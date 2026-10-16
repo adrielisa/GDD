@@ -23,18 +23,14 @@ Esta sección define el mapeo físico y la respuesta sensorial de cada comando d
 - Evitar combinaciones innecesariamente complejas.
 
 - **Consistencia:** Las reglas de salto y aceleración se mantienen idénticas en todo el juego.
-- **Tolerancia de entrada (_Coyote Time_ & _Input Buffering_):**
+- **Tolerancia de entrada  ( _Input Buffering_):**
     
-    - _Coyote Time:_ Se permite saltar hasta 0.08 segundos después de haber abandonado el borde de una plataforma sin registrar caída prematura.
-        
     - _Input Buffering:_ Si el jugador presiona Ataque o Salto hasta 0.10 segundos antes de tocar el suelo o terminar una animación, la acción se ejecuta automáticamente al quedar libre.
-        
+    
 - **Cero combinaciones complejas:** No se implementan secuencias tipo media luna ni dobles toques de dirección; cada acción responde a una pulsación limpia.
-
-
 ## Reasignación
 
-- **Alcance en el prólogo (2 meses):** No se incluirá reasignación libre de teclas dentro del juego para no consumir tiempo de desarrollo en interfaces complejas.
+- **Alcance: No se incluirá reasignación libre de teclas dentro del juego para no consumir tiempo de desarrollo en interfaces complejas.
 
 ## Entrada y retroalimentación
 

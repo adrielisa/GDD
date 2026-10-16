@@ -8,7 +8,7 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 
 | Campo                        | Información                                                 |
 | ---------------------------- | ----------------------------------------------------------- |
-| **Nombre del proyecto**      | <!-- Nombre oficial o nombre temporal -->                   |
+| **Nombre del proyecto**      | True Hero                                                   |
 | **Nombre clave**             |                                                             |
 | **Versión del GDD**          | 0.1.0                                                       |
 | **Estado del proyecto**      | Concepto / Preproducción / Producción / Pruebas / Publicado |

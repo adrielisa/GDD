@@ -8,29 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a0edc3e5e8dd30a",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Pasted image 20261005032134.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20261005032134"
-            }
-          },
-          {
             "id": "cabd6451b620ed22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GDD_Videojuego_ES_2026-main/11 - Referencia de Diseño/03 - Plataformas y Consolas.md",
+                "file": "05 - Arte y Audio/03 - Entornos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03 - Plataformas y Consolas"
+              "title": "03 - Entornos"
             }
           }
         ]
@@ -200,43 +188,54 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "0a0edc3e5e8dd30a",
+  "active": "cabd6451b620ed22",
   "lastOpenFiles": [
-    "Pasted image 20260929141252.png",
-    "GDD_Videojuego_ES_2026-main/05 - Arte y Audio/01 - Dirección de Arte.md",
-    "GDD_Videojuego_ES_2026-main/05 - Arte y Audio/02 - Personajes y Animación.md",
-    "GDD_Videojuego_ES_2026-main/05 - Arte y Audio/03 - Entornos.md",
+    "05 - Arte y Audio/02 - Personajes y Animación.md",
+    "05 - Arte y Audio/01 - Dirección de Arte.md",
+    "04 - Contenido/05 - Misiones y Desafíos.md",
+    "04 - Contenido/04 - Objetos y Coleccionables.md",
+    "04 - Contenido/03 - Enemigos y NPC.md",
+    "04 - Contenido/02 - Niveles.md",
+    "04 - Contenido/01 - Estructura del Contenido.md",
+    "03 - Historia y Mundo/04 - Diálogos y Narrativa.md",
+    "03 - Historia y Mundo/03 - Personajes.md",
+    "03 - Historia y Mundo/01 - Premisa y Trama.md",
+    "02 - Diseño/02 - Mecánicas.md",
+    "03 - Historia y Mundo/02 - Mundo.md",
+    "Pasted image 20261016154159.png",
+    "Pasted image 20261016153614.png",
+    "02 - Diseño/07 - Reglas y Estados del Juego.md",
+    "02 - Diseño/05 - Progresión.md",
+    "02 - Diseño/04 - Controles.md",
+    "02 - Diseño/03 - Sistemas.md",
+    "02 - Diseño/06 - Economía y Recursos.md",
+    "02 - Diseño/01 - Jugabilidad.md",
+    "01 - Visión/04 - Pilares de Diseño.md",
+    "01 - Visión/03 - Público y Plataforma.md",
+    "01 - Visión/02 - Visión del Juego.md",
+    "01 - Visión/01 - Ficha del Proyecto.md",
+    "README.md",
     "Pasted image 20261016112525.png",
-    "GDD_Videojuego_ES_2026-main/04 - Contenido/05 - Misiones y Desafíos.md",
-    "GDD_Videojuego_ES_2026-main/04 - Contenido/04 - Objetos y Coleccionables.md",
-    "GDD_Videojuego_ES_2026-main/04 - Contenido/03 - Enemigos y NPC.md",
-    "GDD_Videojuego_ES_2026-main/04 - Contenido/01 - Estructura del Contenido.md",
-    "GDD_Videojuego_ES_2026-main/05 - Arte y Audio/05 - Audio y Música.md",
-    "GDD_Videojuego_ES_2026-main/05 - Arte y Audio/04 - Interfaz Visual.md",
-    "GDD_Videojuego_ES_2026-main/03 - Historia y Mundo/04 - Diálogos y Narrativa.md",
-    "GDD_Videojuego_ES_2026-main/03 - Historia y Mundo/03 - Personajes.md",
-    "GDD_Videojuego_ES_2026-main/03 - Historia y Mundo/02 - Mundo.md",
-    "GDD_Videojuego_ES_2026-main/03 - Historia y Mundo/01 - Premisa y Trama.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/06 - Economía y Recursos.md",
-    "GDD_Videojuego_ES_2026-main/04 - Contenido/02 - Niveles.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/07 - Reglas y Estados del Juego.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/05 - Progresión.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/04 - Controles.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/03 - Sistemas.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/02 - Mecánicas.md",
-    "GDD_Videojuego_ES_2026-main/02 - Diseño/01 - Jugabilidad.md",
-    "GDD_Videojuego_ES_2026-main/06 - Experiencia/01 - UX y Flujo del Jugador.md",
-    "GDD_Videojuego_ES_2026-main/07 - Tecnología/01 - Arquitectura Técnica.md",
-    "GDD_Videojuego_ES_2026-main/07 - Tecnología/04 - Datos y Persistencia.md",
-    "GDD_Videojuego_ES_2026-main/08 - Producción/02 - Roles y Responsabilidades.md",
-    "Default Sprite.png",
     "Pasted image 20260929141048.png",
-    "Pasted image 20261005031742.png",
-    "Pasted image 20261005031957.png",
-    "Pasted image 20261005032104.png",
-    "Pasted image 20261005032134.png",
-    "Sin título.canvas",
+    "Pasted image 20260929130433.png",
+    "Default Sprite.png",
     "Pasted image 20260929141034.png",
-    "Pasted image 20260929130433.png"
+    "00 - Acerca de esta guía.md",
+    "GDD_Videojuego_ES_2026-main/README.md",
+    "2026-10-05.md",
+    "snippets/GDD-checkbox-fix.css",
+    "snippets",
+    "11 - Referencia de Diseño",
+    "10 - Referencia",
+    "09 - Calidad",
+    "08 - Producción",
+    "07 - Tecnología",
+    "06 - Experiencia",
+    "05 - Arte y Audio",
+    "04 - Contenido",
+    "Sin título.canvas",
+    "Pasted image 20261005032134.png",
+    "Pasted image 20261005032104.png",
+    "Pasted image 20261005031957.png"
   ]
 }

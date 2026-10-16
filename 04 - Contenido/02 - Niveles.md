@@ -3,49 +3,19 @@
 ## Descripción de la sección
 
 Cada nivel debe documentar su propósito jugable, estructura, dificultad, contenido y condiciones de entrada/salida.
-
-## Plantilla de nivel
-
-### Nombre del nivel
-
-**Objetivo principal:**
-
-**Objetivos secundarios:**
-
-**Duración estimada:**
-
-**Dificultad:**
-
-**Mecánicas introducidas:**
-
-**Mecánicas utilizadas:**
-
-**Enemigos / obstáculos:**
-
-**Recompensas:**
-
-**Puntos de guardado:**
-
-**Condición de entrada:**
-
-**Condición de salida:**
-
-**Eventos narrativos:**
-
-**Mapa / diagrama:**
-
-
 ## Nivel 1 
 
-###  El héroe profetizado
+### El héroe profetizado
 
 **Objetivo principal:** Presentar el mundo al espectador
 
-**Objetivos secundarios:** 
+**Objetivos secundarios:**  
+- Mostrar la derrota del protagonista
+- Hacer que el jugador se familiarice con los controles
 
-**Duración estimada:**
+**Duración estimada:** 5 minutos
 
-**Dificultad:**
+**Dificultad:** Intermedio
 
 **Mecánicas introducidas:**
 

@@ -22,12 +22,12 @@ Juego
 | Tipo     | Cantidad |
 | -------- | -------: |
 | Mundos   |        1 |
-| Niveles  |        2 |
+| Niveles  |        3 |
 | Misiones |        - |
-| Enemigos |        2 |
+| Enemigos |        3 |
 | Jefes    |        1 |
-| NPC      |        1 |
-| Objetos  |        3 |
+| NPC      |        3 |
+| Objetos  |        - |
 
 ## Dependencias
 
