@@ -11,7 +11,7 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 | **Nombre del proyecto**      | True Hero                                                                                                                                   |
 | **Nombre clave**             |                                                                                                                                             |
 | **Versión del GDD**          | 0.1.0                                                                                                                                       |
-| **Estado del proyecto**      | Concepto / Preproducción / Producción / Pruebas / Publicado                                                                                 |
+| **Estado del proyecto**      | Concepto                                                                                                                                    |
 | **Equipo**                   | García Velázquez Marco Damián<br>González Cruz Celeste<br>Rodríguez Pacheco Adriel Isaí<br>Trujillo Torres Sergio Joel<br>Vargas Pérez Joel |
 | **Responsable del proyecto** | González Cruz Celeste                                                                                                                       |
 | **Fecha de inicio**          | 05 / Octubre / 2026                                                                                                                         |
