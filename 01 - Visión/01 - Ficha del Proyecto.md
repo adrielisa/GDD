@@ -6,17 +6,17 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 
 ## Información general
 
-| Campo                        | Información                                                 |
-| ---------------------------- | ----------------------------------------------------------- |
-| **Nombre del proyecto**      | True Hero                                                   |
-| **Nombre clave**             |                                                             |
-| **Versión del GDD**          | 0.1.0                                                       |
-| **Estado del proyecto**      | Concepto / Preproducción / Producción / Pruebas / Publicado |
-| **Equipo**                   | <!-- Integrantes -->                                        |
-| **Responsable del proyecto** | <!-- Persona responsable -->                                |
-| **Fecha de inicio**          | <!-- AAAA-MM-DD -->                                         |
-| **Última actualización**     | <!-- AAAA-MM-DD -->                                         |
-| **Repositorio**              | <!-- Enlace -->                                             |
+| Campo                        | Información                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nombre del proyecto**      | True Hero                                                                                                                                   |
+| **Nombre clave**             |                                                                                                                                             |
+| **Versión del GDD**          | 0.1.0                                                                                                                                       |
+| **Estado del proyecto**      | Concepto / Preproducción / Producción / Pruebas / Publicado                                                                                 |
+| **Equipo**                   | García Velázquez Marco Damián<br>González Cruz Celeste<br>Rodríguez Pacheco Adriel Isaí<br>Trujillo Torres Sergio Joel<br>Vargas Pérez Joel |
+| **Responsable del proyecto** | González Cruz Celeste                                                                                                                       |
+| **Fecha de inicio**          | 05 / Octubre / 2026                                                                                                                         |
+| **Última actualización**     | 16 / Octubre / 2026                                                                                                                         |
+| **Repositorio**              | https://github.com/adrielisa/GDD                                                                                                            |
 
 ## Identidad del videojuego
 
