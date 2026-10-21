@@ -20,11 +20,11 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 | Elemento                | Decisión          |
 | ----------------------- | ----------------- |
 | Plataforma principal    | PC                |
-| Plataformas secundarias |                   |
+| Plataformas secundarias | -                 |
 | Método de entrada       | Teclado / Control |
 | Resolución objetivo     | FULL HD           |
-| Relación de aspecto     |                   |
-| Rendimiento objetivo    | 30 FPS            |
+| Relación de aspecto     | 16:9              |
+| Rendimiento objetivo    | 60 FPS            |
 | Conexión requerida      | No                |
 
 ## Restricciones de plataforma
@@ -34,8 +34,10 @@ Documenta limitaciones de hardware, controles, memoria, almacenamiento, distribu
 ## Sesión de juego
 
 **Duración esperada de una sesión:**
+5 minutos.
 
 **Duración total estimada del juego:**
+15 minutos.
 
 ## Modelo de distribución
 

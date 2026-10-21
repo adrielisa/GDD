@@ -21,10 +21,10 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 ## Identidad del videojuego
 
 **Género principal:**  
->Aventura
+>Plataformas
 
 **Subgéneros:**  
->Acción
+>Acción y aventura
 
 **Plataforma objetivo:**  
 >PC
@@ -33,13 +33,14 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 >1 Jugador
 
 **Perspectiva:**  
-> Vista lateral 2D
+> Lateral 2D
 
 **Clasificaciones y etiquetas adicionales:**  
 > Consulta [[06 - Clasificaciones y Etiquetas]].
 
 **Tecnología principal:**  
-> Unity, C#
+> Motor, lenguaje y herramientas principales.
+> Unity Engine (compuesto por Unity Editor y Unity Runtime), C# como lenguaje de programación, Claude como herramienta de productividad y para auditar; y Clip Studio para el diseño y creación de assets, sprites, etc.
 
 ## Elevator Pitch
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Visión/02 - Visión del Juego.md",
+                "file": "01 - Visión/01 - Ficha del Proyecto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02 - Visión del Juego"
+              "title": "01 - Ficha del Proyecto"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GDD_Videojuego_ES_2026-main/01 - Visión/02 - Visión del Juego.md",
+                "file": "01 - Visión/01 - Ficha del Proyecto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,8 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,10 +187,14 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "cabd6451b620ed22",
+  "active": "4f0d83bbaaf3feca",
   "lastOpenFiles": [
+    "02 - Diseño/02 - Mecánicas.md",
+    "02 - Diseño/01 - Jugabilidad.md",
+    "01 - Visión/04 - Pilares de Diseño.md",
+    "01 - Visión/03 - Público y Plataforma.md",
+    "01 - Visión/02 - Visión del Juego.md",
     "01 - Visión/01 - Ficha del Proyecto.md",
-    "05 - Arte y Audio/05 - Audio y Música.md",
     "05 - Arte y Audio/03 - Entornos.md",
     "05 - Arte y Audio/02 - Personajes y Animación.md",
     "05 - Arte y Audio/01 - Dirección de Arte.md",
@@ -203,7 +206,6 @@
     "03 - Historia y Mundo/04 - Diálogos y Narrativa.md",
     "03 - Historia y Mundo/03 - Personajes.md",
     "03 - Historia y Mundo/01 - Premisa y Trama.md",
-    "02 - Diseño/02 - Mecánicas.md",
     "03 - Historia y Mundo/02 - Mundo.md",
     "Pasted image 20261016154159.png",
     "Pasted image 20261016153614.png",
@@ -212,10 +214,6 @@
     "02 - Diseño/04 - Controles.md",
     "02 - Diseño/03 - Sistemas.md",
     "02 - Diseño/06 - Economía y Recursos.md",
-    "02 - Diseño/01 - Jugabilidad.md",
-    "01 - Visión/04 - Pilares de Diseño.md",
-    "01 - Visión/03 - Público y Plataforma.md",
-    "01 - Visión/02 - Visión del Juego.md",
     "README.md",
     "Pasted image 20261016112525.png",
     "Pasted image 20260929141048.png",
@@ -223,6 +221,7 @@
     "Default Sprite.png",
     "Pasted image 20260929141034.png",
     "00 - Acerca de esta guía.md",
+    "GDD_Videojuego_ES_2026-main/README.md",
     "snippets/GDD-checkbox-fix.css",
     "snippets",
     "11 - Referencia de Diseño",

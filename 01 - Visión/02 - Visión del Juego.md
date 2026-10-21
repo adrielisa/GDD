@@ -38,19 +38,19 @@ Lista las características que definen la experiencia.
 
 1. Inicio enganchante: Combate con un jefe de manera inicial 
 2. Oleadas: Combate contra oleadas de variedad de enemigos
-3. 
-4. 
-5. 
 
 ## Diferenciadores
 
 ¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
+El hecho de que rompe el cliché de progresión lineal de un "héroe"
 
 ## Límites del concepto
 
 ¿Qué cosas **NO** es este videojuego?
 
 > Esta sección es especialmente importante para evitar que el proyecto crezca sin control.
+
+No es multijugador.
 
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Ficha del Proyecto]] · [[03 - Público y Plataforma]] →
