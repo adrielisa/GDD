@@ -33,13 +33,13 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 >1 Jugador
 
 **Perspectiva:**  
-> Isométrica o vista superior
+> Vista lateral 2D
 
 **Clasificaciones y etiquetas adicionales:**  
 > Consulta [[06 - Clasificaciones y Etiquetas]].
 
 **Tecnología principal:**  
-> Motor, lenguaje y herramientas principales.
+> Unity, C#
 
 ## Elevator Pitch
 
