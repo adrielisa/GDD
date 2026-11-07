@@ -1,40 +1,51 @@
 # UI y Menús
 
-## Descripción de la sección
-
-Define la estructura funcional de las interfaces y menús.
-
 ## Mapa de navegación
 
 ```text
 Menú principal
-├── Nueva partida
+├── Nueva partida (confirmación si hay guardado)
 ├── Continuar
 ├── Configuración
-│   ├── Audio
-│   ├── Video
-│   ├── Controles
-│   └── Accesibilidad
+│   ├── Audio (general, música, efectos)
+│   ├── Video (resolución, pantalla completa)
+│   └── Controles (vista del mapa de controles)
+├── Créditos
 └── Salir
+
+En juego
+├── Pausa (Escape / Start)
+│   ├── Reanudar
+│   ├── Volver al último punto de control
+│   ├── Configuración
+│   └── Salir al menú (confirmación)
+├── Inventario (Tab / View)
+│   ├── Habilidades
+│   └── Potenciadores
+└── Tienda (E junto al mercader, en la antesala de cada jefe)
 ```
 
 ## Pantallas
 
-### Pantalla
-
-**Propósito:**
-
-**Elementos:**
-
-**Acciones disponibles:**
-
-**Estados:**
-
-**Transiciones:**
+| Pantalla | Propósito | Elementos | Acciones |
+| --- | --- | --- | --- |
+| Menú principal | Entrar al juego. | Logo, ilustración de fondo con La Entidad, opciones. | Nueva partida, Continuar, Configuración, Créditos, Salir. |
+| Prólogo | Contar la caída de Eon. | Viñetas del cómic; indicador de «mantener para omitir». | Avanzar, omitir. |
+| Inventario — Habilidades | Elegir qué 3 habilidades usar. | 3 ranuras arriba; lista de todas las habilidades obtenidas; candado en las no obtenidas. Panel con icono, nombre, **control** y **función** de la seleccionada. | Equipar, quitar, intercambiar. En arenas de jefe, solo lectura. |
+| Inventario — Potenciadores | Elegir qué 3 potenciadores tener activos. | 3 ranuras arriba; lista de potenciadores comprados. Panel con icono, nombre y **función** (indica «Pasivo: siempre activo mientras esté equipado»). | Equipar, quitar, intercambiar. En arenas de jefe, solo lectura. |
+| Tienda | Cambiar XP por potenciadores. | XP actual; catálogo con icono, función y precio; marca «Adquirido» en los ya comprados; retrato y frase del mercader. | Comprar, salir. |
+| Entrega de habilidad | Presentar la habilidad nueva. | Ilustración, nombre, control y función; aviso de que se guardó en el inventario. | Continuar, abrir inventario. |
+| Pausa | Detener el juego. | Opciones. | Ver mapa de navegación. |
+| Derrota | Reintentar. | Mensaje, pista opcional. | Reaparecer, Salir al menú. |
+| Victoria | Cerrar la historia. | Ilustración final. | Continuar a créditos. |
+| Créditos | Reconocer al equipo. | Nombres del equipo y herramientas. | Omitir. |
 
 ## Confirmaciones
 
-Documenta acciones destructivas o irreversibles y cómo se confirman.
-
+| Acción | Confirmación |
+| --- | --- |
+| Nueva partida con guardado existente | *«Se borrará tu progreso. ¿Continuar?»* |
+| Salir al menú desde la pausa | *«Volverás al último punto de control al continuar. ¿Salir?»* |
+| Compra en la tienda | *«¿Comprar [potenciador] por [precio] XP?»* (la compra es permanente). |
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - UX y Flujo del Jugador]] · [[03 - Accesibilidad]] →

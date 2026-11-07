@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - Visión/01 - Ficha del Proyecto.md",
+                "file": "00 - Índice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Ficha del Proyecto"
+              "title": "00 - Índice"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.3000183105469
+    "width": 200
   },
   "right": {
     "id": "299f36cda9220a18",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 - Visión/01 - Ficha del Proyecto.md",
+                "file": "00 - Índice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,41 +187,44 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "4f0d83bbaaf3feca",
+  "active": "cabd6451b620ed22",
   "lastOpenFiles": [
-    "02 - Diseño/02 - Mecánicas.md",
-    "02 - Diseño/01 - Jugabilidad.md",
-    "01 - Visión/04 - Pilares de Diseño.md",
-    "01 - Visión/03 - Público y Plataforma.md",
-    "01 - Visión/02 - Visión del Juego.md",
-    "01 - Visión/01 - Ficha del Proyecto.md",
-    "05 - Arte y Audio/03 - Entornos.md",
-    "05 - Arte y Audio/02 - Personajes y Animación.md",
-    "05 - Arte y Audio/01 - Dirección de Arte.md",
-    "04 - Contenido/05 - Misiones y Desafíos.md",
-    "04 - Contenido/04 - Objetos y Coleccionables.md",
-    "04 - Contenido/03 - Enemigos y NPC.md",
-    "04 - Contenido/02 - Niveles.md",
-    "04 - Contenido/01 - Estructura del Contenido.md",
-    "03 - Historia y Mundo/04 - Diálogos y Narrativa.md",
-    "03 - Historia y Mundo/03 - Personajes.md",
-    "03 - Historia y Mundo/01 - Premisa y Trama.md",
-    "03 - Historia y Mundo/02 - Mundo.md",
-    "Pasted image 20261016154159.png",
-    "Pasted image 20261016153614.png",
-    "02 - Diseño/07 - Reglas y Estados del Juego.md",
-    "02 - Diseño/05 - Progresión.md",
-    "02 - Diseño/04 - Controles.md",
-    "02 - Diseño/03 - Sistemas.md",
-    "02 - Diseño/06 - Economía y Recursos.md",
-    "README.md",
-    "Pasted image 20261016112525.png",
-    "Pasted image 20260929141048.png",
-    "Pasted image 20260929130433.png",
+    "00 - Resumen del juego.md",
+    "00 - Índice.md",
     "Default Sprite.png",
+    "Pasted image 20260929130433.png",
     "Pasted image 20260929141034.png",
-    "00 - Acerca de esta guía.md",
-    "GDD_Videojuego_ES_2026-main/README.md",
+    "Pasted image 20260929141048.png",
+    "Pasted image 20260929141252.png",
+    "Pasted image 20261005031742.png",
+    "Pasted image 20261005031957.png",
+    "Pasted image 20261005032104.png",
+    "Pasted image 20261005032134.png",
+    "Pasted image 20261016153614.png",
+    "README.md",
+    "11 - Referencia de Diseño/01 - Géneros.md",
+    "11 - Referencia de Diseño/02 - Subgéneros y Combinaciones.md",
+    "10 - Referencia/04 - Historial de Versiones.md",
+    "10 - Referencia/03 - Registro de Decisiones.md",
+    "10 - Referencia/02 - Referencias e Inspiración.md",
+    "10 - Referencia/01 - Glosario.md",
+    "09 - Calidad/04 - Criterios de Aceptación.md",
+    "09 - Calidad/03 - Bugs y Seguimiento.md",
+    "09 - Calidad/02 - Pruebas.md",
+    "09 - Calidad/01 - Criterios de Calidad.md",
+    "08 - Producción/05 - Gestión de Cambios.md",
+    "08 - Producción/04 - Backlog del Proyecto.md",
+    "08 - Producción/03 - Roadmap.md",
+    "08 - Producción/02 - Roles y Responsabilidades.md",
+    "08 - Producción/01 - Alcance.md",
+    "07 - Tecnología/05 - Seguridad y Riesgos Técnicos.md",
+    "07 - Tecnología/04 - Datos y Persistencia.md",
+    "07 - Tecnología/03 - Requisitos Técnicos.md",
+    "07 - Tecnología/02 - Motor y Herramientas.md",
+    "07 - Tecnología/01 - Arquitectura Técnica.md",
+    "06 - Experiencia/03 - Accesibilidad.md",
+    "06 - Experiencia/04 - Guardado y Configuración.md",
+    "06 - Experiencia/02 - UI y Menús.md",
     "snippets/GDD-checkbox-fix.css",
     "snippets",
     "11 - Referencia de Diseño",
@@ -232,9 +235,6 @@
     "06 - Experiencia",
     "05 - Arte y Audio",
     "04 - Contenido",
-    "Sin título.canvas",
-    "Pasted image 20261005032134.png",
-    "Pasted image 20261005032104.png",
-    "Pasted image 20261005031957.png"
+    "Sin título.canvas"
   ]
 }

@@ -1,154 +1,105 @@
 # Mecánicas
 
-## Descripción de la sección
+Los valores de esta página son la referencia de diseño para implementar y balancear. Si cambian en Unity, se actualizan aquí y en [[03 - Registro de Decisiones]].
 
-Una mecánica es una regla o interacción mediante la cual el jugador puede actuar dentro del sistema del juego.
+## Valores base de Eon
 
-Documenta cada mecánica con suficiente detalle para que otro integrante pueda implementarla.
+| Parámetro | Valor |
+| --- | ---: |
+| Vida máxima | 100 HP (130 con el potenciador Vigor) |
+| Escudo máximo | 0 SP (50 con el potenciador Coraza) |
+| Velocidad de carrera | 7 u/s |
+| Altura de salto | 3 u |
+| Daño por tajo | 10 / 10 / 15 (combo de 3) |
+| Invulnerabilidad tras recibir daño | 0,7 s |
+
+**Vida y escudo no se recuperan durante la exploración ni el combate.** No hay objetos de curación ni de escudo. Ambos se restauran por completo solo al **tocar un punto de control** o al **vencer a un jefe** (también al reaparecer tras una derrota).
+
 ## Mecánicas principales
 
-### Desplazamiento (Dash)
+### Movimiento lateral
 
-- **Propósito:**
-
-    Otorgar una herramienta de movilidad que permita evadir ataques en el último segundo, reposicionarse rápidamente alrededor de los enemigos y mantener el ritmo ofensivo sin recurrir a bloqueos pasivos.
-
-- **Activación:**
-    
-    Presionar el botón de dash mientras se avanza o se está de pie (en tierra o en el aire).
-    
-- **Reglas:**
- 
-    - Eon se impulsa horizontalmente una distancia fija a alta velocidad durante **0.50 segundos**.
-    
-    - Otorga marcos de invulnerabilidad totales durante todo el recorrido, Eon no recibe daño de ataques ni proyectiles.
-    
-    - Atraviesa la colisión física de enemigos comunes sin recibir daño por contacto.
-    
-    - Solo se puede ejecutar **1 dash aéreo** por salto; no se restablece hasta tocar tierra firme o conectar un ataque.
-    
-- **Entrada:**
-    
-    `Shift Izquierdo` o `RB` / `RT` (Mando).
-    
-- **Estado inicial:**
-    
-    `Idle`, `Run`, `Attack`, `InAir`.
-    
-- **Estado final:**
-    
-    Retorno a `Idle`/`Run` con fricción restaurada, o transición fluida a un nuevo ataque.
-    
-- **Recursos utilizados:**
-    
-    Tiempo de recarga (_cooldown_) global de 5 segundos** en tierra; 1 carga de aire que se consume al usarse en suspensión.
-    
-- **Recompensa:**
-    
-    Evasión garantizada de golpes letales y reubicación ventajosa a la espalda o flanco del enemigo.
-    
-- **Penalización:**
-    
-    Quedar vulnerable si se calcula mal la distancia.
-    
-- **Interacciones con otras mecánicas:**
-    
-    - Cancela la animación de recuperación del combo básico de espada.
-    
-- **Casos límite:**
-    
-    - **Colisión con muros:** Si el dash termina contra una pared o límite del nivel, la velocidad se reduce a cero en el punto de contacto para evitar atravesar la geometría del mapa.
-    
-    - **Caídas al vacío:** La invulnerabilidad del dash evita el daño de proyectiles y enemigos, pero caer al vacío inflige daño al terminar la animación.
-
-
+- Aceleración inmediata y frenado al soltar la dirección; no hay inercia de deslizamiento.
+- En el aire se conserva el control horizontal completo.
 
 ### Salto
 
-**Propósito:**  
-Permitir la navegación vertical, el esquive de proyectiles a nivel de suelo y el cruce entre plataformas flotantes.
+- **Activación:** pulsar Salto en contacto con el suelo.
+- **Reglas:**
+    - Impulso vertical inmediato; soltar el botón antes corta el ascenso (salto variable).
+    - *Jump buffer* de 0,1 s: si se pulsa justo antes de aterrizar, el salto sale al tocar el suelo.
+    - *Coyote time* de 0,1 s tras salir de un borde.
+    - Sin la habilidad **Doble salto** equipada no hay segundo salto en el aire.
+- **Estados:** `Idle`/`Run` → `InAir_Ascending` → `InAir_Falling` → `Landing` → `Idle`/`Run`.
+- **Caso límite:** al chocar con un techo, la velocidad vertical se anula y empieza la caída.
 
-**Activación:**  
-Presionar el botón de salto mientras se está en contacto con el suelo.
+### Dash
 
-**Reglas:**  
-- Aplica un impulso vertical instantáneo hacia arriba.  
-- Cuenta con una tolerancia de pulsación antes de tocar el suelo (*jump buffer*) de 0.1 segundos para que el salto se ejecute de inmediato al aterrizar. 
-- No se puede ejecutar un segundo salto en el aire a menos que se tenga activo el potenciador temporal de doble salto.
+- **Propósito:** esquivar en el último momento y reposicionarse sin bloqueos pasivos.
+- **Activación:** pulsar Dash en tierra o en el aire.
+- **Reglas:**
+    - Desplazamiento horizontal de 4 u durante 0,20 s.
+    - Invulnerabilidad durante todo el recorrido frente a ataques y proyectiles, **excepto los instakill**.
+    - Atraviesa enemigos comunes sin daño por contacto.
+    - Recarga de 1,2 s desde que termina.
+    - 1 dash aéreo por salto; se restablece al tocar suelo o al conectar un ataque descendente.
+- **Interacciones:** cancela la recuperación del combo de espada. Con **Dash cortante** equipado, daña a cada enemigo atravesado.
+- **Casos límite:** contra un muro la velocidad pasa a cero en el punto de contacto. La invulnerabilidad no evita la caída al vacío.
 
-**Entrada:**  
-Barra Espaciadora (Teclado) / Botón `A` (Mando Xbox) / Botón `Cruz` (Mando PS). 
+### Ataque básico (espada)
 
-**Estado inicial:**
-`Idle`, `Run`.
+- **Activación:** pulsar Ataque (`Enter`) en tierra o en el aire.
+- **Reglas:**
+    - En tierra encadena hasta 3 tajos (10, 10 y 15 de daño).
+    - Cada tajo activa una *hitbox* frontal durante 0,10 s.
+    - Al conectar se aplica *hitstop* de 0,05 s y retroceso leve a enemigos comunes.
+    - Recuperación de 0,1 s al final del combo; se puede cancelar con dash.
+    - No se puede atacar durante el aturdimiento por daño recibido.
+- **Caso límite:** si el arco toca a varios enemigos, todos reciben daño.
 
-**Estado final:**
-**Estado final:** `InAir_Ascending` -> `InAir_Falling` -> `Landing` -> `Idle/Run`.
+### Ataque descendente
 
-**Recursos utilizados:**
-Ninguno (uso continuo).
+- **Activación:** Abajo + Ataque (`S` + `Enter`) en el aire.
+- **Reglas:** golpe vertical de 12 de daño. Si impacta a un enemigo, Eon rebota hacia arriba y recupera su dash aéreo.
 
-**Recompensa:**
-Acceso a plataformas superiores y evasión de ataques aéreos o rasantes.
+## Habilidades (obtenidas de jefes)
 
-**Penalización:**
-Inercia aérea comprometida frente a proyectiles si no se cuenta con el Dash disponible.
+- Cada jefe entrega su habilidad (el Jefe 2 entrega dos). **Ninguna se descarta:** todas se guardan en el inventario.
+- Hay **3 ranuras de habilidad**. El jugador decide cuáles equipar; solo las equipadas funcionan. Ninguna es obligatoria, ni siquiera el Doble salto.
+- Al ver una habilidad en el inventario se muestra siempre su **control y su función**.
 
-**Interacciones con otras mecánicas:**
-- Permite activar el Dash en el aire (1 uso por salto). 
-- Permite ejecutar el Ataque aéreo en suspensión.
+| Habilidad | Origen | Tipo | Control | Efecto |
+| --- | --- | --- | --- | --- |
+| **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero). Se restablece al tocar suelo. |
+| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 14 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos comunes. |
+| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash). |
+| **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
 
-**Casos límite:**  
-- **Techos bajos:** Si el personaje choca su cabeza contra una superficie sólida en pleno ascenso, la velocidad vertical se anula de inmediato y pasa directamente a caída libre.
+### Escama pétrea (detalle)
 
+- Mantener `K`: Eon se petrifica y se cubre hasta 1 s; recibe un 70 % menos de daño y no puede moverse.
+- **Bloqueo perfecto:** si el golpe llega en los primeros 0,25 s, el daño se anula y el atacante queda aturdido 1 s.
+- Recarga de 3 s desde que se suelta.
+- **No bloquea ataques instakill** ni evita la caída al vacío.
+- Sinergias: el bloqueo perfecto aturde al Earthlem y rompe la guardia del Vestigio.
 
-### Ataque básico
+## Potenciadores
 
-**Propósito:**  
-Ser la principal herramienta ofensiva directa para infligir daño a los enemigo y abrir cofres.
-
-**Activación:**  
-Presionar el botón de ataque mientras se está en tierra o en el aire.
-
-**Reglas:**  
-- En tierra, presionar repetidamente encadena un combo de 2 a 3 cortes consecutivos. 
-- Cada tajo proyecta una caja de impacto (*hitbox*) frontal durante 0.10 segundos. 
-- Conectar un golpe detiene momentáneamente la animación (*hitstop* de 0.05 segundos) para generar impacto visual. 
-- No puede ejecutarse mientras se está en animación de aturdimiento por daño recibido.
-
-**Entrada:**  
-`J` / Clic Izquierdo (Teclado/Mouse) o Botón `X` (Mando Xbox) / Botón `Cuadrado` (Mando PS).
-
-**Estado inicial:**
-`Idle`, `Run`, `InAir`.
-
-**Estado final:**
-Retorno a `Idle` tras la ventana de recuperación del ataque.
-
-**Recursos utilizados:**
-Ninguno.
-
-**Recompensa:**
-Inflige daño a la vida del enemigo y genera retroceso (*knockback*) leve en enemigos comunes.
-
-**Penalización:**
-Breve tiempo de recuperación (0.1 segundos) al final del combo.
-
-**Interacciones con otras mecánicas:**
-- La animación de recuperación puede cancelarse inmediatamente ejecutando un Dash. 
-- **Casos límite:**
-
-**Casos límite:**  
-
-  - **Múltiples impactos simultáneos:** Si el arco de la espada toca a 2 o más enemigos a la vez, el daño se aplica a todos los objetivos dentro del área de impacto.
+- Se compran con XP al mercader, una sola vez cada uno, y son **permanentes**.
+- **No se activan con ningún botón:** mientras están equipados en el inventario, su efecto está siempre activo.
+- Hay **3 ranuras de potenciador** en el inventario. Los demás quedan guardados, sin efecto, hasta que se equipen.
+- Al ver un potenciador en el inventario se muestra siempre su función.
+- Catálogo y precios en [[06 - Economía y Recursos]].
 
 ## Mecánicas secundarias
 
-- **Interacción con Comerciante y Cofres:** Pulsar el botón de interactuar (`E` / `Botón Y`) frente al mercader o un cofre para desplegar el menú de compra o recolectar botines.
-
-- **Atracción Magnética de Monedas:** Las monedas y orbes soltados por enemigos se desplazan automáticamente hacia el jugador cuando entra en un radio de proximidad de 3 unidades.
-
-- **Consumo de Potenciadores Temporales:** Recoger del suelo un orbe de daño, doble salto o invulnerabilidad aplica el estado alterado por 10 segundos reemplazando el efecto activo anterior.
-
+- **Interacción:** `E` / Botón `Y` frente al mercader y los puntos de control.
+- **Experiencia:** los enemigos sueltan su XP en forma de orbes dorados que se atraen hacia Eon cuando está a 3 u o menos.
+- **Géiseres:** Eon se coloca sobre un géiser y, durante la erupción, sale lanzado en un arco fijo hacia la isla destino.
+    - Ciclo: reposo 1,5 s → aviso (burbujeo y vapor) 0,5 s → erupción 1,0 s.
+    - Durante el vuelo se conserva un control horizontal leve (±1 u) para corregir el aterrizaje.
+    - Sustituyen por completo a los trampolines.
+- **Cañones (isla final):** al interactuar, disparan contra La Entidad. Recarga de 6 s por cañón.
+- **Reaparición de enemigos:** los enemigos comunes reaparecen al descansar en un punto de control o al volver a entrar a una zona. Se puede regresar a zonas ya superadas para acumular más XP.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Jugabilidad]] · [[03 - Sistemas]] →

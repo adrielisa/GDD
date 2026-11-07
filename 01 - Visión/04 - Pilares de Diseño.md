@@ -1,47 +1,52 @@
 # Pilares de Diseño
 
-## Descripción de la sección
+## Pilar 1 — La revancha se gana
 
-Los pilares son los principios que deben mantenerse durante todo el desarrollo. Cuando dos ideas entren en conflicto, los pilares ayudan a decidir cuál encaja mejor con la identidad del juego.
+**Descripción:** Eon ya perdió una vez. Todo lo que el jugador consigue (habilidades, potenciadores, conocimiento de los patrones) debe sentirse como preparación para volver a enfrentar a La Entidad.
 
-## Pilar 1 — Estética vertical y amenaza constante
+**Cómo se refleja en el juego:**
 
-**Descripción:** El juego pone a un pequeño espadachín frente a una entidad enorme que va escalando, genera asombro visual continuo sin recurrir a cinemáticas
+- Cada jefe entrega una habilidad que se vuelve útil en la zona siguiente y en la batalla final.
+- La silueta de La Entidad se ve en el horizonte de todas las zonas, como recordatorio constante.
+- El mercader convierte la XP de los enemigos básicos en potenciadores; pelear en el camino tiene sentido.
 
-**¿Cómo se refleja en el juego?**
+## Pilar 2 — Amenaza legible
 
-- El jefe gigante permanece integrado en el fondo, escalando activamente las islas mientras el jugador combate en el primer plano.
-- La arquitectura del primer nivel prioriza el avance ascendente e impulsos aéreos (trampolines, cañones)
-- Caer de una plataforma visual implica el reinicio del nivel, reforzando la sensación de altitud elevada.
-## Pilar 2 — Fluidez de cómbate en movimiento
+**Descripción:** Los ataques pueden ser duros, incluso letales, pero siempre se anuncian y siempre tienen una respuesta.
 
-**Descripción:** Las dinámicas de moverse y combate van de la mano, avanzar por una isla y atacar enemigos ocurren en un solo flujo continuo.
+**Cómo se refleja en el juego:**
 
-**¿Cómo se refleja en el juego?**
+- Toda acción hostil tiene una preparación visible (brillo, sonido o sombra en el suelo) antes de hacer daño.
+- Los ataques instakill tienen una salida clara: la plataforma de agua ante la ráfaga del Jefe 1 o mantenerse lejos de la cabeza de la serpiente del Jefe 3.
+- Los jefes repiten patrones reconocibles para que cada intento enseñe algo.
 
-- Los enemigos atacan y se posicionan en distintos lugares, lo que obliga al jugador a moverse mientras ataca
-- Elementos interactivos en el entorno como el cañón que se activan mediante la interacción de e un botón
+## Pilar 3 — Fluidez de combate en movimiento
 
-## Pilar 3 — Fantasía medieval
+**Descripción:** Moverse y atacar ocurren en un mismo flujo. Saltar, hacer dash y golpear se encadenan sin pausas.
 
-**Descripción:** Una estética de mundo medieval inspirado en las historias de fantasía clásicas, priorizando un mundo fantasioso pero visualmente atractivo.
+**Cómo se refleja en el juego:**
 
-**¿Cómo se refleja en el juego?**
+- El dash cancela la recuperación del ataque y, con el dash cortante, también hace daño.
+- El mago oscuro obliga a correr para escapar de los picos de magma; la serpiente gigante obliga a saltar entre plataformas.
+- Los géiseres mantienen el ritmo al cruzar entre islas.
 
-- El protagonista usa una armadura, capa y espada.
-- Los distintos personajes secundarios están inspirados en personajes clásicos de la fantasía
+## Pilar 4 — Fantasía medieval colorida
+
+**Descripción:** Un mundo de fantasía clásica en ruinas, con colores vivos y diseños con carisma.
+
+**Cómo se refleja en el juego:**
+
+- Eon usa capa, armadura ligera y espada.
+- Los jefes y enemigos tienen siluetas reconocibles y un punto brillante que indica peligro.
+- Costas, bosques, ruinas e islas flotantes mantienen una paleta saturada aun en un mundo destruido.
 
 ## Reglas de decisión
 
 Antes de incorporar una característica importante, preguntar:
 
-- ¿Refuerza uno de nuestros pilares?
-- ¿Mejora la experiencia principal?
-- ¿Justifica el costo de desarrollo?
+- ¿Refuerza la preparación para la revancha?
+- ¿El jugador puede leer la amenaza a tiempo?
+- ¿Justifica el costo de desarrollo dentro del alcance de [[01 - Alcance]]?
 - ¿Complica innecesariamente otro sistema?
-
-> [!warning] Evitar
-> Convertir los pilares en frases genéricas como “que sea divertido”. Deben describir decisiones concretas de diseño.
-
 
 > **Navegación:** [[00 - Índice]] · ← [[03 - Público y Plataforma]] · [[01 - Jugabilidad]] →

@@ -1,43 +1,44 @@
 # Arquitectura Técnica
 
-## Descripción de la sección
+Arquitectura **propuesta** para Unity. Los nombres de componentes son una guía; se actualizan cuando existan en el proyecto.
 
-Explica cómo está construido técnicamente el videojuego y cómo se comunican sus componentes.
+## Escenas
 
-## Arquitectura
+| Escena | Contenido |
+| --- | --- |
+| `MainMenu` | Menú principal y configuración. |
+| `Prologue` | Cómic del prólogo. |
+| `Zone_Costa` | Playa del Despertar, Acantilados y Arena de la Marea (Jefe 1). |
+| `Zone_Bosque` | Bosque de Raíces. |
+| `Zone_Ruinas` | Ruinas Abandonadas y Patio de la Academia (Jefe 2). |
+| `Zone_Archipielago` | Archipiélago de Tierra y Anillo de Islas (Jefe 3). |
+| `Zone_IslaFinal` | Puente de la Serpiente e Isla Final (La Entidad). |
+| `Credits` | Final y créditos. |
 
-```text
-Entrada
-  ↓
-Controlador
-  ↓
-Lógica de juego
-  ↓
-Sistemas
-  ↓
-Datos / Persistencia
-  ↓
-Presentación
-```
+Una escena persistente (`Bootstrap`) contiene los servicios globales que no se destruyen entre zonas.
 
-## Componentes principales
+## Componentes
 
-| Componente | Responsabilidad | Dependencias |
-|---|---|---|
-| | | |
-| | | |
+| Responsabilidad | Componentes propuestos |
+| --- | --- |
+| Servicios globales | `GameManager`, `SceneLoader`, `SaveService`, `AudioManager` |
+| Jugador | `PlayerInputReader`, `PlayerMotor`, `PlayerCombat`, `PlayerHealth`, `PlayerAbilities` |
+| Habilidades | `AbilityDefinition` (ScriptableObject), `DoubleJumpAbility`, `FireSlashAbility`, `DashStrikeAbility`, `StoneScaleAbility` |
+| Inventario | `Inventory`, `AbilityLoadout` (3 ranuras), `PowerUpLoadout` (3 ranuras), `ItemDescriptionPanel` |
+| Potenciadores | `PowerUpDefinition` (ScriptableObject), `StatModifiers` (aplica los modificadores pasivos de los potenciadores equipados) |
+| Economía | `XPWallet`, `XPOrb`, `ShopController`, `ShopCatalog` |
+| Combate | `Hitbox`, `Hurtbox`, `DamageInfo` (incluye `isInstakill`), `Health` |
+| Enemigos | `EnemyBrain`, `AurionAI`, `EarthlemAI`, `VestigioAI`, `EnemyPool` |
+| Jefes | `BossController`, `BossAttack` (ScriptableObject), `ShrimpSerpentBoss`, `DarkMageBoss`, `GiantSerpentBoss`, `EntityBoss` |
+| Mundo | `WorldProgress`, `Checkpoint`, `AbilityGate`, `BossArena` (barreras invisibles o pilares), `Geyser`, `Cannon`, `WaterPlatform`, `RuinPillar`, `EnemyRespawner` |
+| Cámara | `CameraDirector` (Cinemachine 2D + confinadores) |
+| UI | `HUD`, `InventoryView`, `ShopView`, `BossHealthBar`, `PauseMenu`, `DialogueBox`, `ComicPlayer` |
 
-## Comunicación
+## Principios
 
-¿Cómo intercambian información los sistemas?
-
-## Principios técnicos
-
-- Bajo acoplamiento cuando sea razonable.
-- Responsabilidades claras.
-- Código mantenible.
-- Datos separados de lógica cuando corresponda.
-- Evitar dependencias innecesarias.
-
+- **Datos en ScriptableObjects:** habilidades, potenciadores, ataques de jefe y valores de enemigos se editan sin tocar código.
+- **Eventos:** daño, muerte, compra y entrega de habilidad se comunican por eventos (`OnEntityDeath`, `OnAbilityGranted`, `OnXPChanged`).
+- **Reservas (*pools*):** tajos ardientes, orbes de XP, gotas de baba, camaroncitos y cráneos se reutilizan.
+- **Separación lógica/presentación:** las reglas de combate no dependen de animaciones ni VFX.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Guardado y Configuración]] · [[02 - Motor y Herramientas]] →

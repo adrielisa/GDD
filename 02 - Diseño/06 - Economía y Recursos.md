@@ -1,70 +1,80 @@
 # Economía y Recursos
 
-## Descripción de la sección
+La economía gira en torno a un solo recurso de intercambio: los **puntos de experiencia (XP)**. Los enemigos los sueltan al morir y el mercader los cambia por potenciadores permanentes.
 
-Documenta cualquier recurso cuantificable: dinero, vida, energía, munición, experiencia, materiales, tiempo, puntos, etc.
-
-Esta sección documenta los recursos cuantificables del sistema de juego: la salud del protagonista y las monedas de intercambio. Define las fuentes de obtención, los sumideros de gasto, las reglas de acumulación y el balance económico orientado a incentivar el combate activo y la progresión mediante la compra de nuevo armamento con comerciantes aliados.
 ## Recursos
 
-| **Recurso**                            | **Obtención**                                                                             | **Uso**                                                                                         | **Límite**                                                               | **Pérdida**                                                                            |
-| -------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| **Puntos de Salud (HP)**               | Orbes de curación soltados por enemigos (5% de probabilidad), cofres y puntos de control. | Mantener al jugador con vida ante el daño de enemigos.                                          | 100 HP base (10 segmentos de 10 HP c/u).                                 | Al recibir daño directo cuando no hay escudo activo. Llegar a 0 provoca la Derrota.    |
-| **Escudo**                             | Orbes azules dejados por enemigos o cofres.                                               | Absorber impactos enemigos antes de que afecten la barra de salud principal.                    | 100 SP puntos (10 segmentos de 10 SP c/u )                               | Se reduce con cada impacto enemigo recibido hasta agotarse por completo.               |
-| **Monedas**                            | Eliminación de enemigos (1 a 5 monedas) y apertura de cofres ocultos (15 a 30 monedas).   | Compra de nuevas armas y equipamiento permanente con el comerciante.                            | 999 monedas.                                                             | Al gastarse en la tienda del comerciante. Se conservan al reaparecer tras una derrota. |
-| **Potenciadores Temporales (_Buffs_)** | Caída aleatoria y con baja probabilidad (2%–8%) al abatir enemigos en combate.            | Modificar momentáneamente las capacidades del protagonista durante un lapso de 8 a 12 segundos. | 1 potenciador activo a la vez (recoger otro reemplaza el efecto actual). | Se disipan de forma automática al agotarse su temporizador en pantalla.                |
+| Recurso | Obtención | Uso | Límite | Pérdida / recarga |
+| --- | --- | --- | --- | --- |
+| **Salud (HP)** | Se restaura por completo en puntos de control, al vencer a un jefe y al reaparecer. | Mantener a Eon con vida. | 100 HP (130 con Vigor). | Se pierde con el daño. No hay curación durante la exploración ni el combate. En 0, derrota. |
+| **Escudo (SP)** | Solo con el potenciador Coraza equipado. Se restaura igual que la vida. | Absorber daño antes que la vida. | 50 SP. | Se gasta con cada impacto. |
+| **XP** | Enemigos comunes y jefes. | Comprar potenciadores. | 9999. | Solo al gastarse. **Se conserva al morir.** |
+| **Potenciadores** | Compra única con el mercader. | Efecto pasivo permanente mientras están equipados. | 3 equipados. | Nunca se pierden. |
+| **Habilidades** | Derrotar jefes. | Nuevas acciones o mejoras de movimiento. | 3 equipadas. | Nunca se pierden ni se descartan. |
 
-### Catálogo de Potenciadores Temporales (_Buffs_)
+## Fuentes de XP
 
-- **Filo (Más daño):** Incrementa el daño del arma en un +50% durante 10 segundos; el filo emite un destello rojo.
+| Fuente | XP |
+| --- | ---: |
+| Aurion | 10 |
+| Vestigio | 25 |
+| Earthlem | 30 |
+| Camaroncito (esbirro del Jefe 1) | 1 |
+| Jefe 1 | 200 |
+| Jefe 2 | 300 |
+| Jefe 3 | 400 |
 
-- **Impulso (Doble salto):** Permite ejecutar un segundo salto en el aire durante 12 segundos.
+- Los enemigos comunes **reaparecen** al descansar en un punto de control o al volver a entrar a una zona. Tras vencer a un jefe, el jugador puede regresar a zonas anteriores para acumular más XP.
+- Un recorrido directo reúne unos 1400 XP antes de la isla final. Comprar los 6 potenciadores (1500 XP) exige volver a pelear en zonas anteriores.
 
-- **Coraza (Invulnerabilidad total):** Vuelve al protagonista inmune a cualquier tipo de daño o proyectil durante 6 segundos (el personaje parpadea en blanco/dorado).
+## Catálogo de potenciadores
 
-- **Sobrecarga (Velocidad / Reducción de Cooldown):** Aumenta la velocidad de desplazamiento en un 30% y elimina el tiempo de recarga del _Dash_ durante 8 segundos.
+Todos son **permanentes**: se compran una vez y, mientras ocupan una de las **3 ranuras** del inventario, su efecto está siempre activo. No usan botones. El inventario muestra la función de cada uno.
 
+| Potenciador | Efecto | Precio | Disponible desde |
+| --- | --- | ---: | --- |
+| **Vigor** | +30 de vida máxima (100 → 130). | 200 XP | Antesala del Jefe 1 |
+| **Filo** | +25 % de daño en espada, ataque descendente, Tajo ardiente y Dash cortante. La estela de la espada se tiñe de rojo. | 250 XP | Antesala del Jefe 1 |
+| **Codicia** | +25 % de XP obtenida. | 150 XP | Antesala del Jefe 1 |
+| **Coraza** | Otorga un escudo de 50 SP que absorbe daño antes que la vida; se restaura junto con la vida. | 250 XP | Antesala del Jefe 2 |
+| **Celeridad** | +20 % de velocidad de carrera y −40 % de recarga del dash. | 300 XP | Antesala del Jefe 2 |
+| **Foco arcano** | Tajo ardiente con −50 % de recarga y +50 % de daño. Solo tiene efecto si Tajo ardiente está equipado. | 350 XP | Antesala del Jefe 3 |
 
-### Fuentes y sumideros
+El catálogo de cada antesala incluye también los potenciadores de antesalas anteriores que el jugador no haya comprado. En la antesala de la Isla Final, el mercader regala uno de los que falten (una sola vez).
 
-#### Fuentes (Entrada de recursos)
+## Fuentes y sumideros
 
-- **Combate continuo:** Los enemigos eliminados son la fuente principal de monedas, orbes de salud parcial, orbes de escudo y potenciadores temporales de combate.
+**Fuentes**
 
-- **Cofres de suministros:** Repartidos en rutas secundarias; garantizan paquetes grandes de monedas y escudos completos.
+- **Combate:** enemigos comunes (XP), que reaparecen.
+- **Jefes:** una gran cantidad de XP y su habilidad.
+- **Puntos de control y jefes vencidos:** restauran vida y escudo.
 
-- **Puntos de control (_Checkpoints_):** Restauran la salud del protagonista al 100%.
+**Sumideros**
 
-#### Sumideros (Salida y consumo)
+- **Tienda del mercader:** potenciadores.
+- **Daño:** consume escudo y vida hasta el siguiente punto de control.
 
-- **Tienda del Comerciante:** Espacio seguro donde el jugador invierte sus monedas acumuladas en armas definitivas con atributos únicos.
+## Reglas
 
-- **Impactos enemigos y trampas:** Consumen primero la barra de escudo y, una vez agotada esta, restan segmentos de la barra de salud regular.
+1. **Escudo antes que vida:** la vida no baja mientras quede al menos 1 SP.
+2. **Instakill:** ignora escudo, la invulnerabilidad del dash y la Escama pétrea.
+3. **Sin curación en campo:** vida y escudo solo se restauran en puntos de control, al vencer a un jefe o al reaparecer.
+4. **Persistencia:** XP, potenciadores y habilidades se conservan al ser derrotado.
+5. **Reaparición de enemigos:** los enemigos comunes reaparecen; los jefes derrotados no.
 
-### Reglas
+## Balance
 
-1. **Prioridad de daño (Escudo antes que Salud):** Todo daño entrante impacta primero sobre la barra de escudo. La salud del personaje no se reduce mientras quede al menos 1 punto de escudo disponible.
+**Comportamientos que queremos incentivar**
 
-2. **Exclusividad de Potenciadores:** El personaje solo puede portar un potenciador temporal a la vez. Si recoge un orbe de _Doble salto_ teniendo activo el de _Más daño_, el efecto anterior se cancela y comienza a correr el tiempo del nuevo.
+- Pelear en el camino: la XP de los enemigos es la única vía hacia los potenciadores.
+- Cuidar la vida entre puntos de control: no hay curación en el campo.
+- Elegir: 3 ranuras de habilidad y 3 de potenciador para catálogos de 4 y 6.
+- Volver a zonas superadas para completar el catálogo.
 
-3. **Persistencia económica:** Las monedas obtenidas no se pierden al morir ni al reiniciar desde un punto de control, manteniendo la sensación de avance constante.
+**Comportamientos que queremos evitar**
 
-4. **Reseteo de combate tras la derrota:** Al reaparecer tras una derrota, el personaje recupera su salud base al 100%, pero pierde los escudos adicionales, monedas y cualquier potenciador temporal activo.
-
-### Balance
-
-#### ¿Qué comportamiento queremos incentivar?
-
-- **Enfrentamientos constantes y encadenados:** Los orbes de escudo y los potenciadores con baja probabilidad motivan al jugador a mantener un ritmo agresivo, ya que derrotar grupos de enemigos puede otorgarle ventajas tácticas inmediatas para arrasar con las siguientes ordas.
-
-- **Aprovechamiento del momento** Al obtener un potenciador como _Invulnerabilidad_ o _Más daño_, el jugador se siente empoderado para lanzarse a la ofensiva directa en lugar de replegarse.
-
-- **Exploración activa:** Buscar cofres para garantizar escudos antes de entrar a zonas de combate densas.
-
-#### ¿Qué comportamiento queremos evitar?
-
-- **Juego ultradefensivo o pasivo:** Evitar que el jugador espere a que la vida se recupere sola (no hay autoregeneración pasiva fuera de combate; la recuperación se gana peleando).
-
-- **Evasión total de enemigos:** Desalentar el simplemente correr hasta el final de la pantalla, ya que el jugador se perdería las monedas necesarias para el comerciante y los potenciadores que facilitan el tramo.
+- **Farmear dentro de un combate de jefe:** los camaroncitos dan solo 1 XP.
+- **Ganar sin aprender al jefe:** los potenciadores ayudan, pero el instakill sigue siendo letal.
 
 > **Navegación:** [[00 - Índice]] · ← [[05 - Progresión]] · [[07 - Reglas y Estados del Juego]] →

@@ -1,70 +1,62 @@
 # Ficha del Proyecto
 
-## Descripción de la sección
-
-Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien que nunca haya visto el videojuego entienda qué proyecto es y cuál es su estado actual.
-
 ## Información general
 
 | Campo                        | Información                                                                                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Nombre del proyecto**      | True Hero                                                                                                                                   |
-| **Nombre clave**             |                                                                                                                                             |
-| **Versión del GDD**          | 0.1.0                                                                                                                                       |
-| **Estado del proyecto**      | Concepto                                                                                                                                    |
+| **Nombre clave**             | Revancha                                                                                                                                    |
+| **Versión del GDD**          | 0.2.1                                                                                                                                       |
+| **Estado del proyecto**      | Preproducción (diseño cerrado de la estructura; prototipo en curso)                                                                         |
 | **Equipo**                   | García Velázquez Marco Damián<br>González Cruz Celeste<br>Rodríguez Pacheco Adriel Isaí<br>Trujillo Torres Sergio Joel<br>Vargas Pérez Joel |
 | **Responsable del proyecto** | González Cruz Celeste                                                                                                                       |
 | **Fecha de inicio**          | 05 / Octubre / 2026                                                                                                                         |
-| **Última actualización**     | 16 / Octubre / 2026                                                                                                                         |
+| **Última actualización**     | 07 / Noviembre / 2026                                                                                                                       |
 | **Repositorio**              | https://github.com/adrielisa/GDD                                                                                                            |
 
 ## Identidad del videojuego
 
-**Género principal:**  
->Plataformas
-
-**Subgéneros:**  
->Acción y aventura
-
-**Plataforma objetivo:**  
->PC
-
-**Modo de juego:**  
->1 Jugador
-
-**Perspectiva:**  
-> Lateral 2D
-
-**Clasificaciones y etiquetas adicionales:**  
-> Consulta [[06 - Clasificaciones y Etiquetas]].
-
-**Tecnología principal:**  
-> Motor, lenguaje y herramientas principales.
-> Unity Engine (compuesto por Unity Editor y Unity Runtime), C# como lenguaje de programación, Claude como herramienta de productividad y para auditar; y Clip Studio para el diseño y creación de assets, sprites, etc.
+| Elemento | Decisión |
+| --- | --- |
+| Género principal | Plataformas 2D |
+| Subgéneros | Acción y aventura · exploración por zonas · combate contra jefes |
+| Plataforma objetivo | PC |
+| Modo de juego | 1 jugador |
+| Perspectiva | Lateral 2D (*side-scroller*) |
+| Clasificaciones y etiquetas | Fantasía medieval, pixel art, jefes, progresión por habilidades. Consulta [[06 - Clasificaciones y Etiquetas]]. |
+| Tecnología principal | Unity (Editor y Runtime), C#, Clip Studio para sprites y assets, Claude como apoyo de productividad y auditoría. |
 
 ## Elevator Pitch
 
-> [!example] ¿Qué es?
-> Describe el videojuego en **una o dos frases**. Debe explicar quién juega, qué hace y qué lo hace interesante.
+> _¿Qué pasa cuando el héroe elegido ya perdió?_ Eon, el héroe de la profecía, fue derrotado por La Entidad. Ahora recorre un mundo en ruinas, derrota a tres jefes para arrebatarles sus habilidades, cambia la experiencia de cada combate por potenciadores permanentes con el mercader y vuelve a la isla final por su revancha.
 
-**Respuesta:** 
+## Resumen en cifras
 
- > _¿Qué pasa cuando el héroe elegido pierde en el primer minuto?_ Encarnas a un héroe que debe abrirse paso a golpes contra criaturas fantásticas en un juego de acción 2D.
+| Contenido | Cantidad |
+| --- | ---: |
+| Zonas explorables | 5 (más la isla final) |
+| Jefes normales | 3 |
+| Jefe final | 1 (La Entidad) |
+| Enemigos comunes | 3 (Aurion, Earthlem, Vestigio) |
+| Habilidades obtenibles | 4 |
+| Ranuras de habilidad | 3 |
+| Potenciadores en catálogo | 6 |
+| Ranuras de potenciador | 3 |
 
 ## Estado actual
 
 - [x] Concepto definido
-- [ ] Alcance inicial definido
-- [ ] Mecánica principal definida
+- [x] Alcance inicial definido
+- [x] Mecánica principal definida
 - [ ] Prototipo funcional
-- [ ] Vertical slice
+- [ ] Vertical slice (Costa + Jefe 1)
 - [ ] Producción
 - [ ] Pruebas
 - [ ] Versión final
 
 ## Criterio de éxito del proyecto
 
-Terminar el primer nivel (Prólogo) de manera funcional y entreténida.
-
+- **Mínimo entregable:** la Costa jugable de principio a fin: despertar de Eon, enemigos comunes, mercader en la antesala, combate contra el Jefe 1 y obtención del doble salto en el inventario.
+- **Objetivo completo:** los tres jefes, las zonas explorables, la cinemática de la serpiente petrificada y la batalla final contra La Entidad.
 
 > **Navegación:** [[00 - Índice]] · ← [[00 - Índice]] · [[02 - Visión del Juego]] →

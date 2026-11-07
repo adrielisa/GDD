@@ -1,40 +1,26 @@
 # Bugs y Seguimiento
 
-## Descripción de la sección
+## Clasificación
 
-Registra problemas encontrados durante las pruebas y permite darles seguimiento.
+| Severidad | Definición | Ejemplo |
+| --- | --- | --- |
+| Crítica | Bloquea el avance o pierde el guardado. | Una arena no se abre al morir el jefe. |
+| Alta | Rompe una mecánica principal. | El doble salto no funciona equipado. |
+| Media | Afecta la experiencia, con solución alternativa. | Un potenciador no muestra su descripción en el inventario. |
+| Baja | Visual o de texto. | Un icono desalineado. |
 
-## Reporte de bug
+## Formato de registro
 
-**Título:**
+| ID | Fecha | Severidad | Descripción | Pasos para reproducir | Responsable | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| — | — | — | *Sin bugs registrados aún.* | — | — | — |
 
-**Versión:**
+## Pendientes de diseño (no son bugs)
 
-**Nivel / escena:**
-
-**Pasos para reproducir:**
-
-1.
-2.
-3.
-
-**Resultado esperado:**
-
-**Resultado actual:**
-
-**Frecuencia:** Siempre / A veces / Rara vez
-
-**Severidad:** Crítica / Alta / Media / Baja
-
-**Evidencia:**
-
-**Estado:** Abierto / En progreso / Resuelto / Cerrado
-
-## Registro
-
-| ID | Bug | Severidad | Responsable | Estado |
-|---|---|---|---|---|
-| | | | | |
-
+| Tema | Detalle |
+| --- | --- |
+| Fase 3 de La Entidad | Cerrar ataques y valores. |
+| Nombres | Jefes, camaroncitos y Vestigio. |
+| Valores de La Entidad | Ajustar con el encuentro ya diseñado. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Pruebas]] · [[04 - Criterios de Aceptación]] →

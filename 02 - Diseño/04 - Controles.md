@@ -1,45 +1,50 @@
 # Controles
 
-## Descripción de la sección
-
-Esta sección define el mapeo físico y la respuesta sensorial de cada comando disponible para controlar a el protagonista. Para un prototipo de acción rápida en 2 meses y orientado a pruebas cortas (1-2 minutos), la prioridad es la inmediatez absoluta: cero latencia percibida, botones universales y retroalimentación audiovisual instantánea para que cualquier evaluador domine el combate sin consultar un manual.
+La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por botón y retroalimentación audiovisual instantánea.
 
 ## Mapa de controles
 
-| Acción                      | Teclado                    | Mouse | Control                    | Táctil |
-| --------------------------- | -------------------------- | ----- | -------------------------- | ------ |
-| Mover (Izquierda / Derecha) | `A` / `D`                  | —     | Stick Izquierdo / D-Pad    | —      |
-| Interactuar con cañón       | `E` / `Enter`              | —     | Botón `Y`                  | —      |
-| Ataque principal            | J                          | —     | Botón `X` (Cuadrado en PS) | —      |
-| Ataque secundario           | `S` + `J` (Abajo + Ataque) | —     | Stick Abajo + Botón `X`    | —      |
-| Saltar                      | `W`                        | —     | Botón `A` (Cruz en PS)     | —      |
-| Menú                        | Escape                     | —     | Botón `Start` / `Options`  | —      |
+| Acción | Teclado | Control (Xbox / PS) |
+| --- | --- | --- |
+| Mover izquierda / derecha | `A` / `D` | Stick izquierdo / cruceta |
+| Mirar abajo / dirigir ataque descendente | `S` | Stick izquierdo abajo |
+| Saltar (y doble salto) | `Espacio` o `W` | `A` / Cruz |
+| Ataque con espada | `Enter` | `X` / Cuadrado |
+| Ataque descendente | `S` + `Enter` en el aire | Abajo + `X` / Cuadrado |
+| Dash | `Shift izquierdo` | `RB` / `R1` |
+| Tajo ardiente (ataque arcano) | `J` | `B` / Círculo |
+| Escama pétrea (petrificación) | `K` (mantener) | `LB` / `L1` (mantener) |
+| Interactuar | `E` | `Y` / Triángulo |
+| Inventario | `Tab` | `View` / `Share` |
+| Pausa | `Escape` | `Start` / `Options` |
+
+- Los **potenciadores no tienen controles**: funcionan siempre mientras están equipados en el inventario.
+- Las habilidades pasivas (Doble salto, Dash cortante) no tienen botón propio: modifican Salto y Dash.
+- Si una habilidad activa no está equipada, su botón no hace nada.
+- El inventario muestra el control y la función de cada habilidad, y la función de cada potenciador.
 
 ## Principios de control
 
-- Los controles deben ser consistentes.
-- Las acciones críticas deben ser fáciles de identificar.
-- Debe existir retroalimentación visual, sonora o háptica cuando corresponda.
-- Evitar combinaciones innecesariamente complejas.
+- **Consistencia:** salto, aceleración y dash son idénticos en todas las zonas.
+- **Tolerancia de entrada:** *buffer* de 0,10 s para Ataque, Salto y Dash al terminar una animación o al aterrizar.
+- **Sin combinaciones complejas:** no hay medias lunas ni dobles toques; la única combinación es Abajo + Ataque.
+- **Pulsación accidental:** la tecla que cierra la tienda o el inventario no se reutiliza como ataque o salto en el mismo fotograma.
 
-- **Consistencia:** Las reglas de salto y aceleración se mantienen idénticas en todo el juego.
-- **Tolerancia de entrada  ( _Input Buffering_):**
-    
-    - _Input Buffering:_ Si el jugador presiona Ataque o Salto hasta 0.10 segundos antes de tocar el suelo o terminar una animación, la acción se ejecuta automáticamente al quedar libre.
-    
-- **Cero combinaciones complejas:** No se implementan secuencias tipo media luna ni dobles toques de dirección; cada acción responde a una pulsación limpia.
 ## Reasignación
 
-- **Alcance: No se incluirá reasignación libre de teclas dentro del juego para no consumir tiempo de desarrollo en interfaces complejas.
+No se incluye reasignación de teclas en esta versión. Salto tiene dos teclas (`Espacio`/`W`).
 
 ## Entrada y retroalimentación
 
-Describe qué ocurre inmediatamente después de cada entrada importante.
-
-| **Entrada**                | **Acción resultante**            | **Retroalimentación visual**                                                                               | **Retroalimentación sonora**                        | **Sensación / Game Feel**                                                   |
-| -------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
-| **Pulsar Ataque (Tierra)** | Espadazo horizontal              | Estela de color saturado (cian/blanco) en forma de media luna. Destello en punta de espada.                | Sonido seco de tajo cortando aire (_whoosh_ agudo). | Inercia frontal de 0.5 unidades                                             |
-| **Abajo + Ataque (Aire)**  | Espadazo en caída libre vertical | Estela vertical recta; silueta del protagonista inclinada hacia abajo con la punta de la espada brillante. | Silbido agudo descendente.                          | Caída acelerada inmediata; rebote elástico hacia arriba si impacta enemigo. |
-| **Recibir Daño**           | Impacto y retroceso              | Parpadeo intermitente del sprite (rojo/transparente) durante 0.7 segundos de inmunidad.                    | Sonido sordo de impacto contundente y quejido seco. | Empuje hacia atrás en el eje X; pérdida de control durante 0.15 segundos.   |
+| Entrada | Acción | Visual | Sonido | Sensación |
+| --- | --- | --- | --- | --- |
+| Ataque (tierra) | Tajo horizontal | Estela en media luna cian/blanca. | *Whoosh* agudo. | Avance de 0,5 u. |
+| Abajo + Ataque (aire) | Golpe descendente | Estela vertical, punta brillante. | Silbido descendente. | Caída acelerada; rebote si impacta. |
+| Salto en el aire (con Doble salto) | Segundo salto | Ráfaga de aire bajo los pies. | Soplo corto. | Impulso algo menor que el primero. |
+| Dash | Desplazamiento | Silueta residual; con Dash cortante, estela roja. | Corte de aire; con Dash cortante, tajo metálico. | Velocidad súbita con *hitstop* si corta a un enemigo. |
+| `J` | Tajo ardiente | Media luna de fuego naranja que sale de la espada. | Tajo con chisporroteo. | Retroceso mínimo de Eon. |
+| `K` (mantener) | Escama pétrea | El cuerpo de Eon se vuelve gris piedra; destello blanco en el bloqueo perfecto. | Crujido de roca; golpe seco en el bloqueo perfecto. | Eon queda inmóvil. |
+| Recibir daño | Impacto y retroceso | Parpadeo rojo 0,7 s. | Golpe sordo y quejido. | Empuje en X; sin control 0,15 s. |
+| Aviso instakill | — | Brillo intenso y sombra en el área de impacto. | Sonido exclusivo grave. | La cámara no se mueve para no tapar el aviso. |
 
 > **Navegación:** [[00 - Índice]] · ← [[03 - Sistemas]] · [[05 - Progresión]] →

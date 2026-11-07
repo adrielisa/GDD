@@ -1,77 +1,73 @@
 # Jugabilidad
 
-## Descripción de la sección
-
-La jugabilidad explica **qué hace el jugador, qué recibe a cambio y cómo evoluciona la experiencia.**
-
 ## Bucle principal de juego
 
-Describe el ciclo que se repite durante la experiencia.
+```text
+Explorar la zona → Derrotar enemigos comunes (XP) → Llegar a la antesala del jefe
+      → Intercambiar XP por potenciadores con el mercader → Preparar inventario (3 habilidades, 3 potenciadores)
+      → Vencer al jefe → Guardar su habilidad en el inventario → Siguiente zona
+      (opcional: volver a zonas superadas para acumular más XP)
+```
 
-**Ejemplo conceptual:**
+Tras el tercer jefe el bucle se cierra: la serpiente petrificada abre el paso a la isla final y el jugador enfrenta a La Entidad con todo lo reunido.
 
-`Explorar → Encontrar desafío → Resolver → Obtener recompensa → Mejorar → Explorar`
+## Bucles por escala
 
-**Bucle del proyecto:**
+| Escala | Qué hace el jugador | Qué obtiene |
+| --- | --- | --- |
+| Segundo a segundo | Corre, salta, hace dash y encadena tajos; lee avisos de ataque. | Esquivar daño y conectar golpes. |
+| Minuto a minuto | Despeja tramos con enemigos, cruza géiseres, administra su vida hasta el siguiente punto de control. | XP. |
+| Por zona | Explora la zona, compra potenciadores y vence a su jefe. | Una habilidad nueva y acceso a la zona siguiente. |
+| Partida completa | Reúne habilidades y potenciadores y vuelve a la isla final. | La revancha contra La Entidad. |
 
-Aterrizar en isla → Combatir horda de enemigos → Usar artillería / entorno interactivo → Alcanzar el trampolín → Ascender hacia la siguiente isla acercándose más al jefe.
 ## Acciones principales del jugador
 
-| Acción               | Propósito                | Resultado                                   |
-| -------------------- | ------------------------ | ------------------------------------------- |
-| Ataque con espada    | Eliminar enemigos        | Enemigos pierden vida y terminan muriendo   |
-| Salto                | Evita ataques terrestres | Supera ágilmente obstáculos sin perder vida |
-| Disparo de cañón     | Bajarle vida al jefe     | Explosión que daña al jefe del nivel        |
-| Impulso en trampolín | Cruzar entre islas       | Salto que envía al jugador a otra isla      |
+| Acción | Propósito | Resultado |
+| --- | --- | --- |
+| Ataque con espada | Eliminar enemigos. | Combo de hasta 3 tajos; los enemigos sueltan XP al morir. |
+| Ataque descendente | Golpear desde el aire. | Daña al objetivo y rebota a Eon hacia arriba. |
+| Salto | Navegar plataformas y evitar ataques rasantes. | Con el Doble salto equipado alcanza rutas más altas. |
+| Dash | Esquivar y reposicionarse. | Breve invulnerabilidad; con el Dash cortante también hace daño. |
+| Tajo ardiente | Atacar a distancia (Jefe 2). | Tajo de fuego que sale de la espada y atraviesa enemigos. |
+| Escama pétrea | Defenderse (Jefe 3). | Reduce el daño; el bloqueo perfecto aturde al atacante. |
+| Interactuar | Mercader, puntos de control y cañones. | Abre la tienda, guarda y restaura vida, dispara. |
+| Montar un géiser | Cruzar entre islas. | Lanzamiento en arco hacia la isla siguiente. |
 
-## Experiencia segundo a segundo
+## Experiencia de los primeros minutos
 
-¿Qué hace el jugador durante los primeros minutos?
-
-Durante los primeros minutos, el jugador asimila el peso y la respuesta del protagonista: corre sobre el césped, ajusta la distancia de sus golpes de espada al cruzarse con las primeras criaturas y nota la presencia del titán moviéndose a paso lento en el horizonte.
-
-## Experiencia minuto a minuto
-
-¿Qué actividades se repiten durante una sesión?
-
-Durante el primer nivel alterna 20-30 segundos de avance, ataque a enemigos y uso del cañón central para dañar al jefe, rematando con el impulso aéreo hacia la siguiente base flotante mientras el entorno cambia de altitud y la silueta del jefe se hace más cercana.
+El cómic inicial termina con la derrota de Eon. El control empieza cuando despierta solo en la playa. En el primer minuto el jugador camina, salta y se cruza con los primeros Aurion; aprende el combo y el dash mientras recoge su primera XP. Al final de los Acantilados, justo antes del primer jefe, encuentra al mercader y descubre que esa XP compra potenciadores. La silueta de La Entidad se ve en el horizonte del mar.
 
 ## Experiencia a largo plazo
 
-¿Qué hace que el jugador quiera continuar?
-
-El incentivo para continuar radica en superar la ascensión vertical completa: dominar el ritmo de avance sin ser alcanzado por los ataques a gran escala del jefe, perfeccionar los tiempos de cruce entre islas y desbloquear el enfrentamiento final cara a cara en la última isla.
+Cada jefe entrega una habilidad que cambia la forma de pelear y de moverse, y la batalla final promete la revancha que el cómic dejó pendiente. Las ranuras limitadas obligan a probar combinaciones distintas, y volver a zonas anteriores permite reunir XP para completar el catálogo del mercader.
 
 ## Condición de victoria
 
-¿Qué debe lograr el jugador para avanzar o terminar?
-
-- **Por tramo/isla:** Llegar con vida al borde derecho, activar el trampolín rúnico y aterrizar exitosamente en la plataforma superior.
-- **Del nivel:** Alcanzar la última estructura flotante e infligir mucho daño al jefe.
+- **Por zona:** derrotar al jefe de la zona.
+- **Del juego:** derrotar a La Entidad en la isla final.
 
 ## Condición de derrota
 
-¿Qué situaciones provocan fracaso?
+- La salud de Eon llega a 0 (el escudo, si lo tiene, se gasta primero).
+- Un ataque instakill conecta: ráfaga de agua del Jefe 1 o contacto con la cabeza de la serpiente del Jefe 3.
+- Caer al vacío resta 25 HP y devuelve a Eon al último suelo seguro. Si eso deja la salud en 0, cuenta como derrota.
 
-- Agotamiento total de la barra de salud por impactos de enemigos del jefe.
-- Caída definitiva al vacío por errar el salto en los bordes de la isla.
+Al ser derrotado, Eon reaparece en el último punto de control con la vida y el escudo completos y conserva su XP. Ver [[07 - Reglas y Estados del Juego]].
 
 ## Ritmo
 
-- **Exploración:** Muy breve y visual; la cámara cerrada revela el trazado de la isla y la posición de props conforme se corre hacia adelante.
-- **Acción:** Ráfagas intensas de 10 a 15 segundos al interceptar grupos de bestias y activar el cañón.
-- **Descanso:** La transición aérea del trampolín entre islas (3 a 5 segundos de vuelo libre con vista panorámica del paisaje).
-- **Desafío:** Oleadas coordinadas y ataques de zona del jefe que golpean partes específicas del suelo.
-- **Recompensa:** Despeje fluido del tramo, sensación de velocidad e impacto sonoro al destruir obstáculos.
-- **Historia:** Contada enteramente de forma ambiental mediante la arquitectura en ruinas, las islas destruidas y la silueta amenazante del coloso en ascenso.
+- **Exploración:** tramos de plataformas con rutas opcionales que se abren con habilidades.
+- **Acción:** encuentros de 10 a 20 segundos con grupos pequeños de enemigos.
+- **Tensión:** sin curación en el campo, cada golpe recibido cuenta hasta el siguiente punto de control.
+- **Descanso:** puntos de control y la antesala de cada jefe, donde está el mercader.
+- **Desafío:** combates contra jefes de 2 a 4 minutos con fases.
+- **Recompensa:** la habilidad de cada jefe y la restauración completa de vida al vencerlo.
+- **Historia:** ambiental (ruinas, estandartes caídos, la silueta del titán) y diálogos breves con el mercader.
 
 ## Principios de interacción
 
-¿Qué reglas debe seguir el juego para que las acciones del jugador sean claras, consistentes y predecibles?
-
-- **Legibilidad de bordes:** Los límites transitables de tierra y el precipicio deben tener siluetas y colisiones perfectamente alineadas para evitar caídas injustas.
-
-- **Interactividad unibotón clara:** Los objetos de entorno (cañón y trampolín) utilizan el mismo botón de acción/contexto con señal visual evidente (resplando) al entrar en su zona de activación.
-
+- **Legibilidad de bordes:** los límites transitables y los precipicios tienen siluetas y colisiones alineadas.
+- **Un botón de contexto:** mercader, puntos de control y cañones usan `E` y muestran un aviso al entrar en su zona.
+- **Avisos antes del daño:** ningún ataque hostil hace daño sin una preparación visible de al menos 0,4 s; los instakill, de al menos 1,5 s.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Pilares de Diseño]] · [[02 - Mecánicas]] →

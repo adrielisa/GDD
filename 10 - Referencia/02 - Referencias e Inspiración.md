@@ -1,39 +1,19 @@
 # Referencias e Inspiración
 
-## Descripción de la sección
-
-Registra juegos, películas, libros, fotografías, artículos, diseños o cualquier otra referencia utilizada para tomar decisiones.
-
-## Referencia
-
-**Nombre:**
-
-**Tipo:**
-
-**Enlace:**
-
-**Qué nos interesa:**
-
-**Qué NO queremos copiar:**
+| Referencia | Tipo | Qué nos interesa | Qué NO queremos copiar |
+| --- | --- | --- | --- |
+| *Hollow Knight* | Videojuego | Habilidades de movimiento que abren zonas; amuletos con ranuras limitadas; legibilidad de jefes. | Su escala de mapa y su dificultad de plataformas. |
+| *Terraria* — Devorador de mundos | Videojuego (jefe) | Jefe segmentado que atraviesa el escenario; cuerpo dañable por partes. | Su división en gusanos más pequeños. |
+| *Blasphemous* | Videojuego | Pixel art detallado, tono de mundo caído. | Su violencia gráfica. |
+| *Gurren Lagann* | Anime | Escala colosal y energía de revancha. | Su estética mecánica. |
+| *Celeste* | Videojuego | Respuesta del control, *coyote time* y *buffer*. | — |
+| *Cuphead* | Videojuego | Jefes con patrones claros y fases. | La dificultad extrema. |
 
 ## Referencias visuales
 
-Añade imágenes utilizando la sintaxis de Obsidian:
-
-```markdown
-![[imagen.png]]
-```
-
-## Referencias externas
-
-Puedes utilizar enlaces normales:
-
-```markdown
-[Nombre de la referencia](https://ejemplo.com)
-```
+![[Pasted image 20261016112525.png|267]]
 
 > [!warning] Propiedad intelectual
 > Una referencia sirve para analizar y comunicar una idea. No implica que el proyecto pueda copiar recursos protegidos.
-
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Glosario]] · [[03 - Registro de Decisiones]] →

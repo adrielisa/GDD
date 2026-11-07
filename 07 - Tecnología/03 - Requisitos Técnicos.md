@@ -1,48 +1,30 @@
 # Requisitos Técnicos
 
-## Descripción de la sección
+## Rendimiento
 
-Define las condiciones técnicas necesarias para ejecutar y desarrollar el videojuego.
+| Métrica | Objetivo |
+| --- | --- |
+| Tasa de fotogramas | 60 FPS estables a 1920 × 1080. |
+| Carga entre zonas | Menos de 5 s. |
+| Latencia de entrada | Respuesta en el mismo fotograma o el siguiente. |
+| Objetos activos | Hasta 6 camaroncitos, 4 cráneos, 6 gotas de baba y ~20 orbes de XP sin caída de FPS. |
 
-## Requisitos mínimos
+## Equipo mínimo orientativo
 
-**Sistema operativo:**
+| Componente | Mínimo |
+| --- | --- |
+| Sistema operativo | Windows 10 (64 bits) |
+| Procesador | Doble núcleo a 2,0 GHz |
+| Memoria | 4 GB de RAM |
+| Gráficos | Compatible con DirectX 11 |
+| Almacenamiento | 500 MB libres |
 
-**CPU:**
-
-**GPU:**
-
-**RAM:**
-
-**Almacenamiento:**
-
-**Resolución:**
-
-**Conexión:**
-
-## Requisitos recomendados
-
-**Sistema operativo:**
-
-**CPU:**
-
-**GPU:**
-
-**RAM:**
-
-**Almacenamiento:**
-
-## Objetivos de rendimiento
-
-**FPS objetivo:**
-
-**Tiempo de carga objetivo:**
-
-**Memoria máxima:**
+*Valores orientativos; se confirman con pruebas de rendimiento.*
 
 ## Restricciones
 
-Documenta límites conocidos del proyecto.
-
+- Sin conexión a internet.
+- Guardado local.
+- Un solo jugador.
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Motor y Herramientas]] · [[04 - Datos y Persistencia]] →

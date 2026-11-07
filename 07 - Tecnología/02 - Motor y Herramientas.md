@@ -1,44 +1,17 @@
 # Motor y Herramientas
 
-## Descripción de la sección
-
-Documenta las herramientas utilizadas para crear el videojuego y por qué fueron seleccionadas.
-
-## Motor
-
-**Motor:**
-
-**Versión:**
-
-**Renderizado:**
-
-**Física:**
-
-**Sistema de entrada:**
-
-## Lenguajes
-
-| Lenguaje | Uso |
-|---|---|
-| | |
-
-## Herramientas
-
-| Herramienta | Propósito | Versión |
-|---|---|---|
-| | | |
-
-## Dependencias
-
-Lista librerías, paquetes, plugins o servicios externos.
-
-## Convenciones del proyecto
-
-- Estructura de carpetas
-- Nomenclatura
-- Control de versiones
-- Formato de assets
-- Convenciones de código
-
+| Área | Herramienta | Uso |
+| --- | --- | --- |
+| Motor | Unity (Editor y Runtime), 2D | Juego completo. |
+| Lenguaje | C# | Lógica de juego. |
+| Entrada | Unity Input System | Teclado y mandos con un solo mapa de acciones. |
+| Cámara | Cinemachine 2D | Seguimiento, confinadores y sacudida. |
+| Físicas | Rigidbody2D / Collider2D | Movimiento y colisiones. |
+| Escenarios | Tilemap de Unity | Construcción de zonas. |
+| Arte | Clip Studio Paint | Sprites, animaciones e ilustraciones. |
+| Audio | *Pendiente de definir* | Música y efectos. |
+| Control de versiones | Git + GitHub | Código y GDD (https://github.com/adrielisa/GDD). |
+| Documentación | Obsidian | Este GDD. |
+| Apoyo | Claude | Productividad, revisión y auditoría de código y documentación. |
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Arquitectura Técnica]] · [[03 - Requisitos Técnicos]] →

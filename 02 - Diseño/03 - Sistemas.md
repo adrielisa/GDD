@@ -1,214 +1,145 @@
 # Sistemas del Juego
 
-## Descripción de la sección
-
-Los sistemas son conjuntos de reglas y componentes que trabajan juntos: combate, inventario, IA, diálogo, progresión, economía, misiones, etc.
-
 ## Inventario de sistemas
 
-| Sistema                             | Propósito                                                                                                                                               | Dependencias                                                                 | Estado |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------ |
-| Daño, Salud y Combate               | Gestionar puntos de vida del protagonista y enemigos, detección de _hitbox/hurtbox_ y eventos de muerte.                                                | Capas de colisión 2D, Animador, Sistema de Efectos/Game Feel.                |        |
-| Controlador del Jugador y Movilidad | Procesar entradas del usuario, físicas de movimiento lateral, saltos y rebote vertical                                                                  | Motor de físicas 2D (`Rigidbody2D`, `Collider2D`), Input System.             |        |
-| Sistema de IA de Hordas Menores     | Controlar el patrullaje, detección y embestida de las criaturas sobre la plataforma.                                                                    | Raycasts de suelo/borde, Transform del Jugador, Sistema de Daño.             |        |
-| Cámara Reactiva y Encuadre          | Encuadrar de forma dinámica al protagonista en movimiento rápido, aplicar amortiguación y confinar la visión dentro de los límites de cada micro-arena. | `Transform` del Jugador, colliders de confinamiento de zona, Cinemachine 2D. |        |
-| Gestor de Nivel y Flujo del Prólogo | Orquestar el avance del prólogo, activación de barreras en micro-arenas, eventos de derrota forzada inicial y cinemática final.                         | Triggers de escenario, UI Manager, Estados del Jugador.                      |        |
+| Sistema | Propósito | Dependencias | Estado |
+| --- | --- | --- | --- |
+| Daño, salud y combate | Vida y escudo de Eon y enemigos, *hitbox*/*hurtbox*, instakill y eventos de muerte. | Capas de colisión 2D, Animator, efectos/*game feel*. | Por implementar |
+| Controlador del jugador y movilidad | Entradas, movimiento lateral, salto, doble salto, dash, ataques y habilidades activas. | `Rigidbody2D`, `Collider2D`, Input System, Inventario. | En prototipo |
+| IA de enemigos comunes | Patrulla, detección y ataque de Aurion, Earthlem y Vestigio; reaparición. | Raycasts, `Transform` de Eon, sistema de daño. | Por implementar |
+| IA de jefes | Patrones, fases y avisos de los tres jefes y La Entidad. | Sistema de daño, gestor de mundo, cámara. | Por implementar |
+| Inventario y equipamiento | Guardar habilidades y potenciadores; 3 ranuras de cada tipo; descripciones. | UI, guardado, controlador del jugador. | Por implementar |
+| Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
+| Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | Por implementar |
+| Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | Por implementar |
+| Elementos de entorno | Géiseres, cañones, plataforma de agua, pilares de las ruinas. | Físicas 2D, controlador del jugador. | Por implementar |
+| Guardado | Persistir progreso entre sesiones. | Todos los anteriores. | Por implementar |
 
-## Plantilla de sistema
+## Sistema 01: Daño, salud y combate
 
-### Plantilla de Sistema 01: Daño, salud y combate
+- **Objetivo:** administrar vida y escudo, validar colisiones de ataque y despachar eventos de daño y muerte.
+- **Entradas:** colisiones entre capas `Hitbox` y `Hurtbox`, identificador del atacante, daño y bandera `isInstakill`.
+- **Reglas:**
+    - El daño normal se resta primero del escudo (si Eon tiene Coraza) y después de la vida.
+    - Con Escama pétrea activa, el daño normal se reduce un 70 %; en bloqueo perfecto se anula y aturde al atacante.
+    - Un ataque **instakill** ignora escudo, dash y Escama pétrea; deja la vida en 0.
+    - Tras recibir daño, Eon tiene 0,7 s de invulnerabilidad con parpadeo rojo.
+    - Vida y escudo **solo se restauran** al tocar un punto de control, al vencer a un jefe o al reaparecer. No hay curación en el campo.
+    - Si la vida llega a 0 se apagan los colliders y se llama a la rutina de muerte.
+    - Si el arma de Eon y la *hitbox* de un enemigo común chocan en el mismo fotograma, se anula el daño mutuo y solo recibe daño el enemigo (no aplica a jefes).
+- **Salidas:** `OnHealthChanged`, `OnShieldChanged`, `OnEntityDeath`, `OnPlayerDeath`.
+- **Estados:** `Vulnerable`, `Invulnerable`, `Petrified`, `HitStun`, `Dead`.
+- **Riesgos:** daño registrado dos veces en un fotograma; instakill aplicado sin aviso visible.
+- **Criterios de aceptación:** un impacto descuenta una sola vez, respeta la prioridad escudo → vida y la vida nunca sube fuera de un punto de control o de la muerte de un jefe.
 
-- **Nombre:** Daño, Salud y Combate
+## Sistema 02: Controlador del jugador y movilidad
 
-- **Objetivo:** Administrar los valores de vida del personaje y de las criaturas, validar colisiones de ataque/vulnerabilidad, procesar la ventana y despachar eventos de daño o muerte.
+- **Objetivo:** convertir las entradas en movimiento, salto, dash, ataques y habilidades, consultando qué está equipado.
+- **Entradas:** dirección, Salto, Ataque (`Enter`), Dash, Tajo ardiente (`J`), Escama pétrea (`K`), Interactuar, Inventario.
+- **Reglas:**
+    - Movimiento con aceleración inmediata y frenado al soltar.
+    - Doble salto, Tajo ardiente, Dash cortante y Escama pétrea solo funcionan equipados.
+    - Dash de 0,20 s y 4 u; 1 aéreo por salto; recarga de 1,2 s.
+    - Abajo + Ataque en el aire ejecuta el ataque descendente; al impactar rebota y recupera el dash aéreo.
+    - Los potenciadores equipados modifican los valores de forma permanente (vida máxima, daño, velocidad, recargas).
+    - Durante cinemáticas, tienda e inventario el control queda bloqueado.
+- **Salidas:** `velocity` del `Rigidbody2D`; parámetros del Animator (`Speed`, `IsGrounded`, `IsDashing`, `AirJumps`, `IsPetrified`); activación de *hitboxes*.
+- **Estados:** `Idle`, `Run`, `Jump`, `DoubleJump`, `Fall`, `Dash`, `Attack`, `DownStab`, `FireSlash`, `Petrified`, `HitStun`, `Locked`.
+- **Riesgos:** atascos en esquinas durante el dash; rebotes infinitos fuera de cámara.
+- **Criterios de aceptación:** respuesta inmediata, dash que cancela ataques en el fotograma pedido y habilidades que solo funcionan equipadas.
 
-- **Entradas:** Señales de colisión entre colliders en capas `Hitbox` y `Hurtbox`, identificador del atacante y daño asignado.
+## Sistema 03: IA de enemigos comunes
 
-- **Procesamiento / reglas:**
-    
-    - Al recibir daño válido, se resta el valor a la salud actual de la entidad.
-    
-    - Si la entidad dañada es el protagonista, se activan 0.7 s de invulnerabilidad temporal (_i-frames_) con parpadeo de sprite (color rojo).
-    
-    - Si la vida llega a 0, se apagan los colliders de la entidad y se llama a su rutina de muerte.
-    
-- **Salidas:** Eventos `OnHealthChanged`, `OnEntityDeath`
-    
-- **Estados posibles:** `Vulnerable`, `Invulnerable`, `HitStun`, `Dead`.
-    
-- **Dependencias:** Capas de colisión 2D, Animador, Sistema de Efectos/Game Feel.
-    
-- **Interacciones:** Informa al _Controlador del Jugador_ o a la _IA de Criaturas_ para aplicar aturdimiento y retroceso.
-    
-- **Datos que necesita:** Daño del ataque, vector de retroceso (_knockback_), duración de aturdimiento.
-    
-- **Datos que genera:** Puntos de salud restantes, estado de vida/muerte.
-    
-- **Riesgos:** Registro doble de daño en un mismo fotograma o desincronización de cajas de colisión.
-    
-- **Criterios de aceptación:** Un impacto descuenta vida solo una vez, aplica retroceso en dirección opuesta al golpe y activa los cuadros de invulnerabilidad sin trabar la animación.
+- **Objetivo:** rutinas de patrulla, detección, ataque y reaparición.
+- **Reglas:**
+    - Los terrestres patrullan hasta detectar un muro o un vacío con raycasts y nunca saltan al vacío.
+    - Al detectar a Eon pausan 0,3 s con un destello de aviso antes de atacar.
+    - Los voladores oscilan en altura y embisten cuando Eon entra en su cono.
+    - Al recibir daño entran en `HitStun` y reinician su temporizador de ataque.
+    - Reaparecen en sus posiciones iniciales cuando Eon descansa en un punto de control o vuelve a entrar a la zona.
+- **Estados:** `Patrol`, `Alert`, `Attack`, `Stunned`, `Dead` (más `Buried` en Earthlem y `Guard` en Vestigio).
+- **Salidas:** al morir sueltan orbes de XP.
+- **Criterios de aceptación:** ningún enemigo cae de su plataforma por error, todos avisan antes de golpear y reaparecen correctamente.
 
-### Plantilla de Sistema 02: Controlador del jugador y movilidad
+## Sistema 04: IA de jefes
 
-- **Nombre:** Controlador del jugador y movilidad
-    
-- **Objetivo:** Interpretar los comandos del jugador para controlar el desplazamiento lateral del personaje, las físicas de salto, el rebote aéreo descendente y las cancelaciones de animación mediante dash.
-    
-- **Entradas:** Ejes direccionales, botones de salto, ataque y _Dash_ desde el Input System.
-    
-- **Procesamiento / reglas:**
-    
-    - El movimiento horizontal aplica aceleración directa con frenado inmediato al soltar la palanca.
-    
-    - Presionar ataque con dirección "Abajo" en el aire activa la caída en picada; si impacta un objetivo vivo, resetea la velocidad vertical con un impulso ascendente de rebote.
-    
-    - El Dash mueve al personaje a velocidad fija horizontal durante 0.15 segundos e ignora colisiones con enemigos.
-    
-    - Solo se permite 1 Dash aéreo hasta tocar el suelo.
-    
-- **Salidas:** Modificación de `velocity` en `Rigidbody2D`, cambio de parámetros en el Animator (`Speed`, `IsGrounded`, `IsDashing`), activación de `Hitboxes`.
-    
-- **Estados posibles:** `Idle`, `Run`, `Jump`, `Fall`, `Dash`, `DownStab`, `HitStun`.
-    
-- **Dependencias:** Motor de físicas 2D (`Rigidbody2D`, `Collider2D`), Input System, sistema de daño.
-    
-- **Interacciones:** Envía activación de hitboxes al _sistema de daño_; recibe bloqueos de control durante cinemáticas del _Gestor de Nivel_.
-    
-- **Datos que necesita:** Velocidad de carrera, fuerza de salto, fuerza de rebote vertical, duración del dash.
-    
-- **Datos que genera:** Posición global del personaje, vector de velocidad actual, orientación del sprite (Facing Direction).
-    
-- **Riesgos:** Atascos en esquinas de plataformas durante el dash o rebotes aéreos infinitos fuera del encuadre de cámara.
-    
-- **Criterios de aceptación:** El control responde inmediatamente a las entradas, el dash cancela los ataques en el fotograma solicitado y el rebote aéreo solo se activa al colisionar con entidades válidas.
+- **Objetivo:** ejecutar los patrones de cada jefe con fases y avisos.
+- **Reglas comunes:**
+    - Cada jefe tiene una tabla de ataques con peso, recarga y requisito de fase.
+    - Nunca repite el mismo ataque más de 2 veces seguidas.
+    - El cambio de fase ocurre por porcentaje de vida y va acompañado de una pausa protegida de 1,5 s en la que ni el jefe ni Eon reciben daño.
+    - Los ataques instakill tienen aviso mínimo de 1,5 s y un sonido exclusivo.
+    - Al morir: cinemática corta, habilidad guardada en el inventario, vida y escudo de Eon restaurados y apertura de la arena.
+- **Datos:** vida, fases, tabla de ataques, ventanas de vulnerabilidad. Detalle por jefe en [[03 - Enemigos y NPC]].
+- **Riesgos:** ataques superpuestos imposibles de esquivar; instakill sin salida.
+- **Criterios de aceptación:** cada ataque se puede evitar **sin necesidad de ninguna habilidad concreta**, ya que el jugador decide qué equipar.
 
-### Plantilla de Sistema 03: Sistema de IA de hordas 
+## Sistema 05: Inventario y equipamiento
 
-- **Nombre:** Sistema de IA de hordas 
+- **Objetivo:** guardar lo obtenido y decidir qué se usa.
+- **Reglas:**
+    - **Habilidades:** se guardan todas las obtenidas; ninguna se descarta. Solo **3** pueden estar equipadas.
+    - **Potenciadores:** se guardan todos los comprados; solo **3** pueden estar equipados. Los equipados están **siempre activos**; no hay botones de uso.
+    - Al seleccionar cualquier habilidad o potenciador, el inventario muestra su **función** y, si la tiene, su **tecla de control**.
+    - Una habilidad recién obtenida se guarda en el inventario y se avisa al jugador para que decida si la equipa.
+    - El inventario se abre con `Tab` / `View`. Se puede cambiar el equipamiento en cualquier momento **fuera de una arena de jefe**.
+- **Salidas:** habilidades activas al controlador; modificadores de los potenciadores equipados; iconos al HUD.
+- **Riesgos:** aplicar dos veces el modificador de un potenciador al reequiparlo.
+- **Criterios de aceptación:** nunca hay más de 3 habilidades ni 3 potenciadores equipados; los cambios se reflejan de inmediato en el control, los valores y el HUD.
 
-- **Objetivo:** Manejar las rutinas de patrulla, detección y agresión de las criaturas.
+## Sistema 06: Economía de XP y tienda
 
-- **Entradas:** Coordenadas de posición del personaje, colisiones de `Raycast2D` contra bordes de plataformas y paredes.
+- **Objetivo:** convertir el combate en potenciadores.
+- **Reglas:**
+    - Cada enemigo suelta su XP como orbes al morir; los jefes dan cantidades mayores. Codicia aumenta un 25 % la XP obtenida.
+    - La XP no sube niveles. Tope de 9999. Se conserva al morir.
+    - El mercader está en la antesala de cada jefe. Cada potenciador se compra una sola vez; los ya comprados aparecen como «Adquirido».
+    - La compra se bloquea si falta XP.
+- **Criterios de aceptación:** el contador del HUD y el de la tienda coinciden siempre; una compra descuenta una sola vez y el potenciador aparece en el inventario.
 
-- **Procesamiento / reglas:**
-    
-    - Los enemigos patrullan horizontalmente hasta detectar un muro o un vacío mediante raycasts.
-    
-    - Si el protagonista entra en su radio de visión frontal, el enemigo pausa su marcha por 0.3 s (destello visual de advertencia) e inicia su ataque.
-    
-    - Las unidades voladoras ajustan su altura siguiendo un patrón oscilatorio y se lanzan en picada al tener al jugador en su cono inferior.
-    
-    - Si la entidad entra en estado `HitStun` por recibir daño, su temporizador de ataque se reinicia.
-    
-- **Salidas:** Modificación de posición/fuerza en el `Rigidbody2D` del enemigo, activación de animaciones y encendido de hitboxes hostiles.
-    
-- **Estados posibles:** `Patrol`, `Alert`, `Charge`, `Stunned`, `Dead`.
-    
-- **Dependencias:** Raycasts de suelo/borde, `Transform` del Jugador, Sistema de Daño.
-    
-- **Interacciones:** Consulta la posición del jugador; activa hitboxes que evalúa el _sistema de daño_; reporta su muerte al _gestor de nivel_.
-    
-- **Datos que necesita:** Radio de alerta, velocidad de carga, distancia del raycast de borde, tiempo de preparación de golpe (_windup_).
-    
-- **Datos que genera:** Estado actual de la criatura, hitboxes de daño en fotogramas específicos.
-    
-- **Riesgos:** Enemigos saltando accidentalmente al vacío o quedándose encallados corriendo contra paredes.
-    
-- **Criterios de aceptación:** Las criaturas detienen su avance antes de caer de plataformas no deseadas y muestran un aviso visual claro antes de soltar cualquier golpe.
+## Sistema 07: Cámara reactiva y encuadre
 
+- **Reglas:**
+    - Seguimiento en X e Y con amortiguación y *lookahead* hacia la dirección de avance.
+    - En arenas de jefe la cámara se confina a los límites de la arena y, si el jefe es muy grande (Jefe 3, La Entidad), se aleja para mostrarlo.
+    - Sacudida de cámara en impactos fuertes. **No es configurable** ni se puede desactivar.
+- **Estados:** `FollowPlayer`, `LockedInArena`, `ScreenShake`, `CinematicFocus`.
+- **Criterios de aceptación:** nunca muestra zonas fuera del mapa y siempre deja ver el aviso de un ataque instakill.
 
-### Plantilla de Sistema 04: Cámara reactiva y encuadre
+## Sistema 08: Gestor de mundo y progreso
 
-- **Nombre:** Cámara reactiva y encuadre
+- **Objetivo:** controlar el recorrido de las zonas, los puntos de control, las arenas y los eventos narrativos.
+- **Reglas:**
+    - Registra jefes derrotados y habilidades obtenidas.
+    - El camino principal nunca exige una habilidad concreta; las rutas opcionales pueden pedir Doble salto o Tajo ardiente y muestran una pista visual.
+    - Los puntos de control restauran vida y escudo y hacen reaparecer a los enemigos comunes.
+    - Al cruzar la entrada de una arena de jefe se cierran sus límites:
+        - **Jefe 1, Jefe 3 y La Entidad:** barreras **invisibles**.
+        - **Jefe 2:** **pilares de las ruinas** que emergen del suelo y bloquean el paso; se hunden al morir el jefe.
+    - Al morir el jefe, las barreras se retiran.
+    - Las zonas superadas siguen accesibles para volver a acumular XP.
+    - Tras el Jefe 3 reproduce la ilustración de la serpiente petrificada y activa el puente hacia la isla final.
+    - Tras La Entidad, bloquea el control y lanza el final y los créditos.
+- **Estados:** `Intro`, `Exploration`, `BossArena`, `Cinematic`, `Ending`.
+- **Riesgos:** una arena que queda cerrada si el jefe muere fuera del trigger.
+- **Criterios de aceptación:** cada arena se cierra al entrar y se abre en el fotograma en que muere el jefe.
 
-- **Objetivo:** Mantener el foco sobre el jugador, anticipar su dirección de avance (_lookahead_) y delimitar la vista dentro de cada espacio
+## Sistema 09: Elementos de entorno
 
-- **Entradas:** `Transform` del personaje, volumen de confinamiento activo de la sala, llamadas de evento de impacto.
-
-- **Procesamiento / reglas:**
-    
-    - Sigue al personaje en los ejes X e Y con amortiguación suave (_damping_) para evitar saltos bruscos.
-    
-    - Al entrar en una micro-arena, la cámara bloquea sus límites dentro del `PolygonCollider2D` de confinamiento asignado.
-    
-- **Salidas:** Matriz de vista y proyección de la cámara principal (`Transform` de la cámara en escena).
-    
-- **Estados posibles:** `FollowPlayer`, `LockedInArena`, `ScreenShake`, `CinematicFocus`.
-    
-- **Dependencias:** `Transform` del Jugador, colliders de confinamiento de zona, Cinemachine 2D.
-    
-- **Interacciones:** Recibe llamadas de vibración desde el _sistema de daño_; recibe cambios de confinamiento desde el _gestor de nivel_.
-    
-- **Datos que necesita:** Coordenadas del jugador, límites del confinado de la sala, amplitud y frecuencia de sacudida.
-    
-- **Datos que genera:** Rectángulo de visión visible en pantalla (_frustum_ 2D).
-    
-- **Riesgos:** Salidas de encuadre hacia zonas vacías fuera del escenario o vibraciones excesivas que desorienten al jugador.
-    
-- **Criterios de aceptación:** La cámara no muestra zonas fuera del mapa al llegar a los extremos.
-
-### Plantilla de Sistema 05: Gestor de nivel y flujo del prólogo
-
-- **Nombre:** Gestor de nivel y flujo del prólogo
-
-- **Objetivo:** Controlar la progresión secuencial de los 15 minutos de juego, administrando la derrota inicial.
-
-- **Entradas:** Señales de cruce de `BoxCollider2D` en modo trigger, eventos `OnEntityDeath` de los enemigos dentro de cada sector.
-
-- **Procesamiento / reglas:**
-    
-    - En la escena inicial, monitorea la vida del enemigo principal; al llegar al umbral de derrota, bloquea controles y desata la transición de caída.
-    
-    - Tras derrotar al jefe final, pausa el juego y muestra la interfaz de cierre con la ilustración final y créditos.
-      
-- **Salidas:** Activación/desactivación de GameObjects de barreras, bloqueo/desbloqueo de controles de Eon, llamadas al Canvas de UI.
-    
-- **Estados posibles:** `IntroBossEvent`, `LinearTraversal`, `ArenaFight`, `OutroEvent`.
-    
-- **Dependencias:** Triggers de escenario, UI Manager, Estados del Jugador, Sistema de Daño.
-    
-- **Interacciones:** Deshabilita temporalmente el _controlador del jugador_ en eventos narrativos.
-    
-- **Datos que necesita:** Identificadores de triggers de zona
-    
-- **Datos que genera:** Estado de superación del prólogo.
-    
-- **Riesgos:** Una arena queda cerrada para siempre si un enemigo muere fuera de la detección del trigger.
-    
-- **Criterios de aceptación:** Cada arena cierra sus muros inmediatamente al cruzar el umbral y los retira de inmediato en el fotograma en que muere la última criatura.
+- **Géiser:** ciclo reposo/aviso/erupción; lanza a Eon por un arco fijo hacia un punto destino. Ver [[02 - Mecánicas]].
+- **Cañón:** solo en la isla final; dispara al interactuar y daña a La Entidad.
+- **Plataforma de agua:** solo en el combate del Jefe 1; aparece antes de la ráfaga y se disuelve después.
+- **Pilares de las ruinas:** solo en la arena del Jefe 2; cierran los extremos durante el combate.
 
 ## Relaciones entre sistemas
 
-Describe qué sistemas dependen de otros y qué información intercambian.
-
-#### Detalle de dependencias e intercambio de información
-
-- **Controlador del Jugador y Movilidad $\leftrightarrow$ Daño, Salud y Combate:**
-    
-    - **Información que envía el Controlador:** Activa y orienta las cajas de colisión (`Hitbox`) según la animación en curso (tajo horizontal, caída descendente, dash). Envía las coordenadas del impacto.
-    - **Información que devuelve el Sistema de Daño:** Notifica si el golpe conectó exitosamente para habilitar el _Rebote Aéreo_ (impulso vertical) o si Eon recibió un impacto para forzar el estado `HitStun`, descontar salud e iniciar los fotogramas de invulnerabilidad (_i-frames_).
-     
-- **IA de Hordas Menores $\leftrightarrow$ Daño, Salud y Combate:**
-    
-    - **Información que envía la IA:** Enciende los `Hitboxes` hostiles durante los cuadros activos de embestida o picada, y expone su `Hurtbox` para ser golpeada.
-    
-    - **Información que devuelve el Sistema de Daño:** Aplica retroceso (_knockback_), resta vida a la criatura, interrumpe su comportamiento con aturdimiento (`HitStun`) o ejecuta el evento de muerte cuando la salud llega a cero.
-    
-- **Daño, Salud y Combate $\leftrightarrow$ IA de hordas:**
-    
-    - Si el `Hitbox` del arma del personaje y el `Hitbox` del ataque enemigo colisionan simultáneamente en la ventana de choque, el sistema de daño anula el daño mutuo y aplica solamente el daño al enemigo.
-    
-- **Daño, Salud y Combate $\rightarrow$ Gestor de Nivel y Flujo del Prólogo:**
-    
-    - **Información enviada:** Cuando un enemigo agota su salud, el Sistema de Daño despacha el evento global `OnEntityDeath` junto con el identificador del enemigo.
-    
-- **Gestor de Nivel y Flujo del Prólogo $\rightarrow$ Cámara Reactiva y Encuadre:**
-    
-    - **Información enviada:** Al cruzar el umbral de una zona de combate, el Gestor de Nivel actualiza la referencia del `Cinemachine Confiner` al nuevo `PolygonCollider2D` de la arena. Esto restringe el encuadre de la cámara dentro de los límites visuales de la pelea.
-    
-- **Gestor de Nivel y Flujo del Prólogo $\rightarrow$ Controlador del Jugador:**
-    
-    - **Información enviada:** Órdenes booleanas de interrupción (`EnableControl(false)` / `EnableControl(true)`). Se usan para congelar el movimiento del jugador durante la cinemática inicial y la pantalla final de cierre del prólogo.
-
+- **Controlador ↔ Daño:** el controlador activa las *hitboxes* de espada, descendente, Tajo ardiente y Dash cortante, y el estado de Escama pétrea; el sistema de daño confirma impactos (para el rebote) y aplica el daño recibido.
+- **Inventario → Controlador:** indica qué habilidades están equipadas y qué modificadores aplican los potenciadores.
+- **Tienda → Inventario:** cada compra añade el potenciador al inventario.
+- **Daño → Economía:** `OnEntityDeath` genera los orbes de XP del enemigo.
+- **IA de jefes → Gestor de mundo:** la muerte del jefe guarda la habilidad, restaura a Eon, abre la arena y registra el progreso.
+- **Gestor de mundo → Cámara:** cambia el confinamiento al entrar a una arena y activa el foco cinemático.
+- **Gestor de mundo → IA de enemigos:** ordena la reaparición al usar un punto de control.
+- **Todos → Guardado:** el progreso se escribe al tocar un punto de control, al derrotar un jefe, al comprar y al cambiar el inventario.
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mecánicas]] · [[04 - Controles]] →

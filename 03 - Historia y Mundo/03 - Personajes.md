@@ -1,102 +1,74 @@
 # Personajes
 
-## Descripción de la sección
+Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aquí se describe su identidad y su papel.
 
-Cada personaje importante debe tener una función clara dentro de la historia y/o la jugabilidad.
-## Personajes del juego
-
-### Protagonista
+## Protagonista: Eon
 
 ![[Default Sprite.png|178]]
 
-**Nombre**: Eon 
-**Rol:** Héroe
-**Función jugable:**
-**Función narrativa:** Héroe destinado a salvar el múndo
-**Descripción física:** Joven espadachín ligeramente musculoso de cabello azul
-**Personalidad:** Confiado 
-**Motivaciones:** Cumplir con su destino y regresar como un héroe a su hogar
-**Objetivos:** Acabar con la entidad cósmica final
-**Conflicto:** 
-**Relaciones:**
-**Arco del personaje:**
-**Habilidades:**
-**Debilidades:**
-**Frases o tono de diálogo:**
+| Campo | Descripción |
+| --- | --- |
+| Rol | Héroe caído en busca de revancha. |
+| Función jugable | Personaje controlado: espada, salto, dash y las habilidades que recupera. |
+| Función narrativa | El elegido que falló y decide volver por mérito propio. |
+| Descripción física | Joven espadachín ligeramente musculoso, de cabello azul, con capa y armadura ligera dañada. |
+| Personalidad | Antes, confiado hasta la arrogancia; ahora, terco y con humor seco. |
+| Motivación | Corregir su derrota y demostrar que no necesita una profecía. |
+| Objetivo | Derrotar a La Entidad. |
+| Conflicto | La vergüenza de haber fallado frente a todo un mundo que creía en él. |
+| Relaciones | Viaja solo; el mercader lo trata con burla y respeto a partes iguales. |
+| Arco | De «estoy destinado a ganar» a «voy a ganar porque me preparé». |
+| Habilidades | Espada, salto, dash; recupera Doble salto, Tajo ardiente, Dash cortante y Escama pétrea. |
+| Debilidades | Sin armadura legendaria: 100 HP, sin escudo propio y sin forma de curarse en el campo. |
+| Tono | Frases breves, decididas, con autocrítica. |
 
-**Referencias visuales:**
-
-
-
-### Antagonista
+## Antagonista: La Entidad
 
 ![[Pasted image 20261016153614.png]]
 
-**Nombre**: The entity  
-**Rol:** Entidad cósmica 
-**Función jugable:**
-**Función narrativa:** Calamidad destinada a destruir el mundo
-**Descripción física:** Entidad humanoide de color gris claro
-**Personalidad:** - 
-**Motivaciones:** .
-**Objetivos:** Acabar con la humanidad
-**Conflicto:** 
-**Relaciones:**
-**Arco del personaje:**
-**Habilidades:**
-**Debilidades:**
-**Frases o tono de diálogo:**
-### Personajes secundarios
+| Campo | Descripción |
+| --- | --- |
+| Rol | Titán cósmico y jefe final. |
+| Función jugable | Batalla final en la isla donde Eon perdió. |
+| Función narrativa | La calamidad que la profecía anunciaba. |
+| Descripción física | Humanoide colosal de color gris claro, sin rostro. |
+| Personalidad | Indiferente; no habla, no se burla. Actúa como una fuerza de la naturaleza. |
+| Objetivo | Acabar con la humanidad. |
+| Habilidades | Golpes de zona sobre las islas, ondas y la invocación de Vestigios. |
+| Debilidad | Los cañones de la isla final y los puntos que expone en su última fase. |
 
-![[Pasted image 20261016154159.png|354]]
+## Jefes
 
-**Nombre**: Gatodragón
-**Rol:** Acompañante
-**Función jugable:** -
-**Función narrativa:** -
-**Descripción física:** Gato con alas de dragón
-**Personalidad:** - 
-**Motivaciones:** .
-**Objetivos:** -
-**Conflicto:** 
-**Relaciones:**
-**Arco del personaje:**
-**Habilidades:**
-**Debilidades:**
-**Frases o tono de diálogo:
-### NPC
+| Jefe | Zona | Identidad | Habilidad que entrega |
+| --- | --- | --- | --- |
+| **Jefe 1 — Camarón serpiente** *(nombre provisional)* | Arena de la Marea (costa) | Crustáceo alargado como una serpiente marina; acorazado, de antenas largas. Absorbió el fragmento de agilidad de Eon. Libera camaroncitos voladores. | Doble salto |
+| **Jefe 2 — Mago oscuro** *(nombre provisional)* | Ruinas Abandonadas | Antiguo hechicero de la academia que tomó el fragmento de poder arcano. Domina el fuego, el magma y el teletransporte. | Tajo ardiente y Dash cortante |
+| **Jefe 3 — Serpiente gigante** *(nombre provisional)* | Archipiélago de Tierra | Serpiente segmentada colosal que rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Escama pétrea |
 
-#### Seller 
+## Enemigos comunes
 
-- **Rol:** Comerciante ambulante 
+| Enemigo | Identidad |
+| --- | --- |
+| **Aurion** | Criatura voladora de núcleo brillante; hostigador aéreo. |
+| **Earthlem** | Gólem de roca camuflado bajo tierra; tanque terrestre. |
+| **Vestigio** *(nombre provisional)* | Guerrero humanoide sin rostro, todo blanco, con forma parecida a La Entidad. Porta un arma. Es un eco del titán. |
+| **Camaroncitos** *(sin nombre)* | Esbirros del Jefe 1; pequeños camarones que persiguen a Eon en el aire. |
 
-- **Función jugable:** Provee la tienda de armas e ítems en las zonas seguras del juego. Canjea Monedas por espadas con propiedades tácticas exclusivas.
+## NPC: el mercader (Seller)
 
-- **Función narrativa:** Ex-soldado de una de las academias de caballeros de Eurooppa que sobrevivió al cataclismo vendiendo lo que rescata de los campos de batalla; representa el instinto de la gente común.
-
-- **Descripción física:** Hombre de mediana edad, complexión robusta, piel curtida por el viento de las alturas, rostro con barba descuidada y una enorme mochila metálica cargada de espadas, armaduras y reliquias mecánicas.
-
-- **Personalidad:** Cínico, burlón y calculador en la superficie, pero profundamente compasivo y comprometido en secreto con el éxito de la resistencia.
-
-- **Motivaciones:** Asegurar recursos para los supervivientes de los campamentos.
-
-- **Objetivos:** Recolectar chatarra de alta pureza y equipar a los guerreros que salvarán al mundo.
-
-- **Conflicto:** Haber desertado de su escuadrón el día del ataque final para salvar su propia vida, arrastrando una deuda moral con los que murieron peleando.
-
-- **Relaciones:** Trata al protagonista con una mezcla de respeto silencioso y regaños; alimenta a escondidas a Gatodragón.
-
-- **Arco del personaje:** Comienza cobrando hasta el último centavo por conveniencia, pero en el Nivel 3 le entrega al protagonista su mejor espada forjada sin pedir nada a cambio.
-
-- **Habilidades:** Herrería improvisada rápida, tasación de metales antiguos y supervivencia en zonas inhóspitas.
-
-- **Debilidades:** Movilidad reducida el peso de su equipaje; depende de las defensas de los campamentos.
-
-- **Frases o tono de diálogo:** Áspero y seco
-
-    - _"La gloria no te protege del frío, muchacho. El buen acero sí."_
-
-    - _"Tu profecía se fue al demonio, pero sigues respirando. Paga la cuenta y ve a callarles la boca."_
-
+| Campo | Descripción |
+| --- | --- |
+| Rol | Comerciante ambulante. |
+| Función jugable | Aparece en la antesala de cada jefe, empezando por el primero, y cambia XP por potenciadores permanentes. |
+| Función narrativa | Ex soldado de una academia de caballeros de Kastleland que desertó el día del ataque. Representa a la gente común que sobrevive. |
+| Descripción física | Hombre de mediana edad, robusto, piel curtida, barba descuidada y una enorme mochila metálica llena de frascos, reliquias y chatarra. |
+| Personalidad | Cínico y burlón en la superficie; en secreto, quiere que Eon gane. |
+| Motivación | Sobrevivir y, sin admitirlo, redimir su deserción. |
+| Conflicto | Abandonó a su escuadrón para salvarse. |
+| Relaciones | Regaña a Eon, pero siempre lo espera antes de cada pelea. |
+| Arco | Empieza cobrando cada punto de XP; antes de la isla final le regala un potenciador. |
+| Habilidades | Destilar la energía de las criaturas (XP) en potenciadores; tasar reliquias. |
+| Debilidades | Lento por su carga; nunca se acerca a donde hay pelea. |
+| Tono | Áspero y seco. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mundo]] · [[04 - Diálogos y Narrativa]] →
