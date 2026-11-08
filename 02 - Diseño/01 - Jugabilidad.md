@@ -49,7 +49,7 @@ Cada jefe entrega una habilidad que cambia la forma de pelear y de moverse, y la
 ## Condición de derrota
 
 - La salud de Eon llega a 0 (el escudo, si lo tiene, se gasta primero).
-- Un ataque instakill conecta: ráfaga de agua del Jefe 1 o contacto con la cabeza de la serpiente del Jefe 3.
+- Un ataque instakill conecta: contacto con la cabeza de la serpiente del Jefe 3.
 - Caer al vacío resta 25 HP y devuelve a Eon al último suelo seguro. Si eso deja la salud en 0, cuenta como derrota.
 
 Al ser derrotado, Eon reaparece en el último punto de control con la vida y el escudo completos y conserva su XP. Ver [[07 - Reglas y Estados del Juego]].

@@ -16,7 +16,7 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 
 - **Entornos y ruinas:** rectángulos sólidos; islas flotantes con base de triángulo invertido.
 - **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem); siluetas lisas y verticales sin rasgos (Vestigio).
-- **Jefes:** curvas segmentadas (Camarón serpiente y Serpiente gigante); triángulos y capuchas puntiagudas (Mago oscuro).
+- **Jefes:** curvas segmentadas (Chasko y Serpiente gigante); triángulos y capuchas puntiagudas (Mago oscuro).
 - **La Entidad y Vestigios:** silueta angular alargada, sin rostro, superficie lisa.
 
 ## Paleta de color
@@ -36,7 +36,7 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 
 | Zona | Dominante | Acento |
 | --- | --- | --- |
-| Costa | Turquesa y arena gris | Coral del Camarón serpiente |
+| Costa | Turquesa y arena gris | Rojo y naranja de Chasko |
 | Bosque de Raíces | Verdes profundos | Luciérnagas amarillas |
 | Ruinas Abandonadas | Piedra y violeta oscuro | Naranja del fuego y magma del Mago |
 | Archipiélago de Tierra | Ocres y cielo pálido | Verde ácido de la baba de la serpiente |
@@ -59,7 +59,7 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 - **Contraste por planos:** a mayor distancia, menos contraste y más azul atmosférico. El plano jugable siempre tiene la mayor saturación.
 - **Claridad de amenaza:** todo enemigo tiene una silueta reconocible y un punto focal iluminado (ojo o núcleo).
 - **Suelo jugable resaltado:** las superficies pisables tienen un borde superior claro que las separa del fondo.
-- **Instakill inconfundible:** la ráfaga del Jefe 1 y la cabeza del Jefe 3 usan el color de aviso de instakill; la cabeza tiene siempre su brillo encendido.
+- **Instakill inconfundible:** la cabeza del Jefe 3 usa el color de aviso de instakill y tiene siempre su brillo encendido.
 - **La Entidad en el horizonte:** su silueta aparece en el plano más lejano de cada zona y crece a medida que el juego avanza.
 
 ## Referencias

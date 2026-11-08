@@ -5,7 +5,7 @@
 | Zona | Estilo | Elementos | Función | Modularidad |
 | --- | --- | --- | --- | --- |
 | **Playa del Despertar y Acantilados** | Costa gris y turquesa bajo un cielo nublado; restos de naves y estandartes. | Rocas, faros caídos, cuevas marinas; antesala del Jefe 1 con el mercader. | Tutorial y exploración inicial. | Bloques de roca, arena, restos de barco. |
-| **Arena de la Marea** | Playa abierta con el mar a un lado; oleaje animado. | Arena plana, mar con capa de agua animada, plataformas de agua temporales. | Jefe 1. | Reutiliza bloques de la Costa. |
+| **Arena de la Marea** | Playa abierta con el mar a un lado; oleaje animado. | Arena plana, mar con capa de agua animada. | Jefe 1. | Reutiliza bloques de la Costa. |
 | **Bosque de Raíces** | Árboles altos y vegetación densa. | Raíces colosales entrelazadas, armaduras de caballeros antiguos. | Plataformas verticales; rutas opcionales altas con doble salto. | Segmentos de tronco, raíces, plantas. |
 | **Ruinas Abandonadas** | Academia de caballeros arrasada; mármol agrietado y piedra ennegrecida. | Columnas rotas, aulas derrumbadas, estandartes rasgados, torres. | Exploración y combates terrestres. | Columnas, bloques de muro, arcos. |
 | **Patio de la Academia** | Suelo de piedra completamente plano entre ruinas. | Restos de estatuas al fondo; sin plataformas; pilares de piedra que emergen en los extremos para cerrar la arena. | Jefe 2. | Reutiliza piezas de las Ruinas como fondo. |
@@ -31,7 +31,7 @@
 
 ## Efectos visuales
 
-- **Agua:** oleaje, salpicaduras, plataforma de agua, ráfaga del Jefe 1.
+- **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
 - **Fuego y magma:** llamaradas, picos de magma, cráneos de fuego.
 - **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
 - **Magia del Mago:** escudo, teletransporte (humo negro).
@@ -45,7 +45,7 @@
 
 - *Tilesets* por zona (Costa, Bosque, Ruinas, Archipiélago, Isla Final).
 - 3 capas de *parallax* por zona, más la capa de La Entidad.
-- *Prefabs*: géiser, punto de control, antesala del mercader, cañón, plataforma de agua, pilares de las ruinas.
+- *Prefabs*: géiser, punto de control, antesala del mercader, cañón, pilares de las ruinas.
 - VFX listados arriba.
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Personajes y Animación]] · [[04 - Interfaz Visual]] →

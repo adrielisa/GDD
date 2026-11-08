@@ -17,7 +17,7 @@
 **Cómo se refleja en el juego:**
 
 - Toda acción hostil tiene una preparación visible (brillo, sonido o sombra en el suelo) antes de hacer daño.
-- Los ataques instakill tienen una salida clara: la plataforma de agua ante la ráfaga del Jefe 1 o mantenerse lejos de la cabeza de la serpiente del Jefe 3.
+- Los ataques instakill tienen una salida clara: mantenerse lejos de la cabeza de la serpiente del Jefe 3.
 - Los jefes repiten patrones reconocibles para que cada intento enseñe algo.
 
 ## Pilar 3 — Fluidez de combate en movimiento

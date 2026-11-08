@@ -10,7 +10,7 @@ Antes de cada jefe hay una **antesala** con el mercader y un punto de control. L
 | --- | --- | --- | --- | --- |
 | Playa del Despertar | 3 min | Aurion | — | Inicio |
 | Acantilados de la Costa | 6 min | Aurion | Cueva superior (Doble salto): grupo de Aurion | Mitad y antesala del Jefe 1 |
-| Arena de la Marea | 3 min | Jefe 1, camaroncitos | — | — |
+| Arena de la Marea | 3 min | Jefe 1 (Chasko) | — | — |
 | Bosque de Raíces | 8 min | Aurion, Earthlem | Copa de los árboles (Doble salto): atajo | Entrada y salida |
 | Ruinas Abandonadas | 7 min | Earthlem, Vestigio | Torre sellada (Tajo ardiente: interruptor lejano): atajo y Vestigios | Mitad y antesala del Jefe 2 |
 | Patio de la Academia | 3 min | Jefe 2 | — | — |
@@ -50,7 +50,7 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 
 ## Arena de la Marea (Jefe 1)
 
-- Playa plana de 30 u de ancho con el mar en el lado derecho. Sin plataformas fijas: las plataformas de agua solo aparecen durante la ráfaga.
+- Playa plana de 28 u de ancho con el mar en el lado derecho. Sin plataformas: el combate es a ras de suelo.
 - **Límites invisibles** a ambos lados mientras dura el combate.
 
 ## Bosque de Raíces

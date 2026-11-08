@@ -45,7 +45,7 @@ Los avisos aparecen una sola vez, en el momento en que se necesitan, y nunca det
 
 - Pantalla de derrota con dos opciones: **Reaparecer** (por defecto) y **Salir al menú**.
 - Reaparecer lleva al último punto de control con vida y escudo completos. La XP, los potenciadores y las habilidades se conservan.
-- Si la derrota fue por instakill, la pantalla muestra una pista breve (*«Sube a la plataforma de agua antes de la ráfaga»*, *«Evita la cabeza: es letal»*), solo las 2 primeras veces.
+- Si la derrota fue por instakill, la pantalla muestra una pista breve (*«Evita la cabeza: es letal»*), solo las 2 primeras veces.
 
 ## Navegación del mundo
 

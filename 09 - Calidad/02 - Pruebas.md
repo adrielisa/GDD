@@ -24,8 +24,8 @@
 | T-06 | Seleccionar cada habilidad y potenciador en el inventario. | Se muestra su función y, si la tiene, su tecla. |
 | T-07 | Recibir daño y seguir explorando. | La vida no se recupera hasta tocar un punto de control. |
 | T-08 | Vencer a un jefe con poca vida. | Vida y escudo se restauran al terminar el combate. |
-| T-09 | Recibir la ráfaga del Jefe 1 con escudo. | Derrota (instakill). |
-| T-10 | Subir a la plataforma de agua antes de la ráfaga. | Sin daño. |
+| T-09 | Hacer que Chasko choque contra la pared con la embestida. | Queda aturdido 1,6 s y recibe ×1,5 de daño. |
+| T-10 | Atravesar con dash la burbuja del chasquido. | Sin daño. |
 | T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al pilar. |
 | T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
 | T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |

@@ -5,7 +5,6 @@
 | **Eon** | Protagonista; el héroe profetizado que perdió contra La Entidad. |
 | **La Entidad** | Titán cósmico, jefe final. |
 | **Vestigio** | Enemigo común sin rostro, blanco, con forma parecida a La Entidad (nombre provisional). |
-| **Camaroncitos** | Esbirros voladores del Jefe 1 (sin nombre definitivo). |
 | **XP (puntos de experiencia)** | Recurso que sueltan los enemigos; se cambia por potenciadores. No sube niveles. |
 | **Potenciador** | Mejora pasiva permanente que se compra con XP. Está siempre activa mientras ocupa una de las 3 ranuras de potenciador. |
 | **Habilidad** | Acción o mejora permanente que entrega un jefe; solo funciona equipada (3 ranuras). Ninguna se descarta. |

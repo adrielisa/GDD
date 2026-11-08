@@ -12,7 +12,7 @@
 | Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
 | Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | Por implementar |
 | Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | Por implementar |
-| Elementos de entorno | Géiseres, cañones, plataforma de agua, pilares de las ruinas. | Físicas 2D, controlador del jugador. | Por implementar |
+| Elementos de entorno | Géiseres, cañones, pilares de las ruinas. | Físicas 2D, controlador del jugador. | Por implementar |
 | Guardado | Persistir progreso entre sesiones. | Todos los anteriores. | Por implementar |
 
 ## Sistema 01: Daño, salud y combate
@@ -128,7 +128,6 @@
 
 - **Géiser:** ciclo reposo/aviso/erupción; lanza a Eon por un arco fijo hacia un punto destino. Ver [[02 - Mecánicas]].
 - **Cañón:** solo en la isla final; dispara al interactuar y daña a La Entidad.
-- **Plataforma de agua:** solo en el combate del Jefe 1; aparece antes de la ráfaga y se disuelve después.
 - **Pilares de las ruinas:** solo en la arena del Jefe 2; cierran los extremos durante el combate.
 
 ## Relaciones entre sistemas

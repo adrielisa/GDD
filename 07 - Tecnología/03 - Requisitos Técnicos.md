@@ -7,7 +7,7 @@
 | Tasa de fotogramas | 60 FPS estables a 1920 × 1080. |
 | Carga entre zonas | Menos de 5 s. |
 | Latencia de entrada | Respuesta en el mismo fotograma o el siguiente. |
-| Objetos activos | Hasta 6 camaroncitos, 4 cráneos, 6 gotas de baba y ~20 orbes de XP sin caída de FPS. |
+| Objetos activos | Hasta 3 burbujas de Chasko, 4 cráneos, 6 gotas de baba y ~20 orbes de XP sin caída de FPS. |
 
 ## Equipo mínimo orientativo
 

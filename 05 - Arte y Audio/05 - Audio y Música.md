@@ -49,7 +49,7 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 | Punto de control / jefe vencido | Acorde ascendente | Indicar que vida y escudo se restauraron. |
 | Géiser | Burbujeo (aviso) y erupción | Anunciar el momento de subir. |
 | **Aviso de instakill** | Tono grave exclusivo | Reconocer el peligro sin mirar. |
-| Ráfaga de agua | Rugido de agua a presión | Jefe 1. |
+| Chasquido | Chasquido seco de la pinza y estallido de la burbuja | Jefe 1. |
 | Llamaradas / picos de magma | Silbido y crujido de roca | Jefe 2. |
 | Escudo del Mago | Zumbido cristalino | Indicar que no recibe daño. |
 | Teletransporte | Soplo de humo | Anunciar dónde reaparece. |
@@ -74,4 +74,4 @@ Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre 
 - La música baja durante diálogos e ilustraciones.
 - Transiciones suaves entre pistas.
 
-> **Navegación:** [[00 - Índice]] · ← [[04 - Interfaz Visual]] · [[01 - UX y Flujo del Jugador]] →
+> **Navegación:** [[00 - Índice]] · ← [[04 - Interfaz Visual]] · [[06 - Galería de Assets]] →

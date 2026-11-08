@@ -22,14 +22,14 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Escama pétrea (Jefe 3). **3 equipadas**; ninguna se descarta. |
 | Inventario | Muestra la función y el control de cada habilidad y potenciador. |
 | Enemigos | Aurion, Earthlem y Vestigio. |
-| Jefes | Camarón serpiente (costa), Mago oscuro (ruinas planas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
+| Jefes | Chasko (costa), Mago oscuro (ruinas planas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
 | Mundo | 5 zonas explorables con rutas opcionales; géiseres entre islas. |
 
 ## Jefes
 
 | Jefe | Lo esencial | Entrega |
 | --- | --- | --- |
-| Camarón serpiente | Libera camaroncitos voladores, embiste y muerde; antes de su ráfaga de agua instakill aparece una plataforma de agua para ponerse a salvo. Límites invisibles. | Doble salto |
+| Chasko | Camarón tipo escorpión: dispara burbujas con la pinza, embiste contra la pared (queda aturdido) y en fase 2 lanza ondas de choque. Límites invisibles. | Doble salto |
 | Mago oscuro | Arena plana sin plataformas, cerrada por pilares de las ruinas. Llamaradas del cielo, ola de picos de magma de la que hay que huir, escudo periódico, cráneos de fuego teledirigidos y teletransporte al otro extremo. | Tajo ardiente + Dash cortante |
 | Serpiente gigante | Rodea islas flotantes; su cuerpo deja caer baba; tocar la cabeza es instakill. Al morir se petrifica y forma el puente. Límites invisibles. | Escama pétrea |
 | La Entidad | Ascenso por islas con géiseres y cañones; cara a cara en la cumbre; fase final. Límites invisibles. | Victoria |
@@ -37,7 +37,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 ## Pendiente
 
 - Cerrar la fase 3 de La Entidad.
-- Nombres de jefes, camaroncitos y Vestigio.
+- Nombres de los jefes 2 y 3 y Vestigio.
 - Asignar roles del equipo.
 
 ## Dónde consultar cada parte

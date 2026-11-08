@@ -22,7 +22,7 @@ Ser el héroe caído que no acepta la derrota y vuelve más fuerte, no por desti
 ## Propuesta de valor
 
 - Un protagonista que empieza derrotado: el cómic inicial muestra la caída de Eon y el control se entrega justo después.
-- Tres jefes con identidad propia (una serpiente-camarón en la costa, un mago oscuro entre ruinas y una serpiente gigante entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
+- Tres jefes con identidad propia (Chasko, un camarón tipo escorpión en la costa, un mago oscuro entre ruinas y una serpiente gigante entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
 - Una decisión constante: solo caben **3 habilidades** y **3 potenciadores** equipados a la vez.
 - Un mundo medieval de fantasía con estética colorida y carisma en los diseños.
 
@@ -38,7 +38,7 @@ Ser el héroe caído que no acepta la derrota y vuelve más fuerte, no por desti
 
 - Rompe el cliché del héroe que progresa en línea recta: la historia empieza con su fracaso.
 - El jugador arma su propio equipo de tres habilidades y tres potenciadores para cada desafío.
-- Los ataques más peligrosos (instakill) siempre ofrecen una salida legible: la plataforma de agua del Jefe 1 o evitar la cabeza de la serpiente del Jefe 3.
+- Los ataques más peligrosos (instakill) siempre ofrecen una salida legible: evitar la cabeza de la serpiente del Jefe 3.
 
 ## Límites del concepto
 

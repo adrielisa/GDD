@@ -24,7 +24,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-18 | Mecánicas | La habilidad del Jefe 3 es la **Escama pétrea**. | Petición del equipo. |
 | D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Escama pétrea `K`; Dash `Shift izquierdo`. | Petición del equipo. |
 | D-20 | Mecánicas | Dash unificado: 0,20 s, 4 u, recarga 1,2 s. | Unificar valores que eran distintos entre páginas. |
-| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la ráfaga y de la cabeza de la serpiente. |
+| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la cabeza de la serpiente. |
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
@@ -35,13 +35,14 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-29 | NPC | El mercader aparece por primera vez antes del Jefe 1 y después antes de cada jefe. | Petición del equipo. |
 | D-30 | Reglas | Si Eon y el jefe mueren en el mismo fotograma, gana Eon. | No castigar un golpe final ajustado. |
 | D-31 | Mundo | El continente se llama Kastleland en todo el documento. | Coherencia. |
+| D-32 | Jefes | El Jefe 1 (antes "Camarón serpiente", nombre provisional) se llama **Chasko**: camarón tipo escorpión que dispara burbujas, embiste y lanza ondas de choque. Sin esbirros (se eliminan los camaroncitos) ni ataque instakill. | Nombre definitivo y combate ya implementado. |
 
 ## Decisiones pendientes
 
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 1–3, camaroncitos y Vestigio. |
+| P-02 | Nombres | Jefes 2 y 3 y Vestigio. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 

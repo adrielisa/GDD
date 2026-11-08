@@ -11,7 +11,7 @@ True Hero
 │   ├── Playa del Despertar (tutorial)
 │   ├── Acantilados de la Costa (zona explorable)
 │   ├── Antesala: mercader + punto de control
-│   └── Arena de la Marea → Jefe 1: Camarón serpiente → Doble salto
+│   └── Arena de la Marea → Jefe 1: Chasko → Doble salto
 ├── Bloque 2 — Tierra adentro
 │   ├── Bosque de Raíces (zona explorable)
 │   ├── Ruinas Abandonadas (zona explorable)
@@ -37,7 +37,7 @@ True Hero
 | Arenas de jefe | 4 |
 | Jefes normales | 3 |
 | Jefe final | 1 |
-| Enemigos comunes | 3 (+ esbirros del Jefe 1) |
+| Enemigos comunes | 3 |
 | NPC | 1 (mercader) |
 | Habilidades | 4 |
 | Potenciadores | 6 |

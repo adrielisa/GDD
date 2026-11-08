@@ -24,7 +24,7 @@ Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flo
 
 **Contexto:** el despertar en la costa y el recorrido por Kastleland en ruinas.
 
-**Enfoque narrativo:** Eon, debilitado y solo, se abre paso entre enemigos. Antes de la primera gran pelea encuentra al mercader, que desde entonces aparece antes de cada jefe. Derrota a la serpiente-camarón de la costa (recupera el doble salto) y al mago oscuro de las ruinas (recupera el tajo ardiente y el dash cortante).
+**Enfoque narrativo:** Eon, debilitado y solo, se abre paso entre enemigos. Antes de la primera gran pelea encuentra al mercader, que desde entonces aparece antes de cada jefe. Derrota a Chasko, el camarón de la costa (recupera el doble salto) y al mago oscuro de las ruinas (recupera el tajo ardiente y el dash cortante).
 
 ### Acto 3 — El puente de piedra
 

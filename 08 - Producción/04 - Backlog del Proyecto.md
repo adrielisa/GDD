@@ -11,11 +11,11 @@
 | B-07 | Inventario: 3 ranuras de habilidad + 3 de potenciador, con panel de función y control | Programación / UI | P0 | 2 | Pendiente |
 | B-08 | 6 potenciadores pasivos como ScriptableObjects y `StatModifiers` | Programación | P0 | 2 | Pendiente |
 | B-09 | IA de Aurion y reaparición de enemigos | Programación | P0 | 3 | Pendiente |
-| B-10 | Jefe 1: ataques, camaroncitos, plataforma de agua y ráfaga; límites invisibles | Programación | P0 | 3 | Pendiente |
+| B-10 | Jefe 1 (Chasko): chasquido con burbujas, embestida con aturdimiento y onda de choque; límites invisibles | Programación | P0 | 3 | Pendiente |
 | B-11 | Habilidad Doble salto | Programación | P0 | 3 | Pendiente |
 | B-12 | Tilesets y fondos de la Costa | Arte | P0 | 3 | Pendiente |
 | B-13 | Sprites y animaciones de Eon | Arte | P0 | 3 | Pendiente |
-| B-14 | Sprites del Jefe 1 y camaroncitos | Arte | P0 | 3 | Pendiente |
+| B-14 | Sprites del Jefe 1 (Chasko) y su burbuja | Arte | P0 | 3 | Pendiente |
 | B-15 | Cómic del prólogo (5 páginas) | Arte | P0 | 3 | Pendiente |
 | B-16 | Puntos de control y guardado | Programación | P0 | 3 | Pendiente |
 | B-17 | IA de Earthlem y Vestigio | Programación | P1 | 4 | Pendiente |
@@ -27,7 +27,7 @@
 | B-23 | Ilustración de la serpiente petrificada | Arte | P2 | 5 | Pendiente |
 | B-24 | La Entidad: fases, cañones, Vestigios | Programación | P3 | 6 | Pendiente |
 | B-25 | **Cerrar el diseño de la fase 3 de La Entidad** | Diseño | P2 | 5 | Pendiente |
-| B-26 | Nombres de los jefes, camaroncitos y Vestigio | Diseño | P2 | 5 | Pendiente |
+| B-26 | Nombres de los jefes 2 y 3 y Vestigio | Diseño | P2 | 5 | Pendiente |
 | B-27 | Música por zona y jefe | Audio | P1 | 4–6 | Pendiente |
 | B-28 | Menús, pausa y configuración | UI | P1 | 7 | Pendiente |
 
