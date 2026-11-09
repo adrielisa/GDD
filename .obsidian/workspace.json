@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 - Índice.md",
+                "file": "05 - Arte y Audio/05 - Audio y Música.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00 - Índice"
+              "title": "05 - Audio y Música"
             }
           }
         ]
@@ -34,21 +34,6 @@
         "id": "1092b06530d59c79",
         "type": "tabs",
         "children": [
-          {
-            "id": "5e79844d097d8aea",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
-            }
-          },
           {
             "id": "d10f5184f5f37eab",
             "type": "leaf",
@@ -78,12 +63,28 @@
               "icon": "lucide-bookmark",
               "title": "Marcadores"
             }
+          },
+          {
+            "id": "5e79844d097d8aea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 298.3000183105469
   },
   "right": {
     "id": "299f36cda9220a18",
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 - Índice.md",
+                "file": "05 - Arte y Audio/05 - Audio y Música.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GDD_Videojuego_ES_2026-main/01 - Visión/02 - Visión del Juego.md",
+                "file": "05 - Arte y Audio/05 - Audio y Música.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -170,11 +171,13 @@
               "title": "Esquema"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,41 +193,41 @@
   "active": "cabd6451b620ed22",
   "lastOpenFiles": [
     "00 - Resumen del juego.md",
-    "00 - Índice.md",
-    "Default Sprite.png",
+    "00 - GDD Completo (Para Exportar PDF).md",
+    "01 - Visión/03 - Público y Plataforma.md",
+    "01 - Visión/02 - Visión del Juego.md",
+    "05 - Arte y Audio/05 - Audio y Música.md",
+    "04 - Contenido/02 - Niveles.md",
+    "04 - Contenido/05 - Misiones y Desafíos.md",
+    "02 - Diseño/02 - Mecánicas.md",
+    "03 - Historia y Mundo/04 - Diálogos y Narrativa.md",
+    "03 - Historia y Mundo/03 - Personajes.md",
+    "02 - Diseño/06 - Economía y Recursos.md",
+    "02 - Diseño/07 - Reglas y Estados del Juego.md",
+    "02 - Diseño/05 - Progresión.md",
+    "01 - Visión/04 - Pilares de Diseño.md",
+    "Pasted image 20261005031957.png",
     "Pasted image 20260929130433.png",
+    "Pasted image 20261016154159.png",
+    "Pasted image 20261016153614.png",
+    "Pasted image 20261005032134.png",
+    "Pasted image 20261005031742.png",
+    "Pasted image 20260929141252.png",
     "Pasted image 20260929141034.png",
     "Pasted image 20260929141048.png",
-    "Pasted image 20260929141252.png",
-    "Pasted image 20261005031742.png",
-    "Pasted image 20261005031957.png",
-    "Pasted image 20261005032104.png",
-    "Pasted image 20261005032134.png",
-    "Pasted image 20261016153614.png",
-    "README.md",
-    "11 - Referencia de Diseño/01 - Géneros.md",
-    "11 - Referencia de Diseño/02 - Subgéneros y Combinaciones.md",
-    "10 - Referencia/04 - Historial de Versiones.md",
-    "10 - Referencia/03 - Registro de Decisiones.md",
-    "10 - Referencia/02 - Referencias e Inspiración.md",
-    "10 - Referencia/01 - Glosario.md",
-    "09 - Calidad/04 - Criterios de Aceptación.md",
-    "09 - Calidad/03 - Bugs y Seguimiento.md",
+    "01 - Visión/01 - Ficha del Proyecto.md",
+    "06 - Experiencia/01 - UX y Flujo del Jugador.md",
+    "05 - Arte y Audio/04 - Interfaz Visual.md",
+    "05 - Arte y Audio/03 - Entornos.md",
+    "05 - Arte y Audio/02 - Personajes y Animación.md",
     "09 - Calidad/02 - Pruebas.md",
-    "09 - Calidad/01 - Criterios de Calidad.md",
-    "08 - Producción/05 - Gestión de Cambios.md",
-    "08 - Producción/04 - Backlog del Proyecto.md",
+    "10 - Referencia/01 - Glosario.md",
     "08 - Producción/03 - Roadmap.md",
-    "08 - Producción/02 - Roles y Responsabilidades.md",
     "08 - Producción/01 - Alcance.md",
-    "07 - Tecnología/05 - Seguridad y Riesgos Técnicos.md",
-    "07 - Tecnología/04 - Datos y Persistencia.md",
-    "07 - Tecnología/03 - Requisitos Técnicos.md",
-    "07 - Tecnología/02 - Motor y Herramientas.md",
-    "07 - Tecnología/01 - Arquitectura Técnica.md",
-    "06 - Experiencia/03 - Accesibilidad.md",
-    "06 - Experiencia/04 - Guardado y Configuración.md",
-    "06 - Experiencia/02 - UI y Menús.md",
+    "02 - Diseño/01 - Jugabilidad.md",
+    "02 - Diseño/04 - Controles.md",
+    "02 - Diseño/03 - Sistemas.md",
+    "Pasted image 20261016112525.png",
     "snippets/GDD-checkbox-fix.css",
     "snippets",
     "11 - Referencia de Diseño",

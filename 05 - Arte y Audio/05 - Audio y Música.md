@@ -34,29 +34,15 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 
 ## Efectos de sonido
 
-| Evento | Sonido | Propósito |
-| --- | --- | --- |
-| Caminar | Pasos sobre arena, tierra o piedra | Comunicar el movimiento. |
-| Saltar / doble salto | Impulso breve / soplo de aire | Confirmar cada salto. |
-| Dash / dash cortante | Corte de aire / tajo metálico | Diferenciar si el dash hace daño. |
-| Atacar | Corte de espada y golpe metálico | Comunicar el ataque. |
-| Tajo ardiente | Tajo con chisporroteo de fuego | Confirmar el ataque a distancia. |
-| Escama pétrea | Crujido de roca; golpe seco en el bloqueo perfecto | Confirmar la defensa y el bloqueo perfecto. |
-| Recibir daño | Golpe sordo y quejido | Indicar daño. |
-| Recoger XP | Tintineo agudo | Recompensa. |
-| Comprar | Campanilla y destello | Confirmar la compra. |
-| Equipar potenciador o habilidad | Clic metálico | Confirmar el cambio en el inventario. |
-| Punto de control / jefe vencido | Acorde ascendente | Indicar que vida y escudo se restauraron. |
-| Géiser | Burbujeo (aviso) y erupción | Anunciar el momento de subir. |
-| **Aviso de instakill** | Tono grave exclusivo | Reconocer el peligro sin mirar. |
-| Ráfaga de agua | Rugido de agua a presión | Jefe 1. |
-| Llamaradas / picos de magma | Silbido y crujido de roca | Jefe 2. |
-| Escudo del Mago | Zumbido cristalino | Indicar que no recibe daño. |
-| Teletransporte | Soplo de humo | Anunciar dónde reaparece. |
-| Gota de baba | Goteo viscoso | Jefe 3. |
-| Petrificación | Crujido largo de piedra | Cinemática del Jefe 3. |
-| Cañón | Disparo y explosión | Isla Final. |
-| Victoria / derrota | Fanfarria breve / música descendente | Resultado. |
+| Evento       | Sonido                                   | Propósito                                      |
+| ------------ | ---------------------------------------- | ---------------------------------------------- |
+| Caminar      | Pasos sobre piedra, tierra o madera      | Comunicar el movimiento de Eon                 |
+| Saltar       | Sonido breve de impulso y aterrizaje     | Dar respuesta sonora a los saltos.             |
+| Atacar       | Corte de espada y golpe metálico         | Comunicar los ataques del jugador.             |
+| Recibir daño | Golpe de reacción del personaje          | Indicar que Eon ha recibido daño.              |
+| Victoria     | Efecto de triunfo y música breve         | Recompensar al jugador por superar un desafío. |
+| Derrota      | Música descendente y efecto grave        | Comunicar el fracaso del jugador.              |
+| Destrucción  | Derrumbes, explosiones y piedras cayendo | Representar los efectos de la catástrofe.      |
 
 ## Audio espacial
 
