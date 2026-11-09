@@ -1,13 +1,13 @@
 # Enemigos y NPC
 
-El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes normales y La Entidad. El enemigo Driller queda descartado. Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
+El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
 
 ## Resumen de enemigos comunes
 
 | Enemigo | Vida | Velocidad | Daño principal | Zonas | XP |
 | --- | ---: | --- | --- | --- | ---: |
-| Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago | 10 |
-| Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Bosque, Ruinas, Archipiélago | 30 |
+| Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago, Isla Final | 10 |
+| Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Solo zona 3: Bosque y Ruinas | 30 |
 | Vestigio | 50 HP | 3 u/s | Combo 18; estocada 22 | Ruinas, Archipiélago, Isla Final | 25 |
 
 ## Aurion
@@ -25,7 +25,7 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
 
 ## Earthlem
 
-- **Rol:** tanque terrestre que bloquea el paso.
+- **Rol:** tanque terrestre que bloquea el paso. Solo aparece en la zona 3 (Bosque de Raíces y Ruinas Abandonadas); el jugador lo conoce en el sendero tras vencer a Chasko.
 - **Comportamiento:** camuflado como roca plana. Cuando Eon se acerca a 3,5 u, emerge levantando escombros. Si Eon se aleja más de 8 u, se entierra y reaparece más cerca.
 - **Ataques:**
     - *Barrido de roca:* tajo horizontal tras 0,4 s de preparación; 20 de daño.
@@ -56,10 +56,10 @@ Patrullar → Detectar → Acercarse → Combo / Estocada → [2 golpes frontale
 
 ## Jefe 1 — Chasko
 
-- **Arena:** Arena de la Marea, playa plana de 28 u con el mar a la derecha. Límites invisibles.
+- **Arena:** Arena de la Marea, playa plana de unas 26 u con el mar al fondo. Al empezar el combate emergen dos muros de roca que cierran la arena con una sacudida de pantalla; al vencer a Chasko se rompen en escombros (detalle en [[02 - Niveles]]).
 - **Vida:** 900 HP. **Fases:** 1 (100–50 %) y 2 (menos de 50 %).
 - **Descripción:** camarón de tipo escorpión, rojo y naranja, de unas 3 veces la altura de Eon. Cuerpo acorazado y enroscado, cola en abanico alzada sobre el lomo como la de un escorpión, un ojo negro grande, antenas y una pinza que dispara burbujas de cavitación. Camina por la arena hacia Eon y se le puede golpear con la espada en todo momento.
-- **Recompensa:** 200 XP y **Doble salto**.
+- **Recompensa:** 200 XP y **Doble salto**. Al morir suelta el **Camarón de Chasko**, un camarón pequeñito que sale de su cuerpo, cae hacia el centro de la arena y queda flotando con un brillo; al tocarlo, la habilidad se guarda en el inventario. Si Eon ya la tiene, no suelta nada.
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → D
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
 | **Lluvia de llamaradas** | Círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen del cielo; 2 apuntan a la posición prevista de Eon. Radio de 1 u. | 20 |
-| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Una ola de picos nace junto al mago y avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7 u/s). Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del pilar del extremo: hay que **correr y alejarse** del mago hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
+| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Una ola de picos nace junto al mago y avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s). Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del pilar del extremo: hay que **correr y alejarse** del mago hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
 | **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan levemente a Eon. Mientras dura, el mago lanza cráneos. | — |
 | **Cráneos de fuego** | Llamas en sus manos 0,6 s. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado. Duran 6 s. Se destruyen con un golpe. | 15 |
 | **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) desaparece y reaparece en el **extremo opuesto** de la arena. Al reaparecer queda expuesto 1 s. | — |
@@ -116,6 +116,7 @@ Ataque 1 → Ataque 2 → Ataque 3 → Teletransporte al extremo opuesto (expues
 
 - **Fase 2:** más velocidad, gotas más frecuentes (cada 1,5–3 s) y embestidas dobles.
 - **Al morir:** el cuerpo se detiene, se petrifica (ilustración fija) y forma el Puente de la Serpiente hacia la isla final.
+- **En el prototipo:** mientras no exista la serpiente, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
 
 ## La Entidad (jefe final)
 

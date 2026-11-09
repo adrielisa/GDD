@@ -13,7 +13,7 @@
 | Potenciadores | 6 tipos, permanentes, siempre activos mientras están equipados; sin controles. |
 | Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Escama pétrea (`K`) funcionan solo equipados; ninguna se descarta. |
 | Enemigos | Aurion, Earthlem y Vestigio con sus ataques, defensas, avisos y XP; reaparecen. |
-| Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; límites invisibles; entrega Doble salto. |
+| Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; muros de roca que cierran la arena y se rompen al vencerlo; entrega Doble salto. |
 | Jefe 2 | Arena plana cerrada por pilares; llamaradas, ola de picos con zona segura, escudo, cráneos y teletransporte al extremo opuesto; entrega Tajo ardiente y Dash cortante. |
 | Jefe 3 | Cuerpo dañable, cola débil, lluvia de baba, cabeza instakill; límites invisibles; entrega Escama pétrea; petrificación y puente al morir. |
 | La Entidad | Fases según [[03 - Enemigos y NPC]]; cañones funcionales; límites invisibles; victoria lleva a créditos. |

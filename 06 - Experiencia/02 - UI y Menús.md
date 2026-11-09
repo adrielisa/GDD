@@ -40,6 +40,19 @@ En juego
 | Victoria | Cerrar la historia. | Ilustración final. | Continuar a créditos. |
 | Créditos | Reconocer al equipo. | Nombres del equipo y herramientas. | Omitir. |
 
+### Inventario en el prototipo
+
+En Unity, las habilidades se equipan desde el **menú de pausa**, en la pestaña **Objetos**: a la izquierda están los materiales y, a su costado, la sección **Habilidades**.
+
+- Una ranura por habilidad del catálogo (4). Las no obtenidas se ven atenuadas con «?».
+- Las equipadas llevan un **rombo dorado**; arriba a la derecha, el contador «Equipadas n/3».
+- El panel de detalle muestra nombre, objeto de origen, descripción y estado («Equipada · (A) / Enter para quitar»). Si no se puede cambiar, lo dice en rojo (ranuras llenas o arena de jefe cerrada).
+- Al recoger la habilidad aparece un aviso arriba con su icono: *«¡Nueva habilidad: Doble salto! Equípala en Pausa (Esc / Start) ▸ Objetos ▸ Habilidades»*.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/menu_pausa_habilidades_maqueta.png]]
+
+*Maqueta de la distribución (no es una captura de Unity).*
+
 ## Confirmaciones
 
 | Acción | Confirmación |

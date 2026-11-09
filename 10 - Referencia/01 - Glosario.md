@@ -15,7 +15,7 @@
 | **Géiser** | Elemento que lanza a Eon de una isla a otra; sustituye a los trampolines. |
 | **Punto de control** | Lugar donde se guarda, se restauran vida y escudo, y se reaparece. |
 | **Antesala** | Zona segura antes de cada jefe, con el mercader y un punto de control. |
-| **Arena de jefe** | Espacio cerrado (con límites invisibles o pilares) donde se combate a un jefe; el equipo queda fijo. |
+| **Arena de jefe** | Espacio cerrado (con muros de roca, pilares o límites invisibles) donde se combate a un jefe; el equipo queda fijo. |
 | **Ventana de castigo** | Momento tras un ataque en que el jefe queda expuesto. |
 | **Fragmento** | Parte del poder de Eon absorbida por un jefe; al vencerlo vuelve como habilidad. |
 | ***Coyote time*** | Margen breve para saltar después de salir de un borde. |

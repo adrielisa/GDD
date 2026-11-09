@@ -22,6 +22,8 @@ La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por
 - Las habilidades pasivas (Doble salto, Dash cortante) no tienen botón propio: modifican Salto y Dash.
 - Si una habilidad activa no está equipada, su botón no hace nada.
 - El inventario muestra el control y la función de cada habilidad, y la función de cada potenciador.
+- **En el prototipo** el inventario está dentro del menú de pausa (`Esc` / `P`, `Start`): pestaña Objetos ▸ Habilidades. Se navega con `A` / `D` o las flechas y se equipa o se quita con `Enter` / `Espacio` / `A` (o clic sobre la ranura seleccionada).
+- Mientras la pausa está abierta, Eon no lee salto, dash ni ataque: confirmar en el menú no deja un salto o un tajo en cola al volver al juego.
 
 ## Principios de control
 
@@ -40,7 +42,7 @@ No se incluye reasignación de teclas en esta versión. Salto tiene dos teclas (
 | --- | --- | --- | --- | --- |
 | Ataque (tierra) | Tajo horizontal | Estela en media luna cian/blanca. | *Whoosh* agudo. | Avance de 0,5 u. |
 | Abajo + Ataque (aire) | Golpe descendente | Estela vertical, punta brillante. | Silbido descendente. | Caída acelerada; rebote si impacta. |
-| Salto en el aire (con Doble salto) | Segundo salto | Ráfaga de aire bajo los pies. | Soplo corto. | Impulso algo menor que el primero. |
+| Salto en el aire (con Doble salto) | Segundo salto | Burbuja bajo los pies que se aplasta y estalla en gotitas; suben unas burbujitas. | Burbuja que revienta. | Impulso algo menor que el primero. |
 | Dash | Desplazamiento | Silueta residual; con Dash cortante, estela roja. | Corte de aire; con Dash cortante, tajo metálico. | Velocidad súbita con *hitstop* si corta a un enemigo. |
 | `J` | Tajo ardiente | Media luna de fuego naranja que sale de la espada. | Tajo con chisporroteo. | Retroceso mínimo de Eon. |
 | `K` (mantener) | Escama pétrea | El cuerpo de Eon se vuelve gris piedra; destello blanco en el bloqueo perfecto. | Crujido de roca; golpe seco en el bloqueo perfecto. | Eon queda inmóvil. |

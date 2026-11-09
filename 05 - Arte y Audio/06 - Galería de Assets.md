@@ -10,16 +10,18 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 
 ## Resumen
 
-| Grupo | Personaje / efecto | Animaciones | Estado |
-| --- | --- | --- | --- |
-| Protagonista | Eon | 10 | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
-| Enemigo común | Aurion | 1 | Vuelo hecho; faltan cargar, embestir, aturdido y muerte. |
-| Enemigo común | Earthlem | 3 | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte. |
-| Enemigo común | Vestigio | 0 | Sin arte. |
-| Jefe 1 | Chasko | 5 | Completo, con su burbuja. |
-| Jefe final | La Entidad (Titán Blanco) | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos. |
-| Jefes 2 y 3 | Mago oscuro, Serpiente gigante | 0 | Sin arte. |
-| Efectos | Rayo, tornado, orbe, burbuja | 4 | Hechos. |
+| Grupo         | Personaje / efecto                                     | Animaciones               | Estado                                                                                                           |
+| ------------- | ------------------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
+| Enemigo común | Aurion                                                 | 1                         | Vuelo hecho; faltan cargar, embestir, aturdido y muerte.                                                         |
+| Enemigo común | Earthlem                                               | 3                         | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte.                          |
+| Enemigo común | Vestigio                                               | 0                         | Sin arte.                                                                                                        |
+| Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
+| Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
+| Jefes 2 y 3   | Mago oscuro, Serpiente gigante                         | 0                         | Sin arte.                                                                                                        |
+| Efectos       | Rayo, tornado, orbe, burbuja                           | 4                         | Hechos.                                                                                                          |
+| Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
+| Habilidades | Camarón de Chasko (Doble salto) y burbuja del doble salto | 2 | Hechos. |
 
 ## Comparación de escala
 
@@ -47,9 +49,9 @@ Todos los personajes a la misma escala del mundo (cada uno con sus píxeles por 
 | Correr | 15 | 65 ms por cuadro | 0,97 s | Sí |
 | Saltar | 3 | 70–110 ms por cuadro | 0,27 s | No |
 | Caer | 3 | 90–110 ms por cuadro | 0,31 s | Sí |
-| Ataque | 9 | 45–140 ms por cuadro | 0,65 s | No |
-| Ataque en el aire | 6 | 45–100 ms por cuadro | 0,38 s | No |
-| Ataque hacia arriba | 8 | 45–120 ms por cuadro | 0,56 s | No |
+| Ataque | 9 | 51–159 ms por cuadro | 0,72 s | No |
+| Ataque en el aire | 6 | 51–114 ms por cuadro | 0,41 s | No |
+| Ataque hacia arriba | 8 | 51–136 ms por cuadro | 0,63 s | No |
 | Recibir daño | 3 | 70–120 ms por cuadro | 0,3 s | No |
 | Muerte | 10 | 70–700 ms por cuadro | 1,6 s | No |
 
@@ -573,6 +575,111 @@ Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_mover_*`
 ![[05 - Arte y Audio/Galería de Assets/Efectos/burbuja_explosion_cuadros.png]]
 
 Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_explosion_*`
+
+---
+
+## Habilidades
+
+### Camarón de Chasko (drop del Doble salto)
+
+Lo suelta Chasko al morir. Versión reducida de la ilustración de referencia: 16 × 16 px con la paleta naranja del jefe y sin contorno negro; en el mundo usa un lienzo de 20 × 20 px para los destellos.
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Brillo | 8 | 70–260 ms por cuadro | 0,88 s | Sí |
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/camaron_chasko_brillo.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/camaron_chasko_cuadros.png]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/camaron_chasko_icono.png]]
+
+Origen: `Assets/Resources/Habilidades/camaron_doble_salto_*` (fuente: `Documents/sprites/Jefe_Camaron/Drop_Doble_Salto/Camaron_Doble_Salto.aseprite`).
+
+### Burbuja del doble salto
+
+Aparece bajo los pies de Eon en el segundo salto, se aplasta con el impulso y estalla en gotitas. Usa los colores de la burbuja de Chasko.
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Aparecer | 3 | 40–60 ms por cuadro | 0,15 s | No |
+| Estallar | 4 | 50–80 ms por cuadro | 0,26 s | No |
+| Burbujita | 1 | — | 0,4–0,6 s (sube y se desvanece) | No |
+
+El GIF va a un tercio de la velocidad real para que se vea.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/burbuja_doble_salto.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/burbuja_doble_salto_cuadros.png]]
+
+Origen: `Assets/Resources/Habilidades/burbuja_doble_salto_*` (fuente: `Burbuja_Doble_Salto.aseprite`).
+
+---
+
+## Entornos del mapa jugable
+
+Arte de escenario que ya usa el mapa `Eretz_Mapa` (detalle técnico en [[03 - Entornos]]). Imágenes generadas el 09/11/2026.
+
+### Mapa completo
+
+Vista de todo el recorrido con los enemigos (E = Earthlem, A = Aurion), puntos de control (CP), géiseres (G y su trayectoria) y la meta.
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/mapa_eretz_completo.png]]
+
+### Costa
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/costa.png]]
+
+Mar animado (3 cuadros, unos 300 ms por cuadro):
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/costa_mar_animado.gif]]
+
+Origen: `Assets/Art/Sprites/Environment/Costa_Dia/` (fuente editable: `Documents/sprites/Escenario/Costa_Dia/Estilo_SSW/`).
+
+### Zona 3: templo en ruinas
+
+Vista con la cámara del juego, el cielo de la costa y Eon como referencia de tamaño.
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/zona3_templo.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Templo_Ruinas/Fondo/`.
+
+### Columnas de las ruinas
+
+Columna entera, rota alta, rota baja, caída, capitel caído y arco en ruinas.
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/columnas_ruinas.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Ruinas/`.
+
+### Islas flotantes
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/islas.png]]
+
+Origen: `Assets/Art/Sprites/Environment/SSW_Set3/Tiles/isla_*` y `Assets/Art/Sprites/Environment/Islas_Deco/`.
+
+### Géiser
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Reposo | 8 | 110 ms por cuadro | 0,88 s | Sí |
+| Erupción | 10 | 70 ms por cuadro | 0,7 s | No (al lanzar a Eon) |
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/geiser.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/geiser_cuadros.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Geiser/` (64×128 px, pivote abajo al centro).
+
+### Muro de la arena de Chasko
+
+Muro a su altura real en la arena (14 u) y los escombros en que se rompe.
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/muro_arena_chasko.png]]
+
+Origen: `Assets/Resources/Arena/`.
 
 ---
 

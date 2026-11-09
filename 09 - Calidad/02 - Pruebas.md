@@ -30,7 +30,27 @@
 | T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
 | T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |
 | T-14 | Volver a una zona superada tras vencer a su jefe. | Los enemigos han reaparecido y dan XP. |
-| T-15 | Entrar a cada arena de jefe e intentar salir. | Límite invisible en los Jefes 1 y 3 y La Entidad; pilares visibles en el Jefe 2. |
+| T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; pilares visibles en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
 | T-16 | Ser derrotado con 500 XP. | Reaparece en el punto de control con 500 XP, vida y escudo completos. |
+| T-17 | Empezar el combate contra Chasko. | Los muros emergen con sacudida de pantalla y cierran la arena. |
+| T-18 | Vencer a Chasko. | Los muros se rompen en escombros y desaparecen; el paso queda libre. |
+| T-19 | Morir durante el combate contra Chasko. | Los muros bajan; al volver a entrar se cierran de nuevo. |
+| T-20 | Recorrer el mapa Eretz sin habilidades. | Se llega a la meta; cada sección posterior solo se alcanza con su géiser. |
+| T-21 | Vencer a Chasko. | Sale el Camarón de Chasko, cae y flota; al tocarlo aparece el aviso y la habilidad queda en el inventario sin equipar. |
+| T-22 | Sin equipar Doble salto, saltar en el aire. | No hay segundo salto. |
+| T-23 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
+| T-24 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
+| T-25 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
+
+## Herramientas de prueba (solo en el editor y en *builds* de desarrollo)
+
+| Herramienta | Uso |
+| --- | --- |
+| Salto entre puntos de control | En Play: `.` siguiente, `,` anterior, `L` lista (el juego se pausa). Al llegar, el punto de control se activa. |
+| Jugar desde un punto de control | Clic derecho en el componente Checkpoint ▸ *Jugar desde aquí*, o *TrueHero ▸ Pruebas ▸ Jugar desde el checkpoint seleccionado*. |
+| Colisiones visibles | Los bloques de colisión ocultos bajo los tiles se dibujan en la vista de escena; se activan o apagan en *TrueHero ▸ Blockout*. |
+| Vista previa del fondo | Sin Play, el fondo por zonas sigue a la vista de escena para ver el parallax mientras se edita. |
+| Simulación de saltos | Script que simula el salto de Eon sobre el mapa para detectar atajos y zonas inalcanzables (resultado en [[02 - Niveles]]). |
+| Dar Doble salto | En Play: clic derecho en el componente PlayerInventory de Eon ▸ *Pruebas/Dar y equipar Doble salto* (o *Quitar todas las habilidades*). |
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Criterios de Calidad]] · [[03 - Bugs y Seguimiento]] →

@@ -37,6 +37,17 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-31 | Mundo | El continente se llama Kastleland en todo el documento. | Coherencia. |
 | D-32 | Jefes | El Jefe 1 (antes "Camarón serpiente", nombre provisional) se llama **Chasko**: camarón tipo escorpión que dispara burbujas, embiste y lanza ondas de choque. Sin esbirros (se eliminan los camaroncitos) ni ataque instakill. | Nombre definitivo y combate ya implementado. |
 
+| D-33 | Niveles | Prototipo jugable en un solo mapa (Eretz_Mapa): costa, Jefe 1, zona 3, arena del Jefe 2, Archipiélago e isla final. El recorrido se alarga un 60 % con un tramo de tutorial de combate antes de Chasko y transiciones más largas entre zonas. | Que el recorrido no sea tan rápido y enseñar a pelear antes del primer jefe. |
+| D-34 | Enemigos | Los Earthlem solo aparecen en la zona 3 (Bosque de Raíces y Ruinas); fuera de ella su lugar lo ocupan Aurion. | Petición del equipo. |
+| D-35 | Jefes | La arena de Chasko se cierra con muros de roca que emergen con sacudida de pantalla y se rompen al vencerlo. Sustituye a los límites invisibles de D-28 para el Jefe 1. | Petición del equipo. |
+| D-36 | Mecánicas | Valores de Eon según Unity: carrera 7,6 u/s, salto 3,6 u, dash 5 u en 0,15 s, combo 12/12/16, ataque descendente 15, tajo 0,27 s, pausa de 0,28 s entre ataques y animaciones de ataque al 88 %. | Primero se aceleró el movimiento (se sentía pesado) y después se bajó un poco la carrera y el ritmo del ataque (petición del equipo). |
+| D-37 | Niveles | El recorrido se verifica simulando el salto de Eon: ninguna sección posterior se alcanza sin su géiser. Se separaron las islas B y C y los muros de la arena del Mago quedan sin colisión hasta que exista el jefe. | Evitar atajos; el mapa anterior no se podía terminar. |
+| D-38 | Arte | Los entornos usan el set SSW_SET3 (tierra, roca, pasto y decoración) a 21,5 PPU, con fondos por zona con parallax (costa con mar animado y templo en ruinas en la zona 3). | Unificar el estilo de las zonas. |
+| D-39 | Jefes | En el prototipo, el Driller ocupa de forma provisional el lugar del Jefe 3 (jefe del gusano antes de la isla final). | Reutilizar el enemigo ya programado hasta tener la serpiente. |
+| D-40 | Habilidades | Cada jefe suelta en la arena un objeto que representa su habilidad y se recoge al tocarlo. Chasko suelta el Camarón de Chasko (Doble salto). | Petición del equipo; hace visible la recompensa del combate. |
+| D-41 | Habilidades | El Doble salto se ve como una burbuja bajo los pies de Eon (sustituye a la ráfaga de aire). | Liga la habilidad con Chasko y su burbuja. |
+| D-42 | UI | En el prototipo el inventario de habilidades está en el menú de pausa, pestaña Objetos, junto a los materiales. Con la pausa abierta, Eon no lee entradas de juego. | Reutilizar el menú existente; evitar saltos y tajos en cola al cerrar el menú. |
+
 ## Decisiones pendientes
 
 | # | Tema | Opciones |
@@ -45,5 +56,6 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | P-02 | Nombres | Jefes 2 y 3 y Vestigio. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
+| P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Referencias e Inspiración]] · [[04 - Historial de Versiones]] →

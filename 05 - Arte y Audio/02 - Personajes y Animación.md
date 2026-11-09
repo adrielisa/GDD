@@ -39,7 +39,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 
 - **Nombres de archivo:** `Personaje_Accion` (ej. `Eon_DobleSalto.png`, `MagoOscuro_Teletransporte.png`).
 - **Formato:** PNG con transparencia; hojas de sprites por personaje; fuente editable en Clip Studio.
-- **Escala:** 32 píxeles por unidad de Unity; filtrado *Point* y sin compresión.
+- **Escala:** 21,5 píxeles por unidad de Unity (Eon mide unos 40 px; los tiles, 16 px); filtrado *Point* y sin compresión.
 - **Pivote:** en los pies para personajes terrestres; en el centro para voladores.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Dirección de Arte]] · [[03 - Entornos]] →

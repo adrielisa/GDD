@@ -32,7 +32,7 @@ Los avisos aparecen una sola vez, en el momento en que se necesitan, y nunca det
 
 1. Muere el jefe; cinemática breve. Vida y escudo se restauran.
 2. Ilustración de la habilidad con su nombre, su control y su función.
-3. La habilidad **se guarda en el inventario**; no se descarta ninguna. Aviso: *«Abre el inventario (Tab) para equiparla»*.
+3. La habilidad **se guarda en el inventario**; no se descarta ninguna. Aviso: *«Abre el inventario (Tab) para equiparla»*. En el prototipo el jefe suelta un objeto (Chasko: el Camarón de Chasko) que hay que tocar, y el aviso indica Pausa ▸ Objetos ▸ Habilidades.
 4. El jugador decide si la equipa y qué deja guardado.
 
 ## Inventario

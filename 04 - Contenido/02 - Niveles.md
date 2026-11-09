@@ -14,9 +14,37 @@ Antes de cada jefe hay una **antesala** con el mercader y un punto de control. L
 | Bosque de Raíces | 8 min | Aurion, Earthlem | Copa de los árboles (Doble salto): atajo | Entrada y salida |
 | Ruinas Abandonadas | 7 min | Earthlem, Vestigio | Torre sellada (Tajo ardiente: interruptor lejano): atajo y Vestigios | Mitad y antesala del Jefe 2 |
 | Patio de la Academia | 3 min | Jefe 2 | — | — |
-| Archipiélago de Tierra | 9 min | Aurion, Vestigio, Earthlem | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
+| Archipiélago de Tierra | 9 min | Aurion, Vestigio | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
 | Anillo de Islas | 4 min | Jefe 3 | — | — |
 | Puente e Isla Final | 6 min | La Entidad, Vestigios | — | Antesala de la Isla Final |
+
+## Mapa jugable actual (Eretz_Mapa)
+
+Prototipo en Unity que reúne en un solo mapa la Costa, el Jefe 1, la zona 3 (Bosque de Raíces y Ruinas Abandonadas), la arena del Jefe 2 y el Archipiélago. Sirve para probar el ritmo del recorrido antes de dividirlo en zonas. Todo el recorrido de abajo es la ruta principal: se completa sin habilidades.
+
+- **Escena:** `Assets/Scenes/Levels/Eretz_Mapa.unity`. La forma del mapa sale de `Assets/Scripts/Levels/Editor/Datos/eretz_mapa.json` y de `EretzMapaGenerator`; la escena se puede editar a mano y no se regenera sola (si el generador cambia la forma del mapa, antes guarda una copia en `Assets/Scenes/Levels/Respaldos/`).
+- **Tamaño:** 368 u de ancho (antes 230 u). Se alargó un 60 % para que el recorrido no sea tan rápido: tramo de tutorial de combate antes de Chasko, sendero de transición después de Chasko, meseta antes del Mago y más espacio entre islas.
+- **Escala:** 1 u = 21,5 px de arte; tiles de 16 px (0,744 u). La cámara muestra 216 px de alto con los pies de Eon al 18 % de la pantalla.
+
+| # | Tramo | x (u) | Equivale a | Enemigos | Puntos de control y otros |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Costa | −83 a −51 | Playa del Despertar | — | Inicio sobre una roca. |
+| 2 | Primeros enemigos | −51 a 18 | Acantilados de la Costa | 4 Aurion (primero solos, luego en pareja) | `Costa_Tutorial`; escalones de roca para llegar a la arena; `Costa_Antes_Chasko`. |
+| 3 | Arena de Chasko | 20 a 46 | Arena de la Marea | Jefe 1 | Muros de roca que emergen al empezar (ver abajo). |
+| 4 | Sendero al templo | 46 a 81 | Bosque de Raíces | 1 Earthlem, 1 Aurion | `Despues_Chasko`; columnas de ruinas; fondo del templo. |
+| 5 | Torre de los Earthlem | 81 a 119 | Ruinas Abandonadas | 3 Earthlem | Repisas; géiser `Torre_Repisa` a la cima; `Torre_Arriba`; 2 estatuas (NPC). |
+| 6 | Meseta | 119 a 158 | Antesala del Jefe 2 | 2 Earthlem, 1 Aurion | `Antes_Mago`. |
+| 7 | Arena del Mago | 159 a 177 | Patio de la Academia | Jefe 2 *(pendiente)* | Las columnas de la arena no tienen colisión hasta que exista el jefe. |
+| 8 | Después del Mago | 177 a 207 | Salida de las Ruinas | 2 Aurion | `Despues_Mago`; géiser `Torre_Cima` a la isla A. |
+| 9 | Islas A–E | 167 a 266 (alto 31–71) | Archipiélago de Tierra | 5 Aurion | Géiseres A, B, C y E; `Isla_A`, `Isla_D`. |
+| 10 | Isla final | 233 a 285 (alto 82) | Anillo de Islas | 1 Aurion; Driller *(provisional, ver [[03 - Enemigos y NPC]])* | `Isla_Final`; arena del gusano y meta. |
+
+- **Earthlem solo en la zona 3** (tramos 4 a 6). En la costa, después del Mago y en las islas solo hay Aurion.
+- **Saltos verificados:** se simuló el salto de Eon (carrera 7,6 u/s, salto 3,6 u, salto corto y dash aéreo) desde todas las plataformas. Todo el recorrido se puede completar en orden y no se puede llegar a una sección posterior sin su géiser. Para conseguirlo se separaron las islas B y C (antes se saltaba de una a otra sin el géiser) y se quitó la colisión a los muros de la arena del Mago (cerraban el paso y el mapa no se podía terminar).
+- **Orbes de vida:** el prototipo tiene 4 (tutorial, sendero, antes del Mago e isla final). Contradicen la regla de no curar en el campo; queda pendiente decidir si se quitan (P-05 en [[03 - Registro de Decisiones]]).
+- **Fondos:** cielo y nubes de la costa en todo el mapa; la costa tiene acantilados y mar animado, y la zona 3 el templo en ruinas (ver [[03 - Entornos]]).
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/mapa_eretz_completo.png]]
 
 ## Playa del Despertar
 
@@ -50,8 +78,8 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 
 ## Arena de la Marea (Jefe 1)
 
-- Playa plana de 28 u de ancho con el mar en el lado derecho. Sin plataformas: el combate es a ras de suelo.
-- **Límites invisibles** a ambos lados mientras dura el combate.
+- Playa plana de unas 26 u de ancho con el mar al fondo. Sin plataformas: el combate es a ras de suelo.
+- **Muros de roca:** al empezar el combate, un pilar de roca emerge del suelo en cada extremo (unos 0,6 s) con una sacudida de pantalla y piedritas en la base, y cierra la arena. Al vencer a Chasko, los muros tiemblan, se rompen en escombros y desaparecen. Si Eon cae o es derrotado durante el combate, los muros bajan y la arena se reinicia.
 
 ## Bosque de Raíces
 
@@ -81,8 +109,9 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 - **Objetivo principal:** cruzar las islas hasta el Anillo de Islas.
 - **Duración:** 9 minutos. **Dificultad:** alta.
 - **Mecánicas introducidas:** géiseres; combate en islas pequeñas sobre el vacío.
-- **Enemigos:** Aurion, Vestigio, Earthlem.
+- **Enemigos:** Aurion, Vestigio. Los Earthlem no salen de la zona 3 (Bosque y Ruinas).
 - **Puntos de control:** mitad del recorrido y antesala (mercader).
+- **Islas:** superficie de pasto y tierra; por debajo cuelgan formaciones de roca en forma de pirámide invertida, con lianas.
 
 ```text
 Géiser de las Ruinas → Isla 1 → Géiser → Isla 2 (punto de control) → Géiser → Islas 3–4 → Antesala (mercader) → Anillo de Islas

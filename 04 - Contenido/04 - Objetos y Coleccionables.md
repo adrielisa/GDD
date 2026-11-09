@@ -34,10 +34,11 @@ Solo hay tres tipos de elementos que el jugador obtiene: **XP**, **potenciadores
 - **Uso:** se equipan en una de las **3 ranuras de habilidad**. Ninguna se descarta: las que no se usan quedan guardadas para elegirlas después.
 - **Inventario:** al seleccionar una habilidad se muestran su control y su función.
 - **Cambios:** fuera de las arenas de jefe.
+- **Entrega en el mundo:** el jefe suelta un objeto que la representa y que se recoge al tocarlo. El del Jefe 1 es el **Camarón de Chasko**.
 
 | Habilidad | Origen | Tipo | Control | Efecto | Icono |
 | --- | --- | --- | --- | --- | --- |
-| Doble salto | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire. | Pluma con ráfaga de aire. |
+| Doble salto | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de altura), impulsado por una burbuja bajo los pies. | Camarón de Chasko: camarón pequeñito naranja y enroscado (16 × 16 px). |
 | Tajo ardiente | Jefe 2 | Activa | `J` | La espada lanza un tajo de fuego que atraviesa enemigos: 15 de daño, alcance 8 u, recarga 1,2 s. | Espada envuelta en llamas. |
 | Dash cortante | Jefe 2 | Pasiva | Dash | El dash hace 20 de daño a cada enemigo atravesado. | Silueta de dash con filo rojo. |
 | Escama pétrea | Jefe 3 | Activa | `K` (mantener) | Se petrifica y reduce el daño un 70 %; el bloqueo perfecto anula el golpe y aturde. Recarga 3 s. | Escama gris con grietas. |
