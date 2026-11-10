@@ -1,6 +1,6 @@
 # True Hero — GDD completo
 
-**Versión 0.4.0 · 9 de noviembre de 2026.**
+**Versión 0.4.1 · 10 de noviembre de 2026.**
 
 
 
@@ -8,7 +8,7 @@
 
 ## True Hero: resumen del diseño
 
-**GDD 0.4.0 · 9 de noviembre de 2026.**
+**GDD 0.4.1 · 10 de noviembre de 2026.**
 
 Eon, el héroe de la profecía, ya perdió contra La Entidad. Despierta solo en la costa de Kastleland sin su equipo legendario y emprende la revancha: recorre zonas explorables, derrota enemigos que le dan XP, cambia esa XP por potenciadores permanentes con un mercader que aparece antes de cada jefe y vence a tres jefes que le devuelven sus habilidades. Al caer el tercero, su cuerpo petrificado forma el puente hacia la isla final, donde Eon vuelve a enfrentar a La Entidad.
 
@@ -1509,8 +1509,8 @@ Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → D
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Lluvia de llamaradas** | Ojos naranja y círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Radio de 1 u; estallan al tocar el suelo. | 20 |
-| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
+| **Lluvia de llamaradas** | Ojos naranja y una columna de fuego que brota en el suelo donde caerá cada bola (0,8 s). | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Son bolas de fuego con estela; radio de 1 u; estallan al tocar el suelo en una explosión con humo. | 20 |
+| **Picos de magma** | Grietas incandescentes en el suelo 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico es de piedra con lava que escurre por sus caras; mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
 | **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan a Eon (6 u/s hacia atrás y 3 hacia arriba). Mientras dura, el mago lanza cráneos. | — |
 | **Cráneos de fuego** | Llamas en sus manos. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado (110° por segundo). Duran 6 s. Se destruyen con un golpe. | 15 |
 | **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) se desvanece en remolino y reaparece en el **extremo opuesto** de la sala, a 3 u del muro. Al reaparecer queda **expuesto 1 s**: es la mejor ventana para castigarlo. | — |
@@ -1750,7 +1750,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | Earthlem | 96 × 96 | Enterrado, emerger, caminar, barrido, aplastamiento, enterrarse, impacto, muerte | Escombros, onda sísmica | Emerger, reposo y ataque hechos (128 × 112); el resto pendiente. |
 | Vestigio | 64 × 96 | Caminar, combo, estocada, guardia, impacto, muerte | Brillo del arma, disolución blanca | Pendiente |
 | Jefe 1 — Chasko | 90 × 90 | Idle, caminar, chasquido (carga, disparo, recuperación), recibir daño, muerte | Burbuja de cavitación (46 × 46: avanzar, estallido), parpadeo de embestida, onda de choque | Hecho (`Chasko.aseprite`) |
-| Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Círculos y llamaradas, grietas y picos de magma, esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
+| Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Columna de fuego de aviso, bola de fuego y explosión; grietas incandescentes y picos de piedra con lava (versión 2, aún sin pasar a Unity); esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
 | Jefe 3 — Serpiente gigante | Cabeza 192 × 192, segmento 96 × 96, cola | Mandíbula, segmento hinchado, petrificación | Gotas y salpicadura de baba, polvo al atravesar islas | Pendiente |
 | La Entidad | Escala de fondo y escala de cumbre | Escalar, golpe de mano, barrido, invocar, apertura del rostro, derrota | Ondas, sombras de impacto, núcleo | Cuerpo por piezas, manos (reposo, cansada, rota), fondo y efectos de rayo, tornado y orbe hechos. |
 
@@ -1836,7 +1836,7 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 ### Efectos visuales
 
 - **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
-- **Fuego y magma:** llamaradas, picos de magma, cráneos de fuego.
+- **Fuego y magma:** columnas de fuego de aviso, bolas de fuego que estallan en explosión con humo, picos de piedra con lava que escurre, cráneos de fuego.
 - **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
 - **Magia del Mago:** ojos que pasan de cian a naranja al conjurar, escudo arcano violeta, cráneos de fuego, remolino al aparecer y desaparecer, humo negro en el destino del teletransporte.
 - **Géiseres:** burbujeo de aviso, columna de vapor y agua.
@@ -2731,68 +2731,68 @@ Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_explosion_*`
 
 #### Efectos del Mago oscuro
 
-Magia del Jefe 2. Carpeta `Assets/Resources/Mago_Efectos/` (fuente: `Documents/sprites/Jefe_Mago_Oscuro/Efectos/`). Los GIF hacen una pausa al final para que se vea el último cuadro.
+Magia del Jefe 2. Las llamaradas y los picos son la **versión 2** (basada en hojas de referencia y aprobada): sus fuentes están en `Documents/sprites/Jefe_Mago_Oscuro/Efectos/v2/` y **todavía no están en Unity** (el juego usa aún los efectos anteriores de `Assets/Resources/Mago_Efectos/`). El escudo, los cráneos y el humo no cambian. Los GIF hacen una pausa al final para que se vea el último cuadro.
 
-| Efecto | Cuadros | Velocidad |
-| --- | --- | --- |
-| Llamarada: aviso en el suelo | 3 | 80 ms por cuadro |
-| Llamarada: caída | 3 | 70 ms por cuadro |
-| Llamarada: estallido | 6 | 70 ms por cuadro |
-| Pico de magma: aviso | 3 | 90 ms por cuadro |
-| Pico de magma | 9 | 70 ms por cuadro |
-| Escudo arcano | 12 | 80 ms por cuadro |
-| Cráneo de fuego | 8 | 80 ms por cuadro |
-| Humo del teletransporte | 7 | 70–90 ms por cuadro |
+| Efecto | Cuadros | Velocidad | Tamaño |
+| --- | --- | --- | --- |
+| Llamarada: aviso (columna de fuego) | 7 | 90–100 ms por cuadro | 14 × 34 px |
+| Llamarada: bola de fuego | 4 | 70 ms por cuadro | 16 × 32 px |
+| Llamarada: explosión | 8 | 60–110 ms por cuadro | 54 × 40 px |
+| Pico de magma: aviso (grietas) | 8 | 70 ms por cuadro | 40 × 64 px |
+| Pico de magma | 17 | 60–90 ms por cuadro | 40 × 64 px |
+| Escudo arcano | 12 | 80 ms por cuadro | 84 × 84 px |
+| Cráneo de fuego | 8 | 80 ms por cuadro | 20 × 20 px |
+| Humo del teletransporte | 7 | 70–90 ms por cuadro | 40 × 48 px |
 
-##### Llamarada: aviso en el suelo
+##### Llamarada: aviso (columna de fuego)
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso.gif]]
 
-Círculo de luz naranja que marca dónde caerá (0,8 s, en bucle).
+Columna de fuego que brota en el suelo donde caerá la bola: aparece (cuadros 1-3), late de ida y vuelta mientras dura el aviso (3-5) y se apaga al caer la bola (5-7).
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_aviso_*`
+Origen: `Efectos/v2/Aviso_Llamarada_v2.aseprite` (etiquetas `aparece`, `bucle`, `apaga`)
 
-##### Llamarada: caída
+##### Llamarada: bola de fuego
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae.gif]]
 
-Bola de fuego que cae del techo (en bucle mientras cae).
+Núcleo blanco con borde amarillo y una estela de llamas que sube y titila mientras cae (en bucle).
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_cae_*`
+Origen: `Efectos/v2/Bola_Fuego_v2.aseprite` (etiqueta `cae`)
 
-##### Llamarada: estallido
+##### Llamarada: explosión
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido.gif]]
 
-Al tocar el suelo; hace el daño.
+Destello, bola de fuego con anillo de choque, llamas y humo gris que se disipa. Hace el daño al tocar el suelo.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_estallido_*`
+Origen: `Efectos/v2/Explosion_Llamarada_v2.aseprite` (etiqueta `estallido`)
 
-##### Pico de magma: aviso
+##### Pico de magma: aviso (grietas)
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso.gif]]
 
-Grieta que brilla 0,5 s antes de cada pico.
+Grietas incandescentes que se abren en el suelo 0,5 s antes de cada pico.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/pico_aviso_*`
+Origen: `Efectos/v2/Picos_Magma_v2.aseprite` (etiqueta `aviso`, cuadros 1-8)
 
 ##### Pico de magma
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma.gif]]
 
-Sale del suelo (1-4), vibra activo (4-6) y se rompe (7-9).
+Pico de **piedra** (basalto gris) con la punta incandescente y **lava que escurre** por sus caras. `sale` (5 cuadros, 60 ms): brota con un charco de lava en la base y los hilos de lava empiezan a bajar; `activo` (7 cuadros, 90 ms, en bucle): una gota brillante baja por cada hilo; `rompe` (5 cuadros, 70 ms): la lava se enfría y el pico se desmorona.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/pico_magma_*`
+Origen: `Efectos/v2/Picos_Magma_v2.aseprite` (etiquetas `sale`, `activo`, `rompe`)
 
 ##### Escudo arcano
 
@@ -3467,6 +3467,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-34 | Escena `Ruina_Mago` con cambio de escena y estado entre escenas (`EstadoPartida`) | Programación | P1 | 4 | Hecho |
 | B-35 | Unificar el mapa de controles del prototipo con el del GDD (P-06) | Diseño | P2 | 5 | Pendiente |
 | B-36 | Guardado en disco (hoy `EstadoPartida` solo dura la partida) | Programación | P1 | 4 | Pendiente |
+| B-37 | Pasar a Unity los efectos v2 del Mago (aviso de columna de fuego, bola de fuego, explosión, picos de piedra con lava) | Arte / Programación | P1 | 4 | Pendiente |
 
 
 ---
@@ -3807,6 +3808,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | 0.2.1   | 07/11/2026 | Potenciadores permanentes y pasivos sin controles; sin curación ni escudo en el campo (restauración en puntos de control y jefes); eliminados los objetos del mapa; Eon viaja solo; Tajo ardiente como ataque arcano; Escama pétrea como habilidad del Jefe 3; ninguna habilidad se descarta; nuevos controles (`Enter`, `J`, `K`); inventario con descripciones; sacudida fija; mercader antes de cada jefe; reaparición de enemigos; límites de arena invisibles salvo los pilares del Jefe 2. | Vargas Pérez Joel (con apoyo de Adriel) |
 | 0.3.0   | 09/11/2026 | Sincronización con Unity: mapa jugable Eretz (recorrido +60 %, enemigos por zona, saltos verificados), Earthlem solo en la zona 3, muros de roca en la arena de Chasko, Driller provisional como jefe del gusano, valores de Eon actualizados (carrera, salto, dash, combo y ritmo de ataque), arte de entornos SSW (costa, templo, islas, géiser, columnas) en Entornos y Galería, herramientas de prueba y backlog actualizado; drop de Chasko (Camarón de Chasko → Doble salto con burbuja) e inventario de habilidades en el menú de pausa. | Vargas Pérez Joel |
 | 0.4.0   | 09/11/2026 | Jefe 2 (Mago oscuro) implementado y **opcional**: diseño, ataques y valores de Unity, ojos que cambian al conjurar, remolino al aparecer y desaparecer; pelea dentro del templo en la escena `Ruina_Mago` (sala de 44 u, puertas selladas, cámara limitada); entrada al templo en Eretz con Interactuar, fachada y ruinas detrás; Tajo ardiente (`K` en el prototipo) y Dash cortante entregados por la Brasa del Mago y el Filo de sombra; estado entre escenas; galería con el Mago, su magia, sus objetos y el templo; pruebas T-23 a T-30. | Vargas Pérez Joel |
+| 0.4.1   | 10/11/2026 | Efectos v2 del Mago oscuro en la Galería (sustituyen a los anteriores): aviso con columna de fuego, bola de fuego con estela, explosión con humo, grietas incandescentes y picos de piedra con lava que escurre. Pendiente pasarlos a Unity (B-37). | Vargas Pérez Joel |
 
 ### Convención
 

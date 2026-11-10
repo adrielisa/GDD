@@ -38,5 +38,6 @@
 | B-34 | Escena `Ruina_Mago` con cambio de escena y estado entre escenas (`EstadoPartida`) | Programación | P1 | 4 | Hecho |
 | B-35 | Unificar el mapa de controles del prototipo con el del GDD (P-06) | Diseño | P2 | 5 | Pendiente |
 | B-36 | Guardado en disco (hoy `EstadoPartida` solo dura la partida) | Programación | P1 | 4 | Pendiente |
+| B-37 | Pasar a Unity los efectos v2 del Mago (aviso de columna de fuego, bola de fuego, explosión, picos de piedra con lava) | Arte / Programación | P1 | 4 | Pendiente |
 
 > **Navegación:** [[00 - Índice]] · ← [[03 - Roadmap]] · [[05 - Gestión de Cambios]] →

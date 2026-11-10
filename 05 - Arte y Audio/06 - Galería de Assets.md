@@ -730,68 +730,68 @@ Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_explosion_*`
 
 ### Efectos del Mago oscuro
 
-Magia del Jefe 2. Carpeta `Assets/Resources/Mago_Efectos/` (fuente: `Documents/sprites/Jefe_Mago_Oscuro/Efectos/`). Los GIF hacen una pausa al final para que se vea el último cuadro.
+Magia del Jefe 2. Las llamaradas y los picos son la **versión 2** (basada en hojas de referencia y aprobada): sus fuentes están en `Documents/sprites/Jefe_Mago_Oscuro/Efectos/v2/` y **todavía no están en Unity** (el juego usa aún los efectos anteriores de `Assets/Resources/Mago_Efectos/`). El escudo, los cráneos y el humo no cambian. Los GIF hacen una pausa al final para que se vea el último cuadro.
 
-| Efecto | Cuadros | Velocidad |
-| --- | --- | --- |
-| Llamarada: aviso en el suelo | 3 | 80 ms por cuadro |
-| Llamarada: caída | 3 | 70 ms por cuadro |
-| Llamarada: estallido | 6 | 70 ms por cuadro |
-| Pico de magma: aviso | 3 | 90 ms por cuadro |
-| Pico de magma | 9 | 70 ms por cuadro |
-| Escudo arcano | 12 | 80 ms por cuadro |
-| Cráneo de fuego | 8 | 80 ms por cuadro |
-| Humo del teletransporte | 7 | 70–90 ms por cuadro |
+| Efecto | Cuadros | Velocidad | Tamaño |
+| --- | --- | --- | --- |
+| Llamarada: aviso (columna de fuego) | 7 | 90–100 ms por cuadro | 14 × 34 px |
+| Llamarada: bola de fuego | 4 | 70 ms por cuadro | 16 × 32 px |
+| Llamarada: explosión | 8 | 60–110 ms por cuadro | 54 × 40 px |
+| Pico de magma: aviso (grietas) | 8 | 70 ms por cuadro | 40 × 64 px |
+| Pico de magma | 17 | 60–90 ms por cuadro | 40 × 64 px |
+| Escudo arcano | 12 | 80 ms por cuadro | 84 × 84 px |
+| Cráneo de fuego | 8 | 80 ms por cuadro | 20 × 20 px |
+| Humo del teletransporte | 7 | 70–90 ms por cuadro | 40 × 48 px |
 
-#### Llamarada: aviso en el suelo
+#### Llamarada: aviso (columna de fuego)
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso.gif]]
 
-Círculo de luz naranja que marca dónde caerá (0,8 s, en bucle).
+Columna de fuego que brota en el suelo donde caerá la bola: aparece (cuadros 1-3), late de ida y vuelta mientras dura el aviso (3-5) y se apaga al caer la bola (5-7).
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_aviso_*`
+Origen: `Efectos/v2/Aviso_Llamarada_v2.aseprite` (etiquetas `aparece`, `bucle`, `apaga`)
 
-#### Llamarada: caída
+#### Llamarada: bola de fuego
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae.gif]]
 
-Bola de fuego que cae del techo (en bucle mientras cae).
+Núcleo blanco con borde amarillo y una estela de llamas que sube y titila mientras cae (en bucle).
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_cae_*`
+Origen: `Efectos/v2/Bola_Fuego_v2.aseprite` (etiqueta `cae`)
 
-#### Llamarada: estallido
+#### Llamarada: explosión
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido.gif]]
 
-Al tocar el suelo; hace el daño.
+Destello, bola de fuego con anillo de choque, llamas y humo gris que se disipa. Hace el daño al tocar el suelo.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/llamarada_estallido_*`
+Origen: `Efectos/v2/Explosion_Llamarada_v2.aseprite` (etiqueta `estallido`)
 
-#### Pico de magma: aviso
+#### Pico de magma: aviso (grietas)
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso.gif]]
 
-Grieta que brilla 0,5 s antes de cada pico.
+Grietas incandescentes que se abren en el suelo 0,5 s antes de cada pico.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/pico_aviso_*`
+Origen: `Efectos/v2/Picos_Magma_v2.aseprite` (etiqueta `aviso`, cuadros 1-8)
 
 #### Pico de magma
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma.gif]]
 
-Sale del suelo (1-4), vibra activo (4-6) y se rompe (7-9).
+Pico de **piedra** (basalto gris) con la punta incandescente y **lava que escurre** por sus caras. `sale` (5 cuadros, 60 ms): brota con un charco de lava en la base y los hilos de lava empiezan a bajar; `activo` (7 cuadros, 90 ms, en bucle): una gota brillante baja por cada hilo; `rompe` (5 cuadros, 70 ms): la lava se enfría y el pico se desmorona.
 
 ![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma_cuadros.png]]
 
-Origen: `Assets/Resources/Mago_Efectos/pico_magma_*`
+Origen: `Efectos/v2/Picos_Magma_v2.aseprite` (etiquetas `sale`, `activo`, `rompe`)
 
 #### Escudo arcano
 

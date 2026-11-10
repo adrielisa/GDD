@@ -51,7 +51,7 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 ## Efectos visuales
 
 - **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
-- **Fuego y magma:** llamaradas, picos de magma, cráneos de fuego.
+- **Fuego y magma:** columnas de fuego de aviso, bolas de fuego que estallan en explosión con humo, picos de piedra con lava que escurre, cráneos de fuego.
 - **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
 - **Magia del Mago:** ojos que pasan de cian a naranja al conjurar, escudo arcano violeta, cráneos de fuego, remolino al aparecer y desaparecer, humo negro en el destino del teletransporte.
 - **Géiseres:** burbujeo de aviso, columna de vapor y agua.
