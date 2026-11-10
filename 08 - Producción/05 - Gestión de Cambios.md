@@ -17,7 +17,7 @@
 | Economía | — | XP para cambiar por potenciadores con el mercader. | Economía, Objetos, Enemigos, UI |
 | Habilidades | No existían. | Habilidades de jefes con 3 ranuras. | Mecánicas, Sistemas, Progresión |
 | Cruce entre islas | Trampolines. | Géiseres. | Mecánicas, Entornos, Niveles |
-| Enemigos | Aurion, Driller, Earthlem. | Aurion, Earthlem, Vestigio. Driller descartado. | Enemigos, Arte |
+| Enemigos | Aurion, Driller, Earthlem. | Aurion y Earthlem. Driller descartado. | Enemigos, Arte |
 | Mundo | Niveles lineales. | Zonas explorables. | Estructura, Niveles |
 
 ## Cambios aplicados en la versión 0.2.1

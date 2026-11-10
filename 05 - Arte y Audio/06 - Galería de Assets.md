@@ -15,7 +15,6 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 | Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
 | Enemigo común | Aurion                                                 | 1                         | Vuelo hecho; faltan cargar, embestir, aturdido y muerte.                                                         |
 | Enemigo común | Earthlem                                               | 3                         | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte.                          |
-| Enemigo común | Vestigio                                               | 0                         | Sin arte.                                                                                                        |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
 | Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
@@ -243,10 +242,6 @@ El golpe empieza en el cuadro 8.
 ![[05 - Arte y Audio/Galería de Assets/Enemigos/earthlem_ataque_cuadros.png]]
 
 Origen: `Assets/Art/Sprites/Characters/Enemies/Golem/golem_ataque/`
-
-### Vestigio
-
-Sin arte todavía. Requisitos en [[02 - Personajes y Animación]].
 
 ---
 

@@ -37,7 +37,7 @@ True Hero
 | Arenas de jefe | 4 |
 | Jefes normales | 3 |
 | Jefe final | 1 |
-| Enemigos comunes | 3 |
+| Enemigos comunes | 2 |
 | NPC | 1 (mercader) |
 | Habilidades | 4 |
 | Potenciadores | 6 |
@@ -50,7 +50,7 @@ True Hero
 | --- | --- |
 | Mercader | Llegar a la antesala del Jefe 1. |
 | Jefe 1 | Salto, dash y combo enseñados en la Playa y los Acantilados. |
-| Jefe 2 | Earthlem y Vestigio presentados en Bosque y Ruinas. |
+| Jefe 2 | Earthlem presentado en Bosque y Ruinas. |
 | Archipiélago de Tierra | Cruzar las Ruinas (el Jefe 2 es opcional; los géiseres funcionan siempre). |
 | Jefe 3 | Géiseres y plataformas pequeñas dominados en el Archipiélago. |
 | Isla Final | Jefe 3 derrotado (puente petrificado). |

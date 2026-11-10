@@ -12,11 +12,11 @@ Antes de cada jefe hay una **antesala** con el mercader y un punto de control. L
 | Acantilados de la Costa | 6 min | Aurion | Cueva superior (Doble salto): grupo de Aurion | Mitad y antesala del Jefe 1 |
 | Arena de la Marea | 3 min | Jefe 1 (Chasko) | — | — |
 | Bosque de Raíces | 8 min | Aurion, Earthlem | Copa de los árboles (Doble salto): atajo | Entrada y salida |
-| Ruinas Abandonadas | 7 min | Earthlem, Vestigio | Torre sellada (Tajo ardiente: interruptor lejano): atajo y Vestigios | Mitad y antesala del Jefe 2 |
+| Ruinas Abandonadas | 7 min | Earthlem | Torre sellada (Tajo ardiente: interruptor lejano): atajo y grupo de enemigos | Mitad y antesala del Jefe 2 |
 | Patio de la Academia | 3 min | Jefe 2 | — | — |
-| Archipiélago de Tierra | 9 min | Aurion, Vestigio | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
+| Archipiélago de Tierra | 9 min | Aurion | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
 | Anillo de Islas | 4 min | Jefe 3 | — | — |
-| Puente e Isla Final | 6 min | La Entidad, Vestigios | — | Antesala de la Isla Final |
+| Puente e Isla Final | 6 min | La Entidad | — | Antesala de la Isla Final |
 
 ## Mapa jugable actual (Eretz_Mapa)
 
@@ -107,7 +107,7 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 - **Objetivo principal:** llegar al Patio de la Academia.
 - **Objetivos secundarios:** explorar aulas derrumbadas y torres.
 - **Duración:** 7 minutos. **Dificultad:** media-alta.
-- **Enemigos:** Earthlem, primer Vestigio.
+- **Enemigos:** Earthlem.
 - **Puntos de control:** mitad del recorrido y antesala (mercader).
 
 ## Patio de la Academia (Jefe 2)
@@ -122,7 +122,7 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 - **Objetivo principal:** cruzar las islas hasta el Anillo de Islas.
 - **Duración:** 9 minutos. **Dificultad:** alta.
 - **Mecánicas introducidas:** géiseres; combate en islas pequeñas sobre el vacío.
-- **Enemigos:** Aurion, Vestigio. Los Earthlem no salen de la zona 3 (Bosque y Ruinas).
+- **Enemigos:** Aurion. Los Earthlem no salen de la zona 3 (Bosque y Ruinas).
 - **Puntos de control:** mitad del recorrido y antesala (mercader).
 - **Islas:** superficie de pasto y tierra; por debajo cuelgan formaciones de roca en forma de pirámide invertida, con lianas.
 

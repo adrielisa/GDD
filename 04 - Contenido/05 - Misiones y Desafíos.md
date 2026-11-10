@@ -27,7 +27,7 @@ El juego tiene una misión principal dividida en cuatro objetivos (uno por jefe)
 | --- | --- | --- | --- |
 | Cueva superior | Acantilados de la Costa | Doble salto | Grupo de Aurion (XP). |
 | Copa de los árboles | Bosque de Raíces | Doble salto | Atajo hacia las Ruinas. |
-| Torre sellada | Ruinas Abandonadas | Tajo ardiente (interruptor lejano) | Atajo y grupo de Vestigios (XP). |
+| Torre sellada | Ruinas Abandonadas | Tajo ardiente (interruptor lejano) | Atajo y grupo de enemigos (XP). |
 | Islas altas | Archipiélago de Tierra | Doble salto + géiser | Grupo de enemigos (XP). |
 
 ## Desafío opcional
