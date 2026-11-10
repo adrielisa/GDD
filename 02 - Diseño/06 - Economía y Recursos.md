@@ -1,77 +1,86 @@
 # Economía y Recursos
 
-La economía gira en torno a un solo recurso de intercambio: los **puntos de experiencia (XP)**. Los enemigos los sueltan al morir y el mercader los cambia por potenciadores permanentes.
+La economía gira en torno a la recolección de tres recursos biológicos de intercambio: **materiales de monstruos (Huesos, Alas y Cabezas)**. Los enemigos comunes los sueltan al morir y el mercader los intercambia por mejoras permanentes de atributos para Eon.
 
 ## Recursos
 
-| Recurso | Obtención | Uso | Límite | Pérdida / recarga |
-| --- | --- | --- | --- | --- |
-| **Salud (HP)** | Se restaura por completo en puntos de control, al vencer a un jefe y al reaparecer. | Mantener a Eon con vida. | 100 HP (130 con Vigor). | Se pierde con el daño. No hay curación durante la exploración ni el combate. En 0, derrota. |
-| **Escudo (SP)** | Solo con el potenciador Coraza equipado. Se restaura igual que la vida. | Absorber daño antes que la vida. | 50 SP. | Se gasta con cada impacto. |
-| **XP** | Enemigos comunes y jefes. | Comprar potenciadores. | 9999. | Solo al gastarse. **Se conserva al morir.** |
-| **Potenciadores** | Compra única con el mercader. | Efecto pasivo permanente mientras están equipados. | 3 equipados. | Nunca se pierden. |
-| **Habilidades** | Derrotar jefes. | Nuevas acciones o mejoras de movimiento. | 3 equipadas. | Nunca se pierden ni se descartan. |
+| Recurso                 | Obtención                                                                                                                       | Uso                                                     | Límite                                                             | Pérdida / recarga                                                                                     |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Salud (HP)**    | Se restaura por completo en puntos de control, al vencer a un jefe y al reaparecer.                                              | Mantener a Eon con vida.                                | 100 HP base (hasta 130 HP con Vitalidad máx.).                     | Se pierde al recibir daño una vez agotado el escudo. No hay curación en campo. En 0 HP: derrota.     |
+| **Escudo (SP)**   | Valor base de protección. Se restaura por completo junto con la vida en puntos de control, al vencer a un jefe y al reaparecer. | Absorber daño directo antes de comprometer la salud.   | Base definida según diseño (hasta +30 % con Protección máx.).   | Se reduce con impactos enemigos. Funciona con las mismas reglas de daño y restauración que la salud. |
+| **Hueso**         | Drop garantizado/probable de **Earthlem**.                                                                                 | Moneda de intercambio (mejoras de ataque/fuerza).       | 999.                                                                | Se gasta con el mercader. **Se conserva al morir.**                                              |
+| **Ala**           | Drop garantizado/probable de **Aurion**.                                                                                   | Moneda de intercambio (mejoras de velocidad/movilidad). | 999.                                                                | Se gasta con el mercader. **Se conserva al morir.**                                              |
+| **Cabeza**        | Drop garantizado/probable de **Driller**.                                                                                  | Moneda de intercambio (mejoras de vitalidad/salud).     | 999.                                                                | Se gasta con el mercader. **Se conserva al morir.**                                              |
+| **Potenciadores** | Intercambio por materiales con el mercader.                                                                                      | Aumentos pasivos permanentes a las estadísticas.       | Niveles fijos (Velocidad: 1 nivel; Daño, Vida, Escudo: 3 niveles). | Permanentes. No ocupan ranuras; se aplican directamente al personaje.                                  |
+| **Habilidades**   | Derrotar jefes.                                                                                                                  | Nuevas acciones activas y mejoras de movilidad.         | 3 equipadas a la vez.                                               | Nunca se pierden ni se descartan. Se gestionan desde el inventario.                                    |
 
-## Fuentes de XP
+---
 
-| Fuente | XP |
-| --- | ---: |
-| Aurion | 10 |
-| Earthlem | 30 |
-| Jefe 1 | 200 |
-| Jefe 2 | 300 |
-| Jefe 3 | 400 |
+## Fuentes de Materiales
 
-- Los enemigos comunes **reaparecen** al descansar en un punto de control o al volver a entrar a una zona. Tras vencer a un jefe, el jugador puede regresar a zonas anteriores para acumular más XP.
-- Un recorrido directo reúne unos 1400 XP antes de la isla final. Comprar los 6 potenciadores (1500 XP) exige volver a pelear en zonas anteriores.
+| Enemigo            | Tipo                  | Material obtenido | Tasa / Cantidad |
+| ------------------ | --------------------- | ----------------- | :-------------: |
+| **Earthlem** | Terrestre / Roca      | **Hueso**   |  1–2 por baja  |
+| **Aurion**   | Volador               | **Ala**     |  1–2 por baja  |
+| **Driller**  | Subterráneo / Gusano | **Cabeza**  |   1 por baja   |
 
-## Catálogo de potenciadores
+- Los enemigos comunes **reaparecen** al descansar en un punto de control o al volver a entrar a una zona.
+- El jugador puede regresar a biomas anteriores para farmear materiales específicos según la mejora que desee adquirir antes de entrar a un jefe.
 
-Todos son **permanentes**: se compran una vez y, mientras ocupan una de las **3 ranuras** del inventario, su efecto está siempre activo. No usan botones. El inventario muestra la función de cada uno.
+---
 
-| Potenciador | Efecto | Precio | Disponible desde |
-| --- | --- | ---: | --- |
-| **Vigor** | +30 de vida máxima (100 → 130). | 200 XP | Antesala del Jefe 1 |
-| **Filo** | +25 % de daño en espada, ataque descendente, Tajo ardiente y Dash cortante. La estela de la espada se tiñe de rojo. | 250 XP | Antesala del Jefe 1 |
-| **Codicia** | +25 % de XP obtenida. | 150 XP | Antesala del Jefe 1 |
-| **Coraza** | Otorga un escudo de 50 SP que absorbe daño antes que la vida; se restaura junto con la vida. | 250 XP | Antesala del Jefe 2 |
-| **Celeridad** | +20 % de velocidad de carrera y −40 % de recarga del dash. | 300 XP | Antesala del Jefe 2 |
-| **Foco arcano** | Tajo ardiente con −50 % de recarga y +50 % de daño. Solo tiene efecto si Tajo ardiente está equipado. | 350 XP | Antesala del Jefe 3 |
+## Catálogo de Potenciadores (Mercader)
 
-El catálogo de cada antesala incluye también los potenciadores de antesalas anteriores que el jugador no haya comprado. En la antesala de la Isla Final, el mercader regala uno de los que falten (una sola vez).
+Todas las mejoras son **pasivas y permanentes**: una vez compradas, su efecto queda integrado de inmediato en los atributos de Eon sin ocupar ranuras de inventario.
 
-## Fuentes y sumideros
+| Potenciador                    | Efecto por nivel                            | Niveles disponibles | Efecto máximo total | Coste orientativo de materiales |
+| ------------------------------ | ------------------------------------------- | :-----------------: | :------------------: | ------------------------------- |
+| **Velocidad**            | +5 % de velocidad de movimiento.            |          1          |    **+5 %**    | Alas                            |
+| **Fuerza (Daño)**       | +10 % de daño en todos los ataques de Eon. |          3          |   **+30 %**   | Huesos                          |
+| **Vitalidad (Vida)**     | +10 % de vida máxima.                      |          3          |   **+30 %**   | Cabezas                         |
+| **Protección (Escudo)** | +10 % de escudo máximo.                    |          3          |   **+30 %**   | Combinación de materiales      |
 
-**Fuentes**
+- Las mejoras no adquiridas en una antesala continúan disponibles en los siguientes encuentros con el mercader.
 
-- **Combate:** enemigos comunes (XP), que reaparecen.
-- **Jefes:** una gran cantidad de XP y su habilidad.
-- **Puntos de control y jefes vencidos:** restauran vida y escudo.
+---
 
-**Sumideros**
+## Fuentes y Sumideros
 
-- **Tienda del mercader:** potenciadores.
-- **Daño:** consume escudo y vida hasta el siguiente punto de control.
+### Fuentes
+
+- **Combate ordinario:** enemigos comunes reaparecen y entregan materiales (**Huesos**, **Alas**, **Cabezas**).
+- **Jefes:** entregan habilidades únicas de combate/movilidad.
+- **Puntos de control y jefes vencidos:** restauran por completo la salud y el escudo de Eon.
+
+### Sumideros
+
+- **Tienda del mercader:** consumo directo de materiales para adquirir niveles de potenciadores.
+- **Daño recibido:** reduce progresivamente el escudo (SP) y la vida (HP) hasta el próximo punto de control o muerte.
+
+---
 
 ## Reglas
 
-1. **Escudo antes que vida:** la vida no baja mientras quede al menos 1 SP.
-2. **Instakill:** ignora escudo, la invulnerabilidad del dash y la Escama pétrea.
-3. **Sin curación en campo:** vida y escudo solo se restauran en puntos de control, al vencer a un jefe o al reaparecer.
-4. **Persistencia:** XP, potenciadores y habilidades se conservan al ser derrotado.
-5. **Reaparición de enemigos:** los enemigos comunes reaparecen; los jefes derrotados no.
+1. **Escudo antes que vida:** el escudo absorbe el daño recibido. La salud solo se reduce una vez que el escudo llega a 0 SP.
+2. **Restauración idéntica:** el escudo se comporta en reposición igual que la salud: solo se recarga en puntos de control, al abatir un jefe o al reaparecer.
+3. **Instakill:** las caídas al vacío o trampas letales ignoran el escudo, la salud y cualquier invulnerabilidad activa.
+4. **Sin curación en campo:** no existen pociones, consumibles ni orbes de curación ni de escudo durante la exploración o combate.
+5. **Persistencia total de inventario:** los materiales recolectados, las habilidades y las mejoras adquiridas **se conservan al morir**.
+6. **Reaparición selectiva:** los enemigos comunes reaparecen para permitir el farmeo; los jefes abatidos no reaparecen.
+
+---
 
 ## Balance
 
-**Comportamientos que queremos incentivar**
+### Comportamientos que queremos incentivar
 
-- Pelear en el camino: la XP de los enemigos es la única vía hacia los potenciadores.
-- Cuidar la vida entre puntos de control: no hay curación en el campo.
-- Elegir: 3 ranuras de habilidad y 3 de potenciador para catálogos de 4 y 6.
-- Volver a zonas superadas para completar el catálogo.
+- **Caza selectiva:** motivar al jugador a buscar y eliminar enemigos concretos según el material que necesite para la mejora deseada.
+- **Supervivencia y precisión:** castigar el error, ya que ni el escudo ni la vida se regeneran de forma pasiva en combate.
+- **Exploración y *backtracking*:** volver a zonas previas si se desea optimizar las estadísticas al máximo antes de un combate exigente.
 
-**Comportamientos que queremos evitar**
+### Comportamientos que queremos evitar
 
-- **Ganar sin aprender al jefe:** los potenciadores ayudan, pero el instakill sigue siendo letal.
+- **Dependencia de curaciones infinitas:** forzar la maestría mecánica y el dominio del movimiento sobre el tanqueo por consumibles.
+- **Ignorar el combate regular:** el sistema de materiales obliga a interactuar con los distintos arquetipos de enemigos para progresar en estadísticas.
 
 > **Navegación:** [[00 - Índice]] · ← [[05 - Progresión]] · [[07 - Reglas y Estados del Juego]] →
