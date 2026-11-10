@@ -17,7 +17,6 @@ La economía gira en torno a un solo recurso de intercambio: los **puntos de exp
 | Fuente | XP |
 | --- | ---: |
 | Aurion | 10 |
-| Vestigio | 25 |
 | Earthlem | 30 |
 | Jefe 1 | 200 |
 | Jefe 2 | 300 |

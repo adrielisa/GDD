@@ -5,7 +5,7 @@
 - Prólogo en cómic de 5 páginas con la derrota de Eon.
 - 5 zonas explorables (Playa, Acantilados, Bosque, Ruinas, Archipiélago) y la Isla Final, con rutas opcionales.
 - 3 jefes normales (Chasko, Mago oscuro, Serpiente gigante) y La Entidad.
-- 3 enemigos comunes (Aurion, Earthlem, Vestigio), con reaparición.
+- 2 enemigos comunes (Aurion y Earthlem), con reaparición.
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
 - Inventario con descripción de función y control de cada elemento.
@@ -31,7 +31,7 @@
 | Prioridad | Entregable |
 | --- | --- |
 | **P0 — Vertical slice** | Playa + Acantilados + antesala con mercader + Jefe 1 + inventario + Doble salto. |
-| **P1** | Bosque + Ruinas + Jefe 2 + Vestigio + Tajo ardiente y Dash cortante. |
+| **P1** | Bosque + Ruinas + Jefe 2 + Tajo ardiente y Dash cortante. |
 | **P2** | Archipiélago + géiseres + Jefe 3 + Escama pétrea + cinemática de petrificación. |
 | **P3** | Isla Final + La Entidad + final y créditos. |
 | **P4 (si hay tiempo)** | Desafío «Sin rasguños», pulido de VFX, música dinámica por fases. |

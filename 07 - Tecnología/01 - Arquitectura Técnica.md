@@ -30,7 +30,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 | Potenciadores | `PowerUpDefinition` (ScriptableObject), `StatModifiers` (aplica los modificadores pasivos de los potenciadores equipados) |
 | Economía | `XPWallet`, `XPOrb`, `ShopController`, `ShopCatalog` |
 | Combate | `Hitbox`, `Hurtbox`, `DamageInfo` (incluye `isInstakill`), `Health` |
-| Enemigos | `EnemyBrain`, `AurionAI`, `EarthlemAI`, `VestigioAI`, `EnemyPool` |
+| Enemigos | `EnemyBrain`, `AurionAI`, `EarthlemAI`, `EnemyPool` |
 | Jefes | `BossController`, `BossAttack` (ScriptableObject), `ShrimpSerpentBoss`, `DarkMageBoss`, `GiantSerpentBoss`, `EntityBoss` |
 | Mundo | `WorldProgress`, `Checkpoint`, `AbilityGate`, `BossArena` (barreras invisibles o pilares), `Geyser`, `Cannon`, `WaterPlatform`, `RuinPillar`, `EnemyRespawner` |
 | Cámara | `CameraDirector` (Cinemachine 2D + confinadores) |

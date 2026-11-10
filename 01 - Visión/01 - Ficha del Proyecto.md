@@ -37,7 +37,7 @@
 | Zonas explorables | 5 (más la isla final) |
 | Jefes normales | 3 |
 | Jefe final | 1 (La Entidad) |
-| Enemigos comunes | 3 (Aurion, Earthlem, Vestigio) |
+| Enemigos comunes | 2 (Aurion y Earthlem) |
 | Habilidades obtenibles | 4 |
 | Ranuras de habilidad | 3 |
 | Potenciadores en catálogo | 6 |

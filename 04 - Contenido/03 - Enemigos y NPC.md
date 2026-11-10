@@ -1,6 +1,6 @@
 # Enemigos y NPC
 
-El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
+El juego tiene dos enemigos comunes (Aurion y Earthlem), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
 
 ## Resumen de enemigos comunes
 
@@ -8,7 +8,6 @@ El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes n
 | --- | ---: | --- | --- | --- | ---: |
 | Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago, Isla Final | 10 |
 | Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Solo zona 3: Bosque y Ruinas | 30 |
-| Vestigio | 50 HP | 3 u/s | Combo 18; estocada 22 | Ruinas, Archipiélago, Isla Final | 25 |
 
 ## Aurion
 
@@ -36,22 +35,6 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
 
 ```text
 Enterrado → Detecta a 3,5 u → Emerge → Barrido / Aplastamiento → [Eon a más de 8 u] Se entierra
-```
-
-## Vestigio *(nombre provisional)*
-
-- **Rol:** guerrero cuerpo a cuerpo.
-- **Descripción:** humanoide sin rostro, todo blanco, con una silueta que recuerda a La Entidad. Porta una lanza-espada blanca. Es un eco del titán.
-- **Comportamiento:** patrulla su plataforma; al ver a Eon se acerca hasta 3 u y elige un ataque.
-- **Ataques:**
-    - *Combo de dos tajos:* preparación de 0,5 s (el arma brilla); 18 de daño por tajo.
-    - *Estocada:* avanza 3 u tras 0,7 s de preparación; 22 de daño.
-- **Guardia:** tras recibir 2 golpes frontales seguidos, levanta el arma 1,2 s y bloquea todo daño frontal.
-- **Debilidades:** la guardia no cubre la espalda ni el Dash cortante; el Tajo ardiente y el bloqueo perfecto de la Escama pétrea rompen la guardia y lo aturden 0,5 s.
-- **Recompensa:** 25 XP.
-
-```text
-Patrullar → Detectar → Acercarse → Combo / Estocada → [2 golpes frontales recibidos] Guardia 1,2 s
 ```
 
 ## Jefe 1 — Chasko
@@ -140,8 +123,8 @@ Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extre
 
 | Fase | Vida | Desarrollo |
 | --- | --- | --- |
-| **1. Ascenso** | 100–60 % | Eon sube por 3 islas unidas por géiseres. La Entidad, al fondo, golpea zonas del suelo marcadas con sombra 1,2 s (30 de daño) y envía hasta 3 Vestigios. Cada isla tiene un **cañón**: al interactuar dispara 150 de daño; recarga 6 s. |
-| **2. Cumbre** | 60–25 % | Cara a cara. La Entidad apoya las manos en la cumbre; los núcleos del dorso de cada mano son puntos débiles. Barrido de mano (saltar o doble salto; 25), onda de choque rasante (20) e invocación de Vestigios. |
+| **1. Ascenso** | 100–60 % | Eon sube por 3 islas unidas por géiseres. La Entidad, al fondo, golpea zonas del suelo marcadas con sombra 1,2 s (30 de daño). Cada isla tiene un **cañón**: al interactuar dispara 150 de daño; recarga 6 s. |
+| **2. Cumbre** | 60–25 % | Cara a cara. La Entidad apoya las manos en la cumbre; los núcleos del dorso de cada mano son puntos débiles. Barrido de mano (saltar o doble salto; 25) y onda de choque rasante (20). |
 | **3. Revancha** | Menos de 25 % | Su rostro se abre y expone el núcleo. Combina los ataques anteriores a mayor velocidad. *(Detalle pendiente de cerrar con el equipo.)* |
 
 ## NPC

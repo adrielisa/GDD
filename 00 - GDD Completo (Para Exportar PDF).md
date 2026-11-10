@@ -29,7 +29,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Potenciadores | 6, permanentes y pasivos; **3 equipados**, siempre activos, sin botones. |
 | Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Escama pétrea (Jefe 3). **3 equipadas**; ninguna se descarta. |
 | Inventario | Muestra la función y el control de cada habilidad y potenciador. |
-| Enemigos | Aurion, Earthlem y Vestigio. |
+| Enemigos | Aurion y Earthlem. |
 | Jefes | Chasko (costa), Mago oscuro (opcional, dentro de un templo en ruinas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
 | Mundo | 5 zonas explorables con rutas opcionales; géiseres entre islas. |
 
@@ -45,7 +45,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 ### Pendiente
 
 - Cerrar la fase 3 de La Entidad.
-- Nombres de los jefes 2 y 3 y Vestigio.
+- Nombres de los jefes 2 y 3.
 - Asignar roles del equipo.
 
 ### Dónde consultar cada parte
@@ -99,7 +99,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Zonas explorables | 5 (más la isla final) |
 | Jefes normales | 3 |
 | Jefe final | 1 (La Entidad) |
-| Enemigos comunes | 3 (Aurion, Earthlem, Vestigio) |
+| Enemigos comunes | 2 (Aurion y Earthlem) |
 | Habilidades obtenibles | 4 |
 | Ranuras de habilidad | 3 |
 | Potenciadores en catálogo | 6 |
@@ -446,7 +446,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 - **Bloqueo perfecto:** si el golpe llega en los primeros 0,25 s, el daño se anula y el atacante queda aturdido 1 s.
 - Recarga de 3 s desde que se suelta.
 - **No bloquea ataques instakill** ni evita la caída al vacío.
-- Sinergias: el bloqueo perfecto aturde al Earthlem y rompe la guardia del Vestigio.
+- Sinergias: el bloqueo perfecto aturde al Earthlem.
 
 ### Potenciadores
 
@@ -478,7 +478,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | --- | --- | --- | --- |
 | Daño, salud y combate | Vida y escudo de Eon y enemigos, *hitbox*/*hurtbox*, instakill y eventos de muerte. | Capas de colisión 2D, Animator, efectos/*game feel*. | En prototipo |
 | Controlador del jugador y movilidad | Entradas, movimiento lateral, salto, doble salto, dash, ataques y habilidades activas. | `Rigidbody2D`, `Collider2D`, Input System, Inventario. | En prototipo |
-| IA de enemigos comunes | Patrulla, detección y ataque de Aurion, Earthlem y Vestigio; reaparición. | Raycasts, `Transform` de Eon, sistema de daño. | En prototipo (Aurion y Earthlem) |
+| IA de enemigos comunes | Patrulla, detección y ataque de Aurion y Earthlem; reaparición. | Raycasts, `Transform` de Eon, sistema de daño. | En prototipo |
 | IA de jefes | Patrones, fases y avisos de los tres jefes y La Entidad. | Sistema de daño, gestor de mundo, cámara. | En prototipo (Chasko; Driller provisional) |
 | Inventario y equipamiento | Guardar habilidades y potenciadores; 3 ranuras de cada tipo; descripciones. | UI, guardado, controlador del jugador. | En prototipo (habilidades) |
 | Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
@@ -529,7 +529,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
     - Los voladores oscilan en altura y embisten cuando Eon entra en su cono.
     - Al recibir daño entran en `HitStun` y reinician su temporizador de ataque.
     - Reaparecen en sus posiciones iniciales cuando Eon descansa en un punto de control o vuelve a entrar a la zona.
-- **Estados:** `Patrol`, `Alert`, `Attack`, `Stunned`, `Dead` (más `Buried` en Earthlem y `Guard` en Vestigio).
+- **Estados:** `Patrol`, `Alert`, `Attack`, `Stunned`, `Dead` (más `Buried` en Earthlem).
 - **Salidas:** al morir sueltan orbes de XP.
 - **Criterios de aceptación:** ningún enemigo cae de su plataforma por error, todos avisan antes de golpear y reaparecen correctamente.
 
@@ -683,7 +683,7 @@ Eon no sube de nivel. Progresa de dos formas: **habilidades** que entregan los j
 | Inicio | Cómic del prólogo | Eon ya perdió contra La Entidad. Motivo de la revancha. |
 | Introducción | Playa del Despertar | Movimiento, salto, combo, dash. Primeros Aurion y primera XP. |
 | Desarrollo 1 | Acantilados → antesala (mercader) → **Jefe 1** | Primer potenciador. Leer avisos y castigar tras la embestida. Obtiene **Doble salto**. |
-| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem y Vestigio. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
+| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
 | Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Escama pétrea**: con 4 habilidades y 3 ranuras, elige su equipo. |
 | Clímax | Puente de la Serpiente → antesala → Isla Final | Combina todo contra La Entidad. |
 | Final | — | Revancha cumplida; créditos. |
@@ -713,18 +713,18 @@ Ninguna habilidad es obligatoria para avanzar por el camino principal: el jugado
 | Acantilados | Grupos de Aurion; precipicios | Media-baja. |
 | Jefe 1 | Burbujas que se saltan o se atraviesan con dash, embestida con ventana de castigo | Media. |
 | Bosque | Earthlem; plataformas verticales | Media. |
-| Ruinas | Vestigio; combinaciones Earthlem + Aurion | Media-alta. |
+| Ruinas | Combinaciones Earthlem + Aurion | Media-alta. |
 | Jefe 2 | Arena plana sin plataformas; ataques que exigen correr; escudo y teletransporte | Alta. |
 | Archipiélago | Géiseres, islas pequeñas, enemigos en espacios reducidos | Alta. |
 | Jefe 3 | Jefe grande con cuerpo dañino, lluvia de baba, cabeza instakill | Muy alta. |
-| La Entidad | Fases con todo lo anterior; Vestigios como refuerzos | Máxima. |
+| La Entidad | Fases con todo lo anterior | Máxima. |
 
 Sin curación en el campo, la distancia entre puntos de control es parte de la dificultad: aumenta ligeramente en cada zona.
 
 ### Curva de aprendizaje
 
 - Antes del Jefe 1 el jugador debe dominar salto y dash: la Playa y los Acantilados obligan a usarlos.
-- Antes del Jefe 2 debe saber pelear contra enemigos con defensa (Earthlem, Vestigio).
+- Antes del Jefe 2 debe saber pelear contra enemigos con defensa (Earthlem).
 - Antes del Jefe 3 debe dominar el cruce con géiseres y las plataformas pequeñas.
 - Antes de La Entidad debe haber elegido su equipo de 3 habilidades y 3 potenciadores.
 
@@ -750,7 +750,6 @@ La economía gira en torno a un solo recurso de intercambio: los **puntos de exp
 | Fuente | XP |
 | --- | ---: |
 | Aurion | 10 |
-| Vestigio | 25 |
 | Earthlem | 30 |
 | Jefe 1 | 200 |
 | Jefe 2 | 300 |
@@ -996,7 +995,6 @@ Un megacontinente formado por 17 islas-país. *Pendiente de desarrollar; no apar
 
 - **Los fragmentos del héroe:** al caer Eon, su poder se dividió y fue absorbido por criaturas poderosas. Vencerlas devuelve ese poder en forma de habilidades. Por eso los jefes «entregan» habilidades.
 - **La experiencia se puede intercambiar:** la energía que liberan las criaturas al morir (XP) es tangible; el mercader sabe destilarla en potenciadores.
-- **Los Vestigios:** soldados sin rostro, blancos como La Entidad, nacidos de su ataque. Cuanto más cerca de la isla final, más abundan.
 - **Géiseres:** el cataclismo fracturó la corteza; en las islas brotan géiseres lo bastante potentes para lanzar a una persona de una isla a otra.
 
 ### Historia del mundo
@@ -1030,7 +1028,7 @@ La Entidad es derrotada y el cielo se despeja. El mundo sigue en ruinas, pero la
 
 | Facción | Objetivo | Relación con el jugador |
 | --- | --- | --- |
-| La Entidad y los Vestigios | Terminar la destrucción de Eretz. | Hostil. |
+| La Entidad | Terminar la destrucción de Eretz. | Hostil. |
 | Criaturas con fragmentos (jefes) | Conservar el poder que absorbieron. | Hostil; entregan habilidades al ser vencidas. |
 | Fauna corrompida (Aurion, Earthlem) | Sobrevivir y defender su territorio. | Hostil; fuente de XP. |
 | El mercader | Sobrevivir comerciando. | Aliado comercial. |
@@ -1081,7 +1079,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | Descripción física | Humanoide colosal de color gris claro, sin rostro. |
 | Personalidad | Indiferente; no habla, no se burla. Actúa como una fuerza de la naturaleza. |
 | Objetivo | Acabar con la humanidad. |
-| Habilidades | Golpes de zona sobre las islas, ondas y la invocación de Vestigios. |
+| Habilidades | Golpes de zona sobre las islas y ondas. |
 | Debilidad | Los cañones de la isla final y los puntos que expone en su última fase. |
 
 ### Jefes
@@ -1098,7 +1096,6 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | --- | --- |
 | **Aurion** | Criatura voladora de núcleo brillante; hostigador aéreo. |
 | **Earthlem** | Gólem de roca camuflado bajo tierra; tanque terrestre. |
-| **Vestigio** *(nombre provisional)* | Guerrero humanoide sin rostro, todo blanco, con forma parecida a La Entidad. Porta un arma. Es un eco del titán. |
 
 ### NPC: el mercader (Seller)
 
@@ -1235,7 +1232,7 @@ True Hero
 | Arenas de jefe | 4 |
 | Jefes normales | 3 |
 | Jefe final | 1 |
-| Enemigos comunes | 3 |
+| Enemigos comunes | 2 |
 | NPC | 1 (mercader) |
 | Habilidades | 4 |
 | Potenciadores | 6 |
@@ -1248,7 +1245,7 @@ True Hero
 | --- | --- |
 | Mercader | Llegar a la antesala del Jefe 1. |
 | Jefe 1 | Salto, dash y combo enseñados en la Playa y los Acantilados. |
-| Jefe 2 | Earthlem y Vestigio presentados en Bosque y Ruinas. |
+| Jefe 2 | Earthlem presentado en Bosque y Ruinas. |
 | Archipiélago de Tierra | Cruzar las Ruinas (el Jefe 2 es opcional; los géiseres funcionan siempre). |
 | Jefe 3 | Géiseres y plataformas pequeñas dominados en el Archipiélago. |
 | Isla Final | Jefe 3 derrotado (puente petrificado). |
@@ -1271,11 +1268,11 @@ Antes de cada jefe hay una **antesala** con el mercader y un punto de control. L
 | Acantilados de la Costa | 6 min | Aurion | Cueva superior (Doble salto): grupo de Aurion | Mitad y antesala del Jefe 1 |
 | Arena de la Marea | 3 min | Jefe 1 (Chasko) | — | — |
 | Bosque de Raíces | 8 min | Aurion, Earthlem | Copa de los árboles (Doble salto): atajo | Entrada y salida |
-| Ruinas Abandonadas | 7 min | Earthlem, Vestigio | Torre sellada (Tajo ardiente: interruptor lejano): atajo y Vestigios | Mitad y antesala del Jefe 2 |
+| Ruinas Abandonadas | 7 min | Earthlem | Torre sellada (Tajo ardiente: interruptor lejano): atajo y grupo de enemigos | Mitad y antesala del Jefe 2 |
 | Patio de la Academia | 3 min | Jefe 2 | — | — |
-| Archipiélago de Tierra | 9 min | Aurion, Vestigio | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
+| Archipiélago de Tierra | 9 min | Aurion | Islas altas (Doble salto + géiser): grupo de enemigos | Mitad y antesala del Jefe 3 |
 | Anillo de Islas | 4 min | Jefe 3 | — | — |
-| Puente e Isla Final | 6 min | La Entidad, Vestigios | — | Antesala de la Isla Final |
+| Puente e Isla Final | 6 min | La Entidad | — | Antesala de la Isla Final |
 
 ### Mapa jugable actual (Eretz_Mapa)
 
@@ -1366,7 +1363,7 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 - **Objetivo principal:** llegar al Patio de la Academia.
 - **Objetivos secundarios:** explorar aulas derrumbadas y torres.
 - **Duración:** 7 minutos. **Dificultad:** media-alta.
-- **Enemigos:** Earthlem, primer Vestigio.
+- **Enemigos:** Earthlem.
 - **Puntos de control:** mitad del recorrido y antesala (mercader).
 
 ### Patio de la Academia (Jefe 2)
@@ -1381,7 +1378,7 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 - **Objetivo principal:** cruzar las islas hasta el Anillo de Islas.
 - **Duración:** 9 minutos. **Dificultad:** alta.
 - **Mecánicas introducidas:** géiseres; combate en islas pequeñas sobre el vacío.
-- **Enemigos:** Aurion, Vestigio. Los Earthlem no salen de la zona 3 (Bosque y Ruinas).
+- **Enemigos:** Aurion. Los Earthlem no salen de la zona 3 (Bosque y Ruinas).
 - **Puntos de control:** mitad del recorrido y antesala (mercader).
 - **Islas:** superficie de pasto y tierra; por debajo cuelgan formaciones de roca en forma de pirámide invertida, con lianas.
 
@@ -1413,7 +1410,7 @@ Géiser de las Ruinas → Isla 1 → Géiser → Isla 2 (punto de control) → G
 
 ## Enemigos y NPC
 
-El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
+El juego tiene dos enemigos comunes (Aurion y Earthlem), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
 
 ### Resumen de enemigos comunes
 
@@ -1421,7 +1418,6 @@ El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes n
 | --- | ---: | --- | --- | --- | ---: |
 | Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago, Isla Final | 10 |
 | Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Solo zona 3: Bosque y Ruinas | 30 |
-| Vestigio | 50 HP | 3 u/s | Combo 18; estocada 22 | Ruinas, Archipiélago, Isla Final | 25 |
 
 ### Aurion
 
@@ -1449,22 +1445,6 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
 
 ```text
 Enterrado → Detecta a 3,5 u → Emerge → Barrido / Aplastamiento → [Eon a más de 8 u] Se entierra
-```
-
-### Vestigio *(nombre provisional)*
-
-- **Rol:** guerrero cuerpo a cuerpo.
-- **Descripción:** humanoide sin rostro, todo blanco, con una silueta que recuerda a La Entidad. Porta una lanza-espada blanca. Es un eco del titán.
-- **Comportamiento:** patrulla su plataforma; al ver a Eon se acerca hasta 3 u y elige un ataque.
-- **Ataques:**
-    - *Combo de dos tajos:* preparación de 0,5 s (el arma brilla); 18 de daño por tajo.
-    - *Estocada:* avanza 3 u tras 0,7 s de preparación; 22 de daño.
-- **Guardia:** tras recibir 2 golpes frontales seguidos, levanta el arma 1,2 s y bloquea todo daño frontal.
-- **Debilidades:** la guardia no cubre la espalda ni el Dash cortante; el Tajo ardiente y el bloqueo perfecto de la Escama pétrea rompen la guardia y lo aturden 0,5 s.
-- **Recompensa:** 25 XP.
-
-```text
-Patrullar → Detectar → Acercarse → Combo / Estocada → [2 golpes frontales recibidos] Guardia 1,2 s
 ```
 
 ### Jefe 1 — Chasko
@@ -1553,8 +1533,8 @@ Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extre
 
 | Fase | Vida | Desarrollo |
 | --- | --- | --- |
-| **1. Ascenso** | 100–60 % | Eon sube por 3 islas unidas por géiseres. La Entidad, al fondo, golpea zonas del suelo marcadas con sombra 1,2 s (30 de daño) y envía hasta 3 Vestigios. Cada isla tiene un **cañón**: al interactuar dispara 150 de daño; recarga 6 s. |
-| **2. Cumbre** | 60–25 % | Cara a cara. La Entidad apoya las manos en la cumbre; los núcleos del dorso de cada mano son puntos débiles. Barrido de mano (saltar o doble salto; 25), onda de choque rasante (20) e invocación de Vestigios. |
+| **1. Ascenso** | 100–60 % | Eon sube por 3 islas unidas por géiseres. La Entidad, al fondo, golpea zonas del suelo marcadas con sombra 1,2 s (30 de daño). Cada isla tiene un **cañón**: al interactuar dispara 150 de daño; recarga 6 s. |
+| **2. Cumbre** | 60–25 % | Cara a cara. La Entidad apoya las manos en la cumbre; los núcleos del dorso de cada mano son puntos débiles. Barrido de mano (saltar o doble salto; 25) y onda de choque rasante (20). |
 | **3. Revancha** | Menos de 25 % | Su rostro se abre y expone el núcleo. Combina los ataques anteriores a mayor velocidad. *(Detalle pendiente de cerrar con el equipo.)* |
 
 ### NPC
@@ -1653,7 +1633,7 @@ El juego tiene una misión principal dividida en cuatro objetivos (uno por jefe)
 | --- | --- | --- | --- |
 | Cueva superior | Acantilados de la Costa | Doble salto | Grupo de Aurion (XP). |
 | Copa de los árboles | Bosque de Raíces | Doble salto | Atajo hacia las Ruinas. |
-| Torre sellada | Ruinas Abandonadas | Tajo ardiente (interruptor lejano) | Atajo y grupo de Vestigios (XP). |
+| Torre sellada | Ruinas Abandonadas | Tajo ardiente (interruptor lejano) | Atajo y grupo de enemigos (XP). |
 | Islas altas | Archipiélago de Tierra | Doble salto + géiser | Grupo de enemigos (XP). |
 
 ### Desafío opcional
@@ -1682,16 +1662,16 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 ### Formas predominantes
 
 - **Entornos y ruinas:** rectángulos sólidos; islas flotantes con base de triángulo invertido.
-- **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem); siluetas lisas y verticales sin rasgos (Vestigio).
+- **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem).
 - **Jefes:** curvas segmentadas (Chasko y Serpiente gigante); triángulos y capuchas puntiagudas (Mago oscuro).
-- **La Entidad y Vestigios:** silueta angular alargada, sin rostro, superficie lisa.
+- **La Entidad:** silueta angular alargada, sin rostro, superficie lisa.
 
 ### Paleta de color
 
 **Colores principales**
 
 - **Azul cobalto y celeste (`#3F6EAE`, `#8CAFD9`):** cielo y niebla atmosférica de los planos de *parallax*.
-- **Blanco roto y gris mineral (`#E6E8ED`, `#B0B6C4`):** mármol, rocas celestes, La Entidad y los Vestigios.
+- **Blanco roto y gris mineral (`#E6E8ED`, `#B0B6C4`):** mármol, rocas celestes y La Entidad.
 - **Ocre terroso y marrón (`#4A3728`, `#7D634C`):** base de las islas, raíces y suelo jugable.
 
 **Colores secundarios**
@@ -1750,7 +1730,6 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | Mercader | 64 × 64 | Idle, hablar, entregar | — | Pendiente |
 | Aurion | 48 × 48 | Flotar, cargar, embestir, aturdido, muerte | Núcleo rojo, estela | Vuelo hecho (56 × 56); el resto pendiente. |
 | Earthlem | 96 × 96 | Enterrado, emerger, caminar, barrido, aplastamiento, enterrarse, impacto, muerte | Escombros, onda sísmica | Emerger, reposo y ataque hechos (128 × 112); el resto pendiente. |
-| Vestigio | 64 × 96 | Caminar, combo, estocada, guardia, impacto, muerte | Brillo del arma, disolución blanca | Pendiente |
 | Jefe 1 — Chasko | 90 × 90 | Idle, caminar, chasquido (carga, disparo, recuperación), recibir daño, muerte | Burbuja de cavitación (46 × 46: avanzar, estallido), parpadeo de embestida, onda de choque | Hecho (`Chasko.aseprite`) |
 | Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Columna de fuego de aviso, bola de fuego y explosión; grietas incandescentes y picos de piedra con lava (versión 2, aún sin pasar a Unity); esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
 | Jefe 3 — Serpiente gigante | Cabeza 192 × 192, segmento 96 × 96, cola | Mandíbula, segmento hinchado, petrificación | Gotas y salpicadura de baba, polvo al atravesar islas | Pendiente |
@@ -2018,7 +1997,6 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 | Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
 | Enemigo común | Aurion                                                 | 1                         | Vuelo hecho; faltan cargar, embestir, aturdido y muerte.                                                         |
 | Enemigo común | Earthlem                                               | 3                         | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte.                          |
-| Enemigo común | Vestigio                                               | 0                         | Sin arte.                                                                                                        |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
 | Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
@@ -2246,10 +2224,6 @@ El golpe empieza en el cuadro 8.
 ![[05 - Arte y Audio/Galería de Assets/Enemigos/earthlem_ataque_cuadros.png]]
 
 Origen: `Assets/Art/Sprites/Characters/Enemies/Golem/golem_ataque/`
-
-#### Vestigio
-
-Sin arte todavía. Requisitos en [[02 - Personajes y Animación]].
 
 ---
 
@@ -3339,7 +3313,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 | Potenciadores | `PowerUpDefinition` (ScriptableObject), `StatModifiers` (aplica los modificadores pasivos de los potenciadores equipados) |
 | Economía | `XPWallet`, `XPOrb`, `ShopController`, `ShopCatalog` |
 | Combate | `Hitbox`, `Hurtbox`, `DamageInfo` (incluye `isInstakill`), `Health` |
-| Enemigos | `EnemyBrain`, `AurionAI`, `EarthlemAI`, `VestigioAI`, `EnemyPool` |
+| Enemigos | `EnemyBrain`, `AurionAI`, `EarthlemAI`, `EnemyPool` |
 | Jefes | `BossController`, `BossAttack` (ScriptableObject), `ShrimpSerpentBoss`, `DarkMageBoss`, `GiantSerpentBoss`, `EntityBoss` |
 | Mundo | `WorldProgress`, `Checkpoint`, `AbilityGate`, `BossArena` (barreras invisibles o pilares), `Geyser`, `Cannon`, `WaterPlatform`, `RuinPillar`, `EnemyRespawner` |
 | Cámara | `CameraDirector` (Cinemachine 2D + confinadores) |
@@ -3476,7 +3450,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 - Prólogo en cómic de 5 páginas con la derrota de Eon.
 - 5 zonas explorables (Playa, Acantilados, Bosque, Ruinas, Archipiélago) y la Isla Final, con rutas opcionales.
 - 3 jefes normales (Chasko, Mago oscuro, Serpiente gigante) y La Entidad.
-- 3 enemigos comunes (Aurion, Earthlem, Vestigio), con reaparición.
+- 2 enemigos comunes (Aurion y Earthlem), con reaparición.
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
 - Inventario con descripción de función y control de cada elemento.
@@ -3502,7 +3476,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 | Prioridad | Entregable |
 | --- | --- |
 | **P0 — Vertical slice** | Playa + Acantilados + antesala con mercader + Jefe 1 + inventario + Doble salto. |
-| **P1** | Bosque + Ruinas + Jefe 2 + Vestigio + Tajo ardiente y Dash cortante. |
+| **P1** | Bosque + Ruinas + Jefe 2 + Tajo ardiente y Dash cortante. |
 | **P2** | Archipiélago + géiseres + Jefe 3 + Escama pétrea + cinemática de petrificación. |
 | **P3** | Isla Final + La Entidad + final y créditos. |
 | **P4 (si hay tiempo)** | Desafío «Sin rasguños», pulido de VFX, música dinámica por fases. |
@@ -3545,7 +3519,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | 1. Prototipo de control | Movimiento, salto, dash, combo, ataque descendente. | Se siente bien en una sala gris. |
 | 2. Prototipo de sistemas | Daño, XP, tienda, inventario con 3 ranuras de habilidad y 3 de potenciador. | Se compra y se equipa un potenciador, y su efecto se aplica. |
 | 3. Vertical slice | Playa + Acantilados + Jefe 1 + Doble salto. | Se juega de principio a fin sin errores bloqueantes. |
-| 4. Bloque 2 | Bosque, Ruinas, Vestigio, Jefe 2. | Jefe 2 derrotable y entrega 2 habilidades. |
+| 4. Bloque 2 | Bosque, Ruinas, Jefe 2. | Jefe 2 derrotable y entrega 2 habilidades. |
 | 5. Bloque 3 | Archipiélago, géiseres, Jefe 3, petrificación. | Puente a la Isla Final funcional. |
 | 6. Final | La Entidad, final, créditos. | Juego completo jugable. |
 | 7. Pulido y pruebas | Balance, VFX, audio, accesibilidad. | Criterios de [[04 - Criterios de Aceptación]] cumplidos. |
@@ -3573,16 +3547,16 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-14 | Sprites del Jefe 1 (Chasko) y su burbuja | Arte | P0 | 3 | Hecho |
 | B-15 | Cómic del prólogo (5 páginas) | Arte | P0 | 3 | Pendiente |
 | B-16 | Puntos de control y guardado | Programación | P0 | 3 | En curso (puntos de control hechos) |
-| B-17 | IA de Earthlem y Vestigio | Programación | P1 | 4 | En curso (Earthlem hecho) |
+| B-17 | IA de Earthlem | Programación | P1 | 4 | Hecho |
 | B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; sala del templo con puertas selladas | Programación | P1 | 4 | Hecho |
 | B-19 | Tajo ardiente (`K` en el prototipo) y Dash cortante | Programación | P1 | 4 | Hecho |
 | B-20 | Géiseres | Programación | P2 | 5 | Hecho (animados) |
 | B-21 | Jefe 3: cuerpo segmentado, baba, cabeza instakill | Programación | P2 | 5 | Pendiente |
 | B-22 | Escama pétrea (`K`): reducción, bloqueo perfecto y aturdimiento | Programación | P2 | 5 | Pendiente |
 | B-23 | Ilustración de la serpiente petrificada | Arte | P2 | 5 | Pendiente |
-| B-24 | La Entidad: fases, cañones, Vestigios | Programación | P3 | 6 | Pendiente |
+| B-24 | La Entidad: fases y cañones | Programación | P3 | 6 | Pendiente |
 | B-25 | **Cerrar el diseño de la fase 3 de La Entidad** | Diseño | P2 | 5 | Pendiente |
-| B-26 | Nombres de los jefes 2 y 3 y Vestigio | Diseño | P2 | 5 | Pendiente |
+| B-26 | Nombres de los jefes 2 y 3 | Diseño | P2 | 5 | Pendiente |
 | B-27 | Música por zona y jefe | Audio | P1 | 4–6 | Pendiente |
 | B-28 | Menús, pausa y configuración | UI | P1 | 7 | Pendiente |
 | B-29 | Mapa jugable Eretz (costa a isla final) con enemigos por zona y saltos verificados | Diseño de niveles | P0 | 3 | Hecho |
@@ -3617,7 +3591,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Economía | — | XP para cambiar por potenciadores con el mercader. | Economía, Objetos, Enemigos, UI |
 | Habilidades | No existían. | Habilidades de jefes con 3 ranuras. | Mecánicas, Sistemas, Progresión |
 | Cruce entre islas | Trampolines. | Géiseres. | Mecánicas, Entornos, Niveles |
-| Enemigos | Aurion, Driller, Earthlem. | Aurion, Earthlem, Vestigio. Driller descartado. | Enemigos, Arte |
+| Enemigos | Aurion, Driller, Earthlem. | Aurion y Earthlem. Driller descartado. | Enemigos, Arte |
 | Mundo | Niveles lineales. | Zonas explorables. | Estructura, Niveles |
 
 ### Cambios aplicados en la versión 0.2.1
@@ -3773,7 +3747,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Tema | Detalle |
 | --- | --- |
 | Fase 3 de La Entidad | Cerrar ataques y valores. |
-| Nombres | Jefes 2 y 3 y Vestigio. |
+| Nombres | Jefes 2 y 3. |
 | Valores de La Entidad | Ajustar con el encuentro ya diseñado. |
 
 
@@ -3793,7 +3767,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Inventario | 3 ranuras de habilidad y 3 de potenciador; descripción de función y control; cambios bloqueados dentro de arenas. |
 | Potenciadores | 6 tipos, permanentes, siempre activos mientras están equipados; sin controles. |
 | Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Escama pétrea (`K`) funcionan solo equipados; ninguna se descarta. |
-| Enemigos | Aurion, Earthlem y Vestigio con sus ataques, defensas, avisos y XP; reaparecen. |
+| Enemigos | Aurion y Earthlem con sus ataques, defensas, avisos y XP; reaparecen. |
 | Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; muros de roca que cierran la arena y se rompen al vencerlo; entrega Doble salto. |
 | Jefe 2 | Opcional: se entra al templo con Interactuar y se puede pasar de largo. Sala plana cerrada por los muros del templo y puertas selladas durante la pelea; llamaradas, ola de picos con zona segura junto al muro, escudo, cráneos y teletransporte al extremo opuesto con 1 s de exposición; entrega Tajo ardiente y Dash cortante. |
 | Jefe 3 | Cuerpo dañable, cola débil, lluvia de baba, cabeza instakill; límites invisibles; entrega Escama pétrea; petrificación y puente al morir. |
@@ -3811,7 +3785,6 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | --- | --- |
 | **Eon** | Protagonista; el héroe profetizado que perdió contra La Entidad. |
 | **La Entidad** | Titán cósmico, jefe final. |
-| **Vestigio** | Enemigo común sin rostro, blanco, con forma parecida a La Entidad (nombre provisional). |
 | **XP (puntos de experiencia)** | Recurso que sueltan los enemigos; se cambia por potenciadores. No sube niveles. |
 | **Potenciador** | Mejora pasiva permanente que se compra con XP. Está siempre activa mientras ocupa una de las 3 ranuras de potenciador. |
 | **Habilidad** | Acción o mejora permanente que entrega un jefe; solo funciona equipada (3 ranuras). Ninguna se descarta. |
@@ -3887,7 +3860,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
-| D-25 | Enemigos | Enemigos comunes: Aurion, Earthlem y Vestigio. Driller descartado. | Petición del equipo. |
+| D-25 | Enemigos | Enemigos comunes: Aurion y Earthlem. Driller descartado. | Petición del equipo. |
 | D-26 | Jefes | 3 jefes normales y La Entidad como jefe final. | Petición del equipo. |
 | D-27 | Jefes | La batalla original contra La Entidad (islas, cañones) pasa a ser la fase 1 del combate final. | Reutilizar lo ya diseñado. |
 | D-28 | Jefes | Límites de arena invisibles, salvo en el Jefe 2: pilares de las ruinas que bloquean el paso. | Petición del equipo. |
@@ -3917,7 +3890,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 2 y 3 y Vestigio. |
+| P-02 | Nombres | Jefes 2 y 3. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
@@ -3932,12 +3905,12 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | ------- | ---------- | ------------------- | ----------- |
 | 0.1.0   | 05/10/2026 | Creación del documento a partir de la plantilla. Visión, mecánicas iniciales, sistemas, economía, historia, mundo, personajes, enemigos (Aurion, Driller, Earthlem), objetos, dirección de arte y audio. | Equipo True Hero |
 | 0.1.1   | 16/10/2026 | Actualización de la ficha, la perspectiva, la tecnología y el audio. | Equipo True Hero |
-| 0.2.0   | 07/11/2026 | Reestructuración completa: el juego empieza tras la derrota de Eon; 3 jefes (Camarón serpiente, Mago oscuro, Serpiente gigante) y La Entidad; XP como recurso de intercambio; potenciadores con 3 ranuras; habilidades con 3 ranuras; géiseres; zonas explorables; Vestigio como nuevo enemigo; Driller y aliados eliminados. Secciones 06 a 10 completadas. Página de resumen añadida. | Vargas Pérez Joel (con apoyo de Adriel) |
+| 0.2.0   | 07/11/2026 | Reestructuración completa: el juego empieza tras la derrota de Eon; 3 jefes (Camarón serpiente, Mago oscuro, Serpiente gigante) y La Entidad; XP como recurso de intercambio; potenciadores con 3 ranuras; habilidades con 3 ranuras; géiseres; zonas explorables; Driller y aliados eliminados. Secciones 06 a 10 completadas. Página de resumen añadida. | Vargas Pérez Joel (con apoyo de Adriel) |
 | 0.2.1   | 07/11/2026 | Potenciadores permanentes y pasivos sin controles; sin curación ni escudo en el campo (restauración en puntos de control y jefes); eliminados los objetos del mapa; Eon viaja solo; Tajo ardiente como ataque arcano; Escama pétrea como habilidad del Jefe 3; ninguna habilidad se descarta; nuevos controles (`Enter`, `J`, `K`); inventario con descripciones; sacudida fija; mercader antes de cada jefe; reaparición de enemigos; límites de arena invisibles salvo los pilares del Jefe 2. | Vargas Pérez Joel (con apoyo de Adriel) |
 | 0.3.0   | 09/11/2026 | Sincronización con Unity: mapa jugable Eretz (recorrido +60 %, enemigos por zona, saltos verificados), Earthlem solo en la zona 3, muros de roca en la arena de Chasko, Driller provisional como jefe del gusano, valores de Eon actualizados (carrera, salto, dash, combo y ritmo de ataque), arte de entornos SSW (costa, templo, islas, géiser, columnas) en Entornos y Galería, herramientas de prueba y backlog actualizado; drop de Chasko (Camarón de Chasko → Doble salto con burbuja) e inventario de habilidades en el menú de pausa. | Vargas Pérez Joel |
 | 0.4.0   | 09/11/2026 | Jefe 2 (Mago oscuro) implementado y **opcional**: diseño, ataques y valores de Unity, ojos que cambian al conjurar, remolino al aparecer y desaparecer; pelea dentro del templo en la escena `Ruina_Mago` (sala de 44 u, puertas selladas, cámara limitada); entrada al templo en Eretz con Interactuar, fachada y ruinas detrás; Tajo ardiente (`K` en el prototipo) y Dash cortante entregados por la Brasa del Mago y el Filo de sombra; estado entre escenas; galería con el Mago, su magia, sus objetos y el templo; pruebas T-23 a T-30. | Vargas Pérez Joel |
 | 0.4.1   | 10/11/2026 | Efectos v2 del Mago oscuro en la Galería (sustituyen a los anteriores): aviso con columna de fuego, bola de fuego con estela, explosión con humo, grietas incandescentes y picos de piedra con lava que escurre. Pendiente pasarlos a Unity (B-37). | Vargas Pérez Joel |
-| 0.4.2   | 10/11/2026 | Nueva página [[07 - Bocetos del Desarrollo]] con los 7 bocetos a mano de la fase inicial: diseño, carrera y poses de ataque de Eon; Chasko y el Doble salto; interior y piezas del templo del Mago con su paleta de grises; el Mago oscuro, su magia y el Dash cortante. Cada boceto indica qué se conservó en el juego. Además: el escudo arcano del Mago solo empuja a Eon cuerpo a cuerpo (el Tajo ardiente desde lejos ya no lo empuja), pruebas T-27 y T-34, herramienta para forzar el escudo, pruebas repetidas renumeradas (T-31 a T-33) y estado actual del escudo de Eon en B-04. | Vargas Pérez Joel |
+| 0.4.2   | 10/11/2026 | Nueva página [[07 - Bocetos del Desarrollo]] con los 7 bocetos a mano de la fase inicial: diseño, carrera y poses de ataque de Eon; Chasko y el Doble salto; interior y piezas del templo del Mago con su paleta de grises; el Mago oscuro, su magia y el Dash cortante. Cada boceto indica qué se conservó en el juego. Además: el escudo arcano del Mago solo empuja a Eon cuerpo a cuerpo (el Tajo ardiente desde lejos ya no lo empuja), pruebas T-27 y T-34, herramienta para forzar el escudo, pruebas repetidas renumeradas (T-31 a T-33) y estado actual del escudo de Eon en B-04. Los enemigos comunes quedan en dos (Aurion y Earthlem). | Vargas Pérez Joel |
 
 ### Convención
 

@@ -60,7 +60,6 @@ Un megacontinente formado por 17 islas-país. *Pendiente de desarrollar; no apar
 
 - **Los fragmentos del héroe:** al caer Eon, su poder se dividió y fue absorbido por criaturas poderosas. Vencerlas devuelve ese poder en forma de habilidades. Por eso los jefes «entregan» habilidades.
 - **La experiencia se puede intercambiar:** la energía que liberan las criaturas al morir (XP) es tangible; el mercader sabe destilarla en potenciadores.
-- **Los Vestigios:** soldados sin rostro, blancos como La Entidad, nacidos de su ataque. Cuanto más cerca de la isla final, más abundan.
 - **Géiseres:** el cataclismo fracturó la corteza; en las islas brotan géiseres lo bastante potentes para lanzar a una persona de una isla a otra.
 
 ## Historia del mundo
@@ -94,7 +93,7 @@ La Entidad es derrotada y el cielo se despeja. El mundo sigue en ruinas, pero la
 
 | Facción | Objetivo | Relación con el jugador |
 | --- | --- | --- |
-| La Entidad y los Vestigios | Terminar la destrucción de Eretz. | Hostil. |
+| La Entidad | Terminar la destrucción de Eretz. | Hostil. |
 | Criaturas con fragmentos (jefes) | Conservar el poder que absorbieron. | Hostil; entregan habilidades al ser vencidas. |
 | Fauna corrompida (Aurion, Earthlem) | Sobrevivir y defender su territorio. | Hostil; fuente de XP. |
 | El mercader | Sobrevivir comerciando. | Aliado comercial. |

@@ -15,16 +15,16 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 ## Formas predominantes
 
 - **Entornos y ruinas:** rectángulos sólidos; islas flotantes con base de triángulo invertido.
-- **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem); siluetas lisas y verticales sin rasgos (Vestigio).
+- **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem).
 - **Jefes:** curvas segmentadas (Chasko y Serpiente gigante); triángulos y capuchas puntiagudas (Mago oscuro).
-- **La Entidad y Vestigios:** silueta angular alargada, sin rostro, superficie lisa.
+- **La Entidad:** silueta angular alargada, sin rostro, superficie lisa.
 
 ## Paleta de color
 
 **Colores principales**
 
 - **Azul cobalto y celeste (`#3F6EAE`, `#8CAFD9`):** cielo y niebla atmosférica de los planos de *parallax*.
-- **Blanco roto y gris mineral (`#E6E8ED`, `#B0B6C4`):** mármol, rocas celestes, La Entidad y los Vestigios.
+- **Blanco roto y gris mineral (`#E6E8ED`, `#B0B6C4`):** mármol, rocas celestes y La Entidad.
 - **Ocre terroso y marrón (`#4A3728`, `#7D634C`):** base de las islas, raíces y suelo jugable.
 
 **Colores secundarios**

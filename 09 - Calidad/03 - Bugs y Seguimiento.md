@@ -20,7 +20,7 @@
 | Tema | Detalle |
 | --- | --- |
 | Fase 3 de La Entidad | Cerrar ataques y valores. |
-| Nombres | Jefes 2 y 3 y Vestigio. |
+| Nombres | Jefes 2 y 3. |
 | Valores de La Entidad | Ajustar con el encuentro ya diseñado. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Pruebas]] · [[04 - Criterios de Aceptación]] →

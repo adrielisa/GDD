@@ -28,7 +28,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
-| D-25 | Enemigos | Enemigos comunes: Aurion, Earthlem y Vestigio. Driller descartado. | Petición del equipo. |
+| D-25 | Enemigos | Enemigos comunes: Aurion y Earthlem. Driller descartado. | Petición del equipo. |
 | D-26 | Jefes | 3 jefes normales y La Entidad como jefe final. | Petición del equipo. |
 | D-27 | Jefes | La batalla original contra La Entidad (islas, cañones) pasa a ser la fase 1 del combate final. | Reutilizar lo ya diseñado. |
 | D-28 | Jefes | Límites de arena invisibles, salvo en el Jefe 2: pilares de las ruinas que bloquean el paso. | Petición del equipo. |
@@ -58,7 +58,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 2 y 3 y Vestigio. |
+| P-02 | Nombres | Jefes 2 y 3. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |

@@ -21,7 +21,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Potenciadores | 6, permanentes y pasivos; **3 equipados**, siempre activos, sin botones. |
 | Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Escama pétrea (Jefe 3). **3 equipadas**; ninguna se descarta. |
 | Inventario | Muestra la función y el control de cada habilidad y potenciador. |
-| Enemigos | Aurion, Earthlem y Vestigio. |
+| Enemigos | Aurion y Earthlem. |
 | Jefes | Chasko (costa), Mago oscuro (opcional, dentro de un templo en ruinas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
 | Mundo | 5 zonas explorables con rutas opcionales; géiseres entre islas. |
 
@@ -37,7 +37,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 ## Pendiente
 
 - Cerrar la fase 3 de La Entidad.
-- Nombres de los jefes 2 y 3 y Vestigio.
+- Nombres de los jefes 2 y 3.
 - Asignar roles del equipo.
 
 ## Dónde consultar cada parte

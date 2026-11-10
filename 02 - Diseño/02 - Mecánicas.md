@@ -86,7 +86,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 - **Bloqueo perfecto:** si el golpe llega en los primeros 0,25 s, el daño se anula y el atacante queda aturdido 1 s.
 - Recarga de 3 s desde que se suelta.
 - **No bloquea ataques instakill** ni evita la caída al vacío.
-- Sinergias: el bloqueo perfecto aturde al Earthlem y rompe la guardia del Vestigio.
+- Sinergias: el bloqueo perfecto aturde al Earthlem.
 
 ## Potenciadores
 

@@ -34,7 +34,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | Descripción física | Humanoide colosal de color gris claro, sin rostro. |
 | Personalidad | Indiferente; no habla, no se burla. Actúa como una fuerza de la naturaleza. |
 | Objetivo | Acabar con la humanidad. |
-| Habilidades | Golpes de zona sobre las islas, ondas y la invocación de Vestigios. |
+| Habilidades | Golpes de zona sobre las islas y ondas. |
 | Debilidad | Los cañones de la isla final y los puntos que expone en su última fase. |
 
 ## Jefes
@@ -51,7 +51,6 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | --- | --- |
 | **Aurion** | Criatura voladora de núcleo brillante; hostigador aéreo. |
 | **Earthlem** | Gólem de roca camuflado bajo tierra; tanque terrestre. |
-| **Vestigio** *(nombre provisional)* | Guerrero humanoide sin rostro, todo blanco, con forma parecida a La Entidad. Porta un arma. Es un eco del titán. |
 
 ## NPC: el mercader (Seller)
 
