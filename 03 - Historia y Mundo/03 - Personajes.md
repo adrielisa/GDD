@@ -58,15 +58,15 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | --- | --- |
 | Rol | Comerciante ambulante. |
 | Función jugable | Aparece en la antesala de cada jefe, empezando por el primero, y cambia XP por potenciadores permanentes. |
-| Función narrativa | Ex soldado de una academia de caballeros de Kastleland que desertó el día del ataque. Representa a la gente común que sobrevive. |
-| Descripción física | Hombre de mediana edad, robusto, piel curtida, barba descuidada y una enorme mochila metálica llena de frascos, reliquias y chatarra. |
-| Personalidad | Cínico y burlón en la superficie; en secreto, quiere que Eon gane. |
+| Función narrativa | Ex soldada de una academia de caballeros de Kastleland que desertó el día del ataque. Representa a la gente común que sobrevive. |
+| Descripción física | Mujer joven de cabello rojizo, delgada y ojos naranjas. |
+| Personalidad | Cínico y burlona en la superficie; en secreto, quiere que Eon gane. |
 | Motivación | Sobrevivir y, sin admitirlo, redimir su deserción. |
 | Conflicto | Abandonó a su escuadrón para salvarse. |
 | Relaciones | Regaña a Eon, pero siempre lo espera antes de cada pelea. |
 | Arco | Empieza cobrando cada punto de XP; antes de la isla final le regala un potenciador. |
 | Habilidades | Destilar la energía de las criaturas (XP) en potenciadores; tasar reliquias. |
-| Debilidades | Lento por su carga; nunca se acerca a donde hay pelea. |
-| Tono | Áspero y seco. |
+| Debilidades | Lenta por su carga; nunca se acerca a donde hay pelea. |
+| Tono | Áspera y seca. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mundo]] · [[04 - Diálogos y Narrativa]] →
