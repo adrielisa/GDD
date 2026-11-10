@@ -1,6 +1,6 @@
 # Galería de Assets
 
-Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enemigos, jefes y efectos. Cada animación aparece como **GIF a la velocidad real del juego** y como **hoja de cuadros numerada** (de izquierda a derecha y de arriba abajo). Los requisitos de lo que falta están en [[02 - Personajes y Animación]].
+Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enemigos, jefes y efectos. Cada animación aparece como **GIF a la velocidad real del juego** y como **hoja de cuadros numerada** (de izquierda a derecha y de arriba abajo). Los requisitos de lo que falta están en [[02 - Personajes y Animación]] y los bocetos a mano del principio del desarrollo en [[07 - Bocetos del Desarrollo]].
 
 > [!info] Cómo leer esta página
 > - Los GIF usan los mismos tiempos por cuadro que el juego (clips de Unity, tiempos de Aseprite o constantes del código).
@@ -992,4 +992,4 @@ Origen: `Assets/Art/Sprites/Environment/Ruina_Interior/ruina_fachada_entrada.png
 
 ---
 
-> **Navegación:** [[00 - Índice]] · ← [[05 - Audio y Música]]
+> **Navegación:** [[00 - Índice]] · ← [[05 - Audio y Música]] · [[07 - Bocetos del Desarrollo]] →

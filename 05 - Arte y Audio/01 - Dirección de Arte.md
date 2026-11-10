@@ -66,4 +66,6 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 
 ![[Pasted image 20261016112525.png|267]]
 
+Los bocetos a mano de la fase inicial (Eon, Chasko, el templo del Mago con su paleta de grises y el Mago oscuro con su magia) están en [[07 - Bocetos del Desarrollo]].
+
 > **Navegación:** [[00 - Índice]] · ← [[05 - Misiones y Desafíos]] · [[02 - Personajes y Animación]] →

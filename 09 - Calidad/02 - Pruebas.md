@@ -42,13 +42,14 @@
 | T-24 | Pulsar Interactuar frente al templo. | Fundido a negro, título «Ruinas del Templo» y Eon aparece dentro, en la entrada. |
 | T-25 | Empezar la pelea con el Mago e ir a la puerta de la izquierda. | La puerta no funciona hasta vencer o caer. |
 | T-26 | Huir de la ola de picos corriendo al extremo opuesto. | La ola se detiene a 2 u del muro; sin daño. |
-| T-27 | Golpear al Mago con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
+| T-27 | Golpear al Mago con la espada con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
 | T-28 | Vencer al Mago. | Suelta la Brasa del Mago y el Filo de sombra; al recogerlos salen dos avisos seguidos y las habilidades quedan en el inventario sin equipar. |
 | T-29 | Equipar Tajo ardiente y pulsar `K`. | Sale la media luna de fuego (15 de daño); no se puede volver a lanzar hasta 1,2 s después. |
 | T-30 | Volver a Eretz tras vencer al Mago. | La puerta del templo ya no se abre; las habilidades siguen en el inventario. |
-| T-23 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
-| T-24 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
-| T-25 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
+| T-31 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
+| T-32 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
+| T-33 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
+| T-34 | Lanzar un Tajo ardiente al Mago con el escudo activo, desde lejos. | Sin daño; Eon no se mueve. |
 
 ## Herramientas de prueba (solo en el editor y en *builds* de desarrollo)
 
@@ -60,5 +61,6 @@
 | Vista previa del fondo | Sin Play, el fondo por zonas sigue a la vista de escena para ver el parallax mientras se edita. |
 | Simulación de saltos | Script que simula el salto de Eon sobre el mapa para detectar atajos y zonas inalcanzables (resultado en [[02 - Niveles]]). |
 | Dar Doble salto | En Play: clic derecho en el componente PlayerInventory de Eon ▸ *Pruebas/Dar y equipar Doble salto* (o *Quitar todas las habilidades*). |
+| Forzar el escudo del Mago | En Play: clic derecho en el componente MagoOscuroBoss ▸ *Probar: escudo en el próximo ataque*. |
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Criterios de Calidad]] · [[03 - Bugs y Seguimiento]] →

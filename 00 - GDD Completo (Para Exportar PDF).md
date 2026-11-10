@@ -1,6 +1,6 @@
 # True Hero — GDD completo
 
-**Versión 0.4.1 · 10 de noviembre de 2026.**
+**Versión 0.4.2 · 10 de noviembre de 2026.**
 
 
 
@@ -8,7 +8,7 @@
 
 ## True Hero: resumen del diseño
 
-**GDD 0.4.1 · 10 de noviembre de 2026.**
+**GDD 0.4.2 · 10 de noviembre de 2026.**
 
 Eon, el héroe de la profecía, ya perdió contra La Entidad. Despierta solo en la costa de Kastleland sin su equipo legendario y emprende la revancha: recorre zonas explorables, derrota enemigos que le dan XP, cambia esa XP por potenciadores permanentes con un mercader que aparece antes de cada jefe y vence a tres jefes que le devuelven sus habilidades. Al caer el tercero, su cuerpo petrificado forma el puente hacia la isla final, donde Eon vuelve a enfrentar a La Entidad.
 
@@ -1511,7 +1511,7 @@ Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → D
 | --- | --- | --- | --- |
 | **Lluvia de llamaradas** | Ojos naranja y una columna de fuego que brota en el suelo donde caerá cada bola (0,8 s). | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Son bolas de fuego con estela; radio de 1 u; estallan al tocar el suelo en una explosión con humo. | 20 |
 | **Picos de magma** | Grietas incandescentes en el suelo 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico es de piedra con lava que escurre por sus caras; mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
-| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan a Eon (6 u/s hacia atrás y 3 hacia arriba). Mientras dura, el mago lanza cráneos. | — |
+| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan: si Eon está a menos de 2,5 u (cuerpo a cuerpo), el rebote lo empuja 6 u/s hacia atrás y 3 hacia arriba; un Tajo ardiente lanzado desde lejos no hace daño ni empuja a Eon. Mientras dura, el mago lanza cráneos. | — |
 | **Cráneos de fuego** | Llamas en sus manos. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado (110° por segundo). Duran 6 s. Se destruyen con un golpe. | 15 |
 | **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) se desvanece en remolino y reaparece en el **extremo opuesto** de la sala, a 3 u del muro. Al reaparecer queda **expuesto 1 s**: es la mejor ventana para castigarlo. | — |
 
@@ -1732,6 +1732,8 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 ### Referencias
 
 ![[Pasted image 20261016112525.png|267]]
+
+Los bocetos a mano de la fase inicial (Eon, Chasko, el templo del Mago con su paleta de grises y el Mago oscuro con su magia) están en [[07 - Bocetos del Desarrollo]].
 
 
 ---
@@ -2001,7 +2003,7 @@ Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre 
 
 ## Galería de Assets
 
-Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enemigos, jefes y efectos. Cada animación aparece como **GIF a la velocidad real del juego** y como **hoja de cuadros numerada** (de izquierda a derecha y de arriba abajo). Los requisitos de lo que falta están en [[02 - Personajes y Animación]].
+Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enemigos, jefes y efectos. Cada animación aparece como **GIF a la velocidad real del juego** y como **hoja de cuadros numerada** (de izquierda a derecha y de arriba abajo). Los requisitos de lo que falta están en [[02 - Personajes y Animación]] y los bocetos a mano del principio del desarrollo en [[07 - Bocetos del Desarrollo]].
 
 > [!info] Cómo leer esta página
 > - Los GIF usan los mismos tiempos por cuadro que el juego (clips de Unity, tiempos de Aseprite o constantes del código).
@@ -2996,6 +2998,130 @@ Origen: `Assets/Art/Sprites/Environment/Ruina_Interior/ruina_fachada_entrada.png
 
 ---
 
+## Bocetos del Desarrollo
+
+Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art. Son la base de los diseños de Eon, de los dos primeros jefes, de la magia del Mago oscuro y del interior de su templo. Aquí se guardan como referencia: el arte final está en [[06 - Galería de Assets]] y las reglas de estilo en [[01 - Dirección de Arte]].
+
+> [!info] Cómo leer esta página
+> - Cada boceto lleva qué se conservó en el juego y qué cambió.
+> - Son fotos de cuaderno (lápiz y rotulador); los colores pueden variar un poco respecto al papel.
+> - Los archivos están en `05 - Arte y Audio/Galería de Assets/Bocetos/`.
+
+### Resumen
+
+| Boceto | Tema | Dónde acabó |
+| --- | --- | --- |
+| [[#Eon — diseño del personaje]] | Armadura, casco y capa de Eon | Sprite de Eon |
+| [[#Eon — ciclo de carrera con espada]] | 12 poses de carrera | Animación `run` de Eon |
+| [[#Eon — poses de ataque]] | Embestida con espada | Ataque y dash de Eon |
+| [[#Chasko y el Doble salto]] | Jefe 1 y su drop | Chasko y el Camarón de Chasko |
+| [[#Templo del Mago — interior]] | Composición de la sala del jefe | Escena `Ruina_Mago` |
+| [[#Templo del Mago — piezas y paleta]] | Casetas, verja, cornisa y columna | Piezas y fondo del templo |
+| [[#Mago oscuro y su magia]] | Jefe 2, sus ataques y su drop | Mago oscuro, efectos v2 y Filo de sombra |
+
+---
+
+### Eon
+
+#### Eon — diseño del personaje
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/eon_boceto_diseno.jpg|420]]
+
+Primer diseño completo de Eon, a lápiz.
+- **Casco cúbico** con una rendija de visor y la parte de abajo abierta, que deja ver la barbilla.
+- **Hombreras y peto** de placas, cinturón ancho, pantalón holgado y botas con caña.
+- **Capa** que cae por un lado y **espada a la espalda** con la empuñadura sobre el hombro.
+
+**En el juego:** se conservan la silueta acorazada, la capa y la espada. Ver [[06 - Galería de Assets#Eon]] y [[02 - Personajes y Animación]].
+
+#### Eon — ciclo de carrera con espada
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/eon_boceto_carrera_espada.jpg]]
+
+Estudio de movimiento de **12 cuadros** (3 filas de 4, de izquierda a derecha) con maniquí: Eon corre inclinado hacia delante con la espada baja y hacia atrás, el brazo libre recogido y los hombros que se mueven al ritmo de las piernas.
+
+**En el juego:** es la base de la animación de correr. Ver [[06 - Galería de Assets#Correr]].
+
+#### Eon — poses de ataque
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/eon_boceto_poses_ataque.jpg]]
+
+Dos poses de embestida con la espada sujeta baja y en diagonal, con todo el peso hacia delante.
+- **Izquierda:** variante temprana con la cara descubierta, pelo corto y **gafas**, y vendas cruzadas en la bota.
+- **Derecha:** el mismo movimiento con el cuerpo acorazado y sin cabeza definida.
+
+**En el juego:** la pose de embestida se usa en el ataque y el dash. La versión con gafas quedó descartada: Eon lleva el casco cerrado.
+
+---
+
+### Jefe 1 — Chasko
+
+#### Chasko y el Doble salto
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/chasko_boceto.jpg]]
+
+Hoja de exploración del primer jefe, a rotulador y lápiz.
+- **Chasko** (izquierda): camarón rojo y naranja de cuerpo acorazado y enroscado, un ojo negro grande, antenas largas y cola en abanico.
+- **Variantes a lápiz** (abajo): versiones de tipo escorpión con la cola en segmentos alzada sobre el lomo.
+- **Ataque** (derecha): la pinza cierra de golpe y lanza un **chorro de agua**, la idea de partida de las burbujas de cavitación.
+- **Habilidad Doble salto** (arriba a la derecha): camarón pequeño con burbujas, el objeto que suelta al ser derrotado.
+
+**En el juego:** el diseño final mezcla las dos ideas: camarón de tipo escorpión con la cola sobre el lomo. El chorro se convirtió en la **burbuja** que dispara la pinza y el camarón pequeño en el **Camarón de Chasko** que da el Doble salto. Ver [[06 - Galería de Assets#Jefe 1 — Chasko]], [[06 - Galería de Assets#Burbuja de Chasko]] y [[06 - Galería de Assets#Camarón de Chasko (drop del Doble salto)]].
+
+---
+
+### Templo del Mago oscuro
+
+#### Templo del Mago — interior
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/templo_boceto_interior.jpg]]
+
+Composición de la sala del jefe.
+- **Columnas verdes oscuras** a los dos lados, con muros de ladrillo detrás, que enmarcan la escena.
+- **Luz amarilla** que entra desde arriba en rayos.
+- En el centro, una **verja con arco** entre dos **casetas** de tejado a dos aguas.
+
+**En el juego:** la sala de `Ruina_Mago` conserva el encuadre de columnas laterales, el ladrillo detrás y la puerta central con arco. Las columnas pasaron a **piedra gris** (ver la paleta del boceto siguiente). Ver [[06 - Galería de Assets#Jefe 2 — Mago oscuro]] y [[03 - Entornos]].
+
+#### Templo del Mago — piezas y paleta
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/templo_boceto_piezas.jpg|520]]
+
+Piezas sueltas del templo a rotulador gris.
+- **Caseta** de tejado en punta con dos ventanas.
+- **Pilar de la verja** con arco, **muro de ladrillo** curvo y **verja de hierro** con puntas.
+- **Bloque de cornisa** y **columna** con base de ladrillo.
+- **Paleta de rotuladores:** WG7 (gris cálido, para la base de ladrillo) y CG9, CG7 y CG5 (grises fríos, de más oscuro a más claro).
+
+**En el juego:** esta paleta de grises es la del templo: columnas, ladrillos, arcos, puertas y suelo del interior. Ver la sección del templo en [[06 - Galería de Assets]].
+
+---
+
+### Jefe 2 — Mago oscuro
+
+#### Mago oscuro y su magia
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/mago_boceto_magia.jpg]]
+
+Hoja del segundo jefe con su magia y su drop.
+- **Mago** (derecha): espíritu encapuchado **morado** sin cuerpo, con un **ojo cian** en el hueco de la capucha y la parte de abajo que se deshace como humo.
+- **Conjuro de fuego** (arriba a la izquierda, a lápiz): el mago con una llama en la mano.
+- **Pico magma:** tres tamaños de pico de **piedra negra con vetas de lava**.
+- **Explosión:** secuencia de 9 pasos, de una chispa amarilla a una bola de fuego que acaba en humo gris.
+- **Desaparición:** 7 pasos en los que el mago se enrosca y se reduce hasta un punto.
+- **Habilidad Dash cortante:** una hoja morada con filo rojo.
+
+**En el juego:**
+- El mago conserva la capucha morada y el ojo cian, que se vuelve naranja al conjurar ([[03 - Enemigos y NPC]]).
+- La desaparición es el **remolino** con el que aparece y desaparece.
+- El pico y la explosión son la base de los **efectos v2** (picos de piedra con lava y explosión con humo).
+- El Dash cortante lo entrega el **Filo de sombra**.
+
+Ver [[06 - Galería de Assets#Jefe 2 — Mago oscuro]], [[06 - Galería de Assets#Efectos del Mago oscuro]] y [[06 - Galería de Assets#Habilidades]].
+
+
+---
+
 ## UX y Flujo del Jugador
 
 ### Flujo general
@@ -3434,7 +3560,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-01 | Controlador de Eon (mover, salto variable, *coyote*, *buffer*) | Programación | P0 | 1 | Hecho |
 | B-02 | Dash con invulnerabilidad y recarga | Programación | P0 | 1 | Hecho |
 | B-03 | Combo de espada (`Enter`) y ataque descendente con rebote | Programación | P0 | 1 | Hecho |
-| B-04 | Sistema de daño con escudo e instakill; restauración solo en puntos de control y jefes | Programación | P0 | 2 | Pendiente |
+| B-04 | Sistema de daño con escudo e instakill; restauración solo en puntos de control y jefes. En el prototipo Eon empieza con 100 SP sin Coraza, solo los orbes de escudo lo recargan y al reaparecer queda en 0 | Programación | P0 | 2 | Pendiente |
 | B-05 | XP: orbes, contador y atracción | Programación | P0 | 2 | Pendiente |
 | B-06 | Tienda del mercader (compra única, «Adquirido») | Programación / UI | P0 | 2 | Pendiente |
 | B-07 | Inventario: 3 ranuras de habilidad + 3 de potenciador, con panel de función y control | Programación / UI | P0 | 2 | En curso (habilidades hechas) |
@@ -3601,13 +3727,14 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | T-24 | Pulsar Interactuar frente al templo. | Fundido a negro, título «Ruinas del Templo» y Eon aparece dentro, en la entrada. |
 | T-25 | Empezar la pelea con el Mago e ir a la puerta de la izquierda. | La puerta no funciona hasta vencer o caer. |
 | T-26 | Huir de la ola de picos corriendo al extremo opuesto. | La ola se detiene a 2 u del muro; sin daño. |
-| T-27 | Golpear al Mago con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
+| T-27 | Golpear al Mago con la espada con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
 | T-28 | Vencer al Mago. | Suelta la Brasa del Mago y el Filo de sombra; al recogerlos salen dos avisos seguidos y las habilidades quedan en el inventario sin equipar. |
 | T-29 | Equipar Tajo ardiente y pulsar `K`. | Sale la media luna de fuego (15 de daño); no se puede volver a lanzar hasta 1,2 s después. |
 | T-30 | Volver a Eretz tras vencer al Mago. | La puerta del templo ya no se abre; las habilidades siguen en el inventario. |
-| T-23 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
-| T-24 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
-| T-25 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
+| T-31 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
+| T-32 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
+| T-33 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
+| T-34 | Lanzar un Tajo ardiente al Mago con el escudo activo, desde lejos. | Sin daño; Eon no se mueve. |
 
 ### Herramientas de prueba (solo en el editor y en *builds* de desarrollo)
 
@@ -3619,6 +3746,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Vista previa del fondo | Sin Play, el fondo por zonas sigue a la vista de escena para ver el parallax mientras se edita. |
 | Simulación de saltos | Script que simula el salto de Eon sobre el mapa para detectar atajos y zonas inalcanzables (resultado en [[02 - Niveles]]). |
 | Dar Doble salto | En Play: clic derecho en el componente PlayerInventory de Eon ▸ *Pruebas/Dar y equipar Doble salto* (o *Quitar todas las habilidades*). |
+| Forzar el escudo del Mago | En Play: clic derecho en el componente MagoOscuroBoss ▸ *Probar: escudo en el próximo ataque*. |
 
 
 ---
@@ -3809,6 +3937,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | 0.3.0   | 09/11/2026 | Sincronización con Unity: mapa jugable Eretz (recorrido +60 %, enemigos por zona, saltos verificados), Earthlem solo en la zona 3, muros de roca en la arena de Chasko, Driller provisional como jefe del gusano, valores de Eon actualizados (carrera, salto, dash, combo y ritmo de ataque), arte de entornos SSW (costa, templo, islas, géiser, columnas) en Entornos y Galería, herramientas de prueba y backlog actualizado; drop de Chasko (Camarón de Chasko → Doble salto con burbuja) e inventario de habilidades en el menú de pausa. | Vargas Pérez Joel |
 | 0.4.0   | 09/11/2026 | Jefe 2 (Mago oscuro) implementado y **opcional**: diseño, ataques y valores de Unity, ojos que cambian al conjurar, remolino al aparecer y desaparecer; pelea dentro del templo en la escena `Ruina_Mago` (sala de 44 u, puertas selladas, cámara limitada); entrada al templo en Eretz con Interactuar, fachada y ruinas detrás; Tajo ardiente (`K` en el prototipo) y Dash cortante entregados por la Brasa del Mago y el Filo de sombra; estado entre escenas; galería con el Mago, su magia, sus objetos y el templo; pruebas T-23 a T-30. | Vargas Pérez Joel |
 | 0.4.1   | 10/11/2026 | Efectos v2 del Mago oscuro en la Galería (sustituyen a los anteriores): aviso con columna de fuego, bola de fuego con estela, explosión con humo, grietas incandescentes y picos de piedra con lava que escurre. Pendiente pasarlos a Unity (B-37). | Vargas Pérez Joel |
+| 0.4.2   | 10/11/2026 | Nueva página [[07 - Bocetos del Desarrollo]] con los 7 bocetos a mano de la fase inicial: diseño, carrera y poses de ataque de Eon; Chasko y el Doble salto; interior y piezas del templo del Mago con su paleta de grises; el Mago oscuro, su magia y el Dash cortante. Cada boceto indica qué se conservó en el juego. Además: el escudo arcano del Mago solo empuja a Eon cuerpo a cuerpo (el Tajo ardiente desde lejos ya no lo empuja), pruebas T-27 y T-34, herramienta para forzar el escudo, pruebas repetidas renumeradas (T-31 a T-33) y estado actual del escudo de Eon en B-04. | Vargas Pérez Joel |
 
 ### Convención
 

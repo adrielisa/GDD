@@ -5,7 +5,7 @@
 | B-01 | Controlador de Eon (mover, salto variable, *coyote*, *buffer*) | Programación | P0 | 1 | Hecho |
 | B-02 | Dash con invulnerabilidad y recarga | Programación | P0 | 1 | Hecho |
 | B-03 | Combo de espada (`Enter`) y ataque descendente con rebote | Programación | P0 | 1 | Hecho |
-| B-04 | Sistema de daño con escudo e instakill; restauración solo en puntos de control y jefes | Programación | P0 | 2 | Pendiente |
+| B-04 | Sistema de daño con escudo e instakill; restauración solo en puntos de control y jefes. En el prototipo Eon empieza con 100 SP sin Coraza, solo los orbes de escudo lo recargan y al reaparecer queda en 0 | Programación | P0 | 2 | Pendiente |
 | B-05 | XP: orbes, contador y atracción | Programación | P0 | 2 | Pendiente |
 | B-06 | Tienda del mercader (compra única, «Adquirido») | Programación / UI | P0 | 2 | Pendiente |
 | B-07 | Inventario: 3 ranuras de habilidad + 3 de potenciador, con panel de función y control | Programación / UI | P0 | 2 | En curso (habilidades hechas) |
