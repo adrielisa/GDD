@@ -19,7 +19,6 @@ La economía gira en torno a un solo recurso de intercambio: los **puntos de exp
 | Aurion | 10 |
 | Vestigio | 25 |
 | Earthlem | 30 |
-| Camaroncito (esbirro del Jefe 1) | 1 |
 | Jefe 1 | 200 |
 | Jefe 2 | 300 |
 | Jefe 3 | 400 |
@@ -74,7 +73,6 @@ El catálogo de cada antesala incluye también los potenciadores de antesalas an
 
 **Comportamientos que queremos evitar**
 
-- **Farmear dentro de un combate de jefe:** los camaroncitos dan solo 1 XP.
 - **Ganar sin aprender al jefe:** los potenciadores ayudan, pero el instakill sigue siendo letal.
 
 > **Navegación:** [[00 - Índice]] · ← [[05 - Progresión]] · [[07 - Reglas y Estados del Juego]] →

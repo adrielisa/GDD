@@ -24,7 +24,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-18 | Mecánicas | La habilidad del Jefe 3 es la **Escama pétrea**. | Petición del equipo. |
 | D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Escama pétrea `K`; Dash `Shift izquierdo`. | Petición del equipo. |
 | D-20 | Mecánicas | Dash unificado: 0,20 s, 4 u, recarga 1,2 s. | Unificar valores que eran distintos entre páginas. |
-| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la ráfaga y de la cabeza de la serpiente. |
+| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la cabeza de la serpiente. |
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
@@ -35,14 +35,33 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-29 | NPC | El mercader aparece por primera vez antes del Jefe 1 y después antes de cada jefe. | Petición del equipo. |
 | D-30 | Reglas | Si Eon y el jefe mueren en el mismo fotograma, gana Eon. | No castigar un golpe final ajustado. |
 | D-31 | Mundo | El continente se llama Kastleland en todo el documento. | Coherencia. |
+| D-32 | Jefes | El Jefe 1 (antes "Camarón serpiente", nombre provisional) se llama **Chasko**: camarón tipo escorpión que dispara burbujas, embiste y lanza ondas de choque. Sin esbirros (se eliminan los camaroncitos) ni ataque instakill. | Nombre definitivo y combate ya implementado. |
+
+| D-33 | Niveles | Prototipo jugable en un solo mapa (Eretz_Mapa): costa, Jefe 1, zona 3, arena del Jefe 2, Archipiélago e isla final. El recorrido se alarga un 60 % con un tramo de tutorial de combate antes de Chasko y transiciones más largas entre zonas. | Que el recorrido no sea tan rápido y enseñar a pelear antes del primer jefe. |
+| D-34 | Enemigos | Los Earthlem solo aparecen en la zona 3 (Bosque de Raíces y Ruinas); fuera de ella su lugar lo ocupan Aurion. | Petición del equipo. |
+| D-35 | Jefes | La arena de Chasko se cierra con muros de roca que emergen con sacudida de pantalla y se rompen al vencerlo. Sustituye a los límites invisibles de D-28 para el Jefe 1. | Petición del equipo. |
+| D-36 | Mecánicas | Valores de Eon según Unity: carrera 7,6 u/s, salto 3,6 u, dash 5 u en 0,15 s, combo 12/12/16, ataque descendente 15, tajo 0,27 s, pausa de 0,28 s entre ataques y animaciones de ataque al 88 %. | Primero se aceleró el movimiento (se sentía pesado) y después se bajó un poco la carrera y el ritmo del ataque (petición del equipo). |
+| D-37 | Niveles | El recorrido se verifica simulando el salto de Eon: ninguna sección posterior se alcanza sin su géiser. Se separaron las islas B y C y los muros de la arena del Mago quedan sin colisión hasta que exista el jefe. | Evitar atajos; el mapa anterior no se podía terminar. |
+| D-38 | Arte | Los entornos usan el set SSW_SET3 (tierra, roca, pasto y decoración) a 21,5 PPU, con fondos por zona con parallax (costa con mar animado y templo en ruinas en la zona 3). | Unificar el estilo de las zonas. |
+| D-39 | Jefes | En el prototipo, el Driller ocupa de forma provisional el lugar del Jefe 3 (jefe del gusano antes de la isla final). | Reutilizar el enemigo ya programado hasta tener la serpiente. |
+| D-40 | Habilidades | Cada jefe suelta en la arena un objeto que representa su habilidad y se recoge al tocarlo. Chasko suelta el Camarón de Chasko (Doble salto). | Petición del equipo; hace visible la recompensa del combate. |
+| D-41 | Habilidades | El Doble salto se ve como una burbuja bajo los pies de Eon (sustituye a la ráfaga de aire). | Liga la habilidad con Chasko y su burbuja. |
+| D-42 | UI | En el prototipo el inventario de habilidades está en el menú de pausa, pestaña Objetos, junto a los materiales. Con la pausa abierta, Eon no lee entradas de juego. | Reutilizar el menú existente; evitar saltos y tajos en cola al cerrar el menú. |
+| D-43 | Jefes | El Jefe 2 (Mago oscuro) es **opcional**: su templo está junto al camino y se entra con Interactuar; ninguna parte del recorrido exige sus habilidades. | Petición del equipo; da libertad para saltarlo o volver a por él. |
+| D-44 | Niveles | La pelea con el Mago ocurre dentro del templo, en una escena aparte (`Ruina_Mago`), con fundido a negro al entrar y salir. | Arena única con su propio fondo; separa la carga del mapa grande. |
+| D-45 | Jefes | Sin pilares que emergen en el Jefe 2: los muros del templo cierran la sala y las puertas se sellan durante cualquier pelea de jefe. La cámara no enseña nada más allá de los muros. Sustituye a D-28 para el Jefe 2. | Los pilares tapaban la sala corta; evita huir del combate. |
+| D-46 | Arte | El Mago tiene la escala de Eon (56 × 66 px); sus ojos cambian de color al conjurar; aparece y desaparece en un remolino antihorario. El templo es gótico, de noche y sin luz del sol, con columnas, arcos y ladrillo de una misma textura en gris. | Petición del equipo y referencia aprobada. |
+| D-47 | Mecánicas | En el prototipo el Tajo ardiente va en `K` / clic derecho / `B` porque `J` es el ataque con espada. | Evitar conflicto de teclas hasta unificar el mapa de controles (P-06). |
 
 ## Decisiones pendientes
 
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 1–3, camaroncitos y Vestigio. |
+| P-02 | Nombres | Jefes 2 y 3 y Vestigio. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
+| P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
+| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`) con el del prototipo (ataque `J`, Tajo ardiente `K`) y reasignar la Escama pétrea. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Referencias e Inspiración]] · [[04 - Historial de Versiones]] →

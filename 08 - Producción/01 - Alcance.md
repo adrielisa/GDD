@@ -4,12 +4,12 @@
 
 - Prólogo en cómic de 5 páginas con la derrota de Eon.
 - 5 zonas explorables (Playa, Acantilados, Bosque, Ruinas, Archipiélago) y la Isla Final, con rutas opcionales.
-- 3 jefes normales (Camarón serpiente, Mago oscuro, Serpiente gigante) y La Entidad.
-- 3 enemigos comunes (Aurion, Earthlem, Vestigio), con reaparición, y los camaroncitos del Jefe 1.
+- 3 jefes normales (Chasko, Mago oscuro, Serpiente gigante) y La Entidad.
+- 3 enemigos comunes (Aurion, Earthlem, Vestigio), con reaparición.
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
 - Inventario con descripción de función y control de cada elemento.
-- Géiseres, puntos de control, cañones y pilares de las ruinas.
+- Géiseres, puntos de control, cañones y puertas entre escenas (templo del Mago).
 - Ilustración de la serpiente petrificada.
 - Guardado local de una ranura.
 - Teclado y mando.

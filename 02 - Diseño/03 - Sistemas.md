@@ -4,15 +4,15 @@
 
 | Sistema | Propósito | Dependencias | Estado |
 | --- | --- | --- | --- |
-| Daño, salud y combate | Vida y escudo de Eon y enemigos, *hitbox*/*hurtbox*, instakill y eventos de muerte. | Capas de colisión 2D, Animator, efectos/*game feel*. | Por implementar |
+| Daño, salud y combate | Vida y escudo de Eon y enemigos, *hitbox*/*hurtbox*, instakill y eventos de muerte. | Capas de colisión 2D, Animator, efectos/*game feel*. | En prototipo |
 | Controlador del jugador y movilidad | Entradas, movimiento lateral, salto, doble salto, dash, ataques y habilidades activas. | `Rigidbody2D`, `Collider2D`, Input System, Inventario. | En prototipo |
-| IA de enemigos comunes | Patrulla, detección y ataque de Aurion, Earthlem y Vestigio; reaparición. | Raycasts, `Transform` de Eon, sistema de daño. | Por implementar |
-| IA de jefes | Patrones, fases y avisos de los tres jefes y La Entidad. | Sistema de daño, gestor de mundo, cámara. | Por implementar |
-| Inventario y equipamiento | Guardar habilidades y potenciadores; 3 ranuras de cada tipo; descripciones. | UI, guardado, controlador del jugador. | Por implementar |
+| IA de enemigos comunes | Patrulla, detección y ataque de Aurion, Earthlem y Vestigio; reaparición. | Raycasts, `Transform` de Eon, sistema de daño. | En prototipo (Aurion y Earthlem) |
+| IA de jefes | Patrones, fases y avisos de los tres jefes y La Entidad. | Sistema de daño, gestor de mundo, cámara. | En prototipo (Chasko; Driller provisional) |
+| Inventario y equipamiento | Guardar habilidades y potenciadores; 3 ranuras de cada tipo; descripciones. | UI, guardado, controlador del jugador. | En prototipo (habilidades) |
 | Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
-| Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | Por implementar |
-| Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | Por implementar |
-| Elementos de entorno | Géiseres, cañones, plataforma de agua, pilares de las ruinas. | Físicas 2D, controlador del jugador. | Por implementar |
+| Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | En prototipo (seguimiento ajustado a píxel y sacudidas) |
+| Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | En prototipo (puntos de control y arenas con muros) |
+| Elementos de entorno | Géiseres, cañones, puertas entre escenas. | Físicas 2D, controlador del jugador. | En prototipo (géiseres) |
 | Guardado | Persistir progreso entre sesiones. | Todos los anteriores. | Por implementar |
 
 ## Sistema 01: Daño, salud y combate
@@ -85,6 +85,7 @@
     - El inventario se abre con `Tab` / `View`. Se puede cambiar el equipamiento en cualquier momento **fuera de una arena de jefe**.
 - **Salidas:** habilidades activas al controlador; modificadores de los potenciadores equipados; iconos al HUD.
 - **Riesgos:** aplicar dos veces el modificador de un potenciador al reequiparlo.
+- **Estado en el prototipo:** las habilidades ya se guardan, se equipan (máximo 3) y se aplican al controlador; el cambio se bloquea con los muros de una arena cerrados. Se manejan desde el menú de pausa (ver [[04 - Controles]]). Faltan los potenciadores, el guardado entre sesiones y los iconos en el HUD.
 - **Criterios de aceptación:** nunca hay más de 3 habilidades ni 3 potenciadores equipados; los cambios se reflejan de inmediato en el control, los valores y el HUD.
 
 ## Sistema 06: Economía de XP y tienda
@@ -115,7 +116,7 @@
     - Los puntos de control restauran vida y escudo y hacen reaparecer a los enemigos comunes.
     - Al cruzar la entrada de una arena de jefe se cierran sus límites:
         - **Jefe 1, Jefe 3 y La Entidad:** barreras **invisibles**.
-        - **Jefe 2:** **pilares de las ruinas** que emergen del suelo y bloquean el paso; se hunden al morir el jefe.
+        - **Jefe 2:** la sala del templo ya está cerrada por sus muros; al empezar el combate las **puertas** se sellan.
     - Al morir el jefe, las barreras se retiran.
     - Las zonas superadas siguen accesibles para volver a acumular XP.
     - Tras el Jefe 3 reproduce la ilustración de la serpiente petrificada y activa el puente hacia la isla final.
@@ -128,8 +129,7 @@
 
 - **Géiser:** ciclo reposo/aviso/erupción; lanza a Eon por un arco fijo hacia un punto destino. Ver [[02 - Mecánicas]].
 - **Cañón:** solo en la isla final; dispara al interactuar y daña a La Entidad.
-- **Plataforma de agua:** solo en el combate del Jefe 1; aparece antes de la ráfaga y se disuelve después.
-- **Pilares de las ruinas:** solo en la arena del Jefe 2; cierran los extremos durante el combate.
+- **Puertas entre escenas:** la del templo del Mago (en Eretz) se usa con Interactuar y funde a negro hacia `Ruina_Mago`; las de dentro llevan de vuelta a Eretz. Ninguna funciona durante un combate de jefe.
 
 ## Relaciones entre sistemas
 

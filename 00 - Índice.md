@@ -1,6 +1,6 @@
 # True Hero — Documento de diseño del juego
 
-**GDD 0.2.1 · 7 de noviembre de 2026.**
+**GDD 0.4.2 · 10 de noviembre de 2026.**
 
 Eon ya perdió contra La Entidad. Recorre Kastleland, vence a tres jefes para recuperar sus habilidades, cambia la XP de los enemigos por potenciadores con el mercader y vuelve a la isla final por su revancha. Solo puede llevar 3 habilidades y 3 potenciadores equipados a la vez; los potenciadores son permanentes y siempre activos.
 
@@ -68,6 +68,8 @@ Cada sección explica **qué información debe escribirse**, por qué es importa
 - [[03 - Entornos]]
 - [[04 - Interfaz Visual]]
 - [[05 - Audio y Música]]
+- [[06 - Galería de Assets]]
+- [[07 - Bocetos del Desarrollo]]
 
 ### 06 — Experiencia
 - [[01 - UX y Flujo del Jugador]]

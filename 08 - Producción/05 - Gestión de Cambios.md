@@ -37,4 +37,27 @@
 | Reaparición | — | Los enemigos comunes reaparecen; se puede volver a zonas superadas para acumular XP. | Economía, Niveles, Sistemas |
 | Límites de arena | Barreras genéricas. | Invisibles, salvo en el Jefe 2 (pilares de las ruinas). | Sistemas, Niveles, Enemigos |
 
+## Cambios aplicados en la versión 0.3.0
+
+| Cambio | Antes (0.2.1) | Ahora | Secciones afectadas |
+| --- | --- | --- | --- |
+| Mapa jugable | Zonas solo en papel. | Prototipo Eretz_Mapa con todo el recorrido hasta la isla final, 60 % más largo y con los saltos verificados. | Niveles, Pruebas, Backlog |
+| Earthlem | En el Bosque, las Ruinas y el Archipiélago. | Solo en la zona 3 (Bosque y Ruinas). | Enemigos, Niveles |
+| Arena de Chasko | Límites invisibles. | Muros de roca que emergen y se rompen al vencerlo. | Enemigos, Niveles, Entornos, Pruebas |
+| Driller | Descartado. | Descartado como enemigo común; provisional como jefe del gusano en el prototipo. | Enemigos, Niveles |
+| Valores de Eon | Carrera 7 u/s, salto 3 u, dash 4 u en 0,20 s, combo 10/10/15. | Carrera 7,6 u/s, salto 3,6 u, dash 5 u en 0,15 s, combo 12/12/16, ataque un 12 % más pausado. | Mecánicas, Galería |
+| Arte de entornos | Por definir. | Set SSW_SET3 en costa, zona 3 e islas; fondos por zona con parallax; géiser, columnas y muros animados. | Entornos, Galería, Personajes y Animación |
+| Doble salto | Habilidad sin implementar; efecto de ráfaga de aire. | Chasko suelta el Camarón de Chasko; Doble salto equipable con burbuja bajo los pies. | Mecánicas, Controles, Enemigos, Objetos, Galería, Pruebas |
+| Inventario | Pantalla propia (`Tab`). | En el prototipo, sección Habilidades en la pestaña Objetos del menú de pausa. | Sistemas, Controles, UI, UX |
+
+## Cambios aplicados en la versión 0.4.0
+
+| Cambio | Antes (0.3.0) | Ahora | Secciones afectadas |
+| --- | --- | --- | --- |
+| Jefe 2 | Diseñado, sin implementar; obligatorio. | Mago oscuro implementado y **opcional**; se entra a su templo con Interactuar. | Enemigos, Niveles, Progresión, Misiones, Estructura, Pruebas |
+| Arena del Jefe 2 | Patio plano de 36 u con pilares que emergen. | Interior del templo en otra escena (`Ruina_Mago`): sala de 44 u cerrada por muros, puertas selladas durante la pelea, cámara limitada. | Niveles, Sistemas, Reglas, Entornos, Arquitectura |
+| Tajo ardiente y Dash cortante | Sin implementar. | Hechos; los entregan la Brasa del Mago y el Filo de sombra. Tajo ardiente en `K` en el prototipo. | Mecánicas, Controles, Objetos, Galería |
+| Arte del Mago y del templo | Sin arte. | Mago a escala de Eon con 10 animaciones y 8 efectos; templo gótico de noche por capas; fachada con ruinas detrás. | Personajes y Animación, Entornos, Galería |
+| Estado entre escenas | — | `EstadoPartida` conserva jefes, habilidades y materiales durante la partida. | Arquitectura, Datos y Persistencia |
+
 > **Navegación:** [[00 - Índice]] · ← [[04 - Backlog del Proyecto]] · [[01 - Criterios de Calidad]] →

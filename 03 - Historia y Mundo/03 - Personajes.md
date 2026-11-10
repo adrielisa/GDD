@@ -41,7 +41,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 
 | Jefe | Zona | Identidad | Habilidad que entrega |
 | --- | --- | --- | --- |
-| **Jefe 1 — Camarón serpiente** *(nombre provisional)* | Arena de la Marea (costa) | Crustáceo alargado como una serpiente marina; acorazado, de antenas largas. Absorbió el fragmento de agilidad de Eon. Libera camaroncitos voladores. | Doble salto |
+| **Jefe 1 — Chasko** | Arena de la Marea (costa) | Camarón de tipo escorpión, rojo y naranja, con la cola alzada sobre el lomo y una pinza que dispara burbujas. Absorbió el fragmento de agilidad de Eon. | Doble salto |
 | **Jefe 2 — Mago oscuro** *(nombre provisional)* | Ruinas Abandonadas | Antiguo hechicero de la academia que tomó el fragmento de poder arcano. Domina el fuego, el magma y el teletransporte. | Tajo ardiente y Dash cortante |
 | **Jefe 3 — Serpiente gigante** *(nombre provisional)* | Archipiélago de Tierra | Serpiente segmentada colosal que rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Escama pétrea |
 
@@ -52,7 +52,6 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | **Aurion** | Criatura voladora de núcleo brillante; hostigador aéreo. |
 | **Earthlem** | Gólem de roca camuflado bajo tierra; tanque terrestre. |
 | **Vestigio** *(nombre provisional)* | Guerrero humanoide sin rostro, todo blanco, con forma parecida a La Entidad. Porta un arma. Es un eco del titán. |
-| **Camaroncitos** *(sin nombre)* | Esbirros del Jefe 1; pequeños camarones que persiguen a Eon en el aire. |
 
 ## NPC: el mercader (Seller)
 

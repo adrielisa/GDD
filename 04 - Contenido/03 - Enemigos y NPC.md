@@ -1,15 +1,14 @@
 # Enemigos y NPC
 
-El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), los esbirros del Jefe 1, tres jefes normales y La Entidad. El enemigo Driller queda descartado. Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
+El juego tiene tres enemigos comunes (Aurion, Earthlem y Vestigio), tres jefes normales y La Entidad. El Driller queda descartado como enemigo común; en el prototipo ocupa de forma provisional el lugar del Jefe 3 (ver abajo). Las cifras son la referencia de diseño; se ajustan en pruebas y se registran en [[03 - Registro de Decisiones]].
 
 ## Resumen de enemigos comunes
 
 | Enemigo | Vida | Velocidad | Daño principal | Zonas | XP |
 | --- | ---: | --- | --- | --- | ---: |
-| Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago | 10 |
-| Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Bosque, Ruinas, Archipiélago | 30 |
+| Aurion | 20 HP | 2,5 u/s patrulla; 7 u/s embestida | Embestida 15; contacto 10 | Costa, Bosque, Archipiélago, Isla Final | 10 |
+| Earthlem | 80 HP | 1,2 u/s | Puño 20; onda 15; emerger 10 | Solo zona 3: Bosque y Ruinas | 30 |
 | Vestigio | 50 HP | 3 u/s | Combo 18; estocada 22 | Ruinas, Archipiélago, Isla Final | 25 |
-| Camaroncito | 5 HP | 3 u/s en el aire | Contacto 8 | Arena de la Marea | 1 |
 
 ## Aurion
 
@@ -26,7 +25,7 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
 
 ## Earthlem
 
-- **Rol:** tanque terrestre que bloquea el paso.
+- **Rol:** tanque terrestre que bloquea el paso. Solo aparece en la zona 3 (Bosque de Raíces y Ruinas Abandonadas); el jugador lo conoce en el sendero tras vencer a Chasko.
 - **Comportamiento:** camuflado como roca plana. Cuando Eon se acerca a 3,5 u, emerge levantando escombros. Si Eon se aleja más de 8 u, se entierra y reaparece más cerca.
 - **Ataques:**
     - *Barrido de roca:* tajo horizontal tras 0,4 s de preparación; 20 de daño.
@@ -55,54 +54,62 @@ Enterrado → Detecta a 3,5 u → Emerge → Barrido / Aplastamiento → [Eon a 
 Patrullar → Detectar → Acercarse → Combo / Estocada → [2 golpes frontales recibidos] Guardia 1,2 s
 ```
 
-## Jefe 1 — Camarón serpiente *(nombre provisional)*
+## Jefe 1 — Chasko
 
-- **Arena:** Arena de la Marea, playa plana de 30 u con el mar a la derecha. Límites invisibles.
-- **Vida:** 500 HP. **Fases:** 1 (100–50 %) y 2 (menos de 50 %).
-- **Descripción:** crustáceo alargado con cuerpo de serpiente marina. Pasa la mayor parte del tiempo en el agua; solo se le puede golpear con la espada cuando su cuerpo está sobre la arena.
-- **Recompensa:** 200 XP y **Doble salto**.
+- **Arena:** Arena de la Marea, playa plana de unas 26 u con el mar al fondo. Al empezar el combate emergen dos muros de roca que cierran la arena con una sacudida de pantalla; al vencer a Chasko se rompen en escombros (detalle en [[02 - Niveles]]).
+- **Vida:** 900 HP. **Fases:** 1 (100–50 %) y 2 (menos de 50 %).
+- **Descripción:** camarón de tipo escorpión, rojo y naranja, de unas 3 veces la altura de Eon. Cuerpo acorazado y enroscado, cola en abanico alzada sobre el lomo como la de un escorpión, un ojo negro grande, antenas y una pinza que dispara burbujas de cavitación. Camina por la arena hacia Eon y se le puede golpear con la espada en todo momento.
+- **Recompensa:** 200 XP y **Doble salto**. Al morir suelta el **Camarón de Chasko**, un camarón pequeñito que sale de su cuerpo, cae hacia el centro de la arena y queda flotando con un brillo; al tocarlo, la habilidad se guarda en el inventario. Si Eon ya la tiene, no suelta nada.
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Invocar camaroncitos** | Chapoteo y burbujas. | Libera 3 camaroncitos (4 en fase 2) que persiguen a Eon en el aire a 3 u/s. Máximo 6 vivos. Recarga 12 s. | 8 por contacto |
-| **Embestida corta** | Ojos brillantes y cuerpo recogido 0,6 s. | Se lanza 5 u sobre la arena hacia Eon. Después queda varado 1,5 s: **ventana de castigo**. | 20 |
-| **Mordida** | Mandíbulas abiertas 0,4 s. | Solo si Eon está a 2,5 u de la cabeza. | 25 |
-| **Ráfaga de agua** | Se eleva en la orilla e inhala 2 s; agua girando en la boca y sonido exclusivo. | Al empezar el aviso **emerge una plataforma de agua** a 2,5 u de altura (alcanzable con salto simple) en una de tres posiciones. La ráfaga barre toda la arena a ras de suelo hasta 2 u de altura durante 1,5 s. La plataforma se disuelve 1 s después. Tras la ráfaga queda agotado 3 s en la orilla: **ventana de castigo**. Cada 20 s (15 s en fase 2). | **Instakill** |
+| **Chasquido** | Se encabrita y carga la pinza 1 s (0,7 s en fase 2). | Cierra la pinza de golpe y dispara una burbuja a ras de suelo (10 u/s, dura 3,5 s). Se salta, se atraviesa con dash o se revienta de un golpe. En fase 2 dispara 3 burbujas en abanico (0°, 16° y 32°). | 15 la burbuja; 20 el estallido junto a la pinza |
+| **Embestida** | Tiembla y parpadea en rojo 0,65 s. | Corre hasta la pared a 13 u/s (16 u/s en fase 2). Al chocar queda aturdido 1,6 s: **ventana de castigo** (recibe ×1,5 de daño). | 20 |
+| **Onda de choque** *(solo fase 2)* | Alza la pinza 0,8 s. | Golpea el suelo y lanza una onda a cada lado que recorre 10 u a 9 u/s. Hay que saltarla. | 15 |
 
-- **Fase 2:** más esbirros, ráfagas más frecuentes y los camaroncitos siguen persiguiendo a Eon mientras está sobre la plataforma de agua.
-- **Regla de diseño:** la ráfaga nunca se lanza si no hay una plataforma de agua visible.
+- **Daño por contacto:** 12.
+- **Fase 2:** camina más rápido (3,4 u/s en lugar de 2,4 u/s), carga el chasquido más rápido, descansa 0,5 s entre ataques (0,9 s en fase 1) y añade la onda de choque.
+- **Sin esbirros ni ataques instakill:** es el primer jefe y enseña a leer avisos y a castigar.
 
 ```text
-Agua (invoca / se acerca) → Embestida → Varado 1,5 s (castigo) → Agua
-                    └── cada 20 s: Aviso + plataforma de agua → Ráfaga (instakill) → Agotado 3 s (castigo)
+Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → Descanso → Acercarse
+                         └── Embestida → choca con la pared → Aturdido 1,6 s (castigo ×1,5)
 ```
-
-### Camaroncitos *(sin nombre)*
-
-- Esbirros voladores pequeños. 5 HP: mueren con un golpe o un ataque descendente (que además rebota a Eon).
-- Persiguen a Eon en el aire; al tocarlo hacen 8 de daño y retroceden 1 s antes de volver a perseguir.
-- Desaparecen al morir el jefe.
 
 ## Jefe 2 — Mago oscuro *(nombre provisional)*
 
-- **Arena:** Patio de la Academia, suelo de piedra **totalmente plano** de 36 u, sin plataformas, dentro de unas ruinas abandonadas. Al empezar, **pilares de las ruinas** emergen en ambos extremos y bloquean el paso; se hunden al morir el jefe.
+- **Jefe opcional.** Su templo está en la meseta de las Ruinas (x 159 a 177 del mapa Eretz). La puerta no se cruza al tocarla: aparece el aviso «[E] Entrar al templo» y se entra con Interactuar. Quien pase de largo sigue la ruta principal sin enfrentarlo; solo se queda sin Tajo ardiente ni Dash cortante.
+- **Arena:** el interior del templo, en una **escena aparte** (`Ruina_Mago`). Al entrar, la pantalla se funde a negro y aparece el título «Ruinas del Templo». Es una sala de piedra **totalmente plana** de 44 u entre los muros del templo, sin plataformas.
+    - La pelea empieza al pasar x ±15. Desde ese momento las puertas quedan **selladas** y no se puede huir hasta vencer o caer.
+    - No hay pilares que emerjan: los muros del templo cierran la sala y la cámara nunca enseña nada más allá de ellos.
 - **Vida:** 700 HP. **Fases:** 1 (100–40 %) y 2 (menos de 40 %).
-- **Descripción:** hechicero encapuchado que flota a ras de suelo. Se puede golpear con la espada siempre que no tenga el escudo activo.
-- **Recompensa:** 300 XP, **Tajo ardiente** y **Dash cortante** (se guardan los dos en el inventario).
+- **Descripción:** hechicero encapuchado y oscuro, del tamaño de Eon, que flota a ras de suelo y siempre mira hacia él.
+    - **Ojos:** cian en reposo; se vuelven **naranja al conjurar**. Es la señal de que va a atacar, junto con los avisos del suelo.
+    - **Aparecer y desaparecer:** gira como un **remolino en sentido antihorario** hasta reducirse a nada; la aparición es la misma animación al revés.
+    - **Muerte:** se deshace en jirones y desaparece.
+- **Daño:** se le golpea con espada, Tajo ardiente y Dash cortante mientras no tenga el escudo. Al recibir un golpe parpadea y se estremece.
+- **Recompensa:** 300 XP *(el prototipo aún no tiene XP)*, **Tajo ardiente** y **Dash cortante**. Al morir suelta dos objetos que salen volando, flotan en la sala y se recogen al tocarlos (se acercan solos cuando Eon está cerca):
+    - **Brasa del Mago** → Tajo ardiente.
+    - **Filo de sombra** → Dash cortante.
+    - Cada uno muestra su aviso y queda en el inventario sin equipar.
+- **Tras vencerlo:** la puerta del templo en Eretz ya no se abre; dentro, la puerta de la derecha lleva a la salida de las Ruinas (punto de control `Despues_Mago`).
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Lluvia de llamaradas** | Círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen del cielo; 2 apuntan a la posición prevista de Eon. Radio de 1 u. | 20 |
-| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Una ola de picos nace junto al mago y avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7 u/s). Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del pilar del extremo: hay que **correr y alejarse** del mago hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
-| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan levemente a Eon. Mientras dura, el mago lanza cráneos. | — |
-| **Cráneos de fuego** | Llamas en sus manos 0,6 s. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado. Duran 6 s. Se destruyen con un golpe. | 15 |
-| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) desaparece y reaparece en el **extremo opuesto** de la arena. Al reaparecer queda expuesto 1 s. | — |
+| **Lluvia de llamaradas** | Ojos naranja y una columna de fuego que brota en el suelo donde caerá cada bola (0,8 s). | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Son bolas de fuego con estela; radio de 1 u; estallan al tocar el suelo en una explosión con humo. | 20 |
+| **Picos de magma** | Grietas incandescentes en el suelo 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico es de piedra con lava que escurre por sus caras; mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
+| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan: si Eon está a menos de 2,5 u (cuerpo a cuerpo), el rebote lo empuja 6 u/s hacia atrás y 3 hacia arriba; un Tajo ardiente lanzado desde lejos no hace daño ni empuja a Eon. Mientras dura, el mago lanza cráneos. | — |
+| **Cráneos de fuego** | Llamas en sus manos. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado (110° por segundo). Duran 6 s. Se destruyen con un golpe. | 15 |
+| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) se desvanece en remolino y reaparece en el **extremo opuesto** de la sala, a 3 u del muro. Al reaparecer queda **expuesto 1 s**: es la mejor ventana para castigarlo. | — |
 
-- **Fase 2:** se teletransporta con más frecuencia y puede combinar llamaradas con la ola de picos.
+- **Ritmo:** descansa 1 s entre ataques (0,6 s en fase 2).
+- **Fase 2:** se teletransporta tras 2 ataques y, con un 40 % de probabilidad, combina la lluvia de llamaradas con la ola de picos.
+- **Si Eon cae:** el combate se reinicia; el mago vuelve a su sitio con la vida completa y las puertas se abren.
 
 ```text
-Ataque 1 → Ataque 2 → Ataque 3 → Teletransporte al extremo opuesto (expuesto 1 s) → …
+Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extremo opuesto (expuesto 1 s) → …
    └── cada 15 s: Escudo 4 s + Cráneos de fuego
+   └── fase 2: teletransporte cada 2 ataques; 40 % de combos llamaradas + picos
 ```
 
 ## Jefe 3 — Serpiente gigante *(nombre provisional)*
@@ -123,6 +130,7 @@ Ataque 1 → Ataque 2 → Ataque 3 → Teletransporte al extremo opuesto (expues
 
 - **Fase 2:** más velocidad, gotas más frecuentes (cada 1,5–3 s) y embestidas dobles.
 - **Al morir:** el cuerpo se detiene, se petrifica (ilustración fija) y forma el Puente de la Serpiente hacia la isla final.
+- **En el prototipo:** mientras no exista la serpiente, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
 
 ## La Entidad (jefe final)
 

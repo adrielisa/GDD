@@ -8,9 +8,9 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | --- | ---: |
 | Vida máxima | 100 HP (130 con el potenciador Vigor) |
 | Escudo máximo | 0 SP (50 con el potenciador Coraza) |
-| Velocidad de carrera | 7 u/s |
-| Altura de salto | 3 u |
-| Daño por tajo | 10 / 10 / 15 (combo de 3) |
+| Velocidad de carrera | 7,6 u/s |
+| Altura de salto | 3,6 u (0,36 s hasta el punto más alto) |
+| Daño por tajo | 12 / 12 / 16 (combo de 3) |
 | Invulnerabilidad tras recibir daño | 0,7 s |
 
 **Vida y escudo no se recuperan durante la exploración ni el combate.** No hay objetos de curación ni de escudo. Ambos se restauran por completo solo al **tocar un punto de control** o al **vencer a un jefe** (también al reaparecer tras una derrota).
@@ -27,7 +27,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 - **Activación:** pulsar Salto en contacto con el suelo.
 - **Reglas:**
     - Impulso vertical inmediato; soltar el botón antes corta el ascenso (salto variable).
-    - *Jump buffer* de 0,1 s: si se pulsa justo antes de aterrizar, el salto sale al tocar el suelo.
+    - *Jump buffer* de 0,12 s: si se pulsa justo antes de aterrizar, el salto sale al tocar el suelo.
     - *Coyote time* de 0,1 s tras salir de un borde.
     - Sin la habilidad **Doble salto** equipada no hay segundo salto en el aire.
 - **Estados:** `Idle`/`Run` → `InAir_Ascending` → `InAir_Falling` → `Landing` → `Idle`/`Run`.
@@ -38,7 +38,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 - **Propósito:** esquivar en el último momento y reposicionarse sin bloqueos pasivos.
 - **Activación:** pulsar Dash en tierra o en el aire.
 - **Reglas:**
-    - Desplazamiento horizontal de 4 u durante 0,20 s.
+    - Desplazamiento horizontal de 5 u durante 0,15 s.
     - Invulnerabilidad durante todo el recorrido frente a ataques y proyectiles, **excepto los instakill**.
     - Atraviesa enemigos comunes sin daño por contacto.
     - Recarga de 1,2 s desde que termina.
@@ -50,17 +50,19 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 
 - **Activación:** pulsar Ataque (`Enter`) en tierra o en el aire.
 - **Reglas:**
-    - En tierra encadena hasta 3 tajos (10, 10 y 15 de daño).
-    - Cada tajo activa una *hitbox* frontal durante 0,10 s.
+    - En tierra encadena hasta 3 tajos (12, 12 y 16 de daño).
+    - Cada tajo dura 0,27 s y activa una *hitbox* frontal durante 0,10 s. El siguiente tajo se puede encadenar desde la mitad del anterior y hay 0,33 s para seguir el combo.
+    - Tras cada ataque hay una pausa de 0,28 s antes de poder volver a atacar. Las animaciones de ataque se reproducen al 88 % de su velocidad para que el golpe se lea mejor.
+    - Durante un tajo en tierra Eon se mueve al 35 % de su velocidad.
     - Al conectar se aplica *hitstop* de 0,05 s y retroceso leve a enemigos comunes.
-    - Recuperación de 0,1 s al final del combo; se puede cancelar con dash.
+    - Recuperación de 0,11 s al final del combo; se puede cancelar con dash.
     - No se puede atacar durante el aturdimiento por daño recibido.
 - **Caso límite:** si el arco toca a varios enemigos, todos reciben daño.
 
 ### Ataque descendente
 
 - **Activación:** Abajo + Ataque (`S` + `Enter`) en el aire.
-- **Reglas:** golpe vertical de 12 de daño. Si impacta a un enemigo, Eon rebota hacia arriba y recupera su dash aéreo.
+- **Reglas:** golpe vertical de 15 de daño. Si impacta a un enemigo, Eon rebota hacia arriba y recupera su dash aéreo.
 
 ## Habilidades (obtenidas de jefes)
 
@@ -70,10 +72,13 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 
 | Habilidad | Origen | Tipo | Control | Efecto |
 | --- | --- | --- | --- | --- |
-| **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero). Se restablece al tocar suelo. |
-| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 14 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos comunes. |
-| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash). |
+| **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero): Eon crea una burbuja bajo los pies y se impulsa en ella. Se restablece al tocar suelo. |
+| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` (prototipo: `K`, clic derecho o `B`) | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 16 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos (golpea una vez a cada uno) y se detiene en las paredes. |
+| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash), con una pausa breve al cortar y una estela roja. |
 | **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
+
+- **Entrega del Doble salto:** al morir, Chasko suelta el **Camarón de Chasko**, un camarón pequeñito que queda flotando en la arena. Al tocarlo, la habilidad se guarda en el inventario sin equipar y aparece un aviso para equiparla.
+- **Entrega de Tajo ardiente y Dash cortante:** al morir, el Mago oscuro suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante). Se recogen igual que el camarón. El Mago es opcional, así que ninguna de las dos es necesaria para terminar el recorrido.
 
 ### Escama pétrea (detalle)
 
