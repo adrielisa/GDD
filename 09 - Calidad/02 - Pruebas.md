@@ -26,11 +26,11 @@
 | T-08 | Vencer a un jefe con poca vida. | Vida y escudo se restauran al terminar el combate. |
 | T-09 | Hacer que Chasko choque contra la pared con la embestida. | Queda aturdido 1,6 s y recibe ×1,5 de daño. |
 | T-10 | Atravesar con dash la burbuja del chasquido. | Sin daño. |
-| T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al pilar. |
+| T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al muro del templo. |
 | T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
 | T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |
 | T-14 | Volver a una zona superada tras vencer a su jefe. | Los enemigos han reaparecido y dan XP. |
-| T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; pilares visibles en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
+| T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; puertas selladas en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
 | T-16 | Ser derrotado con 500 XP. | Reaparece en el punto de control con 500 XP, vida y escudo completos. |
 | T-17 | Empezar el combate contra Chasko. | Los muros emergen con sacudida de pantalla y cierran la arena. |
 | T-18 | Vencer a Chasko. | Los muros se rompen en escombros y desaparecen; el paso queda libre. |
@@ -38,6 +38,14 @@
 | T-20 | Recorrer el mapa Eretz sin habilidades. | Se llega a la meta; cada sección posterior solo se alcanza con su géiser. |
 | T-21 | Vencer a Chasko. | Sale el Camarón de Chasko, cae y flota; al tocarlo aparece el aviso y la habilidad queda en el inventario sin equipar. |
 | T-22 | Sin equipar Doble salto, saltar en el aire. | No hay segundo salto. |
+| T-23 | Pasar caminando por delante del templo del Mago sin pulsar Interactuar. | No cambia de escena; el recorrido sigue hasta la meta sin enfrentar al Mago. |
+| T-24 | Pulsar Interactuar frente al templo. | Fundido a negro, título «Ruinas del Templo» y Eon aparece dentro, en la entrada. |
+| T-25 | Empezar la pelea con el Mago e ir a la puerta de la izquierda. | La puerta no funciona hasta vencer o caer. |
+| T-26 | Huir de la ola de picos corriendo al extremo opuesto. | La ola se detiene a 2 u del muro; sin daño. |
+| T-27 | Golpear al Mago con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
+| T-28 | Vencer al Mago. | Suelta la Brasa del Mago y el Filo de sombra; al recogerlos salen dos avisos seguidos y las habilidades quedan en el inventario sin equipar. |
+| T-29 | Equipar Tajo ardiente y pulsar `K`. | Sale la media luna de fuego (15 de daño); no se puede volver a lanzar hasta 1,2 s después. |
+| T-30 | Volver a Eretz tras vencer al Mago. | La puerta del templo ya no se abre; las habilidades siguen en el inventario. |
 | T-23 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
 | T-24 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
 | T-25 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |

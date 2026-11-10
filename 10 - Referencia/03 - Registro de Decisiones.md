@@ -47,6 +47,11 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-40 | Habilidades | Cada jefe suelta en la arena un objeto que representa su habilidad y se recoge al tocarlo. Chasko suelta el Camarón de Chasko (Doble salto). | Petición del equipo; hace visible la recompensa del combate. |
 | D-41 | Habilidades | El Doble salto se ve como una burbuja bajo los pies de Eon (sustituye a la ráfaga de aire). | Liga la habilidad con Chasko y su burbuja. |
 | D-42 | UI | En el prototipo el inventario de habilidades está en el menú de pausa, pestaña Objetos, junto a los materiales. Con la pausa abierta, Eon no lee entradas de juego. | Reutilizar el menú existente; evitar saltos y tajos en cola al cerrar el menú. |
+| D-43 | Jefes | El Jefe 2 (Mago oscuro) es **opcional**: su templo está junto al camino y se entra con Interactuar; ninguna parte del recorrido exige sus habilidades. | Petición del equipo; da libertad para saltarlo o volver a por él. |
+| D-44 | Niveles | La pelea con el Mago ocurre dentro del templo, en una escena aparte (`Ruina_Mago`), con fundido a negro al entrar y salir. | Arena única con su propio fondo; separa la carga del mapa grande. |
+| D-45 | Jefes | Sin pilares que emergen en el Jefe 2: los muros del templo cierran la sala y las puertas se sellan durante cualquier pelea de jefe. La cámara no enseña nada más allá de los muros. Sustituye a D-28 para el Jefe 2. | Los pilares tapaban la sala corta; evita huir del combate. |
+| D-46 | Arte | El Mago tiene la escala de Eon (56 × 66 px); sus ojos cambian de color al conjurar; aparece y desaparece en un remolino antihorario. El templo es gótico, de noche y sin luz del sol, con columnas, arcos y ladrillo de una misma textura en gris. | Petición del equipo y referencia aprobada. |
+| D-47 | Mecánicas | En el prototipo el Tajo ardiente va en `K` / clic derecho / `B` porque `J` es el ataque con espada. | Evitar conflicto de teclas hasta unificar el mapa de controles (P-06). |
 
 ## Decisiones pendientes
 
@@ -57,5 +62,6 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
+| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`) con el del prototipo (ataque `J`, Tajo ardiente `K`) y reasignar la Escama pétrea. |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Referencias e Inspiración]] · [[04 - Historial de Versiones]] →

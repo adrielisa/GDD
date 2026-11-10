@@ -48,6 +48,8 @@ En Unity, las habilidades se equipan desde el **menú de pausa**, en la pestaña
 - Las equipadas llevan un **rombo dorado**; arriba a la derecha, el contador «Equipadas n/3».
 - El panel de detalle muestra nombre, objeto de origen, descripción y estado («Equipada · (A) / Enter para quitar»). Si no se puede cambiar, lo dice en rojo (ranuras llenas o arena de jefe cerrada).
 - Al recoger la habilidad aparece un aviso arriba con su icono: *«¡Nueva habilidad: Doble salto! Equípala en Pausa (Esc / Start) ▸ Objetos ▸ Habilidades»*.
+- Si se recogen dos habilidades seguidas (las del Mago), los avisos salen uno tras otro.
+- **Puertas con Interactuar** (templo del Mago): al acercarse aparece sobre la puerta un aviso flotante «[E] Entrar al templo» que se desvanece al alejarse.
 
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/menu_pausa_habilidades_maqueta.png]]
 

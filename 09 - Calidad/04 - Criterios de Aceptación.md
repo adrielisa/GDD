@@ -14,7 +14,7 @@
 | Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Escama pétrea (`K`) funcionan solo equipados; ninguna se descarta. |
 | Enemigos | Aurion, Earthlem y Vestigio con sus ataques, defensas, avisos y XP; reaparecen. |
 | Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; muros de roca que cierran la arena y se rompen al vencerlo; entrega Doble salto. |
-| Jefe 2 | Arena plana cerrada por pilares; llamaradas, ola de picos con zona segura, escudo, cráneos y teletransporte al extremo opuesto; entrega Tajo ardiente y Dash cortante. |
+| Jefe 2 | Opcional: se entra al templo con Interactuar y se puede pasar de largo. Sala plana cerrada por los muros del templo y puertas selladas durante la pelea; llamaradas, ola de picos con zona segura junto al muro, escudo, cráneos y teletransporte al extremo opuesto con 1 s de exposición; entrega Tajo ardiente y Dash cortante. |
 | Jefe 3 | Cuerpo dañable, cola débil, lluvia de baba, cabeza instakill; límites invisibles; entrega Escama pétrea; petrificación y puente al morir. |
 | La Entidad | Fases según [[03 - Enemigos y NPC]]; cañones funcionales; límites invisibles; victoria lleva a créditos. |
 | Géiseres | Ciclo de reposo, aviso y erupción; lanzamiento al destino correcto. |

@@ -19,8 +19,8 @@
 | B-15 | Cómic del prólogo (5 páginas) | Arte | P0 | 3 | Pendiente |
 | B-16 | Puntos de control y guardado | Programación | P0 | 3 | En curso (puntos de control hechos) |
 | B-17 | IA de Earthlem y Vestigio | Programación | P1 | 4 | En curso (Earthlem hecho) |
-| B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; pilares de las ruinas | Programación | P1 | 4 | Pendiente |
-| B-19 | Tajo ardiente (`J`) y Dash cortante | Programación | P1 | 4 | Pendiente |
+| B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; sala del templo con puertas selladas | Programación | P1 | 4 | Hecho |
+| B-19 | Tajo ardiente (`K` en el prototipo) y Dash cortante | Programación | P1 | 4 | Hecho |
 | B-20 | Géiseres | Programación | P2 | 5 | Hecho (animados) |
 | B-21 | Jefe 3: cuerpo segmentado, baba, cabeza instakill | Programación | P2 | 5 | Pendiente |
 | B-22 | Escama pétrea (`K`): reducción, bloqueo perfecto y aturdimiento | Programación | P2 | 5 | Pendiente |
@@ -34,5 +34,9 @@
 | B-30 | Arte de la zona 3 e islas (SSW), columnas de ruinas, géiser y fondos por zona | Arte | P1 | 4 | Hecho |
 | B-31 | Decidir si se quitan los orbes de vida del prototipo (P-05) | Diseño | P1 | 3 | Pendiente |
 | B-32 | Jefe del gusano provisional (Driller) en la isla final hasta tener el Jefe 3 | Programación | P2 | 5 | Hecho (provisional) |
+| B-33 | Sprites del Jefe 2 (Mago oscuro) y sus efectos; templo del Mago (interior por capas, fachada y ruinas) | Arte | P1 | 4 | Hecho |
+| B-34 | Escena `Ruina_Mago` con cambio de escena y estado entre escenas (`EstadoPartida`) | Programación | P1 | 4 | Hecho |
+| B-35 | Unificar el mapa de controles del prototipo con el del GDD (P-06) | Diseño | P2 | 5 | Pendiente |
+| B-36 | Guardado en disco (hoy `EstadoPartida` solo dura la partida) | Programación | P1 | 4 | Pendiente |
 
 > **Navegación:** [[00 - Índice]] · ← [[03 - Roadmap]] · [[05 - Gestión de Cambios]] →

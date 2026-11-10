@@ -49,7 +49,7 @@
 - **Cinemáticas seguras:** durante introducciones de jefe, cambios de fase y cinemáticas, Eon y los enemigos son invulnerables.
 - **Puntos de control:** al descansar o reaparecer, Eon vuelve al último punto visitado con vida y escudo completos, y los enemigos comunes reaparecen.
 - **Equipo fijado en arena:** al entrar a una arena de jefe no se pueden cambiar habilidades ni potenciadores.
-- **Límites de arena:** invisibles en los combates contra el Jefe 1, el Jefe 3 y La Entidad; en el del Jefe 2, pilares de las ruinas que bloquean el paso.
+- **Límites de arena:** invisibles en los combates contra el Jefe 1, el Jefe 3 y La Entidad; en el del Jefe 2, los muros del templo, con las puertas selladas durante el combate.
 - **Zonas reabiertas:** tras vencer a un jefe, las zonas anteriores siguen accesibles y sus enemigos reaparecen.
 - **Persistencia:** XP, potenciadores, habilidades y jefes derrotados se guardan.
 

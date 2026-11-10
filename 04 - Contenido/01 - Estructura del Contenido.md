@@ -16,7 +16,7 @@ True Hero
 │   ├── Bosque de Raíces (zona explorable)
 │   ├── Ruinas Abandonadas (zona explorable)
 │   ├── Antesala: mercader + punto de control
-│   └── Patio de la Academia → Jefe 2: Mago oscuro → Tajo ardiente + Dash cortante
+│   └── Patio de la Academia → Jefe 2 (opcional): Mago oscuro → Tajo ardiente + Dash cortante
 ├── Bloque 3 — El cielo roto
 │   ├── Archipiélago de Tierra (zona explorable con géiseres)
 │   ├── Antesala: mercader + punto de control
@@ -51,7 +51,7 @@ True Hero
 | Mercader | Llegar a la antesala del Jefe 1. |
 | Jefe 1 | Salto, dash y combo enseñados en la Playa y los Acantilados. |
 | Jefe 2 | Earthlem y Vestigio presentados en Bosque y Ruinas. |
-| Archipiélago de Tierra | Jefe 2 derrotado (activa los géiseres). |
+| Archipiélago de Tierra | Cruzar las Ruinas (el Jefe 2 es opcional; los géiseres funcionan siempre). |
 | Jefe 3 | Géiseres y plataformas pequeñas dominados en el Archipiélago. |
 | Isla Final | Jefe 3 derrotado (puente petrificado). |
 | Rutas opcionales | Doble salto o Tajo ardiente equipados (nunca obligatorias). |

@@ -5,6 +5,7 @@
 - Archivo JSON en `Application.persistentDataPath/truehero_save.json`.
 - Campo `version` para migrar formatos futuros.
 - La configuración se guarda aparte en `PlayerPrefs`.
+- **En el prototipo** todavía no hay archivo de guardado: `EstadoPartida` guarda en memoria, solo durante la partida, los jefes derrotados (`bossesDefeated`), las habilidades obtenidas y equipadas y los materiales, para conservarlos al pasar de `Eretz_Mapa` a `Ruina_Mago` y de vuelta.
 
 ## Estructura del guardado
 

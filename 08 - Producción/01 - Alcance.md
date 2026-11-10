@@ -9,7 +9,7 @@
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
 - Inventario con descripción de función y control de cada elemento.
-- Géiseres, puntos de control, cañones y pilares de las ruinas.
+- Géiseres, puntos de control, cañones y puertas entre escenas (templo del Mago).
 - Ilustración de la serpiente petrificada.
 - Guardado local de una ranura.
 - Teclado y mando.

@@ -18,10 +18,11 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 | Enemigo común | Vestigio                                               | 0                         | Sin arte.                                                                                                        |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
-| Jefes 2 y 3   | Mago oscuro, Serpiente gigante                         | 0                         | Sin arte.                                                                                                        |
-| Efectos       | Rayo, tornado, orbe, burbuja                           | 4                         | Hechos.                                                                                                          |
-| Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
-| Habilidades | Camarón de Chasko (Doble salto) y burbuja del doble salto | 2 | Hechos. |
+| Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
+| Jefe 3        | Serpiente gigante                                      | 0                         | Sin arte.                                                                                                        |
+| Efectos       | Rayo, tornado, orbe, burbuja; magia del Mago                           | 4                         | Hechos.                                                                                                          |
+| Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena, templo del Mago | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
+| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra y tajo ardiente | 5 | Hechos. |
 
 ## Comparación de escala
 
@@ -416,7 +417,158 @@ Origen: `Assets/Art/Sprites/Characters/Jefe_Titan/titan_mano_07`
 
 Sus ataques usan el [[#Rayo]], el [[#Tornado]] y el [[#Orbe]].
 
-### Jefe 2 — Mago oscuro y Jefe 3 — Serpiente gigante
+### Jefe 2 — Mago oscuro
+
+Hechicero encapuchado a la escala de Eon. Reglas de combate en [[03 - Enemigos y NPC]].
+
+| Dato | Valor |
+| --- | --- |
+| Lienzo | 56 × 66 px |
+| Píxeles por unidad | 21,5 (la misma escala que Eon) |
+| Pivote | Abajo al centro; mira a la izquierda |
+| Fuente | `Documents/sprites/Jefe_Mago_Oscuro/Mago_Oscuro.aseprite` (una etiqueta por animación) |
+| Carpeta | `Assets/Resources/Mago_Oscuro/<animación>_NN.png` |
+
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Reposo | 8 | 110 ms por cuadro | 0,88 s | Sí |
+| Reposo con escudo | 8 | 110 ms por cuadro | 0,88 s | Sí |
+| Lluvia de llamaradas | 10 | 80–100 ms por cuadro | 0,91 s | No |
+| Picos de magma | 9 | 60–120 ms por cuadro | 0,8 s | No |
+| Escudo | 7 | 80–100 ms por cuadro | 0,61 s | No |
+| Cráneos de fuego | 9 | 60–120 ms por cuadro | 0,8 s | No |
+| Expuesto | 6 | 110 ms por cuadro | 0,66 s | Sí |
+| Recibir daño | 4 | 70–100 ms por cuadro | 0,34 s | No |
+| Desaparecer (remolino) | 14 | 50–140 ms por cuadro | 1,02 s | No |
+| Muerte | 17 | 60–200 ms por cuadro | 1,53 s | No |
+
+
+#### Reposo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo.gif]]
+
+**8 cuadros** · 56×66 px · 110 ms por cuadro · 0,88 s · en bucle
+
+Flota a ras de suelo; ojos cian.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/reposo_*`
+
+#### Reposo con escudo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_escudo.gif]]
+
+**8 cuadros** · 56×66 px · 110 ms por cuadro · 0,88 s · en bucle
+
+Mientras dura el escudo arcano.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/reposo_escudo_*`
+
+#### Lluvia de llamaradas
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_llamaradas.gif]]
+
+**10 cuadros** · 56×66 px · 80–100 ms por cuadro · 0,91 s · una vez
+
+Ojos naranja; la lluvia cae en el cuadro 8.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_llamaradas_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_llamaradas_*`
+
+#### Picos de magma
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_picos.gif]]
+
+**9 cuadros** · 56×66 px · 60–120 ms por cuadro · 0,8 s · una vez
+
+Golpea el suelo en el cuadro 5: nace la ola de picos.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_picos_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_picos_*`
+
+#### Escudo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_escudo.gif]]
+
+**7 cuadros** · 56×66 px · 80–100 ms por cuadro · 0,61 s · una vez
+
+La esfera se forma desde el cuadro 4.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_escudo_*`
+
+#### Cráneos de fuego
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_craneos.gif]]
+
+**9 cuadros** · 56×66 px · 60–120 ms por cuadro · 0,8 s · una vez
+
+Lanza los cráneos en el cuadro 5.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_craneos_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_craneos_*`
+
+#### Expuesto
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_expuesto.gif]]
+
+**6 cuadros** · 56×66 px · 110 ms por cuadro · 0,66 s · en bucle
+
+Durante 1 s tras reaparecer.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_expuesto_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/expuesto_*`
+
+#### Recibir daño
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_dano.gif]]
+
+**4 cuadros** · 56×66 px · 70–100 ms por cuadro · 0,34 s · una vez
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_dano_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/dano_*`
+
+#### Desaparecer (remolino)
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_desaparicion.gif]]
+
+**14 cuadros** · 56×66 px · 50–140 ms por cuadro · 1,02 s · una vez
+
+Gira en sentido antihorario hasta reducirse a nada. La aparición es la misma animación al revés.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_aparicion.gif]]
+
+*Aparición (la misma animación al revés).*
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_desaparicion_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/desaparicion_*`
+
+#### Muerte
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_muerte.gif]]
+
+**17 cuadros** · 56×66 px · 60–200 ms por cuadro · 1,53 s · una vez
+
+Se deshace en jirones y desaparece.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_muerte_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/muerte_*`
+
+Sus conjuros usan los [[#Efectos del Mago oscuro]].
+
+### Jefe 3 — Serpiente gigante
 
 Sin arte todavía.
 
@@ -576,6 +728,101 @@ Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_mover_*`
 
 Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_explosion_*`
 
+### Efectos del Mago oscuro
+
+Magia del Jefe 2. Carpeta `Assets/Resources/Mago_Efectos/` (fuente: `Documents/sprites/Jefe_Mago_Oscuro/Efectos/`). Los GIF hacen una pausa al final para que se vea el último cuadro.
+
+| Efecto | Cuadros | Velocidad |
+| --- | --- | --- |
+| Llamarada: aviso en el suelo | 3 | 80 ms por cuadro |
+| Llamarada: caída | 3 | 70 ms por cuadro |
+| Llamarada: estallido | 6 | 70 ms por cuadro |
+| Pico de magma: aviso | 3 | 90 ms por cuadro |
+| Pico de magma | 9 | 70 ms por cuadro |
+| Escudo arcano | 12 | 80 ms por cuadro |
+| Cráneo de fuego | 8 | 80 ms por cuadro |
+| Humo del teletransporte | 7 | 70–90 ms por cuadro |
+
+#### Llamarada: aviso en el suelo
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso.gif]]
+
+Círculo de luz naranja que marca dónde caerá (0,8 s, en bucle).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_aviso_*`
+
+#### Llamarada: caída
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae.gif]]
+
+Bola de fuego que cae del techo (en bucle mientras cae).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_cae_*`
+
+#### Llamarada: estallido
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido.gif]]
+
+Al tocar el suelo; hace el daño.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_estallido_*`
+
+#### Pico de magma: aviso
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso.gif]]
+
+Grieta que brilla 0,5 s antes de cada pico.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/pico_aviso_*`
+
+#### Pico de magma
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma.gif]]
+
+Sale del suelo (1-4), vibra activo (4-6) y se rompe (7-9).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/pico_magma_*`
+
+#### Escudo arcano
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_escudo.gif]]
+
+Esfera violeta: se forma, late mientras dura y se rompe.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/escudo_*`
+
+#### Cráneo de fuego
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_craneo.gif]]
+
+Vuela hacia Eon; se destruye de un golpe.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_craneo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/craneo_*`
+
+#### Humo del teletransporte
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_humo.gif]]
+
+Aparece en el destino 0,5 s antes de que el mago reaparezca.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_humo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/humo_*`
+
 ---
 
 ## Habilidades
@@ -615,6 +862,44 @@ El GIF va a un tercio de la velocidad real para que se vea.
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/burbuja_doble_salto_cuadros.png]]
 
 Origen: `Assets/Resources/Habilidades/burbuja_doble_salto_*` (fuente: `Burbuja_Doble_Salto.aseprite`).
+
+### Brasa del Mago (drop del Tajo ardiente)
+
+La suelta el Mago oscuro al morir. Brasa naranja con chispas, 20 × 20 px; brilla en bucle mientras flota.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente_cuadros.png]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente_icono.png]]
+
+Origen: `Assets/Resources/Habilidades/brasa_tajo_ardiente_*`.
+
+### Filo de sombra (drop del Dash cortante)
+
+El otro objeto que suelta el Mago. Hoja oscura con filo rojo, 20 × 20 px.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante_cuadros.png]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante_icono.png]]
+
+Origen: `Assets/Resources/Habilidades/filo_dash_cortante_*`. En el juego, el Dash cortante deja una estela roja de siluetas de Eon.
+
+### Tajo ardiente (proyectil)
+
+Media luna de fuego que lanza la espada: 30 × 36 px, 4 cuadros en bucle (70 ms) mientras viaja.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/tajo_ardiente.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/tajo_ardiente_cuadros.png]]
+
+Origen: `Assets/Resources/Habilidades/tajo_ardiente_*`.
 
 ---
 
@@ -680,6 +965,30 @@ Muro a su altura real en la arena (14 u) y los escombros en que se rompe.
 ![[05 - Arte y Audio/Galería de Assets/Entornos/muro_arena_chasko.png]]
 
 Origen: `Assets/Resources/Arena/`.
+
+### Templo del Mago: interior (escena Ruina_Mago)
+
+Templo gótico en ruinas, de noche. Vista con la cámara del juego (Eon y el Mago como referencia de tamaño):
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_interior_camara.png]]
+
+Fondo completo (960 × 320 px, se repite a lo ancho salvo el portón):
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_interior_completo.png]]
+
+Piezas de juego: pilar con la textura de la columna (32 × 102 px; arriba y abajo fijos, el centro se repite), muro lateral (129 × 64 px, se repite hacia arriba) y puerta (88 × 120 px).
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_piezas.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Templo_Mago/` (fuente editable: `Documents/sprites/Escenario/Templo_Mago/Fondo_Templo_Mago.aseprite`, por capas).
+
+### Templo del Mago: entrada en Eretz
+
+Fachada con frontón de tejas, cornisa moldurada y faroles, y ruinas detrás (torre rota, nave derrumbada, columnata suelta con enredaderas). Vista general con la cámara alejada:
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_entrada_eretz.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Ruina_Interior/ruina_fachada_entrada.png` y `ruina_fachada_ruinas_atras.png` (fuente: `Documents/sprites/Escenario/Templo_Mago/Fachada_Eretz/Fachada_Templo_Eretz.aseprite`).
 
 ---
 

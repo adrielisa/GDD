@@ -24,6 +24,7 @@ La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por
 - El inventario muestra el control y la función de cada habilidad, y la función de cada potenciador.
 - **En el prototipo** el inventario está dentro del menú de pausa (`Esc` / `P`, `Start`): pestaña Objetos ▸ Habilidades. Se navega con `A` / `D` o las flechas y se equipa o se quita con `Enter` / `Espacio` / `A` (o clic sobre la ranura seleccionada).
 - Mientras la pausa está abierta, Eon no lee salto, dash ni ataque: confirmar en el menú no deja un salto o un tajo en cola al volver al juego.
+- **Teclas en el prototipo:** el ataque con espada está en `J`, así que el **Tajo ardiente** usa `K`, el clic derecho o `B` / Círculo. Interactuar acepta `E`, `Enter` e `Y` / Triángulo (p. ej. para entrar al templo del Mago). Queda pendiente unificar el mapa de controles (P-06 en [[03 - Registro de Decisiones]]).
 
 ## Principios de control
 

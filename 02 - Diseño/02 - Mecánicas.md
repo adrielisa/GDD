@@ -73,11 +73,12 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | Habilidad | Origen | Tipo | Control | Efecto |
 | --- | --- | --- | --- | --- |
 | **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero): Eon crea una burbuja bajo los pies y se impulsa en ella. Se restablece al tocar suelo. |
-| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 14 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos comunes. |
-| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash). |
+| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` (prototipo: `K`, clic derecho o `B`) | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 16 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos (golpea una vez a cada uno) y se detiene en las paredes. |
+| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash), con una pausa breve al cortar y una estela roja. |
 | **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
 
 - **Entrega del Doble salto:** al morir, Chasko suelta el **Camarón de Chasko**, un camarón pequeñito que queda flotando en la arena. Al tocarlo, la habilidad se guarda en el inventario sin equipar y aparece un aviso para equiparla.
+- **Entrega de Tajo ardiente y Dash cortante:** al morir, el Mago oscuro suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante). Se recogen igual que el camarón. El Mago es opcional, así que ninguna de las dos es necesaria para terminar el recorrido.
 
 ### Escama pétrea (detalle)
 

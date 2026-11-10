@@ -12,7 +12,7 @@
 | Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
 | Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | En prototipo (seguimiento ajustado a píxel y sacudidas) |
 | Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | En prototipo (puntos de control y arenas con muros) |
-| Elementos de entorno | Géiseres, cañones, pilares de las ruinas. | Físicas 2D, controlador del jugador. | En prototipo (géiseres) |
+| Elementos de entorno | Géiseres, cañones, puertas entre escenas. | Físicas 2D, controlador del jugador. | En prototipo (géiseres) |
 | Guardado | Persistir progreso entre sesiones. | Todos los anteriores. | Por implementar |
 
 ## Sistema 01: Daño, salud y combate
@@ -116,7 +116,7 @@
     - Los puntos de control restauran vida y escudo y hacen reaparecer a los enemigos comunes.
     - Al cruzar la entrada de una arena de jefe se cierran sus límites:
         - **Jefe 1, Jefe 3 y La Entidad:** barreras **invisibles**.
-        - **Jefe 2:** **pilares de las ruinas** que emergen del suelo y bloquean el paso; se hunden al morir el jefe.
+        - **Jefe 2:** la sala del templo ya está cerrada por sus muros; al empezar el combate las **puertas** se sellan.
     - Al morir el jefe, las barreras se retiran.
     - Las zonas superadas siguen accesibles para volver a acumular XP.
     - Tras el Jefe 3 reproduce la ilustración de la serpiente petrificada y activa el puente hacia la isla final.
@@ -129,7 +129,7 @@
 
 - **Géiser:** ciclo reposo/aviso/erupción; lanza a Eon por un arco fijo hacia un punto destino. Ver [[02 - Mecánicas]].
 - **Cañón:** solo en la isla final; dispara al interactuar y daña a La Entidad.
-- **Pilares de las ruinas:** solo en la arena del Jefe 2; cierran los extremos durante el combate.
+- **Puertas entre escenas:** la del templo del Mago (en Eretz) se usa con Interactuar y funde a negro hacia `Ruina_Mago`; las de dentro llevan de vuelta a Eretz. Ninguna funciona durante un combate de jefe.
 
 ## Relaciones entre sistemas
 

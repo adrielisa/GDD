@@ -34,7 +34,7 @@ Prototipo en Unity que reúne en un solo mapa la Costa, el Jefe 1, la zona 3 (Bo
 | 4 | Sendero al templo | 46 a 81 | Bosque de Raíces | 1 Earthlem, 1 Aurion | `Despues_Chasko`; columnas de ruinas; fondo del templo. |
 | 5 | Torre de los Earthlem | 81 a 119 | Ruinas Abandonadas | 3 Earthlem | Repisas; géiser `Torre_Repisa` a la cima; `Torre_Arriba`; 2 estatuas (NPC). |
 | 6 | Meseta | 119 a 158 | Antesala del Jefe 2 | 2 Earthlem, 1 Aurion | `Antes_Mago`. |
-| 7 | Arena del Mago | 159 a 177 | Patio de la Academia | Jefe 2 *(pendiente)* | Las columnas de la arena no tienen colisión hasta que exista el jefe. |
+| 7 | Templo del Mago | 159 a 177 | Patio de la Academia | Jefe 2 *(opcional, en la escena `Ruina_Mago`)* | Fachada del templo con ruinas detrás; se entra con Interactuar (ver abajo). |
 | 8 | Después del Mago | 177 a 207 | Salida de las Ruinas | 2 Aurion | `Despues_Mago`; géiser `Torre_Cima` a la isla A. |
 | 9 | Islas A–E | 167 a 266 (alto 31–71) | Archipiélago de Tierra | 5 Aurion | Géiseres A, B, C y E; `Isla_A`, `Isla_D`. |
 | 10 | Isla final | 233 a 285 (alto 82) | Anillo de Islas | 1 Aurion; Driller *(provisional, ver [[03 - Enemigos y NPC]])* | `Isla_Final`; arena del gusano y meta. |
@@ -45,6 +45,18 @@ Prototipo en Unity que reúne en un solo mapa la Costa, el Jefe 1, la zona 3 (Bo
 - **Fondos:** cielo y nubes de la costa en todo el mapa; la costa tiene acantilados y mar animado, y la zona 3 el templo en ruinas (ver [[03 - Entornos]]).
 
 ![[05 - Arte y Audio/Galería de Assets/Entornos/mapa_eretz_completo.png]]
+
+### Templo del Mago (entrada y escena `Ruina_Mago`)
+
+- **Entrada en Eretz:** fachada del templo centrada en la arena (x ≈ 168), con una capa de ruinas detrás (torre rota, nave derrumbada y columnata suelta). Al acercarse aparece el aviso «[E] Entrar al templo»; con Interactuar la pantalla se funde a negro y Eon aparece dentro. La puerta solo funciona mientras el Mago siga vivo. Se quitó el pilar de piedra que quedaba de la antigua arena junto a `Despues_Mago`.
+- **Escena `Ruina_Mago`:** `Assets/Scenes/Levels/Ruina_Mago.unity`, creada por `RuinaMagoGenerator` (y ajustada sin regenerar por `RuinaMagoTemploAjustes`).
+    - Sala de x −22 a +22 (44 u) entre dos muros del templo; techo a 13 u.
+    - Entrada en `Checkpoint_Entrada_Ruina` (x −18). Puerta izquierda (x −20,6): vuelve a Eretz, a `Antes_Mago`. Puerta derecha (x 18): solo tras vencer al Mago, lleva a `Despues_Mago`.
+    - La pelea empieza al pasar x ±15; el Mago se mueve y se teletransporta entre x −20 y +20.
+    - La cámara se detiene en el borde exterior de los muros (x ±28).
+- **Estado entre escenas:** jefes derrotados, habilidades y materiales se conservan al cambiar de escena (solo durante la partida; aún no hay guardado en disco).
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_entrada_eretz.png]]
 
 ## Playa del Despertar
 
@@ -100,9 +112,10 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 
 ## Patio de la Academia (Jefe 2)
 
-- Arena **completamente plana**, 36 u de ancho, sin plataformas, dentro de las ruinas.
-- Al entrar, **pilares de piedra de las ruinas** emergen del suelo en ambos extremos y bloquean el paso; se hunden al morir el jefe. Es la única arena con límites visibles.
-- Al vencer al jefe se activan los géiseres que llevan al Archipiélago.
+- **Jefe opcional:** la entrada es un templo junto al camino; se puede pasar de largo.
+- La arena es el **interior del templo**: sala **completamente plana** de 44 u, sin plataformas, cerrada por los muros del templo.
+- Al empezar el combate las puertas quedan selladas hasta que muere el jefe o cae Eon. No hay pilares que emerjan.
+- El Archipiélago no depende del jefe: los géiseres funcionan siempre.
 
 ## Archipiélago de Tierra
 

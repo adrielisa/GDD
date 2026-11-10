@@ -9,7 +9,7 @@ Eon no sube de nivel. Progresa de dos formas: **habilidades** que entregan los j
 | Inicio | Cómic del prólogo | Eon ya perdió contra La Entidad. Motivo de la revancha. |
 | Introducción | Playa del Despertar | Movimiento, salto, combo, dash. Primeros Aurion y primera XP. |
 | Desarrollo 1 | Acantilados → antesala (mercader) → **Jefe 1** | Primer potenciador. Leer avisos y castigar tras la embestida. Obtiene **Doble salto**. |
-| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem y Vestigio. Obtiene **Tajo ardiente** y **Dash cortante**: ya tiene 3 habilidades. |
+| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem y Vestigio. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
 | Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Escama pétrea**: con 4 habilidades y 3 ranuras, elige su equipo. |
 | Clímax | Puente de la Serpiente → antesala → Isla Final | Combina todo contra La Entidad. |
 | Final | — | Revancha cumplida; créditos. |
@@ -22,8 +22,8 @@ En cualquier momento tras vencer a un jefe, el jugador puede volver a zonas ante
 | --- | --- | --- |
 | Tienda del mercader | Llegar a la antesala del Jefe 1 | Compra de potenciadores; el mercader vuelve a aparecer antes de cada jefe. |
 | Doble salto | Derrotar al Jefe 1 | Segundo salto aéreo; abre rutas opcionales altas. |
-| Tajo ardiente | Derrotar al Jefe 2 | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
-| Dash cortante | Derrotar al Jefe 2 | El dash hace daño. |
+| Tajo ardiente | Derrotar al Jefe 2 (opcional) | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
+| Dash cortante | Derrotar al Jefe 2 (opcional) | El dash hace daño. |
 | Acceso al Archipiélago | Derrotar al Jefe 2 | Se activan los géiseres que conectan las Ruinas con las islas. |
 | Escama pétrea | Derrotar al Jefe 3 | Bloqueo y contraataque. |
 | Isla Final | Derrotar al Jefe 3 | La serpiente se petrifica y su cuerpo forma el puente. |

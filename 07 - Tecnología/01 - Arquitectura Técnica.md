@@ -17,6 +17,8 @@ Arquitectura **propuesta** para Unity. Los nombres de componentes son una guía;
 
 Una escena persistente (`Bootstrap`) contiene los servicios globales que no se destruyen entre zonas.
 
+**En el prototipo** hay dos escenas de juego: `Eretz_Mapa` (todo el recorrido) y `Ruina_Mago` (interior del templo, Jefe 2). Se cambia de una a otra con `PuertaEscena` + `TransicionEscena` (fundido a negro, carga de la escena y Eon colocado en un punto de control por nombre). `EstadoPartida` es un estado estático que sobrevive al cambio de escena: jefes derrotados, habilidades obtenidas y equipadas, y materiales.
+
 ## Componentes
 
 | Responsabilidad | Componentes propuestos |

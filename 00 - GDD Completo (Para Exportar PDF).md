@@ -1,6 +1,6 @@
 # True Hero — GDD completo
 
-**Versión 0.3.0 · 9 de noviembre de 2026.**
+**Versión 0.4.0 · 9 de noviembre de 2026.**
 
 
 
@@ -8,7 +8,7 @@
 
 ## True Hero: resumen del diseño
 
-**GDD 0.3.0 · 9 de noviembre de 2026.**
+**GDD 0.4.0 · 9 de noviembre de 2026.**
 
 Eon, el héroe de la profecía, ya perdió contra La Entidad. Despierta solo en la costa de Kastleland sin su equipo legendario y emprende la revancha: recorre zonas explorables, derrota enemigos que le dan XP, cambia esa XP por potenciadores permanentes con un mercader que aparece antes de cada jefe y vence a tres jefes que le devuelven sus habilidades. Al caer el tercero, su cuerpo petrificado forma el puente hacia la isla final, donde Eon vuelve a enfrentar a La Entidad.
 
@@ -30,7 +30,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Escama pétrea (Jefe 3). **3 equipadas**; ninguna se descarta. |
 | Inventario | Muestra la función y el control de cada habilidad y potenciador. |
 | Enemigos | Aurion, Earthlem y Vestigio. |
-| Jefes | Chasko (costa), Mago oscuro (ruinas planas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
+| Jefes | Chasko (costa), Mago oscuro (opcional, dentro de un templo en ruinas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
 | Mundo | 5 zonas explorables con rutas opcionales; géiseres entre islas. |
 
 ### Jefes
@@ -38,7 +38,7 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | Jefe | Lo esencial | Entrega |
 | --- | --- | --- |
 | Chasko | Camarón tipo escorpión: dispara burbujas con la pinza, embiste contra la pared (queda aturdido) y en fase 2 lanza ondas de choque. La arena se cierra con muros de roca. | Doble salto |
-| Mago oscuro | Arena plana sin plataformas, cerrada por pilares de las ruinas. Llamaradas del cielo, ola de picos de magma de la que hay que huir, escudo periódico, cráneos de fuego teledirigidos y teletransporte al otro extremo. | Tajo ardiente + Dash cortante |
+| Mago oscuro | Jefe opcional dentro de un templo en ruinas; sala plana sin plataformas y puertas selladas durante la pelea. Llamaradas del cielo, ola de picos de magma de la que hay que huir, escudo periódico, cráneos de fuego teledirigidos y teletransporte al otro extremo. | Tajo ardiente + Dash cortante |
 | Serpiente gigante | Rodea islas flotantes; su cuerpo deja caer baba; tocar la cabeza es instakill. Al morir se petrifica y forma el puente. Límites invisibles. | Escama pétrea |
 | La Entidad | Ascenso por islas con géiseres y cañones; cara a cara en la cumbre; fase final. Límites invisibles. | Victoria |
 
@@ -433,11 +433,12 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | Habilidad | Origen | Tipo | Control | Efecto |
 | --- | --- | --- | --- | --- |
 | **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero): Eon crea una burbuja bajo los pies y se impulsa en ella. Se restablece al tocar suelo. |
-| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 14 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos comunes. |
-| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash). |
+| **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` (prototipo: `K`, clic derecho o `B`) | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 16 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos (golpea una vez a cada uno) y se detiene en las paredes. |
+| **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash), con una pausa breve al cortar y una estela roja. |
 | **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
 
 - **Entrega del Doble salto:** al morir, Chasko suelta el **Camarón de Chasko**, un camarón pequeñito que queda flotando en la arena. Al tocarlo, la habilidad se guarda en el inventario sin equipar y aparece un aviso para equiparla.
+- **Entrega de Tajo ardiente y Dash cortante:** al morir, el Mago oscuro suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante). Se recogen igual que el camarón. El Mago es opcional, así que ninguna de las dos es necesaria para terminar el recorrido.
 
 #### Escama pétrea (detalle)
 
@@ -483,7 +484,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | Economía de XP y tienda | Ganar XP y gastarla con el mercader. | Daño (muertes), UI, guardado. | Por implementar |
 | Cámara reactiva y encuadre | Seguir a Eon, confinar la vista en arenas y aplicar sacudidas. | Cinemachine 2D, gestor de mundo. | En prototipo (seguimiento ajustado a píxel y sacudidas) |
 | Gestor de mundo y progreso | Zonas, puntos de control, arenas de jefe, barreras y cinemáticas. | Triggers, UI, guardado, inventario. | En prototipo (puntos de control y arenas con muros) |
-| Elementos de entorno | Géiseres, cañones, pilares de las ruinas. | Físicas 2D, controlador del jugador. | En prototipo (géiseres) |
+| Elementos de entorno | Géiseres, cañones, puertas entre escenas. | Físicas 2D, controlador del jugador. | En prototipo (géiseres) |
 | Guardado | Persistir progreso entre sesiones. | Todos los anteriores. | Por implementar |
 
 ### Sistema 01: Daño, salud y combate
@@ -587,7 +588,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
     - Los puntos de control restauran vida y escudo y hacen reaparecer a los enemigos comunes.
     - Al cruzar la entrada de una arena de jefe se cierran sus límites:
         - **Jefe 1, Jefe 3 y La Entidad:** barreras **invisibles**.
-        - **Jefe 2:** **pilares de las ruinas** que emergen del suelo y bloquean el paso; se hunden al morir el jefe.
+        - **Jefe 2:** la sala del templo ya está cerrada por sus muros; al empezar el combate las **puertas** se sellan.
     - Al morir el jefe, las barreras se retiran.
     - Las zonas superadas siguen accesibles para volver a acumular XP.
     - Tras el Jefe 3 reproduce la ilustración de la serpiente petrificada y activa el puente hacia la isla final.
@@ -600,7 +601,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 
 - **Géiser:** ciclo reposo/aviso/erupción; lanza a Eon por un arco fijo hacia un punto destino. Ver [[02 - Mecánicas]].
 - **Cañón:** solo en la isla final; dispara al interactuar y daña a La Entidad.
-- **Pilares de las ruinas:** solo en la arena del Jefe 2; cierran los extremos durante el combate.
+- **Puertas entre escenas:** la del templo del Mago (en Eretz) se usa con Interactuar y funde a negro hacia `Ruina_Mago`; las de dentro llevan de vuelta a Eretz. Ninguna funciona durante un combate de jefe.
 
 ### Relaciones entre sistemas
 
@@ -642,6 +643,7 @@ La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por
 - El inventario muestra el control y la función de cada habilidad, y la función de cada potenciador.
 - **En el prototipo** el inventario está dentro del menú de pausa (`Esc` / `P`, `Start`): pestaña Objetos ▸ Habilidades. Se navega con `A` / `D` o las flechas y se equipa o se quita con `Enter` / `Espacio` / `A` (o clic sobre la ranura seleccionada).
 - Mientras la pausa está abierta, Eon no lee salto, dash ni ataque: confirmar en el menú no deja un salto o un tajo en cola al volver al juego.
+- **Teclas en el prototipo:** el ataque con espada está en `J`, así que el **Tajo ardiente** usa `K`, el clic derecho o `B` / Círculo. Interactuar acepta `E`, `Enter` e `Y` / Triángulo (p. ej. para entrar al templo del Mago). Queda pendiente unificar el mapa de controles (P-06 en [[03 - Registro de Decisiones]]).
 
 ### Principios de control
 
@@ -681,7 +683,7 @@ Eon no sube de nivel. Progresa de dos formas: **habilidades** que entregan los j
 | Inicio | Cómic del prólogo | Eon ya perdió contra La Entidad. Motivo de la revancha. |
 | Introducción | Playa del Despertar | Movimiento, salto, combo, dash. Primeros Aurion y primera XP. |
 | Desarrollo 1 | Acantilados → antesala (mercader) → **Jefe 1** | Primer potenciador. Leer avisos y castigar tras la embestida. Obtiene **Doble salto**. |
-| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem y Vestigio. Obtiene **Tajo ardiente** y **Dash cortante**: ya tiene 3 habilidades. |
+| Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem y Vestigio. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
 | Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Escama pétrea**: con 4 habilidades y 3 ranuras, elige su equipo. |
 | Clímax | Puente de la Serpiente → antesala → Isla Final | Combina todo contra La Entidad. |
 | Final | — | Revancha cumplida; créditos. |
@@ -694,8 +696,8 @@ En cualquier momento tras vencer a un jefe, el jugador puede volver a zonas ante
 | --- | --- | --- |
 | Tienda del mercader | Llegar a la antesala del Jefe 1 | Compra de potenciadores; el mercader vuelve a aparecer antes de cada jefe. |
 | Doble salto | Derrotar al Jefe 1 | Segundo salto aéreo; abre rutas opcionales altas. |
-| Tajo ardiente | Derrotar al Jefe 2 | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
-| Dash cortante | Derrotar al Jefe 2 | El dash hace daño. |
+| Tajo ardiente | Derrotar al Jefe 2 (opcional) | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
+| Dash cortante | Derrotar al Jefe 2 (opcional) | El dash hace daño. |
 | Acceso al Archipiélago | Derrotar al Jefe 2 | Se activan los géiseres que conectan las Ruinas con las islas. |
 | Escama pétrea | Derrotar al Jefe 3 | Bloqueo y contraataque. |
 | Isla Final | Derrotar al Jefe 3 | La serpiente se petrifica y su cuerpo forma el puente. |
@@ -860,7 +862,7 @@ El catálogo de cada antesala incluye también los potenciadores de antesalas an
 - **Cinemáticas seguras:** durante introducciones de jefe, cambios de fase y cinemáticas, Eon y los enemigos son invulnerables.
 - **Puntos de control:** al descansar o reaparecer, Eon vuelve al último punto visitado con vida y escudo completos, y los enemigos comunes reaparecen.
 - **Equipo fijado en arena:** al entrar a una arena de jefe no se pueden cambiar habilidades ni potenciadores.
-- **Límites de arena:** invisibles en los combates contra el Jefe 1, el Jefe 3 y La Entidad; en el del Jefe 2, pilares de las ruinas que bloquean el paso.
+- **Límites de arena:** invisibles en los combates contra el Jefe 1, el Jefe 3 y La Entidad; en el del Jefe 2, los muros del templo, con las puertas selladas durante el combate.
 - **Zonas reabiertas:** tras vencer a un jefe, las zonas anteriores siguen accesibles y sus enemigos reaparecen.
 - **Persistencia:** XP, potenciadores, habilidades y jefes derrotados se guardan.
 
@@ -1212,7 +1214,7 @@ True Hero
 │   ├── Bosque de Raíces (zona explorable)
 │   ├── Ruinas Abandonadas (zona explorable)
 │   ├── Antesala: mercader + punto de control
-│   └── Patio de la Academia → Jefe 2: Mago oscuro → Tajo ardiente + Dash cortante
+│   └── Patio de la Academia → Jefe 2 (opcional): Mago oscuro → Tajo ardiente + Dash cortante
 ├── Bloque 3 — El cielo roto
 │   ├── Archipiélago de Tierra (zona explorable con géiseres)
 │   ├── Antesala: mercader + punto de control
@@ -1247,7 +1249,7 @@ True Hero
 | Mercader | Llegar a la antesala del Jefe 1. |
 | Jefe 1 | Salto, dash y combo enseñados en la Playa y los Acantilados. |
 | Jefe 2 | Earthlem y Vestigio presentados en Bosque y Ruinas. |
-| Archipiélago de Tierra | Jefe 2 derrotado (activa los géiseres). |
+| Archipiélago de Tierra | Cruzar las Ruinas (el Jefe 2 es opcional; los géiseres funcionan siempre). |
 | Jefe 3 | Géiseres y plataformas pequeñas dominados en el Archipiélago. |
 | Isla Final | Jefe 3 derrotado (puente petrificado). |
 | Rutas opcionales | Doble salto o Tajo ardiente equipados (nunca obligatorias). |
@@ -1291,7 +1293,7 @@ Prototipo en Unity que reúne en un solo mapa la Costa, el Jefe 1, la zona 3 (Bo
 | 4 | Sendero al templo | 46 a 81 | Bosque de Raíces | 1 Earthlem, 1 Aurion | `Despues_Chasko`; columnas de ruinas; fondo del templo. |
 | 5 | Torre de los Earthlem | 81 a 119 | Ruinas Abandonadas | 3 Earthlem | Repisas; géiser `Torre_Repisa` a la cima; `Torre_Arriba`; 2 estatuas (NPC). |
 | 6 | Meseta | 119 a 158 | Antesala del Jefe 2 | 2 Earthlem, 1 Aurion | `Antes_Mago`. |
-| 7 | Arena del Mago | 159 a 177 | Patio de la Academia | Jefe 2 *(pendiente)* | Las columnas de la arena no tienen colisión hasta que exista el jefe. |
+| 7 | Templo del Mago | 159 a 177 | Patio de la Academia | Jefe 2 *(opcional, en la escena `Ruina_Mago`)* | Fachada del templo con ruinas detrás; se entra con Interactuar (ver abajo). |
 | 8 | Después del Mago | 177 a 207 | Salida de las Ruinas | 2 Aurion | `Despues_Mago`; géiser `Torre_Cima` a la isla A. |
 | 9 | Islas A–E | 167 a 266 (alto 31–71) | Archipiélago de Tierra | 5 Aurion | Géiseres A, B, C y E; `Isla_A`, `Isla_D`. |
 | 10 | Isla final | 233 a 285 (alto 82) | Anillo de Islas | 1 Aurion; Driller *(provisional, ver [[03 - Enemigos y NPC]])* | `Isla_Final`; arena del gusano y meta. |
@@ -1302,6 +1304,18 @@ Prototipo en Unity que reúne en un solo mapa la Costa, el Jefe 1, la zona 3 (Bo
 - **Fondos:** cielo y nubes de la costa en todo el mapa; la costa tiene acantilados y mar animado, y la zona 3 el templo en ruinas (ver [[03 - Entornos]]).
 
 ![[05 - Arte y Audio/Galería de Assets/Entornos/mapa_eretz_completo.png]]
+
+#### Templo del Mago (entrada y escena `Ruina_Mago`)
+
+- **Entrada en Eretz:** fachada del templo centrada en la arena (x ≈ 168), con una capa de ruinas detrás (torre rota, nave derrumbada y columnata suelta). Al acercarse aparece el aviso «[E] Entrar al templo»; con Interactuar la pantalla se funde a negro y Eon aparece dentro. La puerta solo funciona mientras el Mago siga vivo. Se quitó el pilar de piedra que quedaba de la antigua arena junto a `Despues_Mago`.
+- **Escena `Ruina_Mago`:** `Assets/Scenes/Levels/Ruina_Mago.unity`, creada por `RuinaMagoGenerator` (y ajustada sin regenerar por `RuinaMagoTemploAjustes`).
+    - Sala de x −22 a +22 (44 u) entre dos muros del templo; techo a 13 u.
+    - Entrada en `Checkpoint_Entrada_Ruina` (x −18). Puerta izquierda (x −20,6): vuelve a Eretz, a `Antes_Mago`. Puerta derecha (x 18): solo tras vencer al Mago, lleva a `Despues_Mago`.
+    - La pelea empieza al pasar x ±15; el Mago se mueve y se teletransporta entre x −20 y +20.
+    - La cámara se detiene en el borde exterior de los muros (x ±28).
+- **Estado entre escenas:** jefes derrotados, habilidades y materiales se conservan al cambiar de escena (solo durante la partida; aún no hay guardado en disco).
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_entrada_eretz.png]]
 
 ### Playa del Despertar
 
@@ -1357,9 +1371,10 @@ Entrada → Faro caído → Cuevas marinas → Punto de control → Antesala (me
 
 ### Patio de la Academia (Jefe 2)
 
-- Arena **completamente plana**, 36 u de ancho, sin plataformas, dentro de las ruinas.
-- Al entrar, **pilares de piedra de las ruinas** emergen del suelo en ambos extremos y bloquean el paso; se hunden al morir el jefe. Es la única arena con límites visibles.
-- Al vencer al jefe se activan los géiseres que llevan al Archipiélago.
+- **Jefe opcional:** la entrada es un templo junto al camino; se puede pasar de largo.
+- La arena es el **interior del templo**: sala **completamente plana** de 44 u, sin plataformas, cerrada por los muros del templo.
+- Al empezar el combate las puertas quedan selladas hasta que muere el jefe o cae Eon. No hay pilares que emerjan.
+- El Archipiélago no depende del jefe: los géiseres funcionan siempre.
 
 ### Archipiélago de Tierra
 
@@ -1476,24 +1491,38 @@ Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → D
 
 ### Jefe 2 — Mago oscuro *(nombre provisional)*
 
-- **Arena:** Patio de la Academia, suelo de piedra **totalmente plano** de 36 u, sin plataformas, dentro de unas ruinas abandonadas. Al empezar, **pilares de las ruinas** emergen en ambos extremos y bloquean el paso; se hunden al morir el jefe.
+- **Jefe opcional.** Su templo está en la meseta de las Ruinas (x 159 a 177 del mapa Eretz). La puerta no se cruza al tocarla: aparece el aviso «[E] Entrar al templo» y se entra con Interactuar. Quien pase de largo sigue la ruta principal sin enfrentarlo; solo se queda sin Tajo ardiente ni Dash cortante.
+- **Arena:** el interior del templo, en una **escena aparte** (`Ruina_Mago`). Al entrar, la pantalla se funde a negro y aparece el título «Ruinas del Templo». Es una sala de piedra **totalmente plana** de 44 u entre los muros del templo, sin plataformas.
+    - La pelea empieza al pasar x ±15. Desde ese momento las puertas quedan **selladas** y no se puede huir hasta vencer o caer.
+    - No hay pilares que emerjan: los muros del templo cierran la sala y la cámara nunca enseña nada más allá de ellos.
 - **Vida:** 700 HP. **Fases:** 1 (100–40 %) y 2 (menos de 40 %).
-- **Descripción:** hechicero encapuchado que flota a ras de suelo. Se puede golpear con la espada siempre que no tenga el escudo activo.
-- **Recompensa:** 300 XP, **Tajo ardiente** y **Dash cortante** (se guardan los dos en el inventario).
+- **Descripción:** hechicero encapuchado y oscuro, del tamaño de Eon, que flota a ras de suelo y siempre mira hacia él.
+    - **Ojos:** cian en reposo; se vuelven **naranja al conjurar**. Es la señal de que va a atacar, junto con los avisos del suelo.
+    - **Aparecer y desaparecer:** gira como un **remolino en sentido antihorario** hasta reducirse a nada; la aparición es la misma animación al revés.
+    - **Muerte:** se deshace en jirones y desaparece.
+- **Daño:** se le golpea con espada, Tajo ardiente y Dash cortante mientras no tenga el escudo. Al recibir un golpe parpadea y se estremece.
+- **Recompensa:** 300 XP *(el prototipo aún no tiene XP)*, **Tajo ardiente** y **Dash cortante**. Al morir suelta dos objetos que salen volando, flotan en la sala y se recogen al tocarlos (se acercan solos cuando Eon está cerca):
+    - **Brasa del Mago** → Tajo ardiente.
+    - **Filo de sombra** → Dash cortante.
+    - Cada uno muestra su aviso y queda en el inventario sin equipar.
+- **Tras vencerlo:** la puerta del templo en Eretz ya no se abre; dentro, la puerta de la derecha lleva a la salida de las Ruinas (punto de control `Despues_Mago`).
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Lluvia de llamaradas** | Círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen del cielo; 2 apuntan a la posición prevista de Eon. Radio de 1 u. | 20 |
-| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Una ola de picos nace junto al mago y avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s). Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del pilar del extremo: hay que **correr y alejarse** del mago hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
-| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan levemente a Eon. Mientras dura, el mago lanza cráneos. | — |
-| **Cráneos de fuego** | Llamas en sus manos 0,6 s. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado. Duran 6 s. Se destruyen con un golpe. | 15 |
-| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) desaparece y reaparece en el **extremo opuesto** de la arena. Al reaparecer queda expuesto 1 s. | — |
+| **Lluvia de llamaradas** | Ojos naranja y círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Radio de 1 u; estallan al tocar el suelo. | 20 |
+| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
+| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan a Eon (6 u/s hacia atrás y 3 hacia arriba). Mientras dura, el mago lanza cráneos. | — |
+| **Cráneos de fuego** | Llamas en sus manos. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado (110° por segundo). Duran 6 s. Se destruyen con un golpe. | 15 |
+| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) se desvanece en remolino y reaparece en el **extremo opuesto** de la sala, a 3 u del muro. Al reaparecer queda **expuesto 1 s**: es la mejor ventana para castigarlo. | — |
 
-- **Fase 2:** se teletransporta con más frecuencia y puede combinar llamaradas con la ola de picos.
+- **Ritmo:** descansa 1 s entre ataques (0,6 s en fase 2).
+- **Fase 2:** se teletransporta tras 2 ataques y, con un 40 % de probabilidad, combina la lluvia de llamaradas con la ola de picos.
+- **Si Eon cae:** el combate se reinicia; el mago vuelve a su sitio con la vida completa y las puertas se abren.
 
 ```text
-Ataque 1 → Ataque 2 → Ataque 3 → Teletransporte al extremo opuesto (expuesto 1 s) → …
+Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extremo opuesto (expuesto 1 s) → …
    └── cada 15 s: Escudo 4 s + Cráneos de fuego
+   └── fase 2: teletransporte cada 2 ataques; 40 % de combos llamaradas + picos
 ```
 
 ### Jefe 3 — Serpiente gigante *(nombre provisional)*
@@ -1581,13 +1610,13 @@ Solo hay tres tipos de elementos que el jugador obtiene: **XP**, **potenciadores
 - **Uso:** se equipan en una de las **3 ranuras de habilidad**. Ninguna se descarta: las que no se usan quedan guardadas para elegirlas después.
 - **Inventario:** al seleccionar una habilidad se muestran su control y su función.
 - **Cambios:** fuera de las arenas de jefe.
-- **Entrega en el mundo:** el jefe suelta un objeto que la representa y que se recoge al tocarlo. El del Jefe 1 es el **Camarón de Chasko**.
+- **Entrega en el mundo:** el jefe suelta un objeto que la representa y que se recoge al tocarlo. El del Jefe 1 es el **Camarón de Chasko**; el Jefe 2 suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante).
 
 | Habilidad | Origen | Tipo | Control | Efecto | Icono |
 | --- | --- | --- | --- | --- | --- |
 | Doble salto | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de altura), impulsado por una burbuja bajo los pies. | Camarón de Chasko: camarón pequeñito naranja y enroscado (16 × 16 px). |
-| Tajo ardiente | Jefe 2 | Activa | `J` | La espada lanza un tajo de fuego que atraviesa enemigos: 15 de daño, alcance 8 u, recarga 1,2 s. | Espada envuelta en llamas. |
-| Dash cortante | Jefe 2 | Pasiva | Dash | El dash hace 20 de daño a cada enemigo atravesado. | Silueta de dash con filo rojo. |
+| Tajo ardiente | Jefe 2 | Activa | `J` (prototipo: `K`) | La espada lanza un tajo de fuego que atraviesa enemigos: 15 de daño, alcance 8 u, recarga 1,2 s. | Brasa del Mago: brasa naranja con chispas (20 × 20 px). |
+| Dash cortante | Jefe 2 | Pasiva | Dash | El dash hace 20 de daño a cada enemigo atravesado. | Filo de sombra: hoja oscura con filo rojo (20 × 20 px). |
 | Escama pétrea | Jefe 3 | Activa | `K` (mantener) | Se petrifica y reduce el daño un 70 %; el bloqueo perfecto anula el golpe y aturde. Recarga 3 s. | Escama gris con grietas. |
 
 Con 4 habilidades y 3 ranuras, el jugador decide qué combinación llevar a la isla final; las cuatro siguen disponibles en el inventario.
@@ -1604,8 +1633,8 @@ El juego tiene una misión principal dividida en cuatro objetivos (uno por jefe)
 | Objetivo | Tipo | Zona | Requisito | Éxito | Recompensa |
 | --- | --- | --- | --- | --- | --- |
 | La marea viva | Principal | Costa | — | Derrotar a Chasko. | 200 XP, Doble salto. |
-| Las ruinas en llamas | Principal | Ruinas Abandonadas | Jefe 1 derrotado | Derrotar al Mago oscuro. | 300 XP, Tajo ardiente, Dash cortante. |
-| La serpiente de piedra | Principal | Archipiélago de Tierra | Jefe 2 derrotado | Derrotar a la Serpiente gigante. | 400 XP, Escama pétrea, Puente de la Serpiente. |
+| Las ruinas en llamas | Opcional | Ruinas Abandonadas | Jefe 1 derrotado | Entrar al templo y derrotar al Mago oscuro. | 300 XP, Tajo ardiente, Dash cortante. |
+| La serpiente de piedra | Principal | Archipiélago de Tierra | Llegar al Archipiélago | Derrotar a la Serpiente gigante. | 400 XP, Escama pétrea, Puente de la Serpiente. |
 | La revancha | Principal | Isla Final | Jefe 3 derrotado | Derrotar a La Entidad. | Final del juego. |
 
 - **Condición de fracaso:** ninguna permanente. Ser derrotado devuelve al punto de control de la antesala.
@@ -1721,7 +1750,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | Earthlem | 96 × 96 | Enterrado, emerger, caminar, barrido, aplastamiento, enterrarse, impacto, muerte | Escombros, onda sísmica | Emerger, reposo y ataque hechos (128 × 112); el resto pendiente. |
 | Vestigio | 64 × 96 | Caminar, combo, estocada, guardia, impacto, muerte | Brillo del arma, disolución blanca | Pendiente |
 | Jefe 1 — Chasko | 90 × 90 | Idle, caminar, chasquido (carga, disparo, recuperación), recibir daño, muerte | Burbuja de cavitación (46 × 46: avanzar, estallido), parpadeo de embestida, onda de choque | Hecho (`Chasko.aseprite`) |
-| Jefe 2 — Mago oscuro | 96 × 128 | Flotar, conjurar llamaradas, golpear el suelo, escudo, invocar cráneos, desaparecer, aparecer, aturdido, muerte | Llamaradas, picos de magma, esfera violeta, cráneos de fuego, humo | Pendiente |
+| Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Círculos y llamaradas, grietas y picos de magma, esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
 | Jefe 3 — Serpiente gigante | Cabeza 192 × 192, segmento 96 × 96, cola | Mandíbula, segmento hinchado, petrificación | Gotas y salpicadura de baba, polvo al atravesar islas | Pendiente |
 | La Entidad | Escala de fondo y escala de cumbre | Escalar, golpe de mano, barrido, invocar, apertura del rostro, derrota | Ondas, sombras de impacto, núcleo | Cuerpo por piezas, manos (reposo, cansada, rota), fondo y efectos de rayo, tornado y orbe hechos. |
 
@@ -1764,7 +1793,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | **Arena de la Marea** | Playa abierta con el mar a un lado; oleaje animado. | Arena plana, mar con capa de agua animada; muros de roca que emergen y se rompen. | Jefe 1. | Reutiliza bloques de la Costa. |
 | **Bosque de Raíces** | Árboles altos y vegetación densa. | Raíces colosales entrelazadas, armaduras de caballeros antiguos. | Plataformas verticales; rutas opcionales altas con doble salto. | Segmentos de tronco, raíces, plantas. |
 | **Ruinas Abandonadas** | Academia de caballeros arrasada; mármol agrietado y piedra ennegrecida. | Columnas rotas, aulas derrumbadas, estandartes rasgados, torres. | Exploración y combates terrestres. | Columnas, bloques de muro, arcos. |
-| **Patio de la Academia** | Suelo de piedra completamente plano entre ruinas. | Restos de estatuas al fondo; sin plataformas; pilares de piedra que emergen en los extremos para cerrar la arena. | Jefe 2. | Reutiliza piezas de las Ruinas como fondo. |
+| **Patio de la Academia** | Interior de un templo gótico en ruinas, **de noche**: solo lo iluminan velas y faroles; no entra luz del sol. | Bóveda con arcos y ventanales oscuros, nave lateral, muro con pilastras y faroles, portón central con reja y casetas, columnas cercanas; suelo de losas gris. | Jefe 2 (escena aparte). | Fondo por capas con parallax; columnas, arcos y ladrillo con la misma textura. |
 | **Archipiélago de Tierra** | Islas de tierra y roca flotando sobre el vacío; cielo pálido. | Géiseres, raíces colgantes, rocas que caen al vacío. | Exploración aérea con géiseres. | Islas de 3 tamaños, géiser como *prefab*. |
 | **Anillo de Islas** | 7 islas de tierra en dos alturas. | Túneles por donde pasa la serpiente. | Jefe 3. | Reutiliza islas del Archipiélago. |
 | **Puente e Isla Final** | Cuerpo petrificado de la serpiente; cumbre de mármol bajo un cielo oscuro. | Cañones, islas ascendentes con géiseres, La Entidad a gran escala. | Batalla final. | Reutiliza islas, cañón como *prefab*. |
@@ -1785,6 +1814,8 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 | **Géiser** | 64×128 px: montículo de roca con pasto; *reposo* (8 cuadros, burbujeo y vapor) y *erupción* (10 cuadros, se reproduce al lanzar a Eon). | `Geiser/` |
 | **Muros de la arena de Chasko** | Pilar de roca SSW (32 px de ancho); la cabeza y la base son fijas y el centro se repite según la altura. Se rompe en 5 tipos de escombro. | `Assets/Resources/Arena/` |
 | **Fondos por zona** | Cada zona tiene un asset con sus capas; al cruzar de una zona a otra el fondo se funde. Cada capa se ajusta en el Inspector (parallax, altura del suelo, ancla, animación). | `Assets/Art/Fondos_Eretz/` |
+| **Templo del Mago: interior** | Fondo de la escena `Ruina_Mago` en 5 capas con parallax (bóveda 0,9, nave 0,8, muro 0,65, portón 0,6 como pieza única centrada, columnas 0,4). Paleta de grises cálidos oscuros. Columnas, pilastras y arcos usan la textura de la columna de MainLevBuild en gris (sillares dobles con nervio central; en los arcos, doblada a lo largo de la curva); muros y casetas usan un ladrillo con filo de luz y junta oscura. Muros laterales, puertas y suelo con el mismo estilo. | `Templo_Mago/` · `Fondo_Templo_Mago.asset` |
+| **Templo del Mago: entrada** | Fachada (224 × 240 px) con frontón de tejas, cornisa moldurada, columnas y puerta con arco de dovelas y faroles, y una capa de ruinas detrás (408 × 300 px) inspirada en el templo del fondo de la zona 5. | `Ruina_Interior/ruina_fachada_*` |
 
 ### Modularidad
 
@@ -1798,7 +1829,7 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 | --- | --- |
 | Costa | Luz diurna nublada y fría. |
 | Bosque | Penumbra verde con rayos de luz entre hojas. |
-| Ruinas | Atardecer naranja; en la arena del Mago, luz de fuego. |
+| Ruinas | Atardecer naranja; dentro del templo del Mago, noche con luz cálida de velas y faroles (sin halos: la luz solo calienta la piedra). |
 | Archipiélago | Luz alta y pálida; niebla bajo las islas. |
 | Isla Final | Cielo oscuro; La Entidad emite luz propia en sus núcleos. |
 
@@ -1807,7 +1838,7 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 - **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
 - **Fuego y magma:** llamaradas, picos de magma, cráneos de fuego.
 - **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
-- **Magia del Mago:** escudo, teletransporte (humo negro).
+- **Magia del Mago:** ojos que pasan de cian a naranja al conjurar, escudo arcano violeta, cráneos de fuego, remolino al aparecer y desaparecer, humo negro en el destino del teletransporte.
 - **Géiseres:** burbujeo de aviso, columna de vapor y agua.
 - **Baba:** gotas verdes y salpicadura al impactar.
 - **Petrificación:** grietas grises que recorren el cuerpo de la serpiente.
@@ -1988,10 +2019,11 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 | Enemigo común | Vestigio                                               | 0                         | Sin arte.                                                                                                        |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
-| Jefes 2 y 3   | Mago oscuro, Serpiente gigante                         | 0                         | Sin arte.                                                                                                        |
-| Efectos       | Rayo, tornado, orbe, burbuja                           | 4                         | Hechos.                                                                                                          |
-| Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
-| Habilidades | Camarón de Chasko (Doble salto) y burbuja del doble salto | 2 | Hechos. |
+| Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
+| Jefe 3        | Serpiente gigante                                      | 0                         | Sin arte.                                                                                                        |
+| Efectos       | Rayo, tornado, orbe, burbuja; magia del Mago                           | 4                         | Hechos.                                                                                                          |
+| Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena, templo del Mago | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
+| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra y tajo ardiente | 5 | Hechos. |
 
 ### Comparación de escala
 
@@ -2386,7 +2418,158 @@ Origen: `Assets/Art/Sprites/Characters/Jefe_Titan/titan_mano_07`
 
 Sus ataques usan el [[#Rayo]], el [[#Tornado]] y el [[#Orbe]].
 
-#### Jefe 2 — Mago oscuro y Jefe 3 — Serpiente gigante
+#### Jefe 2 — Mago oscuro
+
+Hechicero encapuchado a la escala de Eon. Reglas de combate en [[03 - Enemigos y NPC]].
+
+| Dato | Valor |
+| --- | --- |
+| Lienzo | 56 × 66 px |
+| Píxeles por unidad | 21,5 (la misma escala que Eon) |
+| Pivote | Abajo al centro; mira a la izquierda |
+| Fuente | `Documents/sprites/Jefe_Mago_Oscuro/Mago_Oscuro.aseprite` (una etiqueta por animación) |
+| Carpeta | `Assets/Resources/Mago_Oscuro/<animación>_NN.png` |
+
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Reposo | 8 | 110 ms por cuadro | 0,88 s | Sí |
+| Reposo con escudo | 8 | 110 ms por cuadro | 0,88 s | Sí |
+| Lluvia de llamaradas | 10 | 80–100 ms por cuadro | 0,91 s | No |
+| Picos de magma | 9 | 60–120 ms por cuadro | 0,8 s | No |
+| Escudo | 7 | 80–100 ms por cuadro | 0,61 s | No |
+| Cráneos de fuego | 9 | 60–120 ms por cuadro | 0,8 s | No |
+| Expuesto | 6 | 110 ms por cuadro | 0,66 s | Sí |
+| Recibir daño | 4 | 70–100 ms por cuadro | 0,34 s | No |
+| Desaparecer (remolino) | 14 | 50–140 ms por cuadro | 1,02 s | No |
+| Muerte | 17 | 60–200 ms por cuadro | 1,53 s | No |
+
+
+##### Reposo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo.gif]]
+
+**8 cuadros** · 56×66 px · 110 ms por cuadro · 0,88 s · en bucle
+
+Flota a ras de suelo; ojos cian.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/reposo_*`
+
+##### Reposo con escudo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_escudo.gif]]
+
+**8 cuadros** · 56×66 px · 110 ms por cuadro · 0,88 s · en bucle
+
+Mientras dura el escudo arcano.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_reposo_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/reposo_escudo_*`
+
+##### Lluvia de llamaradas
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_llamaradas.gif]]
+
+**10 cuadros** · 56×66 px · 80–100 ms por cuadro · 0,91 s · una vez
+
+Ojos naranja; la lluvia cae en el cuadro 8.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_llamaradas_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_llamaradas_*`
+
+##### Picos de magma
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_picos.gif]]
+
+**9 cuadros** · 56×66 px · 60–120 ms por cuadro · 0,8 s · una vez
+
+Golpea el suelo en el cuadro 5: nace la ola de picos.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_picos_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_picos_*`
+
+##### Escudo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_escudo.gif]]
+
+**7 cuadros** · 56×66 px · 80–100 ms por cuadro · 0,61 s · una vez
+
+La esfera se forma desde el cuadro 4.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_escudo_*`
+
+##### Cráneos de fuego
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_craneos.gif]]
+
+**9 cuadros** · 56×66 px · 60–120 ms por cuadro · 0,8 s · una vez
+
+Lanza los cráneos en el cuadro 5.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_conjuro_craneos_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/conjuro_craneos_*`
+
+##### Expuesto
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_expuesto.gif]]
+
+**6 cuadros** · 56×66 px · 110 ms por cuadro · 0,66 s · en bucle
+
+Durante 1 s tras reaparecer.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_expuesto_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/expuesto_*`
+
+##### Recibir daño
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_dano.gif]]
+
+**4 cuadros** · 56×66 px · 70–100 ms por cuadro · 0,34 s · una vez
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_dano_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/dano_*`
+
+##### Desaparecer (remolino)
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_desaparicion.gif]]
+
+**14 cuadros** · 56×66 px · 50–140 ms por cuadro · 1,02 s · una vez
+
+Gira en sentido antihorario hasta reducirse a nada. La aparición es la misma animación al revés.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_aparicion.gif]]
+
+*Aparición (la misma animación al revés).*
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_desaparicion_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/desaparicion_*`
+
+##### Muerte
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_muerte.gif]]
+
+**17 cuadros** · 56×66 px · 60–200 ms por cuadro · 1,53 s · una vez
+
+Se deshace en jirones y desaparece.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Mago_Oscuro/mago_muerte_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Oscuro/muerte_*`
+
+Sus conjuros usan los [[#Efectos del Mago oscuro]].
+
+#### Jefe 3 — Serpiente gigante
 
 Sin arte todavía.
 
@@ -2546,6 +2729,101 @@ Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_mover_*`
 
 Origen: `Assets/Art/Sprites/Effects/Chasko_Burbuja/burbuja_explosion_*`
 
+#### Efectos del Mago oscuro
+
+Magia del Jefe 2. Carpeta `Assets/Resources/Mago_Efectos/` (fuente: `Documents/sprites/Jefe_Mago_Oscuro/Efectos/`). Los GIF hacen una pausa al final para que se vea el último cuadro.
+
+| Efecto | Cuadros | Velocidad |
+| --- | --- | --- |
+| Llamarada: aviso en el suelo | 3 | 80 ms por cuadro |
+| Llamarada: caída | 3 | 70 ms por cuadro |
+| Llamarada: estallido | 6 | 70 ms por cuadro |
+| Pico de magma: aviso | 3 | 90 ms por cuadro |
+| Pico de magma | 9 | 70 ms por cuadro |
+| Escudo arcano | 12 | 80 ms por cuadro |
+| Cráneo de fuego | 8 | 80 ms por cuadro |
+| Humo del teletransporte | 7 | 70–90 ms por cuadro |
+
+##### Llamarada: aviso en el suelo
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso.gif]]
+
+Círculo de luz naranja que marca dónde caerá (0,8 s, en bucle).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_aviso_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_aviso_*`
+
+##### Llamarada: caída
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae.gif]]
+
+Bola de fuego que cae del techo (en bucle mientras cae).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_cae_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_cae_*`
+
+##### Llamarada: estallido
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido.gif]]
+
+Al tocar el suelo; hace el daño.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_llamarada_estallido_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/llamarada_estallido_*`
+
+##### Pico de magma: aviso
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso.gif]]
+
+Grieta que brilla 0,5 s antes de cada pico.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_aviso_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/pico_aviso_*`
+
+##### Pico de magma
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma.gif]]
+
+Sale del suelo (1-4), vibra activo (4-6) y se rompe (7-9).
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_pico_magma_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/pico_magma_*`
+
+##### Escudo arcano
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_escudo.gif]]
+
+Esfera violeta: se forma, late mientras dura y se rompe.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_escudo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/escudo_*`
+
+##### Cráneo de fuego
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_craneo.gif]]
+
+Vuela hacia Eon; se destruye de un golpe.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_craneo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/craneo_*`
+
+##### Humo del teletransporte
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_humo.gif]]
+
+Aparece en el destino 0,5 s antes de que el mago reaparezca.
+
+![[05 - Arte y Audio/Galería de Assets/Efectos/mago_humo_cuadros.png]]
+
+Origen: `Assets/Resources/Mago_Efectos/humo_*`
+
 ---
 
 ### Habilidades
@@ -2585,6 +2863,44 @@ El GIF va a un tercio de la velocidad real para que se vea.
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/burbuja_doble_salto_cuadros.png]]
 
 Origen: `Assets/Resources/Habilidades/burbuja_doble_salto_*` (fuente: `Burbuja_Doble_Salto.aseprite`).
+
+#### Brasa del Mago (drop del Tajo ardiente)
+
+La suelta el Mago oscuro al morir. Brasa naranja con chispas, 20 × 20 px; brilla en bucle mientras flota.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente_cuadros.png]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/brasa_tajo_ardiente_icono.png]]
+
+Origen: `Assets/Resources/Habilidades/brasa_tajo_ardiente_*`.
+
+#### Filo de sombra (drop del Dash cortante)
+
+El otro objeto que suelta el Mago. Hoja oscura con filo rojo, 20 × 20 px.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante_cuadros.png]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante_icono.png]]
+
+Origen: `Assets/Resources/Habilidades/filo_dash_cortante_*`. En el juego, el Dash cortante deja una estela roja de siluetas de Eon.
+
+#### Tajo ardiente (proyectil)
+
+Media luna de fuego que lanza la espada: 30 × 36 px, 4 cuadros en bucle (70 ms) mientras viaja.
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/tajo_ardiente.gif]]
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/tajo_ardiente_cuadros.png]]
+
+Origen: `Assets/Resources/Habilidades/tajo_ardiente_*`.
 
 ---
 
@@ -2650,6 +2966,30 @@ Muro a su altura real en la arena (14 u) y los escombros en que se rompe.
 ![[05 - Arte y Audio/Galería de Assets/Entornos/muro_arena_chasko.png]]
 
 Origen: `Assets/Resources/Arena/`.
+
+#### Templo del Mago: interior (escena Ruina_Mago)
+
+Templo gótico en ruinas, de noche. Vista con la cámara del juego (Eon y el Mago como referencia de tamaño):
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_interior_camara.png]]
+
+Fondo completo (960 × 320 px, se repite a lo ancho salvo el portón):
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_interior_completo.png]]
+
+Piezas de juego: pilar con la textura de la columna (32 × 102 px; arriba y abajo fijos, el centro se repite), muro lateral (129 × 64 px, se repite hacia arriba) y puerta (88 × 120 px).
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_piezas.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Templo_Mago/` (fuente editable: `Documents/sprites/Escenario/Templo_Mago/Fondo_Templo_Mago.aseprite`, por capas).
+
+#### Templo del Mago: entrada en Eretz
+
+Fachada con frontón de tejas, cornisa moldurada y faroles, y ruinas detrás (torre rota, nave derrumbada, columnata suelta con enredaderas). Vista general con la cámara alejada:
+
+![[05 - Arte y Audio/Galería de Assets/Entornos/templo_mago_entrada_eretz.png]]
+
+Origen: `Assets/Art/Sprites/Environment/Ruina_Interior/ruina_fachada_entrada.png` y `ruina_fachada_ruinas_atras.png` (fuente: `Documents/sprites/Escenario/Templo_Mago/Fachada_Eretz/Fachada_Templo_Eretz.aseprite`).
 
 ---
 
@@ -2764,6 +3104,8 @@ En Unity, las habilidades se equipan desde el **menú de pausa**, en la pestaña
 - Las equipadas llevan un **rombo dorado**; arriba a la derecha, el contador «Equipadas n/3».
 - El panel de detalle muestra nombre, objeto de origen, descripción y estado («Equipada · (A) / Enter para quitar»). Si no se puede cambiar, lo dice en rojo (ranuras llenas o arena de jefe cerrada).
 - Al recoger la habilidad aparece un aviso arriba con su icono: *«¡Nueva habilidad: Doble salto! Equípala en Pausa (Esc / Start) ▸ Objetos ▸ Habilidades»*.
+- Si se recogen dos habilidades seguidas (las del Mago), los avisos salen uno tras otro.
+- **Puertas con Interactuar** (templo del Mago): al acercarse aparece sobre la puerta un aviso flotante «[E] Entrar al templo» que se desvanece al alejarse.
 
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/menu_pausa_habilidades_maqueta.png]]
 
@@ -2858,6 +3200,8 @@ Arquitectura **propuesta** para Unity. Los nombres de componentes son una guía;
 
 Una escena persistente (`Bootstrap`) contiene los servicios globales que no se destruyen entre zonas.
 
+**En el prototipo** hay dos escenas de juego: `Eretz_Mapa` (todo el recorrido) y `Ruina_Mago` (interior del templo, Jefe 2). Se cambia de una a otra con `PuertaEscena` + `TransicionEscena` (fundido a negro, carga de la escena y Eon colocado en un punto de control por nombre). `EstadoPartida` es un estado estático que sobrevive al cambio de escena: jefes derrotados, habilidades obtenidas y equipadas, y materiales.
+
 ### Componentes
 
 | Responsabilidad | Componentes propuestos |
@@ -2943,6 +3287,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 - Archivo JSON en `Application.persistentDataPath/truehero_save.json`.
 - Campo `version` para migrar formatos futuros.
 - La configuración se guarda aparte en `PlayerPrefs`.
+- **En el prototipo** todavía no hay archivo de guardado: `EstadoPartida` guarda en memoria, solo durante la partida, los jefes derrotados (`bossesDefeated`), las habilidades obtenidas y equipadas y los materiales, para conservarlos al pasar de `Eretz_Mapa` a `Ruina_Mago` y de vuelta.
 
 ### Estructura del guardado
 
@@ -3009,7 +3354,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
 - Inventario con descripción de función y control de cada elemento.
-- Géiseres, puntos de control, cañones y pilares de las ruinas.
+- Géiseres, puntos de control, cañones y puertas entre escenas (templo del Mago).
 - Ilustración de la serpiente petrificada.
 - Guardado local de una ranura.
 - Teclado y mando.
@@ -3103,8 +3448,8 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-15 | Cómic del prólogo (5 páginas) | Arte | P0 | 3 | Pendiente |
 | B-16 | Puntos de control y guardado | Programación | P0 | 3 | En curso (puntos de control hechos) |
 | B-17 | IA de Earthlem y Vestigio | Programación | P1 | 4 | En curso (Earthlem hecho) |
-| B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; pilares de las ruinas | Programación | P1 | 4 | Pendiente |
-| B-19 | Tajo ardiente (`J`) y Dash cortante | Programación | P1 | 4 | Pendiente |
+| B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; sala del templo con puertas selladas | Programación | P1 | 4 | Hecho |
+| B-19 | Tajo ardiente (`K` en el prototipo) y Dash cortante | Programación | P1 | 4 | Hecho |
 | B-20 | Géiseres | Programación | P2 | 5 | Hecho (animados) |
 | B-21 | Jefe 3: cuerpo segmentado, baba, cabeza instakill | Programación | P2 | 5 | Pendiente |
 | B-22 | Escama pétrea (`K`): reducción, bloqueo perfecto y aturdimiento | Programación | P2 | 5 | Pendiente |
@@ -3118,6 +3463,10 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-30 | Arte de la zona 3 e islas (SSW), columnas de ruinas, géiser y fondos por zona | Arte | P1 | 4 | Hecho |
 | B-31 | Decidir si se quitan los orbes de vida del prototipo (P-05) | Diseño | P1 | 3 | Pendiente |
 | B-32 | Jefe del gusano provisional (Driller) en la isla final hasta tener el Jefe 3 | Programación | P2 | 5 | Hecho (provisional) |
+| B-33 | Sprites del Jefe 2 (Mago oscuro) y sus efectos; templo del Mago (interior por capas, fachada y ruinas) | Arte | P1 | 4 | Hecho |
+| B-34 | Escena `Ruina_Mago` con cambio de escena y estado entre escenas (`EstadoPartida`) | Programación | P1 | 4 | Hecho |
+| B-35 | Unificar el mapa de controles del prototipo con el del GDD (P-06) | Diseño | P2 | 5 | Pendiente |
+| B-36 | Guardado en disco (hoy `EstadoPartida` solo dura la partida) | Programación | P1 | 4 | Pendiente |
 
 
 ---
@@ -3174,6 +3523,16 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Doble salto | Habilidad sin implementar; efecto de ráfaga de aire. | Chasko suelta el Camarón de Chasko; Doble salto equipable con burbuja bajo los pies. | Mecánicas, Controles, Enemigos, Objetos, Galería, Pruebas |
 | Inventario | Pantalla propia (`Tab`). | En el prototipo, sección Habilidades en la pestaña Objetos del menú de pausa. | Sistemas, Controles, UI, UX |
 
+### Cambios aplicados en la versión 0.4.0
+
+| Cambio | Antes (0.3.0) | Ahora | Secciones afectadas |
+| --- | --- | --- | --- |
+| Jefe 2 | Diseñado, sin implementar; obligatorio. | Mago oscuro implementado y **opcional**; se entra a su templo con Interactuar. | Enemigos, Niveles, Progresión, Misiones, Estructura, Pruebas |
+| Arena del Jefe 2 | Patio plano de 36 u con pilares que emergen. | Interior del templo en otra escena (`Ruina_Mago`): sala de 44 u cerrada por muros, puertas selladas durante la pelea, cámara limitada. | Niveles, Sistemas, Reglas, Entornos, Arquitectura |
+| Tajo ardiente y Dash cortante | Sin implementar. | Hechos; los entregan la Brasa del Mago y el Filo de sombra. Tajo ardiente en `K` en el prototipo. | Mecánicas, Controles, Objetos, Galería |
+| Arte del Mago y del templo | Sin arte. | Mago a escala de Eon con 10 animaciones y 8 efectos; templo gótico de noche por capas; fachada con ruinas detrás. | Personajes y Animación, Entornos, Galería |
+| Estado entre escenas | — | `EstadoPartida` conserva jefes, habilidades y materiales durante la partida. | Arquitectura, Datos y Persistencia |
+
 
 ---
 
@@ -3225,11 +3584,11 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | T-08 | Vencer a un jefe con poca vida. | Vida y escudo se restauran al terminar el combate. |
 | T-09 | Hacer que Chasko choque contra la pared con la embestida. | Queda aturdido 1,6 s y recibe ×1,5 de daño. |
 | T-10 | Atravesar con dash la burbuja del chasquido. | Sin daño. |
-| T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al pilar. |
+| T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al muro del templo. |
 | T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
 | T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |
 | T-14 | Volver a una zona superada tras vencer a su jefe. | Los enemigos han reaparecido y dan XP. |
-| T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; pilares visibles en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
+| T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; puertas selladas en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
 | T-16 | Ser derrotado con 500 XP. | Reaparece en el punto de control con 500 XP, vida y escudo completos. |
 | T-17 | Empezar el combate contra Chasko. | Los muros emergen con sacudida de pantalla y cierran la arena. |
 | T-18 | Vencer a Chasko. | Los muros se rompen en escombros y desaparecen; el paso queda libre. |
@@ -3237,6 +3596,14 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | T-20 | Recorrer el mapa Eretz sin habilidades. | Se llega a la meta; cada sección posterior solo se alcanza con su géiser. |
 | T-21 | Vencer a Chasko. | Sale el Camarón de Chasko, cae y flota; al tocarlo aparece el aviso y la habilidad queda en el inventario sin equipar. |
 | T-22 | Sin equipar Doble salto, saltar en el aire. | No hay segundo salto. |
+| T-23 | Pasar caminando por delante del templo del Mago sin pulsar Interactuar. | No cambia de escena; el recorrido sigue hasta la meta sin enfrentar al Mago. |
+| T-24 | Pulsar Interactuar frente al templo. | Fundido a negro, título «Ruinas del Templo» y Eon aparece dentro, en la entrada. |
+| T-25 | Empezar la pelea con el Mago e ir a la puerta de la izquierda. | La puerta no funciona hasta vencer o caer. |
+| T-26 | Huir de la ola de picos corriendo al extremo opuesto. | La ola se detiene a 2 u del muro; sin daño. |
+| T-27 | Golpear al Mago con el escudo activo. | Sin daño; el golpe rebota y empuja a Eon. |
+| T-28 | Vencer al Mago. | Suelta la Brasa del Mago y el Filo de sombra; al recogerlos salen dos avisos seguidos y las habilidades quedan en el inventario sin equipar. |
+| T-29 | Equipar Tajo ardiente y pulsar `K`. | Sale la media luna de fuego (15 de daño); no se puede volver a lanzar hasta 1,2 s después. |
+| T-30 | Volver a Eretz tras vencer al Mago. | La puerta del templo ya no se abre; las habilidades siguen en el inventario. |
 | T-23 | Equipar Doble salto (Pausa ▸ Objetos ▸ Habilidades) y saltar en el aire. | Segundo salto al 80 % de altura con burbuja bajo los pies; se recupera al tocar suelo. |
 | T-24 | Intentar cambiar habilidades con los muros de una arena cerrados. | No cambia; el menú avisa en rojo. |
 | T-25 | Confirmar con `Enter` / `Espacio` en la pausa y volver al juego. | Eon no ataca ni salta solo al cerrar el menú. |
@@ -3299,7 +3666,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Escama pétrea (`K`) funcionan solo equipados; ninguna se descarta. |
 | Enemigos | Aurion, Earthlem y Vestigio con sus ataques, defensas, avisos y XP; reaparecen. |
 | Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; muros de roca que cierran la arena y se rompen al vencerlo; entrega Doble salto. |
-| Jefe 2 | Arena plana cerrada por pilares; llamaradas, ola de picos con zona segura, escudo, cráneos y teletransporte al extremo opuesto; entrega Tajo ardiente y Dash cortante. |
+| Jefe 2 | Opcional: se entra al templo con Interactuar y se puede pasar de largo. Sala plana cerrada por los muros del templo y puertas selladas durante la pelea; llamaradas, ola de picos con zona segura junto al muro, escudo, cráneos y teletransporte al extremo opuesto con 1 s de exposición; entrega Tajo ardiente y Dash cortante. |
 | Jefe 3 | Cuerpo dañable, cola débil, lluvia de baba, cabeza instakill; límites invisibles; entrega Escama pétrea; petrificación y puente al morir. |
 | La Entidad | Fases según [[03 - Enemigos y NPC]]; cañones funcionales; límites invisibles; victoria lleva a créditos. |
 | Géiseres | Ciclo de reposo, aviso y erupción; lanzamiento al destino correcto. |
@@ -3410,6 +3777,11 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-40 | Habilidades | Cada jefe suelta en la arena un objeto que representa su habilidad y se recoge al tocarlo. Chasko suelta el Camarón de Chasko (Doble salto). | Petición del equipo; hace visible la recompensa del combate. |
 | D-41 | Habilidades | El Doble salto se ve como una burbuja bajo los pies de Eon (sustituye a la ráfaga de aire). | Liga la habilidad con Chasko y su burbuja. |
 | D-42 | UI | En el prototipo el inventario de habilidades está en el menú de pausa, pestaña Objetos, junto a los materiales. Con la pausa abierta, Eon no lee entradas de juego. | Reutilizar el menú existente; evitar saltos y tajos en cola al cerrar el menú. |
+| D-43 | Jefes | El Jefe 2 (Mago oscuro) es **opcional**: su templo está junto al camino y se entra con Interactuar; ninguna parte del recorrido exige sus habilidades. | Petición del equipo; da libertad para saltarlo o volver a por él. |
+| D-44 | Niveles | La pelea con el Mago ocurre dentro del templo, en una escena aparte (`Ruina_Mago`), con fundido a negro al entrar y salir. | Arena única con su propio fondo; separa la carga del mapa grande. |
+| D-45 | Jefes | Sin pilares que emergen en el Jefe 2: los muros del templo cierran la sala y las puertas se sellan durante cualquier pelea de jefe. La cámara no enseña nada más allá de los muros. Sustituye a D-28 para el Jefe 2. | Los pilares tapaban la sala corta; evita huir del combate. |
+| D-46 | Arte | El Mago tiene la escala de Eon (56 × 66 px); sus ojos cambian de color al conjurar; aparece y desaparece en un remolino antihorario. El templo es gótico, de noche y sin luz del sol, con columnas, arcos y ladrillo de una misma textura en gris. | Petición del equipo y referencia aprobada. |
+| D-47 | Mecánicas | En el prototipo el Tajo ardiente va en `K` / clic derecho / `B` porque `J` es el ataque con espada. | Evitar conflicto de teclas hasta unificar el mapa de controles (P-06). |
 
 ### Decisiones pendientes
 
@@ -3420,6 +3792,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
+| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`) con el del prototipo (ataque `J`, Tajo ardiente `K`) y reasignar la Escama pétrea. |
 
 
 ---
@@ -3433,6 +3806,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | 0.2.0   | 07/11/2026 | Reestructuración completa: el juego empieza tras la derrota de Eon; 3 jefes (Camarón serpiente, Mago oscuro, Serpiente gigante) y La Entidad; XP como recurso de intercambio; potenciadores con 3 ranuras; habilidades con 3 ranuras; géiseres; zonas explorables; Vestigio como nuevo enemigo; Driller y aliados eliminados. Secciones 06 a 10 completadas. Página de resumen añadida. | Vargas Pérez Joel (con apoyo de Adriel) |
 | 0.2.1   | 07/11/2026 | Potenciadores permanentes y pasivos sin controles; sin curación ni escudo en el campo (restauración en puntos de control y jefes); eliminados los objetos del mapa; Eon viaja solo; Tajo ardiente como ataque arcano; Escama pétrea como habilidad del Jefe 3; ninguna habilidad se descarta; nuevos controles (`Enter`, `J`, `K`); inventario con descripciones; sacudida fija; mercader antes de cada jefe; reaparición de enemigos; límites de arena invisibles salvo los pilares del Jefe 2. | Vargas Pérez Joel (con apoyo de Adriel) |
 | 0.3.0   | 09/11/2026 | Sincronización con Unity: mapa jugable Eretz (recorrido +60 %, enemigos por zona, saltos verificados), Earthlem solo en la zona 3, muros de roca en la arena de Chasko, Driller provisional como jefe del gusano, valores de Eon actualizados (carrera, salto, dash, combo y ritmo de ataque), arte de entornos SSW (costa, templo, islas, géiser, columnas) en Entornos y Galería, herramientas de prueba y backlog actualizado; drop de Chasko (Camarón de Chasko → Doble salto con burbuja) e inventario de habilidades en el menú de pausa. | Vargas Pérez Joel |
+| 0.4.0   | 09/11/2026 | Jefe 2 (Mago oscuro) implementado y **opcional**: diseño, ataques y valores de Unity, ojos que cambian al conjurar, remolino al aparecer y desaparecer; pelea dentro del templo en la escena `Ruina_Mago` (sala de 44 u, puertas selladas, cámara limitada); entrada al templo en Eretz con Interactuar, fachada y ruinas detrás; Tajo ardiente (`K` en el prototipo) y Dash cortante entregados por la Brasa del Mago y el Filo de sombra; estado entre escenas; galería con el Mago, su magia, sus objetos y el templo; pruebas T-23 a T-30. | Vargas Pérez Joel |
 
 ### Convención
 

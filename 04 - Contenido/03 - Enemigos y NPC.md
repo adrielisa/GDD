@@ -78,24 +78,38 @@ Acercarse (hasta ~7 u) → Chasquido / Embestida / Onda de choque (fase 2) → D
 
 ## Jefe 2 — Mago oscuro *(nombre provisional)*
 
-- **Arena:** Patio de la Academia, suelo de piedra **totalmente plano** de 36 u, sin plataformas, dentro de unas ruinas abandonadas. Al empezar, **pilares de las ruinas** emergen en ambos extremos y bloquean el paso; se hunden al morir el jefe.
+- **Jefe opcional.** Su templo está en la meseta de las Ruinas (x 159 a 177 del mapa Eretz). La puerta no se cruza al tocarla: aparece el aviso «[E] Entrar al templo» y se entra con Interactuar. Quien pase de largo sigue la ruta principal sin enfrentarlo; solo se queda sin Tajo ardiente ni Dash cortante.
+- **Arena:** el interior del templo, en una **escena aparte** (`Ruina_Mago`). Al entrar, la pantalla se funde a negro y aparece el título «Ruinas del Templo». Es una sala de piedra **totalmente plana** de 44 u entre los muros del templo, sin plataformas.
+    - La pelea empieza al pasar x ±15. Desde ese momento las puertas quedan **selladas** y no se puede huir hasta vencer o caer.
+    - No hay pilares que emerjan: los muros del templo cierran la sala y la cámara nunca enseña nada más allá de ellos.
 - **Vida:** 700 HP. **Fases:** 1 (100–40 %) y 2 (menos de 40 %).
-- **Descripción:** hechicero encapuchado que flota a ras de suelo. Se puede golpear con la espada siempre que no tenga el escudo activo.
-- **Recompensa:** 300 XP, **Tajo ardiente** y **Dash cortante** (se guardan los dos en el inventario).
+- **Descripción:** hechicero encapuchado y oscuro, del tamaño de Eon, que flota a ras de suelo y siempre mira hacia él.
+    - **Ojos:** cian en reposo; se vuelven **naranja al conjurar**. Es la señal de que va a atacar, junto con los avisos del suelo.
+    - **Aparecer y desaparecer:** gira como un **remolino en sentido antihorario** hasta reducirse a nada; la aparición es la misma animación al revés.
+    - **Muerte:** se deshace en jirones y desaparece.
+- **Daño:** se le golpea con espada, Tajo ardiente y Dash cortante mientras no tenga el escudo. Al recibir un golpe parpadea y se estremece.
+- **Recompensa:** 300 XP *(el prototipo aún no tiene XP)*, **Tajo ardiente** y **Dash cortante**. Al morir suelta dos objetos que salen volando, flotan en la sala y se recogen al tocarlos (se acercan solos cuando Eon está cerca):
+    - **Brasa del Mago** → Tajo ardiente.
+    - **Filo de sombra** → Dash cortante.
+    - Cada uno muestra su aviso y queda en el inventario sin equipar.
+- **Tras vencerlo:** la puerta del templo en Eretz ya no se abre; dentro, la puerta de la derecha lleva a la salida de las Ruinas (punto de control `Despues_Mago`).
 
 | Ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Lluvia de llamaradas** | Círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen del cielo; 2 apuntan a la posición prevista de Eon. Radio de 1 u. | 20 |
-| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Una ola de picos nace junto al mago y avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s). Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del pilar del extremo: hay que **correr y alejarse** del mago hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
-| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan levemente a Eon. Mientras dura, el mago lanza cráneos. | — |
-| **Cráneos de fuego** | Llamas en sus manos 0,6 s. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado. Duran 6 s. Se destruyen con un golpe. | 15 |
-| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) desaparece y reaparece en el **extremo opuesto** de la arena. Al reaparecer queda expuesto 1 s. | — |
+| **Lluvia de llamaradas** | Ojos naranja y círculos de luz naranja en el suelo 0,8 s. | 5 llamaradas (7 en fase 2) caen desde el techo; 2 apuntan a la posición prevista de Eon. Radio de 1 u; estallan al tocar el suelo. | 20 |
+| **Picos de magma** | El suelo se agrieta y brilla 0,5 s antes de cada pico. | Golpea el suelo y nace a su lado una ola de picos que avanza hacia el extremo opuesto a 6 u/s (Eon corre a 7,6 u/s), un pico cada 0,8 u. Cada pico mide 2,5 u y dura 1 s. La ola se detiene a 2 u del muro del extremo: hay que **correr y alejarse** hasta esa zona segura. Saltar sobre el frente no sirve: los picos de detrás siguen activos. | 18 por pico |
+| **Escudo arcano** | Esfera violeta que se forma en 0,5 s. | Cada 15 s, durante 4 s, bloquea todo daño. Los golpes rebotan y empujan a Eon (6 u/s hacia atrás y 3 hacia arriba). Mientras dura, el mago lanza cráneos. | — |
+| **Cráneos de fuego** | Llamas en sus manos. | 3 cráneos (4 en fase 2) que persiguen a Eon en el aire a 3,5 u/s con giro limitado (110° por segundo). Duran 6 s. Se destruyen con un golpe. | 15 |
+| **Teletransporte** | Humo negro en el punto de destino 0,5 s antes. | Tras cada 3 ataques (2 en fase 2) se desvanece en remolino y reaparece en el **extremo opuesto** de la sala, a 3 u del muro. Al reaparecer queda **expuesto 1 s**: es la mejor ventana para castigarlo. | — |
 
-- **Fase 2:** se teletransporta con más frecuencia y puede combinar llamaradas con la ola de picos.
+- **Ritmo:** descansa 1 s entre ataques (0,6 s en fase 2).
+- **Fase 2:** se teletransporta tras 2 ataques y, con un 40 % de probabilidad, combina la lluvia de llamaradas con la ola de picos.
+- **Si Eon cae:** el combate se reinicia; el mago vuelve a su sitio con la vida completa y las puertas se abren.
 
 ```text
-Ataque 1 → Ataque 2 → Ataque 3 → Teletransporte al extremo opuesto (expuesto 1 s) → …
+Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extremo opuesto (expuesto 1 s) → …
    └── cada 15 s: Escudo 4 s + Cráneos de fuego
+   └── fase 2: teletransporte cada 2 ataques; 40 % de combos llamaradas + picos
 ```
 
 ## Jefe 3 — Serpiente gigante *(nombre provisional)*

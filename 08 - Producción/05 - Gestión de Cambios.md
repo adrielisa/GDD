@@ -50,4 +50,14 @@
 | Doble salto | Habilidad sin implementar; efecto de ráfaga de aire. | Chasko suelta el Camarón de Chasko; Doble salto equipable con burbuja bajo los pies. | Mecánicas, Controles, Enemigos, Objetos, Galería, Pruebas |
 | Inventario | Pantalla propia (`Tab`). | En el prototipo, sección Habilidades en la pestaña Objetos del menú de pausa. | Sistemas, Controles, UI, UX |
 
+## Cambios aplicados en la versión 0.4.0
+
+| Cambio | Antes (0.3.0) | Ahora | Secciones afectadas |
+| --- | --- | --- | --- |
+| Jefe 2 | Diseñado, sin implementar; obligatorio. | Mago oscuro implementado y **opcional**; se entra a su templo con Interactuar. | Enemigos, Niveles, Progresión, Misiones, Estructura, Pruebas |
+| Arena del Jefe 2 | Patio plano de 36 u con pilares que emergen. | Interior del templo en otra escena (`Ruina_Mago`): sala de 44 u cerrada por muros, puertas selladas durante la pelea, cámara limitada. | Niveles, Sistemas, Reglas, Entornos, Arquitectura |
+| Tajo ardiente y Dash cortante | Sin implementar. | Hechos; los entregan la Brasa del Mago y el Filo de sombra. Tajo ardiente en `K` en el prototipo. | Mecánicas, Controles, Objetos, Galería |
+| Arte del Mago y del templo | Sin arte. | Mago a escala de Eon con 10 animaciones y 8 efectos; templo gótico de noche por capas; fachada con ruinas detrás. | Personajes y Animación, Entornos, Galería |
+| Estado entre escenas | — | `EstadoPartida` conserva jefes, habilidades y materiales durante la partida. | Arquitectura, Datos y Persistencia |
+
 > **Navegación:** [[00 - Índice]] · ← [[04 - Backlog del Proyecto]] · [[01 - Criterios de Calidad]] →
