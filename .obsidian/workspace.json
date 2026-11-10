@@ -35,21 +35,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5e79844d097d8aea",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
-            }
-          },
-          {
             "id": "d10f5184f5f37eab",
             "type": "leaf",
             "state": {
@@ -78,12 +63,28 @@
               "icon": "lucide-bookmark",
               "title": "Marcadores"
             }
+          },
+          {
+            "id": "5e79844d097d8aea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 298.3000183105469
   },
   "right": {
     "id": "299f36cda9220a18",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GDD_Videojuego_ES_2026-main/01 - Visión/02 - Visión del Juego.md",
+                "file": "05 - Arte y Audio/05 - Audio y Música.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -170,11 +171,13 @@
               "title": "Esquema"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
