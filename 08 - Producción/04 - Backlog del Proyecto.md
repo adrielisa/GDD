@@ -7,9 +7,9 @@
 | B-03 | Combo de espada (`Enter`) y ataque descendente con rebote | Programación | P0 | 1 | Hecho |
 | B-04 | Sistema de daño con escudo e instakill; restauración solo en puntos de control y jefes. En el prototipo Eon empieza con 100 SP sin Coraza, solo los orbes de escudo lo recargan y al reaparecer queda en 0 | Programación | P0 | 2 | Pendiente |
 | B-05 | XP: orbes, contador y atracción | Programación | P0 | 2 | Pendiente |
-| B-06 | Tienda del mercader (compra única, «Adquirido») | Programación / UI | P0 | 2 | Pendiente |
+| B-06 | Tienda del mercader (compra única, «Adquirido») | Programación / UI | P0 | 2 | En curso (mercader e iconos de potenciadores hechos) |
 | B-07 | Inventario: 3 ranuras de habilidad + 3 de potenciador, con panel de función y control | Programación / UI | P0 | 2 | En curso (habilidades hechas) |
-| B-08 | 6 potenciadores pasivos como ScriptableObjects y `StatModifiers` | Programación | P0 | 2 | Pendiente |
+| B-08 | Potenciadores pasivos por nivel (velocidad, fuerza, vitalidad, protección) como ScriptableObjects y `StatModifiers` | Programación | P0 | 2 | En curso (diseño e iconos hechos) |
 | B-09 | IA de Aurion y reaparición de enemigos | Programación | P0 | 3 | Pendiente |
 | B-10 | Jefe 1 (Chasko): chasquido con burbujas, embestida con aturdimiento y onda de choque; muros de roca de la arena | Programación | P0 | 3 | Hecho |
 | B-11 | Habilidad Doble salto | Programación | P0 | 3 | Hecho |
@@ -29,7 +29,7 @@
 | B-25 | **Cerrar el diseño de la fase 3 de La Entidad** | Diseño | P2 | 5 | Pendiente |
 | B-26 | Nombre del jefe 2 | Diseño | P2 | 5 | Pendiente |
 | B-27 | Música por zona y jefe | Audio | P1 | 4–6 | Pendiente |
-| B-28 | Menús, pausa y configuración | UI | P1 | 7 | Pendiente |
+| B-28 | Menús, pausa y configuración | UI | P1 | 7 | En curso (pausa con objetos, controles y ajustes; pantallas «Has caído» y «Nivel completado» hechas) |
 | B-29 | Mapa jugable Eretz (costa a isla final) con enemigos por zona y saltos verificados | Diseño de niveles | P0 | 3 | Hecho |
 | B-30 | Arte de la zona 3 e islas (SSW), columnas de ruinas, géiser y fondos por zona | Arte | P1 | 4 | Hecho |
 | B-31 | Decidir si se quitan los orbes de vida del prototipo (P-05) | Diseño | P1 | 3 | Pendiente |

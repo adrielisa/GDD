@@ -35,8 +35,9 @@ En juego
 | Inventario — Potenciadores | Elegir qué 3 potenciadores tener activos. | 3 ranuras arriba; lista de potenciadores comprados. Panel con icono, nombre y **función** (indica «Pasivo: siempre activo mientras esté equipado»). | Equipar, quitar, intercambiar. En arenas de jefe, solo lectura. |
 | Tienda | Cambiar XP por potenciadores. | XP actual; catálogo con icono, función y precio; marca «Adquirido» en los ya comprados; retrato y frase del mercader. | Comprar, salir. |
 | Entrega de habilidad | Presentar la habilidad nueva. | Ilustración, nombre, control y función; aviso de que se guardó en el inventario. | Continuar, abrir inventario. |
-| Pausa | Detener el juego. | Opciones. | Ver mapa de navegación. |
-| Derrota | Reintentar. | Mensaje, pista opcional. | Reaparecer, Salir al menú. |
+| Pausa | Detener el juego. | Pestañas con icono: Objetos (materiales y ficha del objeto), Configuración de control (esquema del mando) y Ajustes (volúmenes, modo de pantalla, vibración, restablecer, salir). | (A) Confirmar, (B) Volver al juego. |
+| Derrota («Has caído») | Reintentar. | Título en rojo, intentos en este nivel, «Pulsa Salto o Ataque para reaparecer en el último punto seguro» y pista opcional. | (A) Reaparecer, (B) Menú principal. |
+| Nivel completado | Cerrar un nivel. | Título en dorado, tiempo y reintentos del nivel. | (A) Confirmar, (B) Menú principal. |
 | Victoria | Cerrar la historia. | Ilustración final. | Continuar a créditos. |
 | Créditos | Reconocer al equipo. | Nombres del equipo y herramientas. | Omitir. |
 
@@ -54,6 +55,8 @@ En Unity, las habilidades se equipan desde el **menú de pausa**, en la pestaña
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/menu_pausa_habilidades_maqueta.png]]
 
 *Maqueta de la distribución (no es una captura de Unity).*
+
+Las pantallas de Sergio (Has caído, Nivel completado y las pestañas del menú de pausa) están en [[06 - Galería de Assets#Interfaz]].
 
 ## Confirmaciones
 

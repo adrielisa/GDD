@@ -21,6 +21,7 @@
 | BUG-06 | 09/11/2026 | Baja | Un pilar de piedra gigante y caído flotaba a la izquierda del checkpoint `Despues_Mago` en Eretz. | Llegar al checkpoint posterior a la arena del Mago. | Vargas Pérez Joel | Resuelto: tiles y bloques del pilar quitados. |
 | BUG-07 | 10/11/2026 | Media | Con el escudo arcano del Mago activo, un Tajo ardiente lanzado desde lejos empujaba a Eon. | Esperar el escudo del Mago y lanzar un Tajo ardiente a más de 2,5 u. | Vargas Pérez Joel | Resuelto: el rebote solo empuja cuerpo a cuerpo (prueba T-34). |
 | BUG-08 | 10/11/2026 | Media | El escudo de Eon no sigue las reglas del GDD: empieza en 100 SP sin la Coraza, solo lo recargan los orbes y queda en 0 al reaparecer. | Recibir daño hasta gastar el escudo, morir y reaparecer en un punto de control. | Vargas Pérez Joel | Abierto: falta decidir la regla (ver B-04). |
+| BUG-09 | 10/11/2026 | Baja | En la imagen de iconos de potenciadores, los corazones de nivel 2 y 3 dicen «FUERZA» en lugar de «VITALIDAD», y el escudo cambia de nombre entre niveles («PROTECCIÓN» / «ESCUDO»). | Abrir `Galería de Assets/General/potenciadores.png`. | Rodríguez Pacheco Adriel Isaí | Abierto |
 
 - **ID:** `BUG-NN`, en orden de aparición. **Estado:** Abierto, En curso o Resuelto (con lo que se hizo).
 - Cada bug resuelto debería tener una prueba en [[02 - Pruebas]] para que no vuelva.

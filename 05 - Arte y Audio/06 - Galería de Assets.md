@@ -22,6 +22,8 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 | Efectos       | Rayo, tornado, orbe, burbuja; magia del Mago                           | 4                         | Hechos.                                                                                                          |
 | Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena, templo del Mago | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
 | Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra, tajo ardiente y Espina de Cienojos | 6 | Hechos (la Espina de Cienojos, solo en Aseprite). |
+| Interfaz | Pantallas «Has caído» y «Nivel completado»; menú de pausa (objetos, controles, ajustes) | 5 pantallas | Hechas (Sergio). |
+| Mercader | Mercader en su puesto e iconos de los 4 potenciadores por nivel | 1 + 10 iconos | Hechos (Adriel). |
 
 ## Comparación de escala
 
@@ -1027,6 +1029,76 @@ Media luna de fuego que lanza la espada: 30 × 36 px, 4 cuadros en bucle (70 ms)
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/tajo_ardiente_cuadros.png]]
 
 Origen: `Assets/Resources/Habilidades/tajo_ardiente_*`.
+
+---
+
+## Interfaz
+
+Pantallas y menús hechos por Sergio (UI/UX). Todos usan el mismo marco de piedra con runas, enredaderas y gemas en las esquinas, y los avisos de botón (A) Confirmar / (B) del mando.
+
+### Pantallas de estado
+
+#### Has caído (reaparición)
+
+![[05 - Arte y Audio/Galería de Assets/UI/Pantallas_de_Estado/Pantalla_reaparicion.png]]
+
+Sale al morir. Título «HAS CAÍDO» en rojo, contador de **intentos en este nivel** y la instrucción *«Pulsa Salto o Ataque para reaparecer en el último punto seguro»*. Acciones: (A) Confirmar (reaparecer) y (B) Menú principal.
+
+#### Nivel completado
+
+![[05 - Arte y Audio/Galería de Assets/UI/Pantallas_de_Estado/Pantalla_fin_de_nivel.png]]
+
+Sale al terminar un nivel. Título «¡NIVEL COMPLETADO!» en dorado con el **tiempo** y los **reintentos** del nivel. Acciones: (A) Confirmar y (B) Menú principal.
+
+### Menú de pausa
+
+Cuatro pestañas con icono (espada, ojo, mapa y engranaje) sobre el juego desenfocado. Acciones: (A) Confirmar y (B) Volver al juego.
+
+#### Objetos
+
+![[05 - Arte y Audio/Galería de Assets/UI/Menú_pausa/menu_objetos.png]]
+
+Materiales con su cantidad (ala, hueso, cabeza), retrato de Eon y una ficha con el nombre y la descripción del objeto seleccionado.
+
+#### Configuración de control
+
+![[05 - Arte y Audio/Galería de Assets/UI/Menú_pausa/menu_configuración_control.png]]
+
+Esquema del mando con cada botón numerado y su acción (movimiento, acciones y salto).
+
+#### Ajustes
+
+![[05 - Arte y Audio/Galería de Assets/UI/Menú_pausa/menu_ajustes.png]]
+
+Volumen de música, volumen de efectos, modo de pantalla (ventana o pantalla completa), vibración del mando, restablecer valores y salir del juego.
+
+---
+
+## Mercader y potenciadores
+
+Hechos por Adriel (dropeables, potenciadores y habilidades). Reglas en [[06 - Economía y Recursos]] y [[04 - Objetos y Coleccionables]].
+
+### Mercader
+
+![[05 - Arte y Audio/Galería de Assets/General/mercader.png]]
+
+Mujer joven de cabello rojizo en su puesto de tela con toldo a rayas, detrás de un mostrador de madera (252 × 180 px, puesto incluido). Aparece en la antesala de cada jefe. Ver [[03 - Personajes]].
+
+### Iconos de potenciadores
+
+![[05 - Arte y Audio/Galería de Assets/General/potenciadores.png]]
+
+Un icono por potenciador y nivel, en un marco de piedra:
+
+| Potenciador | Niveles | Icono |
+| --- | --- | --- |
+| Velocidad | 1 | Bota con alas. |
+| Fuerza (daño) | 1–3 | Espada que arde más en cada nivel. |
+| Vitalidad (vida) | 1–3 | Corazón verde que crece y brilla. |
+| Protección (escudo) | 1–3 | Gema azul que se vuelve escudo de energía. |
+
+> [!warning] Textos por corregir en la imagen
+> Los corazones de nivel 2 y 3 dicen «FUERZA» en lugar de «VITALIDAD», y el escudo dice «PROTECCIÓN» en el nivel 1 y «ESCUDO» en los niveles 2 y 3 (ver BUG-09 en [[03 - Bugs y Seguimiento]]).
 
 ---
 

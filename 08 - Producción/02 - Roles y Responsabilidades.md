@@ -4,8 +4,8 @@
 | --- | --- | --- |
 | González Cruz Celeste | Responsable del proyecto | Coordinación, prioridades y aprobación de cambios en el GDD. |
 | García Velázquez Marco Damián | Audio | Música y efectos de sonido: grabación o búsqueda, edición e integración en el juego (`Audio y Efectos`). |
-| Rodríguez Pacheco Adriel Isaí | Dropeables, potenciadores y habilidades | Objetos que sueltan enemigos y jefes (XP y drops de habilidad), potenciadores del mercader y sistema de habilidades (equipar, ranuras y efectos). |
-| Trujillo Torres Sergio Joel | UI/UX | HUD, menús (pausa, ajustes, inventario, tienda), pantallas de estado y flujo del jugador. |
+| Rodríguez Pacheco Adriel Isaí | Dropeables, potenciadores y habilidades | Objetos que sueltan enemigos y jefes (materiales y drops de habilidad), potenciadores del mercader y sistema de habilidades (equipar, ranuras y efectos). Hechos: mercader, potenciadores por nivel y sus iconos. |
+| Trujillo Torres Sergio Joel | UI/UX | HUD, menús (pausa, ajustes, inventario, tienda), pantallas de estado y flujo del jugador. Hechos: pantallas «Has caído» y «Nivel completado» y menú de pausa. |
 | Vargas Pérez Joel | Programación, niveles y arte | Jugador y combate, enemigos y jefes, niveles en Unity, sprites y animaciones, y mantenimiento del GDD. |
 
 ## Áreas y responsables
