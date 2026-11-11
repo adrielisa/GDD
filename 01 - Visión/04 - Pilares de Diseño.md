@@ -27,7 +27,7 @@
 **Cómo se refleja en el juego:**
 
 - El dash cancela la recuperación del ataque y, con el dash cortante, también hace daño.
-- El mago oscuro obliga a correr para escapar de los picos de magma; la serpiente gigante obliga a saltar entre plataformas.
+- El mago oscuro obliga a correr para escapar de los picos de magma; Cienojos obliga a saltar entre plataformas.
 - Los géiseres mantienen el ritmo al cruzar entre islas.
 
 ## Pilar 4 — Fantasía medieval colorida

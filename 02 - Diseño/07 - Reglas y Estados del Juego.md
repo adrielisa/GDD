@@ -57,7 +57,7 @@
 
 - **Derrota dentro de una arena:** el jefe vuelve a su vida completa y Eon reaparece en el punto de control de la antesala.
 - **Muerte simultánea:** si Eon y el jefe llegan a 0 en el mismo fotograma, prevalece la **victoria**.
-- **Instakill y defensas:** escudo, dash y Escama pétrea no protegen del instakill.
+- **Instakill y defensas:** escudo y dash no protegen del instakill, y Espinas punzantes no se activa con él.
 - **Caída al vacío:** −25 HP y regreso al último suelo seguro. En la arena del Jefe 3, el «último suelo seguro» es la plataforma central.
 - **Habilidad nueva:** se guarda en el inventario sin descartar ninguna. Un aviso invita a abrir el inventario para equiparla.
 - **Salir durante una cinemática de entrega:** la habilidad ya cuenta como obtenida y se guarda.

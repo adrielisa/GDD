@@ -28,9 +28,9 @@
 | Curación y escudo | Orbes y potenciadores de curación y escudo. | No existen: vida y escudo se restauran solo en puntos de control y al vencer a un jefe. | Mecánicas, Economía, Reglas, Objetos |
 | Objetos del mapa | Había objetos que recoger en las zonas. | Eliminados por completo. Solo se obtiene XP. | Objetos, Niveles, Misiones, Economía |
 | Ataque arcano | Orbe mágico. | **Tajo ardiente**: tajo de fuego lanzado por la espada. | Mecánicas, Objetos, Arte, Audio |
-| Habilidad del Jefe 3 | Pendiente. | **Escama pétrea**. | Mecánicas, Objetos, Enemigos |
+| Habilidad del Jefe 3 | Pendiente. | **Espinas punzantes** (pasiva; sustituye a la Escama pétrea). | Mecánicas, Objetos, Enemigos |
 | Habilidades nuevas | Al llenar ranuras había que elegir cuál dejar fuera. | Ninguna se descarta: todas se guardan y el jugador elige cuáles equipar. Ninguna es obligatoria. | Mecánicas, Sistemas, UX |
-| Controles | Ataque `J`, dash `Shift`/`K`, potenciadores `1`/`2`/`3`. | Ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`, dash `Shift`. Sin teclas de potenciador. | Controles, Mecánicas |
+| Controles | Ataque `J`, dash `Shift`/`K`, potenciadores `1`/`2`/`3`. | Ataque `Enter`, Tajo ardiente `J`, dash `Shift`. Sin teclas de potenciador. | Controles, Mecánicas |
 | Inventario | — | Muestra la función y el control de cada habilidad y potenciador. | Sistemas, UI |
 | Sacudida de cámara | Configurable. | Fija; no se puede desactivar. | Sistemas, Accesibilidad, Configuración |
 | Mercader | Varias ubicaciones desde la Playa. | Aparece por primera vez antes del Jefe 1 y después antes de cada jefe. | NPC, Niveles, UX |

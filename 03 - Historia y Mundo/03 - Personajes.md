@@ -18,7 +18,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | Conflicto | La vergüenza de haber fallado frente a todo un mundo que creía en él. |
 | Relaciones | Viaja solo; el mercader lo trata con burla y respeto a partes iguales. |
 | Arco | De «estoy destinado a ganar» a «voy a ganar porque me preparé». |
-| Habilidades | Espada, salto, dash; recupera Doble salto, Tajo ardiente, Dash cortante y Escama pétrea. |
+| Habilidades | Espada, salto, dash; recupera Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes. |
 | Debilidades | Sin armadura legendaria: 100 HP, sin escudo propio y sin forma de curarse en el campo. |
 | Tono | Frases breves, decididas, con autocrítica. |
 
@@ -43,7 +43,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | --- | --- | --- | --- |
 | **Jefe 1 — Chasko** | Arena de la Marea (costa) | Camarón de tipo escorpión, rojo y naranja, con la cola alzada sobre el lomo y una pinza que dispara burbujas. Absorbió el fragmento de agilidad de Eon. | Doble salto |
 | **Jefe 2 — Mago oscuro** *(nombre provisional)* | Ruinas Abandonadas | Antiguo hechicero de la academia que tomó el fragmento de poder arcano. Domina el fuego, el magma y el teletransporte. | Tajo ardiente y Dash cortante |
-| **Jefe 3 — Serpiente gigante** *(nombre provisional)* | Archipiélago de Tierra | Serpiente segmentada colosal que rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Escama pétrea |
+| **Jefe 3 — Cienojos** | Archipiélago de Tierra | Serpiente colosal de placas de obsidiana azul noche, cubierta de ojos dorados que lloran veneno; corona de púas en la cabeza y cola con púas. Rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Espinas punzantes |
 
 ## Enemigos comunes
 

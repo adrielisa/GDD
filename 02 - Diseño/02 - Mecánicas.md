@@ -75,18 +75,20 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero): Eon crea una burbuja bajo los pies y se impulsa en ella. Se restablece al tocar suelo. |
 | **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` (prototipo: `K`, clic derecho o `B`) | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 16 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos (golpea una vez a cada uno) y se detiene en las paredes. |
 | **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash), con una pausa breve al cortar y una estela roja. |
-| **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
+| **Espinas punzantes** | Jefe 3 | Pasiva | — | Probabilidad de devolver parte del daño al atacante (detalle abajo). |
 
 - **Entrega del Doble salto:** al morir, Chasko suelta el **Camarón de Chasko**, un camarón pequeñito que queda flotando en la arena. Al tocarlo, la habilidad se guarda en el inventario sin equipar y aparece un aviso para equiparla.
 - **Entrega de Tajo ardiente y Dash cortante:** al morir, el Mago oscuro suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante). Se recogen igual que el camarón. El Mago es opcional, así que ninguna de las dos es necesaria para terminar el recorrido.
+- **Entrega de Espinas punzantes:** al morir, Cienojos suelta la **Espina de Cienojos**, una espina curva con una gota de veneno en la punta. Se recoge igual que las demás.
 
-### Escama pétrea (detalle)
+### Espinas punzantes (detalle)
 
-- Mantener `K`: Eon se petrifica y se cubre hasta 1 s; recibe un 70 % menos de daño y no puede moverse.
-- **Bloqueo perfecto:** si el golpe llega en los primeros 0,25 s, el daño se anula y el atacante queda aturdido 1 s.
-- Recarga de 3 s desde que se suelta.
-- **No bloquea ataques instakill** ni evita la caída al vacío.
-- Sinergias: el bloqueo perfecto aturde al Earthlem.
+- **Pasiva**, como el encantamiento «Espinas» de Minecraft: no usa ningún botón; funciona mientras está equipada.
+- Cada vez que un enemigo le hace daño a Eon, hay un **30 %** de probabilidad de que el atacante reciba el **50 %** de ese daño. Eon recibe el golpe completo igual.
+- Si el golpe viene de un proyectil (burbuja, cráneo, lágrima), el daño vuelve al enemigo que lo lanzó.
+- **No se activa** con instakill ni con daño del entorno (caídas al vacío, pinchos).
+- Al activarse brotan espinas del cuerpo de Eon y el atacante parpadea.
+- *Los valores (30 % y 50 %) son de referencia; se ajustan en pruebas.*
 
 ## Potenciadores
 

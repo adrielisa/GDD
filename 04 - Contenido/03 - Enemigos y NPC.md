@@ -30,7 +30,7 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
     - *Barrido de roca:* tajo horizontal tras 0,4 s de preparación; 20 de daño.
     - *Aplastamiento sísmico:* golpe al suelo con ambos puños; onda rasante de 3 u (hay que saltarla); 15 de daño.
 - **Defensas:** coraza frontal; los golpes de frente hacen 50 % del daño. La espalda recibe daño completo.
-- **Debilidades:** gira despacio; un dash para quedar a su espalda permite castigarlo. Con Dash cortante, el propio dash le hace daño completo. Con Escama pétrea, un bloqueo perfecto contra el barrido lo aturde 1 s.
+- **Debilidades:** gira despacio; un dash para quedar a su espalda permite castigarlo. Con Dash cortante, el propio dash le hace daño completo. Con Espinas punzantes, sus golpes pueden devolverle parte del daño.
 - **Recompensa:** 30 XP.
 
 ```text
@@ -95,25 +95,26 @@ Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extre
    └── fase 2: teletransporte cada 2 ataques; 40 % de combos llamaradas + picos
 ```
 
-## Jefe 3 — Serpiente gigante *(nombre provisional)*
+## Jefe 3 — Cienojos
 
 - **Arena:** Anillo de Islas, 7 plataformas de tierra flotantes en dos alturas sobre el vacío. Límites invisibles.
 - **Vida:** 1200 HP compartidos por todo el cuerpo. **Fases:** 1 (100–50 %) y 2 (menos de 50 %).
-- **Descripción:** serpiente segmentada colosal (cabeza + ~18 segmentos + cola) que da vueltas entre y a través de las plataformas, al estilo del Devorador de mundos de Terraria.
-- **Recompensa:** 400 XP, **Escama pétrea** y cinemática de petrificación.
+- **Descripción:** serpiente colosal de placas de obsidiana azul noche con brillo turquesa (cabeza + ~18 eslabones + cola) que da vueltas entre y a través de las plataformas, al estilo del Devorador de mundos de Terraria. **Cada eslabón tiene ojos dorados de reptil que lloran veneno.** La cabeza, alargada, lleva una corona de púas curvas y cuatro ojos; la cola, púas largas y grietas carmesí. Diseño a partir del boceto de [[07 - Bocetos del Desarrollo#Cienojos]].
+- **Partes del sprite:** cabeza (gira con el rumbo), ojos (cada eslabón; no giran) y cola. Ver [[06 - Galería de Assets#Jefe 3 — Cienojos]].
+- **Recompensa:** 400 XP, **Espinas punzantes** (la suelta como la **Espina de Cienojos**) y cinemática del puente.
 
 | Elemento / ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Cabeza** | Ojos y mandíbula brillantes; silueta siempre visible. | Tocarla es **instakill**. No recibe daño. | **Instakill** |
-| **Cuerpo** | — | Cada segmento recibe daño de espada, Tajo ardiente, ataque descendente (con rebote) y Dash cortante. Tocarlo hace daño. | 15 por contacto |
-| **Cola** | Punta de color distinto. | Punto débil: recibe el doble de daño. | 15 por contacto |
+| **Cabeza** | Ojos dorados encendidos y mandíbula con dientes que brillan; silueta siempre visible. | Tocarla es **instakill**. No recibe daño. | **Instakill** |
+| **Ojos (cuerpo)** | — | Cada eslabón recibe daño de espada, Tajo ardiente, ataque descendente (con rebote) y Dash cortante. Tocarlo hace daño. | 15 por contacto |
+| **Cola** | Grietas carmesí que laten (color distinto). | Punto débil: recibe el doble de daño. | 15 por contacto |
 | **Recorrido** | — | Trayectorias en bucle, en ocho y zambullidas verticales a 6 u/s (8 u/s en fase 2). Puede atravesar las plataformas. | — |
-| **Lluvia de baba** | El segmento se hincha y gotea 0,4 s antes. | Cada segmento deja caer gotas de baba en momentos aleatorios (cada 2–4 s; máximo 6 gotas a la vez en pantalla). Caen en vertical. | 10 |
-| **Embestida de cabeza** | Rugido y flecha en el borde de la pantalla 1,5 s. | La cabeza sale de pantalla y cruza la arena en línea recta hacia la posición de Eon a 14 u/s. | **Instakill** (cabeza) |
+| **Goteo de lágrimas** | El ojo del eslabón se humedece y brilla 0,4 s antes. | Los ojos de cada eslabón lloran lágrimas venenosas en momentos aleatorios (cada 2–4 s; máximo 6 a la vez en pantalla). Caen en vertical y salpican al tocar el suelo. | 10 |
+| **Embestida de cabeza** | Rugido (boca abierta y ojos encendidos) y flecha en el borde de la pantalla 1,5 s. | La cabeza sale de pantalla y cruza la arena en línea recta hacia la posición de Eon a 14 u/s. | **Instakill** (cabeza) |
 
-- **Fase 2:** más velocidad, gotas más frecuentes (cada 1,5–3 s) y embestidas dobles.
+- **Fase 2:** más velocidad, lágrimas más frecuentes (cada 1,5–3 s) y embestidas dobles.
 - **Al morir:** el cuerpo se detiene, se petrifica (ilustración fija) y forma el Puente de la Serpiente hacia la isla final.
-- **En el prototipo:** mientras no exista la serpiente, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
+- **En el prototipo:** mientras no exista Cienojos, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
 
 ## La Entidad (jefe final)
 

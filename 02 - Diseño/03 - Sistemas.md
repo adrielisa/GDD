@@ -21,8 +21,8 @@
 - **Entradas:** colisiones entre capas `Hitbox` y `Hurtbox`, identificador del atacante, daño y bandera `isInstakill`.
 - **Reglas:**
     - El daño normal se resta primero del escudo (si Eon tiene Coraza) y después de la vida.
-    - Con Escama pétrea activa, el daño normal se reduce un 70 %; en bloqueo perfecto se anula y aturde al atacante.
-    - Un ataque **instakill** ignora escudo, dash y Escama pétrea; deja la vida en 0.
+    - Con Espinas punzantes equipada, cada golpe recibido de un enemigo tiene un 30 % de probabilidad de devolverle el 50 % del daño.
+    - Un ataque **instakill** ignora escudo y dash; deja la vida en 0 y no activa Espinas punzantes.
     - Tras recibir daño, Eon tiene 0,7 s de invulnerabilidad con parpadeo rojo.
     - Vida y escudo **solo se restauran** al tocar un punto de control, al vencer a un jefe o al reaparecer. No hay curación en el campo.
     - Si la vida llega a 0 se apagan los colliders y se llama a la rutina de muerte.
@@ -35,10 +35,10 @@
 ## Sistema 02: Controlador del jugador y movilidad
 
 - **Objetivo:** convertir las entradas en movimiento, salto, dash, ataques y habilidades, consultando qué está equipado.
-- **Entradas:** dirección, Salto, Ataque (`Enter`), Dash, Tajo ardiente (`J`), Escama pétrea (`K`), Interactuar, Inventario.
+- **Entradas:** dirección, Salto, Ataque (`Enter`), Dash, Tajo ardiente (`J`), Interactuar, Inventario.
 - **Reglas:**
     - Movimiento con aceleración inmediata y frenado al soltar.
-    - Doble salto, Tajo ardiente, Dash cortante y Escama pétrea solo funcionan equipados.
+    - Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes solo funcionan equipados.
     - Dash de 0,20 s y 4 u; 1 aéreo por salto; recarga de 1,2 s.
     - Abajo + Ataque en el aire ejecuta el ataque descendente; al impactar rebota y recupera el dash aéreo.
     - Los potenciadores equipados modifican los valores de forma permanente (vida máxima, daño, velocidad, recargas).
@@ -133,7 +133,7 @@
 
 ## Relaciones entre sistemas
 
-- **Controlador ↔ Daño:** el controlador activa las *hitboxes* de espada, descendente, Tajo ardiente y Dash cortante, y el estado de Escama pétrea; el sistema de daño confirma impactos (para el rebote) y aplica el daño recibido.
+- **Controlador ↔ Daño:** el controlador activa las *hitboxes* de espada, descendente, Tajo ardiente y Dash cortante; el sistema de daño confirma impactos (para el rebote), aplica el daño recibido y, con Espinas punzantes, decide si devuelve parte al atacante.
 - **Inventario → Controlador:** indica qué habilidades están equipadas y qué modificadores aplican los potenciadores.
 - **Tienda → Inventario:** cada compra añade el potenciador al inventario.
 - **Daño → Economía:** `OnEntityDeath` genera los orbes de XP del enemigo.

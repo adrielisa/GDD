@@ -40,7 +40,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 
 - **Datos en ScriptableObjects:** habilidades, potenciadores, ataques de jefe y valores de enemigos se editan sin tocar código.
 - **Eventos:** daño, muerte, compra y entrega de habilidad se comunican por eventos (`OnEntityDeath`, `OnAbilityGranted`, `OnXPChanged`).
-- **Reservas (*pools*):** tajos ardientes, orbes de XP, gotas de baba, burbujas de Chasko y cráneos se reutilizan.
+- **Reservas (*pools*):** tajos ardientes, orbes de XP, lágrimas de Cienojos, burbujas de Chasko y cráneos se reutilizan.
 - **Separación lógica/presentación:** las reglas de combate no dependen de animaciones ni VFX.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Guardado y Configuración]] · [[02 - Motor y Herramientas]] →

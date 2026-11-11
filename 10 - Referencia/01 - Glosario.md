@@ -9,8 +9,8 @@
 | **Habilidad** | Acción o mejora permanente que entrega un jefe; solo funciona equipada (3 ranuras). Ninguna se descarta. |
 | **Pasiva / activa** | Una habilidad pasiva modifica una acción existente; una activa tiene tecla propia (`J`, `K`). |
 | **Tajo ardiente** | Ataque arcano: la espada lanza un tajo de fuego a distancia. |
-| **Escama pétrea** | Petrificación defensiva con bloqueo perfecto. |
-| **Instakill** | Ataque que derrota a Eon al instante sin importar escudo, dash o Escama pétrea. |
+| **Espinas punzantes** | Habilidad pasiva del Jefe 3: probabilidad de devolver parte del daño al atacante. |
+| **Instakill** | Ataque que derrota a Eon al instante sin importar escudo o dash. |
 | **Géiser** | Elemento que lanza a Eon de una isla a otra; sustituye a los trampolines. |
 | **Punto de control** | Lugar donde se guarda, se restauran vida y escudo, y se reaparece. |
 | **Antesala** | Zona segura antes de cada jefe, con el mercader y un punto de control. |

@@ -63,7 +63,7 @@ Todas las mejoras son **pasivas y permanentes**: una vez compradas, su efecto qu
 
 1. **Escudo antes que vida:** el escudo absorbe el daño recibido. La salud solo se reduce una vez que el escudo llega a 0 SP.
 2. **Restauración idéntica:** el escudo se comporta en reposición igual que la salud: solo se recarga en puntos de control, al abatir un jefe o al reaparecer.
-3. **Instakill:** las caídas al vacío o trampas letales ignoran el escudo, la salud y cualquier invulnerabilidad activa.
+3. **Instakill:** las caídas al vacío o trampas letales ignoran el escudo, la salud y cualquier invulnerabilidad activa, y no activan Espinas punzantes.
 4. **Sin curación en campo:** no existen pociones, consumibles ni orbes de curación ni de escudo durante la exploración o combate.
 5. **Persistencia total de inventario:** los materiales recolectados, las habilidades y las mejoras adquiridas **se conservan al morir**.
 6. **Reaparición selectiva:** los enemigos comunes reaparecen para permitir el farmeo; los jefes abatidos no reaparecen.

@@ -21,10 +21,10 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-15 | Contenido | No hay objetos que recoger en el mapa aparte de la XP. | Petición del equipo. |
 | D-16 | Mecánicas | Doble salto es habilidad del Jefe 1 y el jugador decide si la equipa; la ruta principal no lo exige. | Petición del equipo. |
 | D-17 | Mecánicas | El ataque arcano es el **Tajo ardiente**: un tajo de fuego lanzado por la espada. | Petición del equipo. |
-| D-18 | Mecánicas | La habilidad del Jefe 3 es la **Escama pétrea**. | Petición del equipo. |
-| D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Escama pétrea `K`; Dash `Shift izquierdo`. | Petición del equipo. |
+| D-18 | Mecánicas | La habilidad del Jefe 3 es **Espinas punzantes** (antes Escama pétrea; ver D-49). | Petición del equipo. |
+| D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Dash `Shift izquierdo`. | Petición del equipo. |
 | D-20 | Mecánicas | Dash unificado: 0,20 s, 4 u, recarga 1,2 s. | Unificar valores que eran distintos entre páginas. |
-| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la cabeza de la serpiente. |
+| D-21 | Mecánicas | Los instakill ignoran escudo y dash, y no activan Espinas punzantes. | Mantener la amenaza de la cabeza de la serpiente. |
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
@@ -52,16 +52,19 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-45 | Jefes | Sin pilares que emergen en el Jefe 2: los muros del templo cierran la sala y las puertas se sellan durante cualquier pelea de jefe. La cámara no enseña nada más allá de los muros. Sustituye a D-28 para el Jefe 2. | Los pilares tapaban la sala corta; evita huir del combate. |
 | D-46 | Arte | El Mago tiene la escala de Eon (56 × 66 px); sus ojos cambian de color al conjurar; aparece y desaparece en un remolino antihorario. El templo es gótico, de noche y sin luz del sol, con columnas, arcos y ladrillo de una misma textura en gris. | Petición del equipo y referencia aprobada. |
 | D-47 | Mecánicas | En el prototipo el Tajo ardiente va en `K` / clic derecho / `B` porque `J` es el ataque con espada. | Evitar conflicto de teclas hasta unificar el mapa de controles (P-06). |
+| D-48 | Jefes | El Jefe 3 se llama **Cienojos**: serpiente de obsidiana azul noche cubierta de ojos dorados, según el boceto de Joel. Sprite en tres partes: cabeza, ojos (eslabón) y cola. | Diseño propio del equipo. |
+| D-49 | Habilidades | **Espinas punzantes** sustituye a la Escama pétrea: pasiva, 30 % de probabilidad de devolver el 50 % del daño al atacante (como «Espinas» de Minecraft). Se elimina la habilidad de petrificación; el puente petrificado se mantiene. | Petición del equipo. |
+| D-50 | Jefes | La lluvia de baba del Jefe 3 pasa a ser un goteo de lágrimas venenosas desde los ojos de sus eslabones. | Encaja con el diseño de Cienojos. |
 
 ## Decisiones pendientes
 
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 2 y 3. |
+| P-02 | Nombres | Jefe 2. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
-| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`) con el del prototipo (ataque `J`, Tajo ardiente `K`) y reasignar la Escama pétrea. |
+| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`) con el del prototipo (ataque `J`, Tajo ardiente `K`). |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Referencias e Inspiración]] · [[04 - Historial de Versiones]] →
