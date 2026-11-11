@@ -55,6 +55,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-48 | Jefes | El Jefe 3 se llama **Cienojos**: serpiente de obsidiana azul noche cubierta de ojos dorados, según el boceto de Joel. Sprite en tres partes: cabeza, ojos (eslabón) y cola. | Diseño propio del equipo. |
 | D-49 | Habilidades | **Espinas punzantes** sustituye a la Escama pétrea: pasiva, 30 % de probabilidad de devolver el 50 % del daño al atacante (como «Espinas» de Minecraft). Se elimina la habilidad de petrificación; el puente petrificado se mantiene. | Petición del equipo. |
 | D-50 | Jefes | La lluvia de baba del Jefe 3 pasa a ser un goteo de lágrimas venenosas desde los ojos de sus eslabones. | Encaja con el diseño de Cienojos. |
+| D-51 | Producción | Roles: Sergio, UI/UX; Adriel, dropeables, potenciadores y habilidades; Marco, audio; Joel, programación, niveles y arte; Celeste, coordinación. | Repartir el trabajo del equipo. |
 
 ## Decisiones pendientes
 
@@ -63,7 +64,6 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | P-01 | Fase 3 de La Entidad | Por definir. |
 | P-02 | Nombres | Jefe 2. |
 | P-03 | Herramienta de audio | Por definir. |
-| P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
 | P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`) con el del prototipo (ataque `J`, Tajo ardiente `K`). |
 
