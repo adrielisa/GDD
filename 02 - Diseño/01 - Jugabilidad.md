@@ -25,7 +25,6 @@ Tras el tercer jefe el bucle se cierra: la serpiente petrificada abre el paso a 
 | Acción | Propósito | Resultado |
 | --- | --- | --- |
 | Ataque con espada | Eliminar enemigos. | Combo de hasta 3 tajos; los enemigos sueltan XP al morir. |
-| Ataque descendente | Golpear desde el aire. | Daña al objetivo y rebota a Eon hacia arriba. |
 | Salto | Navegar plataformas y evitar ataques rasantes. | Con el Doble salto equipado alcanza rutas más altas. |
 | Dash | Esquivar y reposicionarse. | Breve invulnerabilidad; con el Dash cortante también hace daño. |
 | Tajo ardiente | Atacar a distancia (Jefe 2). | Tajo de fuego que sale de la espada y atraviesa enemigos. |
