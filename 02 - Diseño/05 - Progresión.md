@@ -10,7 +10,7 @@ Eon no sube de nivel. Progresa de dos formas: **habilidades** que entregan los j
 | Introducción | Playa del Despertar | Movimiento, salto, combo, dash. Primeros Aurion y primera XP. |
 | Desarrollo 1 | Acantilados → antesala (mercader) → **Jefe 1** | Primer potenciador. Leer avisos y castigar tras la embestida. Obtiene **Doble salto**. |
 | Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
-| Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Escama pétrea**: con 4 habilidades y 3 ranuras, elige su equipo. |
+| Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Espinas punzantes**: con 4 habilidades y 3 ranuras, elige su equipo. |
 | Clímax | Puente de la Serpiente → antesala → Isla Final | Combina todo contra La Entidad. |
 | Final | — | Revancha cumplida; créditos. |
 
@@ -25,7 +25,7 @@ En cualquier momento tras vencer a un jefe, el jugador puede volver a zonas ante
 | Tajo ardiente | Derrotar al Jefe 2 (opcional) | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
 | Dash cortante | Derrotar al Jefe 2 (opcional) | El dash hace daño. |
 | Acceso al Archipiélago | Derrotar al Jefe 2 | Se activan los géiseres que conectan las Ruinas con las islas. |
-| Escama pétrea | Derrotar al Jefe 3 | Bloqueo y contraataque. |
+| Espinas punzantes | Derrotar al Jefe 3 | Devolver daño a quien lo golpea. |
 | Isla Final | Derrotar al Jefe 3 | La serpiente se petrifica y su cuerpo forma el puente. |
 | Nuevos potenciadores | Llegar a cada antesala | El catálogo del mercader crece (ver [[06 - Economía y Recursos]]). |
 
@@ -42,7 +42,7 @@ Ninguna habilidad es obligatoria para avanzar por el camino principal: el jugado
 | Ruinas | Combinaciones Earthlem + Aurion | Media-alta. |
 | Jefe 2 | Arena plana sin plataformas; ataques que exigen correr; escudo y teletransporte | Alta. |
 | Archipiélago | Géiseres, islas pequeñas, enemigos en espacios reducidos | Alta. |
-| Jefe 3 | Jefe grande con cuerpo dañino, lluvia de baba, cabeza instakill | Muy alta. |
+| Jefe 3 | Jefe grande con cuerpo dañino, goteo de lágrimas venenosas, cabeza instakill | Muy alta. |
 | La Entidad | Fases con todo lo anterior | Máxima. |
 
 Sin curación en el campo, la distancia entre puntos de control es parte de la dificultad: aumenta ligeramente en cada zona.

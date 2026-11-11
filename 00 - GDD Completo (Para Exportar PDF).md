@@ -1,6 +1,6 @@
 # True Hero — GDD completo
 
-**Versión 0.4.2 · 10 de noviembre de 2026.**
+**Versión 0.4.3 · 10 de noviembre de 2026.**
 
 
 
@@ -8,7 +8,7 @@
 
 ## True Hero: resumen del diseño
 
-**GDD 0.4.2 · 10 de noviembre de 2026.**
+**GDD 0.4.3 · 10 de noviembre de 2026.**
 
 Eon, el héroe de la profecía, ya perdió contra La Entidad. Despierta solo en la costa de Kastleland sin su equipo legendario y emprende la revancha: recorre zonas explorables, derrota enemigos que le dan XP, cambia esa XP por potenciadores permanentes con un mercader que aparece antes de cada jefe y vence a tres jefes que le devuelven sus habilidades. Al caer el tercero, su cuerpo petrificado forma el puente hacia la isla final, donde Eon vuelve a enfrentar a La Entidad.
 
@@ -23,14 +23,14 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 
 | Área | Contenido |
 | --- | --- |
-| Control | Mover, salto, dash (`Shift`), ataque con espada (`Enter`), ataque descendente, Tajo ardiente (`J`), Escama pétrea (`K`). |
+| Control | Mover, salto, dash (`Shift`), ataque con espada (`Enter`), ataque descendente, Tajo ardiente (`J`). |
 | Vida | Sin curación en el campo: vida y escudo se restauran solo en puntos de control y al vencer a un jefe. |
 | Economía | XP de los enemigos → potenciadores del mercader. Los enemigos reaparecen; se puede volver a zonas superadas. |
 | Potenciadores | 6, permanentes y pasivos; **3 equipados**, siempre activos, sin botones. |
-| Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Escama pétrea (Jefe 3). **3 equipadas**; ninguna se descarta. |
+| Habilidades | Doble salto (Jefe 1), Tajo ardiente y Dash cortante (Jefe 2), Espinas punzantes (Jefe 3). **3 equipadas**; ninguna se descarta. |
 | Inventario | Muestra la función y el control de cada habilidad y potenciador. |
 | Enemigos | Aurion y Earthlem. |
-| Jefes | Chasko (costa), Mago oscuro (opcional, dentro de un templo en ruinas), Serpiente gigante (islas de tierra flotante), La Entidad (isla final). |
+| Jefes | Chasko (costa), Mago oscuro (opcional, dentro de un templo en ruinas), Cienojos (islas de tierra flotante), La Entidad (isla final). |
 | Mundo | 5 zonas explorables con rutas opcionales; géiseres entre islas. |
 
 ### Jefes
@@ -39,13 +39,13 @@ Cómic (derrota de Eon) → Costa → Jefe 1 → Bosque → Ruinas → Jefe 2 �
 | --- | --- | --- |
 | Chasko | Camarón tipo escorpión: dispara burbujas con la pinza, embiste contra la pared (queda aturdido) y en fase 2 lanza ondas de choque. La arena se cierra con muros de roca. | Doble salto |
 | Mago oscuro | Jefe opcional dentro de un templo en ruinas; sala plana sin plataformas y puertas selladas durante la pelea. Llamaradas del cielo, ola de picos de magma de la que hay que huir, escudo periódico, cráneos de fuego teledirigidos y teletransporte al otro extremo. | Tajo ardiente + Dash cortante |
-| Serpiente gigante | Rodea islas flotantes; su cuerpo deja caer baba; tocar la cabeza es instakill. Al morir se petrifica y forma el puente. Límites invisibles. | Escama pétrea |
+| Cienojos | Serpiente cubierta de ojos que rodea islas flotantes; sus ojos lloran lágrimas venenosas; tocar la cabeza es instakill. Al morir se petrifica y forma el puente. Límites invisibles. | Espinas punzantes |
 | La Entidad | Ascenso por islas con géiseres y cañones; cara a cara en la cumbre; fase final. Límites invisibles. | Victoria |
 
 ### Pendiente
 
 - Cerrar la fase 3 de La Entidad.
-- Nombres de los jefes 2 y 3.
+- Nombre del jefe 2.
 - Asignar roles del equipo.
 
 ### Dónde consultar cada parte
@@ -148,14 +148,14 @@ Ser el héroe caído que no acepta la derrota y vuelve más fuerte, no por desti
 ### Propuesta de valor
 
 - Un protagonista que empieza derrotado: el cómic inicial muestra la caída de Eon y el control se entrega justo después.
-- Tres jefes con identidad propia (Chasko, un camarón tipo escorpión en la costa, un mago oscuro entre ruinas y una serpiente gigante entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
+- Tres jefes con identidad propia (Chasko, un camarón tipo escorpión en la costa, un mago oscuro entre ruinas y Cienojos, una serpiente gigante cubierta de ojos, entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
 - Una decisión constante: solo caben **3 habilidades** y **3 potenciadores** equipados a la vez.
 - Un mundo medieval de fantasía con estética colorida y carisma en los diseños.
 
 ### Características principales
 
 1. **Revancha estructurada:** tres jefes antes de volver a enfrentar a La Entidad.
-2. **Habilidades por jefe:** Doble salto, Tajo ardiente, Dash cortante y Escama pétrea. Ninguna se descarta; el jugador elige cuáles equipar.
+2. **Habilidades por jefe:** Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes. Ninguna se descarta; el jugador elige cuáles equipar.
 3. **XP para el mercader:** los enemigos comunes sueltan XP que se cambia por potenciadores permanentes. Los enemigos reaparecen y se puede volver a zonas superadas para acumular más.
 4. **Vida que se gana:** no hay curación en el campo; vida y escudo solo se restauran en puntos de control o al vencer a un jefe.
 5. **Géiseres:** el cruce entre ciertas islas se hace con géiseres que lanzan a Eon por el aire.
@@ -258,7 +258,7 @@ Gratuito.
 **Cómo se refleja en el juego:**
 
 - El dash cancela la recuperación del ataque y, con el dash cortante, también hace daño.
-- El mago oscuro obliga a correr para escapar de los picos de magma; la serpiente gigante obliga a saltar entre plataformas.
+- El mago oscuro obliga a correr para escapar de los picos de magma; Cienojos obliga a saltar entre plataformas.
 - Los géiseres mantienen el ritmo al cruzar entre islas.
 
 ### Pilar 4 — Fantasía medieval colorida
@@ -314,7 +314,7 @@ Tras el tercer jefe el bucle se cierra: la serpiente petrificada abre el paso a 
 | Salto | Navegar plataformas y evitar ataques rasantes. | Con el Doble salto equipado alcanza rutas más altas. |
 | Dash | Esquivar y reposicionarse. | Breve invulnerabilidad; con el Dash cortante también hace daño. |
 | Tajo ardiente | Atacar a distancia (Jefe 2). | Tajo de fuego que sale de la espada y atraviesa enemigos. |
-| Escama pétrea | Defenderse (Jefe 3). | Reduce el daño; el bloqueo perfecto aturde al atacante. |
+| Espinas punzantes | Castigar a quien lo golpea (Jefe 3). | Probabilidad de devolver parte del daño al atacante. |
 | Interactuar | Mercader, puntos de control y cañones. | Abre la tienda, guarda y restaura vida, dispara. |
 | Montar un géiser | Cruzar entre islas. | Lanzamiento en arco hacia la isla siguiente. |
 
@@ -435,18 +435,20 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 | **Doble salto** | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de la altura del primero): Eon crea una burbuja bajo los pies y se impulsa en ella. Se restablece al tocar suelo. |
 | **Tajo ardiente** (ataque arcano) | Jefe 2 | Activa | `J` (prototipo: `K`, clic derecho o `B`) | La espada lanza un tajo ardiente en forma de media luna que viaja en horizontal: 15 de daño, 16 u/s, alcance 8 u, recarga 1,2 s. Atraviesa a los enemigos (golpea una vez a cada uno) y se detiene en las paredes. |
 | **Dash cortante** | Jefe 2 | Pasiva | Dash | El dash inflige 20 de daño a cada enemigo que atraviesa (una vez por enemigo y por dash), con una pausa breve al cortar y una estela roja. |
-| **Escama pétrea** | Jefe 3 | Activa | `K` (mantener) | Eon petrifica su cuerpo y se cubre (detalle abajo). |
+| **Espinas punzantes** | Jefe 3 | Pasiva | — | Probabilidad de devolver parte del daño al atacante (detalle abajo). |
 
 - **Entrega del Doble salto:** al morir, Chasko suelta el **Camarón de Chasko**, un camarón pequeñito que queda flotando en la arena. Al tocarlo, la habilidad se guarda en el inventario sin equipar y aparece un aviso para equiparla.
 - **Entrega de Tajo ardiente y Dash cortante:** al morir, el Mago oscuro suelta la **Brasa del Mago** (Tajo ardiente) y el **Filo de sombra** (Dash cortante). Se recogen igual que el camarón. El Mago es opcional, así que ninguna de las dos es necesaria para terminar el recorrido.
+- **Entrega de Espinas punzantes:** al morir, Cienojos suelta la **Espina de Cienojos**, una espina curva con una gota de veneno en la punta. Se recoge igual que las demás.
 
-#### Escama pétrea (detalle)
+#### Espinas punzantes (detalle)
 
-- Mantener `K`: Eon se petrifica y se cubre hasta 1 s; recibe un 70 % menos de daño y no puede moverse.
-- **Bloqueo perfecto:** si el golpe llega en los primeros 0,25 s, el daño se anula y el atacante queda aturdido 1 s.
-- Recarga de 3 s desde que se suelta.
-- **No bloquea ataques instakill** ni evita la caída al vacío.
-- Sinergias: el bloqueo perfecto aturde al Earthlem.
+- **Pasiva**, como el encantamiento «Espinas» de Minecraft: no usa ningún botón; funciona mientras está equipada.
+- Cada vez que un enemigo le hace daño a Eon, hay un **30 %** de probabilidad de que el atacante reciba el **50 %** de ese daño. Eon recibe el golpe completo igual.
+- Si el golpe viene de un proyectil (burbuja, cráneo, lágrima), el daño vuelve al enemigo que lo lanzó.
+- **No se activa** con instakill ni con daño del entorno (caídas al vacío, pinchos).
+- Al activarse brotan espinas del cuerpo de Eon y el atacante parpadea.
+- *Los valores (30 % y 50 %) son de referencia; se ajustan en pruebas.*
 
 ### Potenciadores
 
@@ -470,7 +472,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 
 ---
 
-## Sistemas del Juego
+	# Sistemas del Juego
 
 ### Inventario de sistemas
 
@@ -493,8 +495,8 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 - **Entradas:** colisiones entre capas `Hitbox` y `Hurtbox`, identificador del atacante, daño y bandera `isInstakill`.
 - **Reglas:**
     - El daño normal se resta primero del escudo (si Eon tiene Coraza) y después de la vida.
-    - Con Escama pétrea activa, el daño normal se reduce un 70 %; en bloqueo perfecto se anula y aturde al atacante.
-    - Un ataque **instakill** ignora escudo, dash y Escama pétrea; deja la vida en 0.
+    - Con Espinas punzantes equipada, cada golpe recibido de un enemigo tiene un 30 % de probabilidad de devolverle el 50 % del daño.
+    - Un ataque **instakill** ignora escudo y dash; deja la vida en 0 y no activa Espinas punzantes.
     - Tras recibir daño, Eon tiene 0,7 s de invulnerabilidad con parpadeo rojo.
     - Vida y escudo **solo se restauran** al tocar un punto de control, al vencer a un jefe o al reaparecer. No hay curación en el campo.
     - Si la vida llega a 0 se apagan los colliders y se llama a la rutina de muerte.
@@ -507,10 +509,10 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 ### Sistema 02: Controlador del jugador y movilidad
 
 - **Objetivo:** convertir las entradas en movimiento, salto, dash, ataques y habilidades, consultando qué está equipado.
-- **Entradas:** dirección, Salto, Ataque (`Enter`), Dash, Tajo ardiente (`J`), Escama pétrea (`K`), Interactuar, Inventario.
+- **Entradas:** dirección, Salto, Ataque (`Enter`), Dash, Tajo ardiente (`J`), Interactuar, Inventario.
 - **Reglas:**
     - Movimiento con aceleración inmediata y frenado al soltar.
-    - Doble salto, Tajo ardiente, Dash cortante y Escama pétrea solo funcionan equipados.
+    - Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes solo funcionan equipados.
     - Dash de 0,20 s y 4 u; 1 aéreo por salto; recarga de 1,2 s.
     - Abajo + Ataque en el aire ejecuta el ataque descendente; al impactar rebota y recupera el dash aéreo.
     - Los potenciadores equipados modifican los valores de forma permanente (vida máxima, daño, velocidad, recargas).
@@ -605,7 +607,7 @@ Los valores de esta página son la referencia de diseño para implementar y bala
 
 ### Relaciones entre sistemas
 
-- **Controlador ↔ Daño:** el controlador activa las *hitboxes* de espada, descendente, Tajo ardiente y Dash cortante, y el estado de Escama pétrea; el sistema de daño confirma impactos (para el rebote) y aplica el daño recibido.
+- **Controlador ↔ Daño:** el controlador activa las *hitboxes* de espada, descendente, Tajo ardiente y Dash cortante; el sistema de daño confirma impactos (para el rebote), aplica el daño recibido y, con Espinas punzantes, decide si devuelve parte al atacante.
 - **Inventario → Controlador:** indica qué habilidades están equipadas y qué modificadores aplican los potenciadores.
 - **Tienda → Inventario:** cada compra añade el potenciador al inventario.
 - **Daño → Economía:** `OnEntityDeath` genera los orbes de XP del enemigo.
@@ -632,7 +634,6 @@ La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por
 | Ataque descendente | `S` + `Enter` en el aire | Abajo + `X` / Cuadrado |
 | Dash | `Shift izquierdo` | `RB` / `R1` |
 | Tajo ardiente (ataque arcano) | `J` | `B` / Círculo |
-| Escama pétrea (petrificación) | `K` (mantener) | `LB` / `L1` (mantener) |
 | Interactuar | `E` | `Y` / Triángulo |
 | Inventario | `Tab` | `View` / `Share` |
 | Pausa | `Escape` | `Start` / `Options` |
@@ -665,7 +666,6 @@ No se incluye reasignación de teclas en esta versión. Salto tiene dos teclas (
 | Salto en el aire (con Doble salto) | Segundo salto | Burbuja bajo los pies que se aplasta y estalla en gotitas; suben unas burbujitas. | Burbuja que revienta. | Impulso algo menor que el primero. |
 | Dash | Desplazamiento | Silueta residual; con Dash cortante, estela roja. | Corte de aire; con Dash cortante, tajo metálico. | Velocidad súbita con *hitstop* si corta a un enemigo. |
 | `J` | Tajo ardiente | Media luna de fuego naranja que sale de la espada. | Tajo con chisporroteo. | Retroceso mínimo de Eon. |
-| `K` (mantener) | Escama pétrea | El cuerpo de Eon se vuelve gris piedra; destello blanco en el bloqueo perfecto. | Crujido de roca; golpe seco en el bloqueo perfecto. | Eon queda inmóvil. |
 | Recibir daño | Impacto y retroceso | Parpadeo rojo 0,7 s. | Golpe sordo y quejido. | Empuje en X; sin control 0,15 s. |
 | Aviso instakill | — | Brillo intenso y sombra en el área de impacto. | Sonido exclusivo grave. | La cámara no se mueve para no tapar el aviso. |
 
@@ -684,7 +684,7 @@ Eon no sube de nivel. Progresa de dos formas: **habilidades** que entregan los j
 | Introducción | Playa del Despertar | Movimiento, salto, combo, dash. Primeros Aurion y primera XP. |
 | Desarrollo 1 | Acantilados → antesala (mercader) → **Jefe 1** | Primer potenciador. Leer avisos y castigar tras la embestida. Obtiene **Doble salto**. |
 | Desarrollo 2 | Bosque → Ruinas → antesala → **Jefe 2** | Earthlem. Si vence al Jefe 2 (**opcional**) obtiene **Tajo ardiente** y **Dash cortante** y ya tiene 3 habilidades. |
-| Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Escama pétrea**: con 4 habilidades y 3 ranuras, elige su equipo. |
+| Dominio | Archipiélago → antesala → **Jefe 3** | Géiseres y plataformas flotantes. Obtiene **Espinas punzantes**: con 4 habilidades y 3 ranuras, elige su equipo. |
 | Clímax | Puente de la Serpiente → antesala → Isla Final | Combina todo contra La Entidad. |
 | Final | — | Revancha cumplida; créditos. |
 
@@ -699,7 +699,7 @@ En cualquier momento tras vencer a un jefe, el jugador puede volver a zonas ante
 | Tajo ardiente | Derrotar al Jefe 2 (opcional) | Ataque a distancia; activa interruptores lejanos de rutas opcionales. |
 | Dash cortante | Derrotar al Jefe 2 (opcional) | El dash hace daño. |
 | Acceso al Archipiélago | Derrotar al Jefe 2 | Se activan los géiseres que conectan las Ruinas con las islas. |
-| Escama pétrea | Derrotar al Jefe 3 | Bloqueo y contraataque. |
+| Espinas punzantes | Derrotar al Jefe 3 | Devolver daño a quien lo golpea. |
 | Isla Final | Derrotar al Jefe 3 | La serpiente se petrifica y su cuerpo forma el puente. |
 | Nuevos potenciadores | Llegar a cada antesala | El catálogo del mercader crece (ver [[06 - Economía y Recursos]]). |
 
@@ -716,7 +716,7 @@ Ninguna habilidad es obligatoria para avanzar por el camino principal: el jugado
 | Ruinas | Combinaciones Earthlem + Aurion | Media-alta. |
 | Jefe 2 | Arena plana sin plataformas; ataques que exigen correr; escudo y teletransporte | Alta. |
 | Archipiélago | Géiseres, islas pequeñas, enemigos en espacios reducidos | Alta. |
-| Jefe 3 | Jefe grande con cuerpo dañino, lluvia de baba, cabeza instakill | Muy alta. |
+| Jefe 3 | Jefe grande con cuerpo dañino, goteo de lágrimas venenosas, cabeza instakill | Muy alta. |
 | La Entidad | Fases con todo lo anterior | Máxima. |
 
 Sin curación en el campo, la distancia entre puntos de control es parte de la dificultad: aumenta ligeramente en cada zona.
@@ -789,7 +789,7 @@ El catálogo de cada antesala incluye también los potenciadores de antesalas an
 ### Reglas
 
 1. **Escudo antes que vida:** la vida no baja mientras quede al menos 1 SP.
-2. **Instakill:** ignora escudo, la invulnerabilidad del dash y la Escama pétrea.
+2. **Instakill:** ignora escudo y la invulnerabilidad del dash, y no activa Espinas punzantes.
 3. **Sin curación en campo:** vida y escudo solo se restauran en puntos de control, al vencer a un jefe o al reaparecer.
 4. **Persistencia:** XP, potenciadores y habilidades se conservan al ser derrotado.
 5. **Reaparición de enemigos:** los enemigos comunes reaparecen; los jefes derrotados no.
@@ -869,7 +869,7 @@ El catálogo de cada antesala incluye también los potenciadores de antesalas an
 
 - **Derrota dentro de una arena:** el jefe vuelve a su vida completa y Eon reaparece en el punto de control de la antesala.
 - **Muerte simultánea:** si Eon y el jefe llegan a 0 en el mismo fotograma, prevalece la **victoria**.
-- **Instakill y defensas:** escudo, dash y Escama pétrea no protegen del instakill.
+- **Instakill y defensas:** escudo y dash no protegen del instakill, y Espinas punzantes no se activa con él.
 - **Caída al vacío:** −25 HP y regreso al último suelo seguro. En la arena del Jefe 3, el «último suelo seguro» es la plataforma central.
 - **Habilidad nueva:** se guarda en el inventario sin descartar ninguna. Un aviso invita a abrir el inventario para equiparla.
 - **Salir durante una cinemática de entrega:** la habilidad ya cuenta como obtenida y se guarda.
@@ -889,7 +889,7 @@ En un mundo más allá de la Vía Láctea existe el planeta Eretz (nombre de la 
 
 Días después, Eon despierta solo en una playa entre ruinas. No tiene su armadura ni su espada legendaria, y su poder ya no le pertenece: se repartió entre las criaturas que sobrevivieron al cataclismo. Con la espada que le queda, Eon recorre la costa, los bosques, las ruinas y las islas de tierra flotante. Cada enemigo vencido le da experiencia que un mercader errante, que aparece siempre antes de cada gran combate, acepta a cambio de potenciadores; cada jefe vencido le devuelve una habilidad.
 
-Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flotantes, su cuerpo se petrifica y forma un puente hacia la isla final. Allí, Eon enfrenta de nuevo a La Entidad. Esta vez no lo sostiene una profecía, sino todo lo que aprendió y ganó en el camino.
+Al derrotar a la tercera criatura, Cienojos, una serpiente gigante cubierta de ojos que rodea las islas flotantes, su cuerpo se petrifica y forma un puente hacia la isla final. Allí, Eon enfrenta de nuevo a La Entidad. Esta vez no lo sostiene una profecía, sino todo lo que aprendió y ganó en el camino.
 
 ### Estructura narrativa
 
@@ -907,9 +907,9 @@ Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flo
 
 #### Acto 3 — El puente de piedra
 
-**Contexto:** el Archipiélago de Tierra, la serpiente gigante y la isla final.
+**Contexto:** el Archipiélago de Tierra, Cienojos y la isla final.
 
-**Enfoque narrativo:** Eon vence a la serpiente gigante y recupera la escama pétrea; el cuerpo de la serpiente se petrifica y abre el camino hacia la isla final. La revancha contra La Entidad cierra el arco: el héroe no gana por estar destinado, sino porque decidió volver.
+**Enfoque narrativo:** Eon vence a Cienojos y obtiene las espinas punzantes; el cuerpo de la serpiente se petrifica y abre el camino hacia la isla final. La revancha contra La Entidad cierra el arco: el héroe no gana por estar destinado, sino porque decidió volver.
 
 ### Eventos principales
 
@@ -920,7 +920,7 @@ Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flo
 | 3 | El mercader | Lo encuentra en la antesala del Jefe 1. | Descubre que la XP sirve para comprar potenciadores. |
 | 4 | La marea viva | Derrota al Jefe 1 en la Arena de la Marea. | Recupera el **Doble salto**. |
 | 5 | Las ruinas en llamas | Derrota al Jefe 2 en las Ruinas Abandonadas. | Recupera el **Tajo ardiente** y el **Dash cortante**; se activan los géiseres hacia el Archipiélago. |
-| 6 | La serpiente de piedra | Derrota al Jefe 3 en el Archipiélago de Tierra. | Recupera la **Escama pétrea**. Cinemática: la serpiente se petrifica y forma el puente. |
+| 6 | La serpiente de piedra | Derrota al Jefe 3 en el Archipiélago de Tierra. | Obtiene **Espinas punzantes**. Cinemática: la serpiente se petrifica y forma el puente. |
 | 7 | La revancha | Cruza el puente y enfrenta a La Entidad. | Victoria: final y créditos. |
 
 ### Final
@@ -1063,7 +1063,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | Conflicto | La vergüenza de haber fallado frente a todo un mundo que creía en él. |
 | Relaciones | Viaja solo; el mercader lo trata con burla y respeto a partes iguales. |
 | Arco | De «estoy destinado a ganar» a «voy a ganar porque me preparé». |
-| Habilidades | Espada, salto, dash; recupera Doble salto, Tajo ardiente, Dash cortante y Escama pétrea. |
+| Habilidades | Espada, salto, dash; recupera Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes. |
 | Debilidades | Sin armadura legendaria: 100 HP, sin escudo propio y sin forma de curarse en el campo. |
 | Tono | Frases breves, decididas, con autocrítica. |
 
@@ -1088,7 +1088,7 @@ Las cifras de combate de jefes y enemigos están en [[03 - Enemigos y NPC]]; aqu
 | --- | --- | --- | --- |
 | **Jefe 1 — Chasko** | Arena de la Marea (costa) | Camarón de tipo escorpión, rojo y naranja, con la cola alzada sobre el lomo y una pinza que dispara burbujas. Absorbió el fragmento de agilidad de Eon. | Doble salto |
 | **Jefe 2 — Mago oscuro** *(nombre provisional)* | Ruinas Abandonadas | Antiguo hechicero de la academia que tomó el fragmento de poder arcano. Domina el fuego, el magma y el teletransporte. | Tajo ardiente y Dash cortante |
-| **Jefe 3 — Serpiente gigante** *(nombre provisional)* | Archipiélago de Tierra | Serpiente segmentada colosal que rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Escama pétrea |
+| **Jefe 3 — Cienojos** | Archipiélago de Tierra | Serpiente colosal de placas de obsidiana azul noche, cubierta de ojos dorados que lloran veneno; corona de púas en la cabeza y cola con púas. Rodea las islas flotantes, inspirada en el Devorador de mundos de Terraria. Al morir se petrifica. | Espinas punzantes |
 
 ### Enemigos comunes
 
@@ -1215,7 +1215,7 @@ True Hero
 ├── Bloque 3 — El cielo roto
 │   ├── Archipiélago de Tierra (zona explorable con géiseres)
 │   ├── Antesala: mercader + punto de control
-│   └── Anillo de Islas → Jefe 3: Serpiente gigante → Escama pétrea
+│   └── Anillo de Islas → Jefe 3: Cienojos → Espinas punzantes
 │       └── Cinemática: la serpiente se petrifica
 └── Final
     ├── Puente de la Serpiente
@@ -1440,7 +1440,7 @@ Patrullar → Detectar (núcleo rojo, 0,5 s) → Embestir → [falla] Aturdido 0
     - *Barrido de roca:* tajo horizontal tras 0,4 s de preparación; 20 de daño.
     - *Aplastamiento sísmico:* golpe al suelo con ambos puños; onda rasante de 3 u (hay que saltarla); 15 de daño.
 - **Defensas:** coraza frontal; los golpes de frente hacen 50 % del daño. La espalda recibe daño completo.
-- **Debilidades:** gira despacio; un dash para quedar a su espalda permite castigarlo. Con Dash cortante, el propio dash le hace daño completo. Con Escama pétrea, un bloqueo perfecto contra el barrido lo aturde 1 s.
+- **Debilidades:** gira despacio; un dash para quedar a su espalda permite castigarlo. Con Dash cortante, el propio dash le hace daño completo. Con Espinas punzantes, sus golpes pueden devolverle parte del daño.
 - **Recompensa:** 30 XP.
 
 ```text
@@ -1505,25 +1505,26 @@ Ataque 1 → Ataque 2 → Ataque 3 → Remolino y humo → reaparece en el extre
    └── fase 2: teletransporte cada 2 ataques; 40 % de combos llamaradas + picos
 ```
 
-### Jefe 3 — Serpiente gigante *(nombre provisional)*
+### Jefe 3 — Cienojos
 
 - **Arena:** Anillo de Islas, 7 plataformas de tierra flotantes en dos alturas sobre el vacío. Límites invisibles.
 - **Vida:** 1200 HP compartidos por todo el cuerpo. **Fases:** 1 (100–50 %) y 2 (menos de 50 %).
-- **Descripción:** serpiente segmentada colosal (cabeza + ~18 segmentos + cola) que da vueltas entre y a través de las plataformas, al estilo del Devorador de mundos de Terraria.
-- **Recompensa:** 400 XP, **Escama pétrea** y cinemática de petrificación.
+- **Descripción:** serpiente colosal de placas de obsidiana azul noche con brillo turquesa (cabeza + ~18 eslabones + cola) que da vueltas entre y a través de las plataformas, al estilo del Devorador de mundos de Terraria. **Cada eslabón tiene ojos dorados de reptil que lloran veneno.** La cabeza, alargada, lleva una corona de púas curvas y cuatro ojos; la cola, púas largas y grietas carmesí. Diseño a partir del boceto de [[07 - Bocetos del Desarrollo#Cienojos]].
+- **Partes del sprite:** cabeza (gira con el rumbo), ojos (cada eslabón; no giran) y cola. Ver [[06 - Galería de Assets#Jefe 3 — Cienojos]].
+- **Recompensa:** 400 XP, **Espinas punzantes** (la suelta como la **Espina de Cienojos**) y cinemática del puente.
 
 | Elemento / ataque | Aviso | Regla | Daño |
 | --- | --- | --- | --- |
-| **Cabeza** | Ojos y mandíbula brillantes; silueta siempre visible. | Tocarla es **instakill**. No recibe daño. | **Instakill** |
-| **Cuerpo** | — | Cada segmento recibe daño de espada, Tajo ardiente, ataque descendente (con rebote) y Dash cortante. Tocarlo hace daño. | 15 por contacto |
-| **Cola** | Punta de color distinto. | Punto débil: recibe el doble de daño. | 15 por contacto |
+| **Cabeza** | Ojos dorados encendidos y mandíbula con dientes que brillan; silueta siempre visible. | Tocarla es **instakill**. No recibe daño. | **Instakill** |
+| **Ojos (cuerpo)** | — | Cada eslabón recibe daño de espada, Tajo ardiente, ataque descendente (con rebote) y Dash cortante. Tocarlo hace daño. | 15 por contacto |
+| **Cola** | Grietas carmesí que laten (color distinto). | Punto débil: recibe el doble de daño. | 15 por contacto |
 | **Recorrido** | — | Trayectorias en bucle, en ocho y zambullidas verticales a 6 u/s (8 u/s en fase 2). Puede atravesar las plataformas. | — |
-| **Lluvia de baba** | El segmento se hincha y gotea 0,4 s antes. | Cada segmento deja caer gotas de baba en momentos aleatorios (cada 2–4 s; máximo 6 gotas a la vez en pantalla). Caen en vertical. | 10 |
-| **Embestida de cabeza** | Rugido y flecha en el borde de la pantalla 1,5 s. | La cabeza sale de pantalla y cruza la arena en línea recta hacia la posición de Eon a 14 u/s. | **Instakill** (cabeza) |
+| **Goteo de lágrimas** | El ojo del eslabón se humedece y brilla 0,4 s antes. | Los ojos de cada eslabón lloran lágrimas venenosas en momentos aleatorios (cada 2–4 s; máximo 6 a la vez en pantalla). Caen en vertical y salpican al tocar el suelo. | 10 |
+| **Embestida de cabeza** | Rugido (boca abierta y ojos encendidos) y flecha en el borde de la pantalla 1,5 s. | La cabeza sale de pantalla y cruza la arena en línea recta hacia la posición de Eon a 14 u/s. | **Instakill** (cabeza) |
 
-- **Fase 2:** más velocidad, gotas más frecuentes (cada 1,5–3 s) y embestidas dobles.
+- **Fase 2:** más velocidad, lágrimas más frecuentes (cada 1,5–3 s) y embestidas dobles.
 - **Al morir:** el cuerpo se detiene, se petrifica (ilustración fija) y forma el Puente de la Serpiente hacia la isla final.
-- **En el prototipo:** mientras no exista la serpiente, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
+- **En el prototipo:** mientras no exista Cienojos, su lugar lo ocupa el **Driller** (gusano segmentado ya programado; 100 HP, 12 de daño por contacto) en la arena de la isla final, antes de la meta.
 
 ### La Entidad (jefe final)
 
@@ -1597,7 +1598,7 @@ Solo hay tres tipos de elementos que el jugador obtiene: **XP**, **potenciadores
 | Doble salto | Jefe 1 | Pasiva | Salto en el aire | Segundo salto en el aire (80 % de altura), impulsado por una burbuja bajo los pies. | Camarón de Chasko: camarón pequeñito naranja y enroscado (16 × 16 px). |
 | Tajo ardiente | Jefe 2 | Activa | `J` (prototipo: `K`) | La espada lanza un tajo de fuego que atraviesa enemigos: 15 de daño, alcance 8 u, recarga 1,2 s. | Brasa del Mago: brasa naranja con chispas (20 × 20 px). |
 | Dash cortante | Jefe 2 | Pasiva | Dash | El dash hace 20 de daño a cada enemigo atravesado. | Filo de sombra: hoja oscura con filo rojo (20 × 20 px). |
-| Escama pétrea | Jefe 3 | Activa | `K` (mantener) | Se petrifica y reduce el daño un 70 %; el bloqueo perfecto anula el golpe y aturde. Recarga 3 s. | Escama gris con grietas. |
+| Espinas punzantes | Jefe 3 | Pasiva | — | 30 % de probabilidad de que el atacante reciba el 50 % del daño que le hace a Eon; no con instakill ni con daño del entorno. | Espina de Cienojos: espina curva azul noche con una gota de veneno en la punta (32 × 32 px). |
 
 Con 4 habilidades y 3 ranuras, el jugador decide qué combinación llevar a la isla final; las cuatro siguen disponibles en el inventario.
 
@@ -1614,7 +1615,7 @@ El juego tiene una misión principal dividida en cuatro objetivos (uno por jefe)
 | --- | --- | --- | --- | --- | --- |
 | La marea viva | Principal | Costa | — | Derrotar a Chasko. | 200 XP, Doble salto. |
 | Las ruinas en llamas | Opcional | Ruinas Abandonadas | Jefe 1 derrotado | Entrar al templo y derrotar al Mago oscuro. | 300 XP, Tajo ardiente, Dash cortante. |
-| La serpiente de piedra | Principal | Archipiélago de Tierra | Llegar al Archipiélago | Derrotar a la Serpiente gigante. | 400 XP, Escama pétrea, Puente de la Serpiente. |
+| La serpiente de piedra | Principal | Archipiélago de Tierra | Llegar al Archipiélago | Derrotar a Cienojos. | 400 XP, Espinas punzantes, Puente de la Serpiente. |
 | La revancha | Principal | Isla Final | Jefe 3 derrotado | Derrotar a La Entidad. | Final del juego. |
 
 - **Condición de fracaso:** ninguna permanente. Ser derrotado devuelve al punto de control de la antesala.
@@ -1663,7 +1664,7 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 
 - **Entornos y ruinas:** rectángulos sólidos; islas flotantes con base de triángulo invertido.
 - **Enemigos comunes:** curvas fluidas con terminaciones afiladas (Aurion); bloques pesados (Earthlem).
-- **Jefes:** curvas segmentadas (Chasko y Serpiente gigante); triángulos y capuchas puntiagudas (Mago oscuro).
+- **Jefes:** curvas segmentadas (Chasko y Cienojos); triángulos y capuchas puntiagudas (Mago oscuro).
 - **La Entidad:** silueta angular alargada, sin rostro, superficie lisa.
 
 ### Paleta de color
@@ -1686,7 +1687,7 @@ Define la identidad visual del juego y las reglas que deben seguir los recursos 
 | Costa | Turquesa y arena gris | Rojo y naranja de Chasko |
 | Bosque de Raíces | Verdes profundos | Luciérnagas amarillas |
 | Ruinas Abandonadas | Piedra y violeta oscuro | Naranja del fuego y magma del Mago |
-| Archipiélago de Tierra | Ocres y cielo pálido | Verde ácido de la baba de la serpiente |
+| Archipiélago de Tierra | Ocres y cielo pálido | Azul noche y oro de Cienojos; verde turquesa de sus lágrimas |
 | Isla Final | Gris y blanco | Rojo de los núcleos de La Entidad |
 
 **Colores de información jugable**
@@ -1726,13 +1727,13 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 
 | Personaje | Sprite | Animaciones | VFX | Estado |
 | --- | --- | --- | --- | --- |
-| Eon | 64 × 64 | Idle, correr, saltar, doble salto, caer, aterrizar, dash, ataque ×3, ataque descendente, tajo ardiente, escama pétrea (petrificarse, bloqueo perfecto), recibir daño, muerte, interactuar | Estelas de espada (normal y roja con Filo), polvo de aterrizaje, ráfaga del doble salto, estela de dash (normal y cortante), media luna de fuego del tajo ardiente, piel de piedra y destello de bloqueo | Hechos: reposo, reposo de combate, correr, saltar, caer, 3 ataques, daño y muerte. Pendientes: doble salto, dash, tajo ardiente, escama pétrea, interactuar. Ver [[06 - Galería de Assets]]. |
+| Eon | 64 × 64 | Idle, correr, saltar, doble salto, caer, aterrizar, dash, ataque ×3, ataque descendente, tajo ardiente, recibir daño, muerte, interactuar | Estelas de espada (normal y roja con Filo), polvo de aterrizaje, ráfaga del doble salto, estela de dash (normal y cortante), media luna de fuego del tajo ardiente, espinas que brotan al devolver daño | Hechos: reposo, reposo de combate, correr, saltar, caer, 3 ataques, daño y muerte. Pendientes: doble salto, dash, tajo ardiente, interactuar. Ver [[06 - Galería de Assets]]. |
 | Mercader | 64 × 64 | Idle, hablar, entregar | — | Pendiente |
 | Aurion | 48 × 48 | Flotar, cargar, embestir, aturdido, muerte | Núcleo rojo, estela | Vuelo hecho (56 × 56); el resto pendiente. |
 | Earthlem | 96 × 96 | Enterrado, emerger, caminar, barrido, aplastamiento, enterrarse, impacto, muerte | Escombros, onda sísmica | Emerger, reposo y ataque hechos (128 × 112); el resto pendiente. |
 | Jefe 1 — Chasko | 90 × 90 | Idle, caminar, chasquido (carga, disparo, recuperación), recibir daño, muerte | Burbuja de cavitación (46 × 46: avanzar, estallido), parpadeo de embestida, onda de choque | Hecho (`Chasko.aseprite`) |
 | Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Columna de fuego de aviso, bola de fuego y explosión; grietas incandescentes y picos de piedra con lava (versión 2, aún sin pasar a Unity); esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
-| Jefe 3 — Serpiente gigante | Cabeza 192 × 192, segmento 96 × 96, cola | Mandíbula, segmento hinchado, petrificación | Gotas y salpicadura de baba, polvo al atravesar islas | Pendiente |
+| Jefe 3 — Cienojos | Cabeza 72 × 72, ojos (eslabón) 40 × 40, cola 56 × 56, lágrima 32 × 24 | Cabeza: mover, parpadeo, rugido. Ojos: mirar, parpadeo, llorar. Cola: pulso | Lágrima que cae y salpica; polvo al atravesar islas | Diseño hecho en Aseprite (`Documents/sprites/Jefe_Cienojos/`); falta pasarlo a Unity |
 | La Entidad | Escala de fondo y escala de cumbre | Escalar, golpe de mano, barrido, invocar, apertura del rostro, derrota | Ondas, sombras de impacto, núcleo | Cuerpo por piezas, manos (reposo, cansada, rota), fondo y efectos de rayo, tornado y orbe hechos. |
 
 ### Animaciones de Eon
@@ -1740,7 +1741,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | Grupo | Animaciones | Fotogramas orientativos |
 | --- | --- | --- |
 | Movimiento | Idle, correr, saltar, doble salto, caer, aterrizar | 6 / 8 / 3 / 4 / 2 / 3 |
-| Combate | Tajo 1, 2, 3; descendente; dash; tajo ardiente; escama pétrea | 4 / 4 / 6 / 3 / 3 / 5 / 4 |
+| Combate | Tajo 1, 2, 3; descendente; dash; tajo ardiente | 4 / 4 / 6 / 3 / 3 / 5 |
 | Interacción | Interactuar | 4 |
 | Daño | Impacto, aturdido | 2 / 4 |
 | Derrota | Colapso | 8 |
@@ -1818,10 +1819,10 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 
 - **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
 - **Fuego y magma:** columnas de fuego de aviso, bolas de fuego que estallan en explosión con humo, picos de piedra con lava que escurre, cráneos de fuego.
-- **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
+- **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), espinas que brotan del cuerpo con Espinas punzantes.
 - **Magia del Mago:** ojos que pasan de cian a naranja al conjurar, escudo arcano violeta, cráneos de fuego, remolino al aparecer y desaparecer, humo negro en el destino del teletransporte.
 - **Géiseres:** burbujeo de aviso, columna de vapor y agua.
-- **Baba:** gotas verdes y salpicadura al impactar.
+- **Lágrimas de Cienojos:** gotas de veneno verde turquesa y salpicadura con vapor al impactar.
 - **Petrificación:** grietas grises que recorren el cuerpo de la serpiente.
 - **Impactos:** chispas de espada, polvo de aterrizaje, escombros del Earthlem.
 - **Clima:** niebla en el Archipiélago; ceniza en las Ruinas.
@@ -1850,7 +1851,7 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 | Recarga de dash | Junto a Eon | Pequeño arco que se llena; se oculta si está listo. |
 | Barra del jefe | Abajo al centro | Nombre del jefe, barra de vida y marcas de cambio de fase. Solo en arenas. |
 | Indicador contextual | Sobre el objeto | Tecla de Interactuar cerca del mercader, un punto de control o un cañón. |
-| Indicador fuera de pantalla | Borde de la pantalla | Flecha roja para la embestida de la Serpiente gigante. |
+| Indicador fuera de pantalla | Borde de la pantalla | Flecha roja para la embestida de Cienojos. |
 
 ### Jerarquía visual
 
@@ -1944,7 +1945,7 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 | Dash / dash cortante | Corte de aire / tajo metálico | Diferenciar si el dash hace daño. |
 | Atacar | Corte de espada y golpe metálico | Comunicar el ataque. |
 | Tajo ardiente | Tajo con chisporroteo de fuego | Confirmar el ataque a distancia. |
-| Escama pétrea | Crujido de roca; golpe seco en el bloqueo perfecto | Confirmar la defensa y el bloqueo perfecto. |
+| Espinas punzantes | Chasquido de púas | Confirmar que el daño se devolvió al atacante. |
 | Recibir daño | Golpe sordo y quejido | Indicar daño. |
 | Recoger XP | Tintineo agudo | Recompensa. |
 | Comprar | Campanilla y destello | Confirmar la compra. |
@@ -1956,14 +1957,14 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 | Llamaradas / picos de magma | Silbido y crujido de roca | Jefe 2. |
 | Escudo del Mago | Zumbido cristalino | Indicar que no recibe daño. |
 | Teletransporte | Soplo de humo | Anunciar dónde reaparece. |
-| Gota de baba | Goteo viscoso | Jefe 3. |
+| Lágrima de Cienojos | Goteo y siseo de veneno | Jefe 3. |
 | Petrificación | Crujido largo de piedra | Cinemática del Jefe 3. |
 | Cañón | Disparo y explosión | Isla Final. |
 | Victoria / derrota | Fanfarria breve / música descendente | Resultado. |
 
 ### Audio espacial
 
-Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre todo la embestida de la Serpiente gigante que llega desde fuera de pantalla. El resto de los sonidos se reproduce sin atenuación por distancia.
+Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre todo la embestida de Cienojos que llega desde fuera de pantalla. El resto de los sonidos se reproduce sin atenuación por distancia.
 
 ### Voz
 
@@ -1994,16 +1995,16 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 
 | Grupo         | Personaje / efecto                                     | Animaciones               | Estado                                                                                                           |
 | ------------- | ------------------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
+| Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente e interactuar. |
 | Enemigo común | Aurion                                                 | 1                         | Vuelo hecho; faltan cargar, embestir, aturdido y muerte.                                                         |
 | Enemigo común | Earthlem                                               | 3                         | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte.                          |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
 | Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
-| Jefe 3        | Serpiente gigante                                      | 0                         | Sin arte.                                                                                                        |
+| Jefe 3        | Cienojos                                               | 9 (cabeza, ojos, cola, lágrima) | Diseño hecho en Aseprite; falta pasarlo a Unity.                                                                 |
 | Efectos       | Rayo, tornado, orbe, burbuja; magia del Mago                           | 4                         | Hechos.                                                                                                          |
 | Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena, templo del Mago | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
-| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra y tajo ardiente | 5 | Hechos. |
+| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra, tajo ardiente y Espina de Cienojos | 6 | Hechos (la Espina de Cienojos, solo en Aseprite). |
 
 ### Comparación de escala
 
@@ -2545,9 +2546,125 @@ Origen: `Assets/Resources/Mago_Oscuro/muerte_*`
 
 Sus conjuros usan los [[#Efectos del Mago oscuro]].
 
-#### Jefe 3 — Serpiente gigante
+#### Jefe 3 — Cienojos
 
-Sin arte todavía.
+Serpiente de obsidiana azul noche con brillo turquesa, cubierta de ojos dorados que lloran veneno. Diseño de Joel a partir de su [[07 - Bocetos del Desarrollo#Cienojos|boceto]]. Reglas de combate en [[03 - Enemigos y NPC]]. **Todavía no está en Unity:** solo en Aseprite.
+
+| Dato | Valor |
+| --- | --- |
+| Partes | Cabeza 72 × 72 px · Ojos (eslabón) 40 × 40 px · Cola 56 × 56 px · Lágrima 32 × 24 px |
+| Píxeles por unidad | 21,5 (la misma escala que Eon; un eslabón mide más o menos lo que Eon) |
+| Pivote | Centro. La cabeza mira a la derecha y gira con el rumbo; los eslabones y la cola no giran |
+| Fuente | `Documents/sprites/Jefe_Cienojos/Cienojos_Cabeza.aseprite`, `Cienojos_Ojos.aseprite`, `Cienojos_Cola.aseprite`, `Cienojos_Lagrima.aseprite` (una etiqueta por animación) |
+| Paleta | Obsidiana `#07081A`–`#25306A`, brillo turquesa `#5CB4B2`, ojos dorados `#F7C835`, lágrimas `#22B47E`, grietas de la cola `#D01E4E` |
+
+En movimiento (como el Driller actual: la cabeza manda y cada eslabón sigue al anterior), con Eon para la escala:
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_en_movimiento.gif]]
+
+| Parte | Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- | --- |
+| Cabeza | Mover | 6 | 110 ms por cuadro | 0,66 s | Sí |
+| Cabeza | Parpadeo | 4 | 70 ms por cuadro | 0,28 s | No |
+| Cabeza | Rugido (aviso de embestida) | 6 | 90–160 ms por cuadro | 0,76 s | No |
+| Ojos | Mirar | 8 | 120 ms por cuadro | 0,96 s | Sí |
+| Ojos | Parpadeo | 4 | 70 ms por cuadro | 0,28 s | No |
+| Ojos | Llorar | 8 | 60–140 ms por cuadro | 0,79 s | No |
+| Cola | Pulso | 4 | 130 ms por cuadro | 0,52 s | Sí (ida y vuelta) |
+| Lágrima | Cae | 3 | 80 ms por cuadro | 0,24 s | Sí |
+| Lágrima | Salpica | 6 | 60–110 ms por cuadro | 0,47 s | No |
+
+##### Cabeza: mover
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_mover.gif]]
+
+**6 cuadros** · 72×72 px · 110 ms por cuadro · 0,66 s · en bucle
+
+La mandíbula se entreabre mientras avanza.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_mover_cuadros.png]]
+
+##### Cabeza: rugido
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_rugido.gif]]
+
+**6 cuadros** · 72×72 px · 90–160 ms por cuadro · 0,76 s · una vez
+
+Abre la boca (garganta dorada) y se le encienden los ojos: aviso de la embestida.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_rugido_cuadros.png]]
+
+##### Cabeza: parpadeo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_parpadeo.gif]]
+
+**4 cuadros** · 72×72 px · 70 ms por cuadro · 0,28 s · una vez
+
+Los cuatro ojos se cierran a la vez.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_parpadeo_cuadros.png]]
+
+##### Ojos (eslabón): mirar
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_mirar.gif]]
+
+**8 cuadros** · 40×40 px · 120 ms por cuadro · 0,96 s · en bucle
+
+Las pupilas siguen a Eon; el ojo de abajo parpadea a destiempo.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_mirar_cuadros.png]]
+
+##### Ojos (eslabón): parpadeo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_parpadeo.gif]]
+
+**4 cuadros** · 40×40 px · 70 ms por cuadro · 0,28 s · una vez
+
+Parpadeo de los dos ojos.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_parpadeo_cuadros.png]]
+
+##### Ojos (eslabón): llorar
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_llorar.gif]]
+
+**8 cuadros** · 40×40 px · 60–140 ms por cuadro · 0,79 s · una vez
+
+El ojo brilla 0,4 s (aviso) y suelta la lágrima venenosa.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_llorar_cuadros.png]]
+
+##### Cola: pulso
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cola_pulso.gif]]
+
+**4 cuadros** · 56×56 px · 130 ms por cuadro · 0,52 s · en bucle
+
+Las grietas carmesí del punto débil laten.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cola_pulso_cuadros.png]]
+
+##### Lágrima: cae
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_cae.gif]]
+
+**3 cuadros** · 32×24 px · 80 ms por cuadro · 0,24 s · en bucle
+
+Proyectil: cae en vertical con una estela corta.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_cae_cuadros.png]]
+
+##### Lágrima: salpica
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_salpica.gif]]
+
+**6 cuadros** · 32×24 px · 60–110 ms por cuadro · 0,47 s · una vez
+
+Al tocar el suelo: gotitas, charco que se extiende y vapor tóxico.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_salpica_cuadros.png]]
+
+Origen: `Documents/sprites/Jefe_Cienojos/` (aún no hay carpeta en Unity).
 
 ---
 
@@ -2868,6 +2985,22 @@ Icono del inventario:
 
 Origen: `Assets/Resources/Habilidades/filo_dash_cortante_*`. En el juego, el Dash cortante deja una estela roja de siluetas de Eon.
 
+#### Espina de Cienojos (drop de Espinas punzantes)
+
+La suelta Cienojos al morir. Espina curva de obsidiana, rayada como en el boceto, con una gota de veneno en la punta. Lienzo de 32 × 32 px. Solo en Aseprite por ahora.
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Objeto (flota y brilla) | 8 | 110 ms por cuadro | 0,88 s | Sí |
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/espina_de_cienojos.gif]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/espinas_punzantes_icono.png]]
+
+Origen: `Documents/sprites/Jefe_Cienojos/Habilidad_Espinas_Punzantes.aseprite` (etiquetas `icono` y `objeto`).
+
 #### Tajo ardiente (proyectil)
 
 Media luna de fuego que lanza la espada: 30 × 36 px, 4 cuadros en bucle (70 ms) mientras viaja.
@@ -2974,7 +3107,7 @@ Origen: `Assets/Art/Sprites/Environment/Ruina_Interior/ruina_fachada_entrada.png
 
 ## Bocetos del Desarrollo
 
-Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art. Son la base de los diseños de Eon, de los dos primeros jefes, de la magia del Mago oscuro y del interior de su templo. Aquí se guardan como referencia: el arte final está en [[06 - Galería de Assets]] y las reglas de estilo en [[01 - Dirección de Arte]].
+Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art. Son la base de los diseños de Eon, de los tres jefes, de la magia del Mago oscuro y del interior de su templo. Aquí se guardan como referencia: el arte final está en [[06 - Galería de Assets]] y las reglas de estilo en [[01 - Dirección de Arte]].
 
 > [!info] Cómo leer esta página
 > - Cada boceto lleva qué se conservó en el juego y qué cambió.
@@ -2992,6 +3125,7 @@ Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art
 | [[#Templo del Mago — interior]] | Composición de la sala del jefe | Escena `Ruina_Mago` |
 | [[#Templo del Mago — piezas y paleta]] | Casetas, verja, cornisa y columna | Piezas y fondo del templo |
 | [[#Mago oscuro y su magia]] | Jefe 2, sus ataques y su drop | Mago oscuro, efectos v2 y Filo de sombra |
+| [[#Cienojos]] | Jefe 3, sus lágrimas y su drop | Cienojos y la Espina de Cienojos |
 
 ---
 
@@ -3092,6 +3226,23 @@ Hoja del segundo jefe con su magia y su drop.
 - El Dash cortante lo entrega el **Filo de sombra**.
 
 Ver [[06 - Galería de Assets#Jefe 2 — Mago oscuro]], [[06 - Galería de Assets#Efectos del Mago oscuro]] y [[06 - Galería de Assets#Habilidades]].
+
+---
+
+### Jefe 3 — Cienojos
+
+#### Cienojos
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/cienojos_boceto.jpg]]
+
+Hoja del tercer jefe, a lápiz.
+- **Cuerpo:** eslabones de placas en forma de hexágono, cada uno con dos o tres ojos de reptil con arrugas alrededor; algunos asoman un ojo pequeño por el borde.
+- **Cabeza** (abajo a la izquierda): corona de púas y un cuerno en forma de pinza.
+- **Cola** (derecha): púas largas y rectas.
+- **Goteo de lágrimas** (arriba a la derecha): gota, salpicadura, charco y vapor.
+- **Habilidad Espinas Punzantes:** espina curva rayada con una gota en la punta, dentro de su marco de icono.
+
+**En el juego:** el diseño final suaviza las placas (sin esquinas) y usa la paleta de obsidiana azul noche y ojos dorados. La pinza de la cabeza se quitó y las púas pasaron a ser curvas. El goteo de lágrimas sustituye a la lluvia de baba y la espina es el drop de **Espinas punzantes**. Ver [[06 - Galería de Assets#Jefe 3 — Cienojos]] y [[06 - Galería de Assets#Espina de Cienojos (drop de Espinas punzantes)]].
 
 
 ---
@@ -3323,7 +3474,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 
 - **Datos en ScriptableObjects:** habilidades, potenciadores, ataques de jefe y valores de enemigos se editan sin tocar código.
 - **Eventos:** daño, muerte, compra y entrega de habilidad se comunican por eventos (`OnEntityDeath`, `OnAbilityGranted`, `OnXPChanged`).
-- **Reservas (*pools*):** tajos ardientes, orbes de XP, gotas de baba, burbujas de Chasko y cráneos se reutilizan.
+- **Reservas (*pools*):** tajos ardientes, orbes de XP, lágrimas de Cienojos, burbujas de Chasko y cráneos se reutilizan.
 - **Separación lógica/presentación:** las reglas de combate no dependen de animaciones ni VFX.
 
 
@@ -3357,7 +3508,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 | Tasa de fotogramas | 60 FPS estables a 1920 × 1080. |
 | Carga entre zonas | Menos de 5 s. |
 | Latencia de entrada | Respuesta en el mismo fotograma o el siguiente. |
-| Objetos activos | Hasta 3 burbujas de Chasko, 4 cráneos, 6 gotas de baba y ~20 orbes de XP sin caída de FPS. |
+| Objetos activos | Hasta 3 burbujas de Chasko, 4 cráneos, 6 lágrimas de Cienojos y ~20 orbes de XP sin caída de FPS. |
 
 ### Equipo mínimo orientativo
 
@@ -3430,7 +3581,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 
 | Riesgo | Probabilidad | Impacto | Mitigación |
 | --- | --- | --- | --- |
-| La Serpiente gigante (cuerpo segmentado que atraviesa plataformas) es compleja de programar. | Alta | Alto | Prototipar primero con segmentos que siguen un camino (*path following*); limitar a ~18 segmentos. |
+| Cienojos (cuerpo segmentado que atraviesa plataformas) es compleja de programar. | Alta | Alto | Prototipar primero con segmentos que siguen un camino (*path following*); limitar a ~18 segmentos. |
 | Ataques instakill percibidos como injustos. | Media | Alto | Aviso mínimo de 1,5 s, color y sonido exclusivos; pruebas con jugadores nuevos. |
 | Que un jefe o la ruta principal exijan sin querer una habilidad concreta. | Media | Alto | La ruta principal y cada jefe se prueban sin habilidades equipadas; las `AbilityGate` solo se usan en rutas opcionales. |
 | Modificadores de potenciadores aplicados dos veces al reequipar. | Media | Medio | `StatModifiers` recalcula los valores desde la base cada vez que cambia el equipo. |
@@ -3449,7 +3600,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 
 - Prólogo en cómic de 5 páginas con la derrota de Eon.
 - 5 zonas explorables (Playa, Acantilados, Bosque, Ruinas, Archipiélago) y la Isla Final, con rutas opcionales.
-- 3 jefes normales (Chasko, Mago oscuro, Serpiente gigante) y La Entidad.
+- 3 jefes normales (Chasko, Mago oscuro y Cienojos) y La Entidad.
 - 2 enemigos comunes (Aurion y Earthlem), con reaparición.
 - 4 habilidades con 3 ranuras; 6 potenciadores permanentes con 3 ranuras.
 - XP como recurso de intercambio y tienda del mercader en la antesala de cada jefe.
@@ -3477,7 +3628,7 @@ Una escena persistente (`Bootstrap`) contiene los servicios globales que no se d
 | --- | --- |
 | **P0 — Vertical slice** | Playa + Acantilados + antesala con mercader + Jefe 1 + inventario + Doble salto. |
 | **P1** | Bosque + Ruinas + Jefe 2 + Tajo ardiente y Dash cortante. |
-| **P2** | Archipiélago + géiseres + Jefe 3 + Escama pétrea + cinemática de petrificación. |
+| **P2** | Archipiélago + géiseres + Jefe 3 (Cienojos) + Espinas punzantes + cinemática de petrificación. |
 | **P3** | Isla Final + La Entidad + final y créditos. |
 | **P4 (si hay tiempo)** | Desafío «Sin rasguños», pulido de VFX, música dinámica por fases. |
 
@@ -3551,12 +3702,12 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; sala del templo con puertas selladas | Programación | P1 | 4 | Hecho |
 | B-19 | Tajo ardiente (`K` en el prototipo) y Dash cortante | Programación | P1 | 4 | Hecho |
 | B-20 | Géiseres | Programación | P2 | 5 | Hecho (animados) |
-| B-21 | Jefe 3: cuerpo segmentado, baba, cabeza instakill | Programación | P2 | 5 | Pendiente |
-| B-22 | Escama pétrea (`K`): reducción, bloqueo perfecto y aturdimiento | Programación | P2 | 5 | Pendiente |
+| B-21 | Jefe 3 (Cienojos): cuerpo segmentado, lágrimas venenosas, cabeza instakill | Programación | P2 | 5 | Pendiente |
+| B-22 | Espinas punzantes (pasiva): probabilidad de devolver daño al atacante | Programación | P2 | 5 | Pendiente |
 | B-23 | Ilustración de la serpiente petrificada | Arte | P2 | 5 | Pendiente |
 | B-24 | La Entidad: fases y cañones | Programación | P3 | 6 | Pendiente |
 | B-25 | **Cerrar el diseño de la fase 3 de La Entidad** | Diseño | P2 | 5 | Pendiente |
-| B-26 | Nombres de los jefes 2 y 3 | Diseño | P2 | 5 | Pendiente |
+| B-26 | Nombre del jefe 2 | Diseño | P2 | 5 | Pendiente |
 | B-27 | Música por zona y jefe | Audio | P1 | 4–6 | Pendiente |
 | B-28 | Menús, pausa y configuración | UI | P1 | 7 | Pendiente |
 | B-29 | Mapa jugable Eretz (costa a isla final) con enemigos por zona y saltos verificados | Diseño de niveles | P0 | 3 | Hecho |
@@ -3602,9 +3753,9 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Curación y escudo | Orbes y potenciadores de curación y escudo. | No existen: vida y escudo se restauran solo en puntos de control y al vencer a un jefe. | Mecánicas, Economía, Reglas, Objetos |
 | Objetos del mapa | Había objetos que recoger en las zonas. | Eliminados por completo. Solo se obtiene XP. | Objetos, Niveles, Misiones, Economía |
 | Ataque arcano | Orbe mágico. | **Tajo ardiente**: tajo de fuego lanzado por la espada. | Mecánicas, Objetos, Arte, Audio |
-| Habilidad del Jefe 3 | Pendiente. | **Escama pétrea**. | Mecánicas, Objetos, Enemigos |
+| Habilidad del Jefe 3 | Pendiente. | **Espinas punzantes** (pasiva; sustituye a la Escama pétrea). | Mecánicas, Objetos, Enemigos |
 | Habilidades nuevas | Al llenar ranuras había que elegir cuál dejar fuera. | Ninguna se descarta: todas se guardan y el jugador elige cuáles equipar. Ninguna es obligatoria. | Mecánicas, Sistemas, UX |
-| Controles | Ataque `J`, dash `Shift`/`K`, potenciadores `1`/`2`/`3`. | Ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`, dash `Shift`. Sin teclas de potenciador. | Controles, Mecánicas |
+| Controles | Ataque `J`, dash `Shift`/`K`, potenciadores `1`/`2`/`3`. | Ataque `Enter`, Tajo ardiente `J`, dash `Shift`. Sin teclas de potenciador. | Controles, Mecánicas |
 | Inventario | — | Muestra la función y el control de cada habilidad y potenciador. | Sistemas, UI |
 | Sacudida de cámara | Configurable. | Fija; no se puede desactivar. | Sistemas, Accesibilidad, Configuración |
 | Mercader | Varias ubicaciones desde la Playa. | Aparece por primera vez antes del Jefe 1 y después antes de cada jefe. | NPC, Niveles, UX |
@@ -3686,8 +3837,8 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | T-09 | Hacer que Chasko choque contra la pared con la embestida. | Queda aturdido 1,6 s y recibe ×1,5 de daño. |
 | T-10 | Atravesar con dash la burbuja del chasquido. | Sin daño. |
 | T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al muro del templo. |
-| T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
-| T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |
+| T-12 | Tocar la cabeza de Cienojos durante un dash o con Espinas punzantes equipada. | Derrota (instakill); las espinas no se activan. |
+| T-13 | Recibir 20 golpes del Earthlem con Espinas punzantes equipada. | Eon recibe todo el daño; en unos 6 de cada 20 golpes el Earthlem recibe la mitad del daño y parpadea. |
 | T-14 | Volver a una zona superada tras vencer a su jefe. | Los enemigos han reaparecido y dan XP. |
 | T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; puertas selladas en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
 | T-16 | Ser derrotado con 500 XP. | Reaparece en el punto de control con 500 XP, vida y escudo completos. |
@@ -3747,7 +3898,7 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Tema | Detalle |
 | --- | --- |
 | Fase 3 de La Entidad | Cerrar ataques y valores. |
-| Nombres | Jefes 2 y 3. |
+| Nombres | Jefe 2. |
 | Valores de La Entidad | Ajustar con el encuentro ya diseñado. |
 
 
@@ -3760,17 +3911,17 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | Inicio | Prólogo omitible que termina con la derrota de Eon; control inmediato en la Playa. |
 | Movimiento | Salto variable, *coyote time*, *buffer*, dash de 0,20 s con invulnerabilidad (excepto instakill) y 1 dash aéreo. |
 | Combate | Combo de 3 tajos con `Enter`, ataque descendente con rebote, retroceso e *hitstop*. |
-| Daño | Escudo antes que vida; instakill ignora escudo, dash y Escama pétrea. |
+| Daño | Escudo antes que vida; instakill ignora escudo y dash, y no activa Espinas punzantes. |
 | Vida y escudo | Solo se restauran en puntos de control, al vencer a un jefe y al reaparecer. |
 | XP | Orbes atraídos a 3 u; contador del HUD exacto; tope 9999; se conserva al morir. |
 | Tienda | Mercader en cada antesala desde el Jefe 1; compra única; catálogo que crece por antesala; regalo antes de la Isla Final. |
 | Inventario | 3 ranuras de habilidad y 3 de potenciador; descripción de función y control; cambios bloqueados dentro de arenas. |
 | Potenciadores | 6 tipos, permanentes, siempre activos mientras están equipados; sin controles. |
-| Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Escama pétrea (`K`) funcionan solo equipados; ninguna se descarta. |
+| Habilidades | Doble salto, Tajo ardiente (`J`), Dash cortante y Espinas punzantes funcionan solo equipados; ninguna se descarta. |
 | Enemigos | Aurion y Earthlem con sus ataques, defensas, avisos y XP; reaparecen. |
 | Jefe 1 | Chasquido con burbuja (3 en abanico en fase 2), embestida con aturdimiento al chocar y onda de choque en fase 2; muros de roca que cierran la arena y se rompen al vencerlo; entrega Doble salto. |
 | Jefe 2 | Opcional: se entra al templo con Interactuar y se puede pasar de largo. Sala plana cerrada por los muros del templo y puertas selladas durante la pelea; llamaradas, ola de picos con zona segura junto al muro, escudo, cráneos y teletransporte al extremo opuesto con 1 s de exposición; entrega Tajo ardiente y Dash cortante. |
-| Jefe 3 | Cuerpo dañable, cola débil, lluvia de baba, cabeza instakill; límites invisibles; entrega Escama pétrea; petrificación y puente al morir. |
+| Jefe 3 | Cienojos: cuerpo de ojos dañable, cola débil, goteo de lágrimas venenosas, cabeza instakill; límites invisibles; entrega Espinas punzantes; petrificación y puente al morir. |
 | La Entidad | Fases según [[03 - Enemigos y NPC]]; cañones funcionales; límites invisibles; victoria lleva a créditos. |
 | Géiseres | Ciclo de reposo, aviso y erupción; lanzamiento al destino correcto. |
 | Guardado | Todo lo listado en [[04 - Guardado y Configuración]] se conserva. |
@@ -3790,8 +3941,8 @@ Hitos en orden. No se fijan fechas que el equipo no haya acordado; cada hito se 
 | **Habilidad** | Acción o mejora permanente que entrega un jefe; solo funciona equipada (3 ranuras). Ninguna se descarta. |
 | **Pasiva / activa** | Una habilidad pasiva modifica una acción existente; una activa tiene tecla propia (`J`, `K`). |
 | **Tajo ardiente** | Ataque arcano: la espada lanza un tajo de fuego a distancia. |
-| **Escama pétrea** | Petrificación defensiva con bloqueo perfecto. |
-| **Instakill** | Ataque que derrota a Eon al instante sin importar escudo, dash o Escama pétrea. |
+| **Espinas punzantes** | Habilidad pasiva del Jefe 3: probabilidad de devolver parte del daño al atacante. |
+| **Instakill** | Ataque que derrota a Eon al instante sin importar escudo o dash. |
 | **Géiser** | Elemento que lanza a Eon de una isla a otra; sustituye a los trampolines. |
 | **Punto de control** | Lugar donde se guarda, se restauran vida y escudo, y se reaparece. |
 | **Antesala** | Zona segura antes de cada jefe, con el mercader y un punto de control. |
@@ -3853,10 +4004,10 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-15 | Contenido | No hay objetos que recoger en el mapa aparte de la XP. | Petición del equipo. |
 | D-16 | Mecánicas | Doble salto es habilidad del Jefe 1 y el jugador decide si la equipa; la ruta principal no lo exige. | Petición del equipo. |
 | D-17 | Mecánicas | El ataque arcano es el **Tajo ardiente**: un tajo de fuego lanzado por la espada. | Petición del equipo. |
-| D-18 | Mecánicas | La habilidad del Jefe 3 es la **Escama pétrea**. | Petición del equipo. |
-| D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Escama pétrea `K`; Dash `Shift izquierdo`. | Petición del equipo. |
+| D-18 | Mecánicas | La habilidad del Jefe 3 es **Espinas punzantes** (antes Escama pétrea; ver D-49). | Petición del equipo. |
+| D-19 | Controles | Ataque `Enter`; Tajo ardiente `J`; Dash `Shift izquierdo`. | Petición del equipo. |
 | D-20 | Mecánicas | Dash unificado: 0,20 s, 4 u, recarga 1,2 s. | Unificar valores que eran distintos entre páginas. |
-| D-21 | Mecánicas | Los instakill ignoran escudo, dash y Escama pétrea. | Mantener la amenaza de la cabeza de la serpiente. |
+| D-21 | Mecánicas | Los instakill ignoran escudo y dash, y no activan Espinas punzantes. | Mantener la amenaza de la cabeza de la serpiente. |
 | D-22 | Mecánicas | Caer al vacío resta 25 HP y devuelve al último suelo seguro. | En un mundo por zonas, reiniciar la zona sería demasiado castigo. |
 | D-23 | Mecánicas | Los trampolines se sustituyen por géiseres. | Petición del equipo. |
 | D-24 | Cámara | La sacudida de cámara es fija y no se puede desactivar. | Petición del equipo. |
@@ -3884,17 +4035,20 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | D-45 | Jefes | Sin pilares que emergen en el Jefe 2: los muros del templo cierran la sala y las puertas se sellan durante cualquier pelea de jefe. La cámara no enseña nada más allá de los muros. Sustituye a D-28 para el Jefe 2. | Los pilares tapaban la sala corta; evita huir del combate. |
 | D-46 | Arte | El Mago tiene la escala de Eon (56 × 66 px); sus ojos cambian de color al conjurar; aparece y desaparece en un remolino antihorario. El templo es gótico, de noche y sin luz del sol, con columnas, arcos y ladrillo de una misma textura en gris. | Petición del equipo y referencia aprobada. |
 | D-47 | Mecánicas | En el prototipo el Tajo ardiente va en `K` / clic derecho / `B` porque `J` es el ataque con espada. | Evitar conflicto de teclas hasta unificar el mapa de controles (P-06). |
+| D-48 | Jefes | El Jefe 3 se llama **Cienojos**: serpiente de obsidiana azul noche cubierta de ojos dorados, según el boceto de Joel. Sprite en tres partes: cabeza, ojos (eslabón) y cola. | Diseño propio del equipo. |
+| D-49 | Habilidades | **Espinas punzantes** sustituye a la Escama pétrea: pasiva, 30 % de probabilidad de devolver el 50 % del daño al atacante (como «Espinas» de Minecraft). Se elimina la habilidad de petrificación; el puente petrificado se mantiene. | Petición del equipo. |
+| D-50 | Jefes | La lluvia de baba del Jefe 3 pasa a ser un goteo de lágrimas venenosas desde los ojos de sus eslabones. | Encaja con el diseño de Cienojos. |
 
 ### Decisiones pendientes
 
 | # | Tema | Opciones |
 | --- | --- | --- |
 | P-01 | Fase 3 de La Entidad | Por definir. |
-| P-02 | Nombres | Jefes 2 y 3. |
+| P-02 | Nombres | Jefe 2. |
 | P-03 | Herramienta de audio | Por definir. |
 | P-04 | Roles del equipo | Por asignar. |
 | P-05 | Orbes de vida del prototipo | Quitarlos (cumple la regla de no curar en el campo) o mantenerlos solo en el tramo de tutorial. |
-| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`, Escama pétrea `K`) con el del prototipo (ataque `J`, Tajo ardiente `K`) y reasignar la Escama pétrea. |
+| P-06 | Mapa de controles | Unificar el del GDD (ataque `Enter`, Tajo ardiente `J`) con el del prototipo (ataque `J`, Tajo ardiente `K`). |
 
 
 ---
@@ -3911,6 +4065,7 @@ Decisiones vigentes a partir de la versión 0.2.1 (07/11/2026).
 | 0.4.0   | 09/11/2026 | Jefe 2 (Mago oscuro) implementado y **opcional**: diseño, ataques y valores de Unity, ojos que cambian al conjurar, remolino al aparecer y desaparecer; pelea dentro del templo en la escena `Ruina_Mago` (sala de 44 u, puertas selladas, cámara limitada); entrada al templo en Eretz con Interactuar, fachada y ruinas detrás; Tajo ardiente (`K` en el prototipo) y Dash cortante entregados por la Brasa del Mago y el Filo de sombra; estado entre escenas; galería con el Mago, su magia, sus objetos y el templo; pruebas T-23 a T-30. | Vargas Pérez Joel |
 | 0.4.1   | 10/11/2026 | Efectos v2 del Mago oscuro en la Galería (sustituyen a los anteriores): aviso con columna de fuego, bola de fuego con estela, explosión con humo, grietas incandescentes y picos de piedra con lava que escurre. Pendiente pasarlos a Unity (B-37). | Vargas Pérez Joel |
 | 0.4.2   | 10/11/2026 | Nueva página [[07 - Bocetos del Desarrollo]] con los 7 bocetos a mano de la fase inicial: diseño, carrera y poses de ataque de Eon; Chasko y el Doble salto; interior y piezas del templo del Mago con su paleta de grises; el Mago oscuro, su magia y el Dash cortante. Cada boceto indica qué se conservó en el juego. Además: el escudo arcano del Mago solo empuja a Eon cuerpo a cuerpo (el Tajo ardiente desde lejos ya no lo empuja), pruebas T-27 y T-34, herramienta para forzar el escudo, pruebas repetidas renumeradas (T-31 a T-33) y estado actual del escudo de Eon en B-04. Los enemigos comunes quedan en dos (Aurion y Earthlem). | Vargas Pérez Joel |
+| 0.4.3   | 10/11/2026 | El Jefe 3 pasa a llamarse **Cienojos** con el diseño de Joel (serpiente de obsidiana azul noche cubierta de ojos dorados; sprite en cabeza, ojos y cola) y su arte entra en la Galería y en los Bocetos. La lluvia de baba pasa a ser un goteo de lágrimas venenosas. **Espinas punzantes** (pasiva: probabilidad de devolver daño al atacante) sustituye a la Escama pétrea; se quitan su tecla `K`, el bloqueo perfecto y sus animaciones. El puente petrificado se mantiene. | Vargas Pérez Joel |
 
 ### Convención
 

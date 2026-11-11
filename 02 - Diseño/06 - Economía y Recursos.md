@@ -56,7 +56,7 @@ El catálogo de cada antesala incluye también los potenciadores de antesalas an
 ## Reglas
 
 1. **Escudo antes que vida:** la vida no baja mientras quede al menos 1 SP.
-2. **Instakill:** ignora escudo, la invulnerabilidad del dash y la Escama pétrea.
+2. **Instakill:** ignora escudo y la invulnerabilidad del dash, y no activa Espinas punzantes.
 3. **Sin curación en campo:** vida y escudo solo se restauran en puntos de control, al vencer a un jefe o al reaparecer.
 4. **Persistencia:** XP, potenciadores y habilidades se conservan al ser derrotado.
 5. **Reaparición de enemigos:** los enemigos comunes reaparecen; los jefes derrotados no.

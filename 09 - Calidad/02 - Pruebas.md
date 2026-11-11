@@ -27,8 +27,8 @@
 | T-09 | Hacer que Chasko choque contra la pared con la embestida. | Queda aturdido 1,6 s y recibe ×1,5 de daño. |
 | T-10 | Atravesar con dash la burbuja del chasquido. | Sin daño. |
 | T-11 | Escapar de la ola de picos corriendo hacia el extremo. | Sin daño al llegar a la zona segura junto al muro del templo. |
-| T-12 | Tocar la cabeza de la serpiente durante un dash o con Escama pétrea. | Derrota (instakill). |
-| T-13 | Bloqueo perfecto con Escama pétrea contra el barrido del Earthlem. | Sin daño; Earthlem aturdido 1 s. |
+| T-12 | Tocar la cabeza de Cienojos durante un dash o con Espinas punzantes equipada. | Derrota (instakill); las espinas no se activan. |
+| T-13 | Recibir 20 golpes del Earthlem con Espinas punzantes equipada. | Eon recibe todo el daño; en unos 6 de cada 20 golpes el Earthlem recibe la mitad del daño y parpadea. |
 | T-14 | Volver a una zona superada tras vencer a su jefe. | Los enemigos han reaparecido y dan XP. |
 | T-15 | Entrar a cada arena de jefe e intentar salir. | Muros de roca en el Jefe 1; puertas selladas en el Jefe 2; límite invisible en el Jefe 3 y La Entidad. |
 | T-16 | Ser derrotado con 500 XP. | Reaparece en el punto de control con 500 XP, vida y escudo completos. |

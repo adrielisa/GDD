@@ -22,14 +22,14 @@ Ser el héroe caído que no acepta la derrota y vuelve más fuerte, no por desti
 ## Propuesta de valor
 
 - Un protagonista que empieza derrotado: el cómic inicial muestra la caída de Eon y el control se entrega justo después.
-- Tres jefes con identidad propia (Chasko, un camarón tipo escorpión en la costa, un mago oscuro entre ruinas y una serpiente gigante entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
+- Tres jefes con identidad propia (Chasko, un camarón tipo escorpión en la costa, un mago oscuro entre ruinas y Cienojos, una serpiente gigante cubierta de ojos, entre islas de tierra flotante), cada uno con una habilidad que cambia la forma de jugar.
 - Una decisión constante: solo caben **3 habilidades** y **3 potenciadores** equipados a la vez.
 - Un mundo medieval de fantasía con estética colorida y carisma en los diseños.
 
 ## Características principales
 
 1. **Revancha estructurada:** tres jefes antes de volver a enfrentar a La Entidad.
-2. **Habilidades por jefe:** Doble salto, Tajo ardiente, Dash cortante y Escama pétrea. Ninguna se descarta; el jugador elige cuáles equipar.
+2. **Habilidades por jefe:** Doble salto, Tajo ardiente, Dash cortante y Espinas punzantes. Ninguna se descarta; el jugador elige cuáles equipar.
 3. **XP para el mercader:** los enemigos comunes sueltan XP que se cambia por potenciadores permanentes. Los enemigos reaparecen y se puede volver a zonas superadas para acumular más.
 4. **Vida que se gana:** no hay curación en el campo; vida y escudo solo se restauran en puntos de control o al vencer a un jefe.
 5. **Géiseres:** el cruce entre ciertas islas se hace con géiseres que lanzan a Eon por el aire.

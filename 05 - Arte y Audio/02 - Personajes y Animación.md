@@ -6,13 +6,13 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 
 | Personaje | Sprite | Animaciones | VFX | Estado |
 | --- | --- | --- | --- | --- |
-| Eon | 64 × 64 | Idle, correr, saltar, doble salto, caer, aterrizar, dash, ataque ×3, ataque descendente, tajo ardiente, escama pétrea (petrificarse, bloqueo perfecto), recibir daño, muerte, interactuar | Estelas de espada (normal y roja con Filo), polvo de aterrizaje, ráfaga del doble salto, estela de dash (normal y cortante), media luna de fuego del tajo ardiente, piel de piedra y destello de bloqueo | Hechos: reposo, reposo de combate, correr, saltar, caer, 3 ataques, daño y muerte. Pendientes: doble salto, dash, tajo ardiente, escama pétrea, interactuar. Ver [[06 - Galería de Assets]]. |
+| Eon | 64 × 64 | Idle, correr, saltar, doble salto, caer, aterrizar, dash, ataque ×3, ataque descendente, tajo ardiente, recibir daño, muerte, interactuar | Estelas de espada (normal y roja con Filo), polvo de aterrizaje, ráfaga del doble salto, estela de dash (normal y cortante), media luna de fuego del tajo ardiente, espinas que brotan al devolver daño | Hechos: reposo, reposo de combate, correr, saltar, caer, 3 ataques, daño y muerte. Pendientes: doble salto, dash, tajo ardiente, interactuar. Ver [[06 - Galería de Assets]]. |
 | Mercader | 64 × 64 | Idle, hablar, entregar | — | Pendiente |
 | Aurion | 48 × 48 | Flotar, cargar, embestir, aturdido, muerte | Núcleo rojo, estela | Vuelo hecho (56 × 56); el resto pendiente. |
 | Earthlem | 96 × 96 | Enterrado, emerger, caminar, barrido, aplastamiento, enterrarse, impacto, muerte | Escombros, onda sísmica | Emerger, reposo y ataque hechos (128 × 112); el resto pendiente. |
 | Jefe 1 — Chasko | 90 × 90 | Idle, caminar, chasquido (carga, disparo, recuperación), recibir daño, muerte | Burbuja de cavitación (46 × 46: avanzar, estallido), parpadeo de embestida, onda de choque | Hecho (`Chasko.aseprite`) |
 | Jefe 2 — Mago oscuro | 56 × 66 (escala de Eon) | Reposo, reposo con escudo, daño, conjurar llamaradas, golpear el suelo (picos), escudo, invocar cráneos, expuesto, desaparecer / aparecer (remolino antihorario), muerte | Columna de fuego de aviso, bola de fuego y explosión; grietas incandescentes y picos de piedra con lava (versión 2, aún sin pasar a Unity); esfera violeta, cráneos de fuego, humo negro | Hecho (`Mago_Oscuro.aseprite`) |
-| Jefe 3 — Serpiente gigante | Cabeza 192 × 192, segmento 96 × 96, cola | Mandíbula, segmento hinchado, petrificación | Gotas y salpicadura de baba, polvo al atravesar islas | Pendiente |
+| Jefe 3 — Cienojos | Cabeza 72 × 72, ojos (eslabón) 40 × 40, cola 56 × 56, lágrima 32 × 24 | Cabeza: mover, parpadeo, rugido. Ojos: mirar, parpadeo, llorar. Cola: pulso | Lágrima que cae y salpica; polvo al atravesar islas | Diseño hecho en Aseprite (`Documents/sprites/Jefe_Cienojos/`); falta pasarlo a Unity |
 | La Entidad | Escala de fondo y escala de cumbre | Escalar, golpe de mano, barrido, invocar, apertura del rostro, derrota | Ondas, sombras de impacto, núcleo | Cuerpo por piezas, manos (reposo, cansada, rota), fondo y efectos de rayo, tornado y orbe hechos. |
 
 ## Animaciones de Eon
@@ -20,7 +20,7 @@ Lista de sprites y animaciones necesarios. Lo que ya está hecho se ve animado e
 | Grupo | Animaciones | Fotogramas orientativos |
 | --- | --- | --- |
 | Movimiento | Idle, correr, saltar, doble salto, caer, aterrizar | 6 / 8 / 3 / 4 / 2 / 3 |
-| Combate | Tajo 1, 2, 3; descendente; dash; tajo ardiente; escama pétrea | 4 / 4 / 6 / 3 / 3 / 5 / 4 |
+| Combate | Tajo 1, 2, 3; descendente; dash; tajo ardiente | 4 / 4 / 6 / 3 / 3 / 5 |
 | Interacción | Interactuar | 4 |
 | Daño | Impacto, aturdido | 2 / 4 |
 | Derrota | Colapso | 8 |

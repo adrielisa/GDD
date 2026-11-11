@@ -1,6 +1,6 @@
 # Bocetos del Desarrollo
 
-Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art. Son la base de los diseños de Eon, de los dos primeros jefes, de la magia del Mago oscuro y del interior de su templo. Aquí se guardan como referencia: el arte final está en [[06 - Galería de Assets]] y las reglas de estilo en [[01 - Dirección de Arte]].
+Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art. Son la base de los diseños de Eon, de los tres jefes, de la magia del Mago oscuro y del interior de su templo. Aquí se guardan como referencia: el arte final está en [[06 - Galería de Assets]] y las reglas de estilo en [[01 - Dirección de Arte]].
 
 > [!info] Cómo leer esta página
 > - Cada boceto lleva qué se conservó en el juego y qué cambió.
@@ -18,6 +18,7 @@ Dibujos a mano de la **fase inicial del desarrollo**, antes de pasar a pixel art
 | [[#Templo del Mago — interior]] | Composición de la sala del jefe | Escena `Ruina_Mago` |
 | [[#Templo del Mago — piezas y paleta]] | Casetas, verja, cornisa y columna | Piezas y fondo del templo |
 | [[#Mago oscuro y su magia]] | Jefe 2, sus ataques y su drop | Mago oscuro, efectos v2 y Filo de sombra |
+| [[#Cienojos]] | Jefe 3, sus lágrimas y su drop | Cienojos y la Espina de Cienojos |
 
 ---
 
@@ -118,5 +119,22 @@ Hoja del segundo jefe con su magia y su drop.
 - El Dash cortante lo entrega el **Filo de sombra**.
 
 Ver [[06 - Galería de Assets#Jefe 2 — Mago oscuro]], [[06 - Galería de Assets#Efectos del Mago oscuro]] y [[06 - Galería de Assets#Habilidades]].
+
+---
+
+## Jefe 3 — Cienojos
+
+### Cienojos
+
+![[05 - Arte y Audio/Galería de Assets/Bocetos/cienojos_boceto.jpg]]
+
+Hoja del tercer jefe, a lápiz.
+- **Cuerpo:** eslabones de placas en forma de hexágono, cada uno con dos o tres ojos de reptil con arrugas alrededor; algunos asoman un ojo pequeño por el borde.
+- **Cabeza** (abajo a la izquierda): corona de púas y un cuerno en forma de pinza.
+- **Cola** (derecha): púas largas y rectas.
+- **Goteo de lágrimas** (arriba a la derecha): gota, salpicadura, charco y vapor.
+- **Habilidad Espinas Punzantes:** espina curva rayada con una gota en la punta, dentro de su marco de icono.
+
+**En el juego:** el diseño final suaviza las placas (sin esquinas) y usa la paleta de obsidiana azul noche y ojos dorados. La pinza de la cabeza se quitó y las púas pasaron a ser curvas. El goteo de lágrimas sustituye a la lluvia de baba y la espina es el drop de **Espinas punzantes**. Ver [[06 - Galería de Assets#Jefe 3 — Cienojos]] y [[06 - Galería de Assets#Espina de Cienojos (drop de Espinas punzantes)]].
 
 > **Navegación:** [[00 - Índice]] · ← [[06 - Galería de Assets]]

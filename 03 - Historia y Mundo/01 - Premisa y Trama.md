@@ -10,7 +10,7 @@ En un mundo más allá de la Vía Láctea existe el planeta Eretz (nombre de la 
 
 Días después, Eon despierta solo en una playa entre ruinas. No tiene su armadura ni su espada legendaria, y su poder ya no le pertenece: se repartió entre las criaturas que sobrevivieron al cataclismo. Con la espada que le queda, Eon recorre la costa, los bosques, las ruinas y las islas de tierra flotante. Cada enemigo vencido le da experiencia que un mercader errante, que aparece siempre antes de cada gran combate, acepta a cambio de potenciadores; cada jefe vencido le devuelve una habilidad.
 
-Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flotantes, su cuerpo se petrifica y forma un puente hacia la isla final. Allí, Eon enfrenta de nuevo a La Entidad. Esta vez no lo sostiene una profecía, sino todo lo que aprendió y ganó en el camino.
+Al derrotar a la tercera criatura, Cienojos, una serpiente gigante cubierta de ojos que rodea las islas flotantes, su cuerpo se petrifica y forma un puente hacia la isla final. Allí, Eon enfrenta de nuevo a La Entidad. Esta vez no lo sostiene una profecía, sino todo lo que aprendió y ganó en el camino.
 
 ## Estructura narrativa
 
@@ -28,9 +28,9 @@ Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flo
 
 ### Acto 3 — El puente de piedra
 
-**Contexto:** el Archipiélago de Tierra, la serpiente gigante y la isla final.
+**Contexto:** el Archipiélago de Tierra, Cienojos y la isla final.
 
-**Enfoque narrativo:** Eon vence a la serpiente gigante y recupera la escama pétrea; el cuerpo de la serpiente se petrifica y abre el camino hacia la isla final. La revancha contra La Entidad cierra el arco: el héroe no gana por estar destinado, sino porque decidió volver.
+**Enfoque narrativo:** Eon vence a Cienojos y obtiene las espinas punzantes; el cuerpo de la serpiente se petrifica y abre el camino hacia la isla final. La revancha contra La Entidad cierra el arco: el héroe no gana por estar destinado, sino porque decidió volver.
 
 ## Eventos principales
 
@@ -41,7 +41,7 @@ Al derrotar a la tercera criatura, una serpiente gigante que rodea las islas flo
 | 3 | El mercader | Lo encuentra en la antesala del Jefe 1. | Descubre que la XP sirve para comprar potenciadores. |
 | 4 | La marea viva | Derrota al Jefe 1 en la Arena de la Marea. | Recupera el **Doble salto**. |
 | 5 | Las ruinas en llamas | Derrota al Jefe 2 en las Ruinas Abandonadas. | Recupera el **Tajo ardiente** y el **Dash cortante**; se activan los géiseres hacia el Archipiélago. |
-| 6 | La serpiente de piedra | Derrota al Jefe 3 en el Archipiélago de Tierra. | Recupera la **Escama pétrea**. Cinemática: la serpiente se petrifica y forma el puente. |
+| 6 | La serpiente de piedra | Derrota al Jefe 3 en el Archipiélago de Tierra. | Obtiene **Espinas punzantes**. Cinemática: la serpiente se petrifica y forma el puente. |
 | 7 | La revancha | Cruza el puente y enfrenta a La Entidad. | Victoria: final y créditos. |
 
 ## Final

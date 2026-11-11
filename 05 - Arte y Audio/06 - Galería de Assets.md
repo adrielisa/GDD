@@ -12,16 +12,16 @@ Catálogo visual de todo el arte que ya está en el proyecto de Unity: Eon, enem
 
 | Grupo         | Personaje / efecto                                     | Animaciones               | Estado                                                                                                           |
 | ------------- | ------------------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente, escama pétrea e interactuar. |
+| Protagonista  | Eon                                                    | 10                        | Movimiento, ataques, daño y muerte hechos; faltan doble salto, dash, tajo ardiente e interactuar. |
 | Enemigo común | Aurion                                                 | 1                         | Vuelo hecho; faltan cargar, embestir, aturdido y muerte.                                                         |
 | Enemigo común | Earthlem                                               | 3                         | Emerger, reposo y ataque hechos; faltan caminar, barrido, enterrarse, impacto y muerte.                          |
 | Jefe 1        | Chasko                                                 | 5                         | Completo, con su burbuja.                                                                                        |
 | Jefe final    | La Entidad (Titán Blanco)                              | Piezas + mano (3 estados) | Cuerpo por piezas, manos, fondo y 3 ataques con efecto hechos.                                                   |
 | Jefe 2        | Mago oscuro                                            | 10 (+ aparición)          | Completo, con sus 8 efectos de magia.                                                                           |
-| Jefe 3        | Serpiente gigante                                      | 0                         | Sin arte.                                                                                                        |
+| Jefe 3        | Cienojos                                               | 9 (cabeza, ojos, cola, lágrima) | Diseño hecho en Aseprite; falta pasarlo a Unity.                                                                 |
 | Efectos       | Rayo, tornado, orbe, burbuja; magia del Mago                           | 4                         | Hechos.                                                                                                          |
 | Entornos      | Costa, zona 3, islas, géiser, columnas, muros de arena, templo del Mago | —                         | Hechos para el mapa jugable (ver al final).                                                                      |
-| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra y tajo ardiente | 5 | Hechos. |
+| Habilidades | Camarón de Chasko, burbuja del doble salto, Brasa del Mago, Filo de sombra, tajo ardiente y Espina de Cienojos | 6 | Hechos (la Espina de Cienojos, solo en Aseprite). |
 
 ## Comparación de escala
 
@@ -563,9 +563,125 @@ Origen: `Assets/Resources/Mago_Oscuro/muerte_*`
 
 Sus conjuros usan los [[#Efectos del Mago oscuro]].
 
-### Jefe 3 — Serpiente gigante
+### Jefe 3 — Cienojos
 
-Sin arte todavía.
+Serpiente de obsidiana azul noche con brillo turquesa, cubierta de ojos dorados que lloran veneno. Diseño de Joel a partir de su [[07 - Bocetos del Desarrollo#Cienojos|boceto]]. Reglas de combate en [[03 - Enemigos y NPC]]. **Todavía no está en Unity:** solo en Aseprite.
+
+| Dato | Valor |
+| --- | --- |
+| Partes | Cabeza 72 × 72 px · Ojos (eslabón) 40 × 40 px · Cola 56 × 56 px · Lágrima 32 × 24 px |
+| Píxeles por unidad | 21,5 (la misma escala que Eon; un eslabón mide más o menos lo que Eon) |
+| Pivote | Centro. La cabeza mira a la derecha y gira con el rumbo; los eslabones y la cola no giran |
+| Fuente | `Documents/sprites/Jefe_Cienojos/Cienojos_Cabeza.aseprite`, `Cienojos_Ojos.aseprite`, `Cienojos_Cola.aseprite`, `Cienojos_Lagrima.aseprite` (una etiqueta por animación) |
+| Paleta | Obsidiana `#07081A`–`#25306A`, brillo turquesa `#5CB4B2`, ojos dorados `#F7C835`, lágrimas `#22B47E`, grietas de la cola `#D01E4E` |
+
+En movimiento (como el Driller actual: la cabeza manda y cada eslabón sigue al anterior), con Eon para la escala:
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_en_movimiento.gif]]
+
+| Parte | Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- | --- |
+| Cabeza | Mover | 6 | 110 ms por cuadro | 0,66 s | Sí |
+| Cabeza | Parpadeo | 4 | 70 ms por cuadro | 0,28 s | No |
+| Cabeza | Rugido (aviso de embestida) | 6 | 90–160 ms por cuadro | 0,76 s | No |
+| Ojos | Mirar | 8 | 120 ms por cuadro | 0,96 s | Sí |
+| Ojos | Parpadeo | 4 | 70 ms por cuadro | 0,28 s | No |
+| Ojos | Llorar | 8 | 60–140 ms por cuadro | 0,79 s | No |
+| Cola | Pulso | 4 | 130 ms por cuadro | 0,52 s | Sí (ida y vuelta) |
+| Lágrima | Cae | 3 | 80 ms por cuadro | 0,24 s | Sí |
+| Lágrima | Salpica | 6 | 60–110 ms por cuadro | 0,47 s | No |
+
+#### Cabeza: mover
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_mover.gif]]
+
+**6 cuadros** · 72×72 px · 110 ms por cuadro · 0,66 s · en bucle
+
+La mandíbula se entreabre mientras avanza.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_mover_cuadros.png]]
+
+#### Cabeza: rugido
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_rugido.gif]]
+
+**6 cuadros** · 72×72 px · 90–160 ms por cuadro · 0,76 s · una vez
+
+Abre la boca (garganta dorada) y se le encienden los ojos: aviso de la embestida.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_rugido_cuadros.png]]
+
+#### Cabeza: parpadeo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_parpadeo.gif]]
+
+**4 cuadros** · 72×72 px · 70 ms por cuadro · 0,28 s · una vez
+
+Los cuatro ojos se cierran a la vez.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cabeza_parpadeo_cuadros.png]]
+
+#### Ojos (eslabón): mirar
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_mirar.gif]]
+
+**8 cuadros** · 40×40 px · 120 ms por cuadro · 0,96 s · en bucle
+
+Las pupilas siguen a Eon; el ojo de abajo parpadea a destiempo.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_mirar_cuadros.png]]
+
+#### Ojos (eslabón): parpadeo
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_parpadeo.gif]]
+
+**4 cuadros** · 40×40 px · 70 ms por cuadro · 0,28 s · una vez
+
+Parpadeo de los dos ojos.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_parpadeo_cuadros.png]]
+
+#### Ojos (eslabón): llorar
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_llorar.gif]]
+
+**8 cuadros** · 40×40 px · 60–140 ms por cuadro · 0,79 s · una vez
+
+El ojo brilla 0,4 s (aviso) y suelta la lágrima venenosa.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_ojos_llorar_cuadros.png]]
+
+#### Cola: pulso
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cola_pulso.gif]]
+
+**4 cuadros** · 56×56 px · 130 ms por cuadro · 0,52 s · en bucle
+
+Las grietas carmesí del punto débil laten.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_cola_pulso_cuadros.png]]
+
+#### Lágrima: cae
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_cae.gif]]
+
+**3 cuadros** · 32×24 px · 80 ms por cuadro · 0,24 s · en bucle
+
+Proyectil: cae en vertical con una estela corta.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_cae_cuadros.png]]
+
+#### Lágrima: salpica
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_salpica.gif]]
+
+**6 cuadros** · 32×24 px · 60–110 ms por cuadro · 0,47 s · una vez
+
+Al tocar el suelo: gotitas, charco que se extiende y vapor tóxico.
+
+![[05 - Arte y Audio/Galería de Assets/Jefes/Cienojos/cienojos_lagrima_salpica_cuadros.png]]
+
+Origen: `Documents/sprites/Jefe_Cienojos/` (aún no hay carpeta en Unity).
 
 ---
 
@@ -885,6 +1001,22 @@ Icono del inventario:
 ![[05 - Arte y Audio/Galería de Assets/Habilidades/filo_dash_cortante_icono.png]]
 
 Origen: `Assets/Resources/Habilidades/filo_dash_cortante_*`. En el juego, el Dash cortante deja una estela roja de siluetas de Eon.
+
+### Espina de Cienojos (drop de Espinas punzantes)
+
+La suelta Cienojos al morir. Espina curva de obsidiana, rayada como en el boceto, con una gota de veneno en la punta. Lienzo de 32 × 32 px. Solo en Aseprite por ahora.
+
+| Animación | Cuadros | Velocidad | Duración | Bucle |
+| --- | --- | --- | --- | --- |
+| Objeto (flota y brilla) | 8 | 110 ms por cuadro | 0,88 s | Sí |
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/espina_de_cienojos.gif]]
+
+Icono del inventario:
+
+![[05 - Arte y Audio/Galería de Assets/Habilidades/espinas_punzantes_icono.png]]
+
+Origen: `Documents/sprites/Jefe_Cienojos/Habilidad_Espinas_Punzantes.aseprite` (etiquetas `icono` y `objeto`).
 
 ### Tajo ardiente (proyectil)
 

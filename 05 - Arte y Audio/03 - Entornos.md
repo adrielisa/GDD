@@ -52,10 +52,10 @@ Arte ya usado en el mapa jugable ([[02 - Niveles]]). Las imágenes están en [[0
 
 - **Agua:** oleaje, salpicaduras y burbujas del Jefe 1.
 - **Fuego y magma:** columnas de fuego de aviso, bolas de fuego que estallan en explosión con humo, picos de piedra con lava que escurre, cráneos de fuego.
-- **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), piel de piedra de la Escama pétrea.
+- **Fuego y magia de Eon:** tajo ardiente (media luna de fuego), espinas que brotan del cuerpo con Espinas punzantes.
 - **Magia del Mago:** ojos que pasan de cian a naranja al conjurar, escudo arcano violeta, cráneos de fuego, remolino al aparecer y desaparecer, humo negro en el destino del teletransporte.
 - **Géiseres:** burbujeo de aviso, columna de vapor y agua.
-- **Baba:** gotas verdes y salpicadura al impactar.
+- **Lágrimas de Cienojos:** gotas de veneno verde turquesa y salpicadura con vapor al impactar.
 - **Petrificación:** grietas grises que recorren el cuerpo de la serpiente.
 - **Impactos:** chispas de espada, polvo de aterrizaje, escombros del Earthlem.
 - **Clima:** niebla en el Archipiélago; ceniza en las Ruinas.

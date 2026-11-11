@@ -20,7 +20,7 @@ True Hero
 ├── Bloque 3 — El cielo roto
 │   ├── Archipiélago de Tierra (zona explorable con géiseres)
 │   ├── Antesala: mercader + punto de control
-│   └── Anillo de Islas → Jefe 3: Serpiente gigante → Escama pétrea
+│   └── Anillo de Islas → Jefe 3: Cienojos → Espinas punzantes
 │       └── Cinemática: la serpiente se petrifica
 └── Final
     ├── Puente de la Serpiente

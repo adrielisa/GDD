@@ -29,7 +29,7 @@ Tras el tercer jefe el bucle se cierra: la serpiente petrificada abre el paso a 
 | Salto | Navegar plataformas y evitar ataques rasantes. | Con el Doble salto equipado alcanza rutas más altas. |
 | Dash | Esquivar y reposicionarse. | Breve invulnerabilidad; con el Dash cortante también hace daño. |
 | Tajo ardiente | Atacar a distancia (Jefe 2). | Tajo de fuego que sale de la espada y atraviesa enemigos. |
-| Escama pétrea | Defenderse (Jefe 3). | Reduce el daño; el bloqueo perfecto aturde al atacante. |
+| Espinas punzantes | Castigar a quien lo golpea (Jefe 3). | Probabilidad de devolver parte del daño al atacante. |
 | Interactuar | Mercader, puntos de control y cañones. | Abre la tienda, guarda y restaura vida, dispara. |
 | Montar un géiser | Cruzar entre islas. | Lanzamiento en arco hacia la isla siguiente. |
 

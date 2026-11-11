@@ -12,7 +12,7 @@
 | Recarga de dash | Junto a Eon | Pequeño arco que se llena; se oculta si está listo. |
 | Barra del jefe | Abajo al centro | Nombre del jefe, barra de vida y marcas de cambio de fase. Solo en arenas. |
 | Indicador contextual | Sobre el objeto | Tecla de Interactuar cerca del mercader, un punto de control o un cañón. |
-| Indicador fuera de pantalla | Borde de la pantalla | Flecha roja para la embestida de la Serpiente gigante. |
+| Indicador fuera de pantalla | Borde de la pantalla | Flecha roja para la embestida de Cienojos. |
 
 ## Jerarquía visual
 

@@ -2,7 +2,7 @@
 
 | Riesgo | Probabilidad | Impacto | Mitigación |
 | --- | --- | --- | --- |
-| La Serpiente gigante (cuerpo segmentado que atraviesa plataformas) es compleja de programar. | Alta | Alto | Prototipar primero con segmentos que siguen un camino (*path following*); limitar a ~18 segmentos. |
+| Cienojos (cuerpo segmentado que atraviesa plataformas) es compleja de programar. | Alta | Alto | Prototipar primero con segmentos que siguen un camino (*path following*); limitar a ~18 segmentos. |
 | Ataques instakill percibidos como injustos. | Media | Alto | Aviso mínimo de 1,5 s, color y sonido exclusivos; pruebas con jugadores nuevos. |
 | Que un jefe o la ruta principal exijan sin querer una habilidad concreta. | Media | Alto | La ruta principal y cada jefe se prueban sin habilidades equipadas; las `AbilityGate` solo se usan en rutas opcionales. |
 | Modificadores de potenciadores aplicados dos veces al reequipar. | Media | Medio | `StatModifiers` recalcula los valores desde la base cada vez que cambia el equipo. |

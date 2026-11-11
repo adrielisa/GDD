@@ -13,7 +13,6 @@ La prioridad es la inmediatez: respuesta sin latencia percibida, una acción por
 | Ataque descendente | `S` + `Enter` en el aire | Abajo + `X` / Cuadrado |
 | Dash | `Shift izquierdo` | `RB` / `R1` |
 | Tajo ardiente (ataque arcano) | `J` | `B` / Círculo |
-| Escama pétrea (petrificación) | `K` (mantener) | `LB` / `L1` (mantener) |
 | Interactuar | `E` | `Y` / Triángulo |
 | Inventario | `Tab` | `View` / `Share` |
 | Pausa | `Escape` | `Start` / `Options` |
@@ -46,7 +45,6 @@ No se incluye reasignación de teclas en esta versión. Salto tiene dos teclas (
 | Salto en el aire (con Doble salto) | Segundo salto | Burbuja bajo los pies que se aplasta y estalla en gotitas; suben unas burbujitas. | Burbuja que revienta. | Impulso algo menor que el primero. |
 | Dash | Desplazamiento | Silueta residual; con Dash cortante, estela roja. | Corte de aire; con Dash cortante, tajo metálico. | Velocidad súbita con *hitstop* si corta a un enemigo. |
 | `J` | Tajo ardiente | Media luna de fuego naranja que sale de la espada. | Tajo con chisporroteo. | Retroceso mínimo de Eon. |
-| `K` (mantener) | Escama pétrea | El cuerpo de Eon se vuelve gris piedra; destello blanco en el bloqueo perfecto. | Crujido de roca; golpe seco en el bloqueo perfecto. | Eon queda inmóvil. |
 | Recibir daño | Impacto y retroceso | Parpadeo rojo 0,7 s. | Golpe sordo y quejido. | Empuje en X; sin control 0,15 s. |
 | Aviso instakill | — | Brillo intenso y sombra en el área de impacto. | Sonido exclusivo grave. | La cámara no se mueve para no tapar el aviso. |
 

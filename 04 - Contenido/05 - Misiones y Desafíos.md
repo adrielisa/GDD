@@ -8,7 +8,7 @@ El juego tiene una misión principal dividida en cuatro objetivos (uno por jefe)
 | --- | --- | --- | --- | --- | --- |
 | La marea viva | Principal | Costa | — | Derrotar a Chasko. | 200 XP, Doble salto. |
 | Las ruinas en llamas | Opcional | Ruinas Abandonadas | Jefe 1 derrotado | Entrar al templo y derrotar al Mago oscuro. | 300 XP, Tajo ardiente, Dash cortante. |
-| La serpiente de piedra | Principal | Archipiélago de Tierra | Llegar al Archipiélago | Derrotar a la Serpiente gigante. | 400 XP, Escama pétrea, Puente de la Serpiente. |
+| La serpiente de piedra | Principal | Archipiélago de Tierra | Llegar al Archipiélago | Derrotar a Cienojos. | 400 XP, Espinas punzantes, Puente de la Serpiente. |
 | La revancha | Principal | Isla Final | Jefe 3 derrotado | Derrotar a La Entidad. | Final del juego. |
 
 - **Condición de fracaso:** ninguna permanente. Ser derrotado devuelve al punto de control de la antesala.

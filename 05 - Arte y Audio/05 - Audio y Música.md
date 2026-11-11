@@ -41,7 +41,7 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 | Dash / dash cortante | Corte de aire / tajo metálico | Diferenciar si el dash hace daño. |
 | Atacar | Corte de espada y golpe metálico | Comunicar el ataque. |
 | Tajo ardiente | Tajo con chisporroteo de fuego | Confirmar el ataque a distancia. |
-| Escama pétrea | Crujido de roca; golpe seco en el bloqueo perfecto | Confirmar la defensa y el bloqueo perfecto. |
+| Espinas punzantes | Chasquido de púas | Confirmar que el daño se devolvió al atacante. |
 | Recibir daño | Golpe sordo y quejido | Indicar daño. |
 | Recoger XP | Tintineo agudo | Recompensa. |
 | Comprar | Campanilla y destello | Confirmar la compra. |
@@ -53,14 +53,14 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 | Llamaradas / picos de magma | Silbido y crujido de roca | Jefe 2. |
 | Escudo del Mago | Zumbido cristalino | Indicar que no recibe daño. |
 | Teletransporte | Soplo de humo | Anunciar dónde reaparece. |
-| Gota de baba | Goteo viscoso | Jefe 3. |
+| Lágrima de Cienojos | Goteo y siseo de veneno | Jefe 3. |
 | Petrificación | Crujido largo de piedra | Cinemática del Jefe 3. |
 | Cañón | Disparo y explosión | Isla Final. |
 | Victoria / derrota | Fanfarria breve / música descendente | Resultado. |
 
 ## Audio espacial
 
-Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre todo la embestida de la Serpiente gigante que llega desde fuera de pantalla. El resto de los sonidos se reproduce sin atenuación por distancia.
+Se usa paneo estéreo simple (izquierda/derecha) para los avisos de jefe, sobre todo la embestida de Cienojos que llega desde fuera de pantalla. El resto de los sonidos se reproduce sin atenuación por distancia.
 
 ## Voz
 

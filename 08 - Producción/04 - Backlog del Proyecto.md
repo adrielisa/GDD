@@ -22,12 +22,12 @@
 | B-18 | Jefe 2: llamaradas, picos, escudo, cráneos, teletransporte; sala del templo con puertas selladas | Programación | P1 | 4 | Hecho |
 | B-19 | Tajo ardiente (`K` en el prototipo) y Dash cortante | Programación | P1 | 4 | Hecho |
 | B-20 | Géiseres | Programación | P2 | 5 | Hecho (animados) |
-| B-21 | Jefe 3: cuerpo segmentado, baba, cabeza instakill | Programación | P2 | 5 | Pendiente |
-| B-22 | Escama pétrea (`K`): reducción, bloqueo perfecto y aturdimiento | Programación | P2 | 5 | Pendiente |
+| B-21 | Jefe 3 (Cienojos): cuerpo segmentado, lágrimas venenosas, cabeza instakill | Programación | P2 | 5 | Pendiente |
+| B-22 | Espinas punzantes (pasiva): probabilidad de devolver daño al atacante | Programación | P2 | 5 | Pendiente |
 | B-23 | Ilustración de la serpiente petrificada | Arte | P2 | 5 | Pendiente |
 | B-24 | La Entidad: fases y cañones | Programación | P3 | 6 | Pendiente |
 | B-25 | **Cerrar el diseño de la fase 3 de La Entidad** | Diseño | P2 | 5 | Pendiente |
-| B-26 | Nombres de los jefes 2 y 3 | Diseño | P2 | 5 | Pendiente |
+| B-26 | Nombre del jefe 2 | Diseño | P2 | 5 | Pendiente |
 | B-27 | Música por zona y jefe | Audio | P1 | 4–6 | Pendiente |
 | B-28 | Menús, pausa y configuración | UI | P1 | 7 | Pendiente |
 | B-29 | Mapa jugable Eretz (costa a isla final) con enemigos por zona y saltos verificados | Diseño de niveles | P0 | 3 | Hecho |
