@@ -16,47 +16,47 @@ La música y los efectos acompañan a Eon desde su derrota hasta la revancha: me
 
 **Temas principales:**
 
-| Tema | Uso | Carácter |
-| --- | --- | --- |
-| Tema de Eon | Menú, prólogo y final (versión triunfal). | Heroico; en el prólogo termina roto. |
-| La caída | Página 5 del cómic. | Oscuro y descendente. |
-| Costa | Playa y Acantilados. | Melancólico, con sonido de olas. |
-| Bosque | Bosque de Raíces. | Misterioso, flautas y cuerdas. |
-| Ruinas | Ruinas Abandonadas. | Lento, solitario. |
-| Archipiélago | Islas flotantes. | Aéreo, con viento. |
-| Jefe 1 | Arena de la Marea. | Percusión rápida con motivos acuáticos. |
-| Jefe 2 | Patio de la Academia. | Coros oscuros y órgano. |
-| Jefe 3 | Anillo de Islas. | Ritmo pesado y creciente. |
-| La revancha | Isla Final. | Tema de Eon reorquestado contra el tema de La Entidad. |
-| Antesala | Mercader, antes de cada jefe. | Tranquilo, con tensión creciente. |
+| Tema         | Uso                                       | Carácter                                               |
+| ------------ | ----------------------------------------- | ------------------------------------------------------ |
+| Tema de Eon  | Menú, prólogo y final (versión triunfal). | Heroico; en el prólogo termina roto.                   |
+| La caída     | Página 5 del cómic.                       | Oscuro y descendente.                                  |
+| Costa        | Playa y Acantilados.                      | Melancólico, con sonido de olas.                       |
+| Bosque       | Bosque de Raíces.                         | Misterioso, flautas y cuerdas.                         |
+| Ruinas       | Ruinas Abandonadas.                       | Lento, solitario.                                      |
+| Archipiélago | Islas flotantes.                          | Aéreo, con viento.                                     |
+| Jefe 1       | Arena de la Marea.                        | Percusión rápida con motivos acuáticos.                |
+| Jefe 2       | Patio de la Academia.                     | Coros oscuros y órgano.                                |
+| Jefe 3       | Anillo de Islas.                          | Ritmo pesado y creciente.                              |
+| La revancha  | Isla Final.                               | Tema de Eon reorquestado contra el tema de La Entidad. |
+| Antesala     | Mercader, antes de cada jefe.             | Tranquilo, con tensión creciente.                      |
 
 **Música dinámica:** sí. Cada jefe tiene una variación más intensa en su segunda fase; la exploración baja de volumen y añade percusión cuando hay enemigos cerca.
 
 ## Efectos de sonido
 
-| Evento | Sonido | Propósito |
-| --- | --- | --- |
-| Caminar | Pasos sobre arena, tierra o piedra | Comunicar el movimiento. |
-| Saltar / doble salto | Impulso breve / soplo de aire | Confirmar cada salto. |
-| Dash / dash cortante | Corte de aire / tajo metálico | Diferenciar si el dash hace daño. |
-| Atacar | Corte de espada y golpe metálico | Comunicar el ataque. |
-| Tajo ardiente | Tajo con chisporroteo de fuego | Confirmar el ataque a distancia. |
-| Escama pétrea | Crujido de roca; golpe seco en el bloqueo perfecto | Confirmar la defensa y el bloqueo perfecto. |
-| Recibir daño | Golpe sordo y quejido | Indicar daño. |
-| Recoger XP | Tintineo agudo | Recompensa. |
-| Comprar | Campanilla y destello | Confirmar la compra. |
-| Equipar potenciador o habilidad | Clic metálico | Confirmar el cambio en el inventario. |
-| Punto de control / jefe vencido | Acorde ascendente | Indicar que vida y escudo se restauraron. |
-| Géiser | Burbujeo (aviso) y erupción | Anunciar el momento de subir. |
-| **Aviso de instakill** | Tono grave exclusivo | Reconocer el peligro sin mirar. |
-| Chasquido | Chasquido seco de la pinza y estallido de la burbuja | Jefe 1. |
-| Llamaradas / picos de magma | Silbido y crujido de roca | Jefe 2. |
-| Escudo del Mago | Zumbido cristalino | Indicar que no recibe daño. |
-| Teletransporte | Soplo de humo | Anunciar dónde reaparece. |
-| Gota de baba | Goteo viscoso | Jefe 3. |
-| Petrificación | Crujido largo de piedra | Cinemática del Jefe 3. |
-| Cañón | Disparo y explosión | Isla Final. |
-| Victoria / derrota | Fanfarria breve / música descendente | Resultado. |
+| Evento                          | Sonido                                               | Propósito                                   |
+| ------------------------------- | ---------------------------------------------------- | ------------------------------------------- |
+| Caminar                         | Pasos sobre arena, tierra o piedra                   | Comunicar el movimiento.                    |
+| Saltar / doble salto            | Impulso breve / soplo de aire                        | Confirmar cada salto.                       |
+| Dash / dash cortante            | Corte de aire / tajo metálico                        | Diferenciar si el dash hace daño.           |
+| Atacar                          | Corte de espada y golpe metálico                     | Comunicar el ataque.                        |
+| Tajo ardiente                   | Tajo con chisporroteo de fuego                       | Confirmar el ataque a distancia.            |
+| Escama pétrea                   | Crujido de roca; golpe seco en el bloqueo perfecto   | Confirmar la defensa y el bloqueo perfecto. |
+| Recibir daño                    | Golpe sordo y quejido                                | Indicar daño.                               |
+| Recoger XP                      | Tintineo agudo                                       | Recompensa.                                 |
+| Comprar                         | Campanilla y destello                                | Confirmar la compra.                        |
+| Equipar potenciador o habilidad | Clic metálico                                        | Confirmar el cambio en el inventario.       |
+| Punto de control / jefe vencido | Acorde ascendente                                    | Indicar que vida y escudo se restauraron.   |
+| Géiser                          | Burbujeo (aviso) y erupción                          | Anunciar el momento de subir.               |
+| **Aviso de instakill**          | Tono grave exclusivo                                 | Reconocer el peligro sin mirar.             |
+| Chasquido                       | Chasquido seco de la pinza y estallido de la burbuja | Jefe 1.                                     |
+| Llamaradas / picos de magma     | Silbido y crujido de roca                            | Jefe 2.                                     |
+| Escudo del Mago                 | Zumbido cristalino                                   | Indicar que no recibe daño.                 |
+| Teletransporte                  | Soplo de humo                                        | Anunciar dónde reaparece.                   |
+| Gota de baba                    | Goteo viscoso                                        | Jefe 3.                                     |
+| Petrificación                   | Crujido largo de piedra                              | Cinemática del Jefe 3.                      |
+| Cañón                           | Disparo y explosión                                  | Isla Final.                                 |
+| Victoria / derrota              | Fanfarria breve / música descendente                 | Resultado.                                  |
 
 ## Audio espacial
 
